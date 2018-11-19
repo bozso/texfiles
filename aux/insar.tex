@@ -1,0 +1,78 @@
+\newcommand\bench[2]{
+    \begin{minipage}[t]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{#1}
+        \vspace{7.5pt}
+        
+        LOS deformáció.
+    \end{minipage}
+    \hspace{5pt}
+    \begin{minipage}[t]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{#2}
+        \vspace{7.5pt}
+        
+        Kálmán-szűréssel integrált GNSS és InSAR mérések.
+    \end{minipage}
+}
+
+\def\boxcolor{black}
+\def\fillcolor{white}
+\def\refcolor{orange}
+
+
+\def\hun{
+    \begin{anfig}{hungary_networks_raw.png}
+        \anbox{0.27, 0.3}{0.33, 0.4}{A}{\boxcolor}
+        \anbox{0.5, 0.4}{0.5525, 0.525}{B}{\boxcolor}
+        \anbox{0.465, 0.05}{0.535, 0.15}{C}{\boxcolor}
+    \end{anfig}
+}
+
+\def\erdely{
+    \begin{anfig}{transylvania_networks_raw.png}
+        \anbox{0.4075, 0.55}{0.4875, 0.67}{A}{\boxcolor}
+        \anbox{0.55, 0.37}{0.63, 0.49}{B}{\boxcolor}
+        \anbox{0.75, 0.08}{0.9, 0.4}{C}{\boxcolor}
+    \end{anfig}
+}
+
+\def\dszekcso{
+    \begin{anfig}{dszekcso_network_raw.png}
+        \antext{0.05, 0.57}{0.25, 0.64}{IB1}{\refcolor}{\fillcolor}
+        \antext{0.3, 0.67}{0.5, 0.74}{IB2}{\boxcolor}{\fillcolor}
+        \antext{0.225, 0.47}{0.425, 0.54}{IB3}{\boxcolor}{\fillcolor}
+        \antext{0.32, 0.25}{0.52, 0.32}{IB4}{\boxcolor}{\fillcolor}
+    \end{anfig}
+}
+
+\def\kulcs{
+    \begin{anfig}{kulcs_network_raw.png}
+        \antext{0.125, 0.875}{0.225, 0.975}{A1}{\boxcolor}{\fillcolor}
+        \antext{0.51, 0.45}{0.61, 0.55}{A2}{\boxcolor}{\fillcolor}
+        \antext{0.825, 0.17}{0.925, 0.27}{A3}{\boxcolor}{\fillcolor}
+        \antext{0.79, 0.04}{0.89, 0.14}{A4}{\boxcolor}{\fillcolor}
+        \antext{0.46, 0.17}{0.56, 0.27}{AR}{\refcolor}{\fillcolor}
+        \antext{0.475, 0.7}{0.625, 0.8}{Duna}{\boxcolor}{\fillcolor}
+    \end{anfig}
+}
+
+\def\fonyod{
+    \begin{anfig}{fonyod_network_raw.png}
+        \antext{0.25, 0.78}{0.45, 0.86}{Balaton}{\boxcolor}{\fillcolor}
+        \antext{0.725, 0.77}{0.825, 0.87}{KV}{\boxcolor}{\fillcolor}
+        \antext{0.725, 0.16}{0.825, 0.26}{PH}{\refcolor}{\fillcolor}
+        \antext{0.29, 0.0575}{0.39, 0.1575}{RE}{\boxcolor}{\fillcolor}
+    \end{anfig}
+}
+
+
+\def\csomad{
+    \begin{anfig}{ciomadul_network_raw.png}
+        \antext{0.3, 0.29}{0.42, 0.375}{C1}{\boxcolor}{\fillcolor}
+        \antext{0.21, 0.1}{0.33, 0.18}{C2}{\refcolor}{\fillcolor}
+        \antext{0.665, 0.2}{0.775, 0.28}{C3}{\boxcolor}{\fillcolor}
+        \antext{0.49, 0.565}{0.6, 0.645}{C4}{\boxcolor}{\fillcolor}
+        \antext{0.64, 0.82}{0.76, 0.9}{C5}{\refcolor}{\fillcolor}
+    \end{anfig}
+}

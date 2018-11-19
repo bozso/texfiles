@@ -1,0 +1,115 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx, tikz}
+\usepackage[framemethod=TikZ]{mdframed}
+
+\mode<presentation>
+{
+    \usetheme{Boadilla}
+    \usecolortheme{default}
+    \usefonttheme{default}
+    \setbeamertemplate{navigation symbols}{}
+    \setbeamertemplate{caption}[numbered]
+} 
+
+
+\input{../aux.tex}
+
+\graphicspath{{/home/istvan/insar/images/geokemia/}}
+
+\title[Geophysics of Subducted Slab]{Geophysics of the Subducted Slab and Accretion Wedge}
+\author{István Bozsó}
+\institute[MTA CSFK GGI]{MTA CSFK Geodetic and Geophysical Institute}
+\date{2018.11.11.}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}{Shorthand terms}
+    \begin{table}
+        \begin{tabular}{c|c}
+            velo. & velocity \\
+            subd. & subduction \\
+            discont. & discontinuity \\
+            freq. & frequency \\
+            minerl. & mineralogy
+        \end{tabular}
+    \end{table}
+\end{frame}
+
+\begin{frame}{\SubdLithoVelo}
+    \paper{Subducted Lithospheric Slab Velocity Structure: Observations and Mineralogical Inferences}{George Helffrich}
+    \vspace{10pt}
+    
+    Abstract
+    \begin{itemize}
+        \item seismic wave speed structure $\rar$ anomalies 4-10\% relative to the ambient mantle
+        \item transformations are taking place in the slab $\lar$ slab/mantle velocity contrasts do not monotonically decrease as a thermal origin would predict
+        \item slab velocity layering must exist to depths excess of 200 km
+        \item hydrous metabasalt velo. contrasts appear large enough to explain low velo. layers in shallow slabs; metastable anhydrous gabbro $\rar$ eclogite reaction not a good model for changes in shallow slab minerl.?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{\SubdLithoVelo}
+    Introduction
+    \begin{itemize}
+        \item subd. slabs delineated by seismicity but influence seismic travel times
+        \item info. carried by 3 different ways
+        \begin{itemize}
+            \item travel time of the wave (known path $rar$ average path velo. or velo. anomaly)
+            \item secondary arrivals $\lar$ presence of a slab (P $\rar$ S and S $\rar$ P waves from rock elastic property discont.-s); size and location of discont. from seismogram
+            \item freq. dependent effects (certain wavelengths will be enhanced)
+        \end{itemize}
+        \item seismological investigation $\rar$ velo. (anomaly) in some part of the slab or layer thickness
+        \item minerl.-cal inferences only from comparison with computed velo.-s
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{\SubdLithoVelo}
+    \begin{minipage}[c]{0.45\textwidth}
+        \inc{subduction_schematic2.png}
+    \end{minipage}
+    \hspace{10pt}
+    \begin{minipage}[c]{0.45\textwidth}
+        (a) P reflector and ScSp geometries \\
+        (b) PS conversion geometry
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{\SubdLithoVelo}
+    Seismological observations
+    
+    \begin{itemize}
+        \item all observations from stations above subd. zones
+        \item seismic wave -- slab interactions:
+        \begin{itemize}
+            \item reflection from the face of the subd.-ed slab
+            \item refraction at its surface
+            \item lengthy along-strike up-dip paths taken in the slab (slab = waveguide)
+        \end{itemize}
+        \item all of Japan overlies active subd. $\rar$ most of the records from here
+        \item slab fave reflection (rarest) constrain material property contrast of mantle and subd. slab; here 4-10\% change in velo. in 10-20 km thick region
+        \item S $\rar$ P, P $\rar$ S conversions (more common); geometry and P/S relative amplitude constrain conversion interface properties
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{\SubdLithoVelo}
+    \begin{minipage}[c]{0.325\textwidth}
+        \inc{japan_plate.png}
+    \end{minipage}
+    \hspace{10pt}
+    \begin{minipage}[c]{0.6\textwidth}
+        Sites where ScSp is observed, observed ScSp/ScS amplitude ratios. ScS $\rar$ P at $\approx$ 60 km depth (KMU, SHK), DDR conversion depth $\approx$ 180 km, MAT conversion depth $\approx$ 300 km.
+    \end{minipage}
+\end{frame}
+
+
+
+
+\end{document}

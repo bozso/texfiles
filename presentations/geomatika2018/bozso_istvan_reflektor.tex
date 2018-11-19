@@ -1,0 +1,227 @@
+\documentclass[aspectratio=169]{beamer}
+
+\mode<presentation>
+{
+    \usetheme{Boadilla}
+    \usecolortheme{default}
+    \usefonttheme{default}
+    \setbeamertemplate{navigation symbols}{}
+    \setbeamertemplate{caption}[numbered]
+} 
+
+\usepackage[magyar]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx, tikz}
+\usepackage[framemethod=TikZ]{mdframed}
+
+\input{../../aux/anfig.tex}
+\input{../../aux/presentation.tex}
+\input{../../aux/insar.tex}
+
+
+\graphicspath{{../../images/}}
+
+
+\title[Geomatika Szeminárium 2018]{Lassú felszíni deformációs folyamatok monitorozása sarokreflektorok és Sentinel-1 adatok felhasználásával magyarországi teszt területeken}
+\author[Bozsó et al.]{Bozsó István, Szűcs Eszter, Bányai László, Wesztergom Viktor}
+\institute[MTA CSFK GGI]{MTA CSFK Geodéziai és Geofizikai Intézet}
+\date{2018.11.08.}
+
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+    \begin{center}
+        \begin{minipage}[c]{0.25\textwidth}
+            \includegraphics[width=0.75\textwidth]{ggi_logo.png}
+        \end{minipage}
+        \hspace{30pt}
+        \begin{minipage}[c]{0.25\textwidth}
+            \includegraphics[width=0.75\textwidth]{esa_logo.eps}
+        \end{minipage}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Áttekintés}
+    \tableofcontents
+\end{frame}
+
+\section{Bevezetés}
+
+\begin{frame}{Bevezetés}
+    
+\end{frame}
+
+
+
+
+
+\section{A reflektor hálózatok első eredményei}
+
+\sepframe{Magyarországi reflektor hálózatok és az első eredmények}
+
+\begin{frame}{Magyarországi reflektor hálózatok}
+    \centering
+    \begin{minipage}[c]{0.7\textwidth}
+        \hun
+        \begin{center}
+            \textbf{A}: Fonyód,
+            \textbf{B}: Kulcs,
+            \textbf{C}: Dunaszekcső
+        \end{center}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}{Magyarországi reflektor hálózatok}
+    \begin{minipage}[c]{0.365\textwidth}
+        \centering
+        \dszekcso
+
+        Dunaszekcsői hálózat
+    \end{minipage}
+    \hspace{10pt}
+    \begin{minipage}[c]{0.58\textwidth}
+        \centering
+        \kulcs
+
+        Kulcsi hálózat
+    \end{minipage}
+\end{frame}
+
+
+% ***************
+% * Dunaszekcső *
+% ***************
+
+
+\begin{frame}{Dunaszekcsői hálózat IB2-IB1}
+    \bench{IB2-IB1_los.png}{IB2-IB1_kalman.png}
+\end{frame}
+
+\begin{frame}{Dunaszekcsői hálózat IB3-IB1}
+    \bench{IB3-IB1_los.png}{IB3-IB1_kalman.png}
+\end{frame}
+
+\begin{frame}{Dunaszekcsői hálózat IB4-IB1}
+    \bench{IB4-IB1_los.png}{IB4-IB1_kalman.png}
+\end{frame}
+
+
+\begin{frame}{Magyarországi reflektor hálózatok}
+    \begin{minipage}[c]{0.365\textwidth}
+        \centering
+        \dszekcso
+
+        Dunaszekcsői hálózat
+    \end{minipage}
+    \hspace{10pt}
+    \begin{minipage}[c]{0.58\textwidth}
+        \centering
+        \kulcs
+
+        Kulcsi hálózat
+    \end{minipage}
+\end{frame}
+
+
+% *********
+% * Kulcs *
+% *********
+
+
+\begin{frame}{Kulcsi hálózat A1-AR}
+    \bench{A1-AR_los.png}{A1-AR_kalman.png}
+\end{frame}
+
+
+\begin{frame}{Kulcsi hálózat A3-AR}
+    \bench{A3-AR_los.png}{A3-AR_kalman.png}
+\end{frame}
+
+
+\begin{frame}{Magyarországi reflektor hálózatok}
+    \begin{minipage}[c]{0.6\textwidth}
+        \centering
+        \fonyod
+
+        Fonyódi hálózat
+    \end{minipage}
+    \hspace{5pt}
+    \begin{minipage}[c]{0.3\textwidth}
+            \textbf{PH}: Polgármesteri hivatal\\
+            \textbf{RE}: Ripka emlékmű\\
+            \textbf{KV}: Kripta-villa
+    \end{minipage}
+\end{frame}
+
+
+% **********
+% * Fonyód *
+% **********
+
+\begin{frame}{Fonyód network KV-PH}
+    \bench{KV-PH_los.png}{KV-PH_kalman.png}
+\end{frame}
+
+\begin{frame}{Fonyód network RE-PH}
+    \bench{RE-PH_los.png}{RE-PH_kalman.png}
+\end{frame}
+
+
+
+\section{Telepített és tervezett erdélyi hálózatok}
+
+\sepframe{Erdélyi reflektor hálózatok}
+
+\begin{frame}{Erdélyi reflektor hálózatok}
+    \centering
+    \begin{minipage}[c]{0.65\textwidth}
+        \erdely
+        \begin{center}
+            \textbf{A}: Parajdi hálózat, 
+            \textbf{B}: Csomádi hálózat, 
+            \textbf{C}: Vrancea-zóna
+        \end{center}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}{Parajdi hálózat}
+    \begin{minipage}[c]{0.7\textwidth}
+        \includegraphics[width=\textwidth]{parajd_3D.png}
+    \end{minipage}
+    \hspace{5pt}
+    \begin{minipage}[c]{0.225\textwidth}
+        \begin{itemize}
+            \item Közép-Európa legnagyobb sódiapírja $\rightarrow$ sótektonika
+            \item vertikális mozgások?
+        \end{itemize}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}{Csomádi hálózat}
+    \begin{minipage}[c]{0.475\textwidth}
+        \centering
+        \csomad
+    \end{minipage}
+    \hspace{5pt}
+    \begin{minipage}[c]{0.45\textwidth}
+        \begin{itemize}
+            \item magnetotellurikus mérések $\rightarrow$ potenciálisan aktív magmatározó
+            \item lehetséges mozgások a Csomád-vulkán környezetében
+        \end{itemize}
+    \end{minipage}
+\end{frame}
+
+\begin{frame}
+    \begin{center}
+        \Huge \color{blue!55!black}
+        Köszönöm a figyelmet!
+    \end{center}
+\end{frame}
+
+\end{document}

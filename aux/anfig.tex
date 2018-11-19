@@ -1,0 +1,33 @@
+\newcommand\annotatedFigureBoxCustom[8]{
+    \draw[#5,ultra thick,rounded corners] (#1) rectangle (#2);
+    \node at (#4) [fill=#6,thick,shape=circle,draw=#7,
+                   inner sep=2pt,font=\sffamily,text=#8]
+                   {\textbf{#3}};
+}
+
+
+% {from}{to}{text}{color}
+\newcommand\anbox[4]{\annotatedFigureBoxCustom{#1}{#2}{#3}{#1}{#4}{white}{black}{black}}
+
+
+\newcommand\antext[5]{
+    \draw[#4, fill=#5, ultra thick, rounded corners] (#1) rectangle (#2)
+    node[pos=0.5, font=\sffamily, text=black] {\textbf{#3}};
+}
+
+
+\newenvironment{anfig}[1]
+{
+    \begin{mdframed}[linecolor=blue!65!white, linewidth=2pt, roundcorner=0.75pt,
+                     innerrightmargin=0.05pt, innerleftmargin=0.05pt,
+                     innertopmargin=0.05pt, innerbottommargin=0.05pt, frametitle={}]
+    \begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] (image) at (0,0)
+    {\includegraphics[width=\textwidth]{#1}};
+    \begin{scope}[x={(image.south east)},y={(image.north west)}]
+}
+{
+    \end{scope}
+    \end{tikzpicture}
+    \end{mdframed}
+}
