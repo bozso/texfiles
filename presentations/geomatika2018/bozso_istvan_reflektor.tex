@@ -23,7 +23,7 @@
 \graphicspath{{../../images/}}
 
 
-\title[Geomatika Szeminárium 2018]{Lassú felszíni deformációs folyamatok monitorozása sarokreflektorok és Sentinel-1 adatok felhasználásával magyarországi teszt területeken}
+\title[XI. Geomatika Szeminárium, Sopron 2018]{Lassú felszíni deformációs folyamatok monitorozása sarokreflektorok és Sentinel-1 adatok felhasználásával magyarországi teszt területeken}
 \author[Bozsó et al.]{Bozsó István, Szűcs Eszter, Bányai László, Wesztergom Viktor}
 \institute[MTA CSFK GGI]{MTA CSFK Geodéziai és Geofizikai Intézet}
 \date{2018.11.08.}
@@ -48,19 +48,210 @@
     \tableofcontents
 \end{frame}
 
-\section{Bevezetés}
+\section{A reflektorok tervezése}
 
-\begin{frame}{Bevezetés}
+\begin{frame}{A reflektorok tervezése}
+    \textbf{ESA-PECS pályázat} keretében: reflektorok tervezése, telepítése, mérések feldolgozása.
+    \vspace{10pt}
+    
+    Szempontok:
+    \begin{itemize}
+        \item analóg, analitikus és numerikus számítások - BME Szélessávú Hírközlés és Villamosságtan Tanszék
+        \item Sentinel-1 radar hullámhossz és pályaparaméterek,
+        \item mechanikai kompaktság és stabilitás.
+    \end{itemize}
+    \begin{center}
+        \resizebox{0.1\textwidth}{30pt}{$\Downarrow$}
+        \vspace{10pt}
+        
+        optimális reflektor geometria
+    \end{center}    
+\end{frame}
+
+
+\subsection{Alapfogalmak}
+
+\begin{frame}{Alapfogalmak}
+    A hatásos radarszórási keresztmetszet (Radar cross-section, RCS), visszaverő képesség:
+    
+    \begin{equation*}
+        \sigma = 4 \pi \lim_{R \to \infty} R^2 \frac{ \abs{\subt{E}{szórt}}^2 }{ \abs{\subt{E}{beeső}}^2 },
+    \end{equation*}
+    
+    ahol
+    
+    \begin{itemize}
+        \item $R$ meggfigyelési pont távolsága a céltárgytól,
+        \item $\subt{E}{szórt}$ szórt elektromágnese térerősség,
+        \item $\subt{E}{beeső}$ céltárgyra beérkező elektromágnese térerősség.
+    \end{itemize}
+    
+    Mértékegysége: $\dbm$
     
 \end{frame}
 
 
+\subsection{Reflektor típusok}
 
+\begin{frame}{Reflektor típusok}
+    \begin{center}
+        \begin{minipage}[c]{0.75\textwidth}
+            \begin{minipage}[t]{0.41\textwidth}
+                \centering
+                \reflector{reflector_triangle.png}{a}
+            \end{minipage}
+            \hspace{2pt}
+            \begin{minipage}[t]{0.37\textwidth}
+                \centering
+                \reflector{reflector_pentagonal.png}{b}
+            \end{minipage}
+            \vspace{5pt}
+            
+            \begin{minipage}[t]{0.44\textwidth}
+                \centering
+                \reflector{reflector_circular.png}{c}
+            \end{minipage}
+            \hspace{2pt}
+            \begin{minipage}[t]{0.4\textwidth}
+                \centering
+                \reflector{reflector_rectangular.png}{d}
+            \end{minipage}        
+        \end{minipage}
+        \begin{minipage}[c]{0.225\textwidth}
+            \begin{itemize}
+                \item \textbf{a}: Háromszög
+                \item \textbf{b}: Pentagonális
+                \item \textbf{c}: Negyedkör
+                \item \textbf{d}: Négyzet
+            \end{itemize}
+        \end{minipage}
+    \end{center}
+\end{frame}
+
+
+\begin{frame}
+    \begin{minipage}[t]{0.475\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{reflector_angles.png}
+        
+        A beesési irányt jellemző két szög. $\alpha$: azimuth, $\vartheta$: beesési szög.
+    \end{minipage}
+    \begin{minipage}[t]{0.475\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{trihedral_theo.png}
+        
+        Elméleti számítások alapján felrajzolt RCS a beesési szög függvényében háromszög reflektorra. $a = \SI{1}{\meter} $, $f = \SI{5.405}{\giga\hertz}$, $\text{azimuth} = \SI{45}{\degree}$. Maximum RCS $\SI{55}{\degree}$ beesési szögnél.
+    \end{minipage}
+\end{frame}
+
+
+\subsection{Numerikus modellezés eredményei}
+
+\sepframe{Numerikus modellezés eredményei}
+
+\begin{frame}{Különböző reflektortípusok RCS karakterisztikái}
+    \begin{minipage}[c]{0.55\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{reflectors_compare_elevation.png}
+        
+        Különböző reflektorok normalizált RCS görbéi a beesési szög függvényében. $a = \SI{1}{\meter} $, $f = \SI{5.405}{\giga\hertz}$, $\text{azimuth} = \SI{45}{\degree}$
+    \end{minipage}
+    \hspace{5pt}
+    \begin{minipage}[c]{0.325\textwidth}
+        \begin{table}
+            \centering
+            \begin{tabular}{m{75pt} c} \toprule
+                Típus & Szögátmérő (3 $\db$) \\ \midrule
+                Háromszög & $\SI{38.2}{\degree}$ \\ \hline
+                Pentagonális (Csonkolás: $\SI{0.25}{\meter}$)& $\SI{34.5}{\degree}$ \\ \hline
+                Négyzet & $\SI{22.5}{\degree}$ \\ \hline
+                Negyedkör & $\SI{31.3}{\degree}$ 
+            \end{tabular}
+        \end{table}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}{Különböző reflektortípusok RCS karakterisztikái}
+    \begin{minipage}[c]{0.55\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{reflectors_compare_azimuth.png}
+        
+        Különböző reflektorok normalizált RCS görbéi az azimuth függvényében. $a = \SI{1}{\meter} $, $f = \SI{5.405}{\giga\hertz}$, $\text{beesési szög} = \SI{54.74}{\degree}$
+    \end{minipage}
+    \hspace{5pt}
+    \begin{minipage}[c]{0.325\textwidth}
+        \begin{table}
+            \centering
+            \begin{tabular}{m{75pt} c} \toprule
+                Típus & Szögátmérő (3 $\db$) \\ \midrule
+                Háromszög & $\SI{46.3}{\degree}$ \\ \hline
+                Pentagonális (Csonkolás: $\SI{0.25}{\meter}$)& $\SI{41.1}{\degree}$ \\ \hline
+                Négyzet & $\SI{25.3}{\degree}$ \\ \hline
+                Negyedkör & $\SI{37.6}{\degree}$
+            \end{tabular}
+        \end{table}
+    \end{minipage}
+\end{frame}
+
+\subsection{Optimális reflektor geometria}
+
+\begin{frame}{Optimális reflektor geometria}
+    Választás: Pentagonális reflektor
+    
+    \begin{itemize}
+        \item Megfelelően nagy RCS-t szolgáltat.
+        \item Mechanikailag stabilabb.
+        \item További vizsgálatok alapján az optimális csonkolás aránya: $\frac{\subt{a}{csonkolt}}{a}: 0.4$.
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Analóg mérések - reflektor asszimmetria}
+    \begin{minipage}[c]{0.65\textwidth}
+        \centering
+        \inc{reflector_asymmetry.png}
+        
+        Szembenálló modell reflektorok RCS görbéi az azimuth függvényében.
+    \end{minipage}
+    \begin{minipage}[c]{0.3\textwidth}
+        \centering
+        Kísérleti elrendezés.
+        \vspace{10pt}
+        
+        \begin{minipage}[c]{\textwidth}
+            \ffig{reflector_model_f2f.png}
+        \end{minipage}
+        \vspace{10pt}
+        
+        \begin{minipage}[c]{\textwidth}
+            \ffig{reflector_analogue.png}
+        \end{minipage}
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Mért intenzitásértékek - Dunaszekcső}
+    \begin{minipage}[t]{0.45\textwidth}
+        \centering
+        \inc{dszekcso_intensity_range.png}
+    \end{minipage}
+    \hspace{10pt}
+    \begin{minipage}[t]{0.45\textwidth}
+        \centering
+        \inc{dszekcso_intensity_azimuth.png}
+    \end{minipage}
+    
+    \begin{center}
+        A dunaszekcsői hálózat környezetében mért relatív intenzitásértékek a távolság függvényében két metszet (range, azimut) esetén.
+    \end{center}
+\end{frame}
 
 
 \section{A reflektor hálózatok első eredményei}
 
 \sepframe{Magyarországi reflektor hálózatok és az első eredmények}
+
+\subsection{Dunaszekcsői hálózat}
 
 \begin{frame}{Magyarországi reflektor hálózatok}
     \centering
@@ -98,17 +289,18 @@
 
 
 \begin{frame}{Dunaszekcsői hálózat IB2-IB1}
-    \bench{IB2-IB1_los.png}{IB2-IB1_kalman.png}
+    \bench{IB2-IB1_los.eps}{IB2-IB1_kalman.eps}
 \end{frame}
 
 \begin{frame}{Dunaszekcsői hálózat IB3-IB1}
-    \bench{IB3-IB1_los.png}{IB3-IB1_kalman.png}
+    \bench{IB3-IB1_los.eps}{IB3-IB1_kalman.eps}
 \end{frame}
 
 \begin{frame}{Dunaszekcsői hálózat IB4-IB1}
-    \bench{IB4-IB1_los.png}{IB4-IB1_kalman.png}
+    \bench{IB4-IB1_los.eps}{IB4-IB1_kalman.eps}
 \end{frame}
 
+\subsection{Kulcsi hálózat}
 
 \begin{frame}{Magyarországi reflektor hálózatok}
     \begin{minipage}[c]{0.365\textwidth}
@@ -133,14 +325,15 @@
 
 
 \begin{frame}{Kulcsi hálózat A1-AR}
-    \bench{A1-AR_los.png}{A1-AR_kalman.png}
+    \bench{A1-AR_los.eps}{A1-AR_kalman.eps}
 \end{frame}
 
 
 \begin{frame}{Kulcsi hálózat A3-AR}
-    \bench{A3-AR_los.png}{A3-AR_kalman.png}
+    \bench{A3-AR_los.eps}{A3-AR_kalman.eps}
 \end{frame}
 
+\subsection{Fonyódi hálózat}
 
 \begin{frame}{Magyarországi reflektor hálózatok}
     \begin{minipage}[c]{0.6\textwidth}
@@ -163,18 +356,37 @@
 % **********
 
 \begin{frame}{Fonyód network KV-PH}
-    \bench{KV-PH_los.png}{KV-PH_kalman.png}
+    \bench{KV-PH_los.eps}{KV-PH_kalman.eps}
 \end{frame}
 
 \begin{frame}{Fonyód network RE-PH}
-    \bench{RE-PH_los.png}{RE-PH_kalman.png}
+    \bench{RE-PH_los.eps}{RE-PH_kalman.eps}
+\end{frame}
+
+\section{Összefoglalás}
+
+\begin{frame}{Összefoglalás}
+    \begin{itemize}
+        \item A reflektorok megfelelő mértékű visszavert intenzitás értékeket szolgáltatnak, kiemelkednek környezetükből.
+        \item A GNSS és az InSAR reflektor mérések integrálásával 3D-s elmozdulás értékeket kaphatunk kiváló időbeli felbontással (6 naponta).
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \begin{center}
+        \Huge \color{blue!55!black}
+        Köszönöm a figyelmet!
+    \end{center}
+    \vspace{35pt}
+    {\large
+    Acknowledgement: Contains modified Copernicus Sentinel-1 data [2018]
+    }
 \end{frame}
 
 
+\backupbegin
 
-\section{Telepített és tervezett erdélyi hálózatok}
-
-\sepframe{Erdélyi reflektor hálózatok}
+\section*{Telepített és tervezett erdélyi hálózatok}
 
 \begin{frame}{Erdélyi reflektor hálózatok}
     \centering
@@ -217,11 +429,6 @@
     \end{minipage}
 \end{frame}
 
-\begin{frame}
-    \begin{center}
-        \Huge \color{blue!55!black}
-        Köszönöm a figyelmet!
-    \end{center}
-\end{frame}
+\backupend
 
 \end{document}

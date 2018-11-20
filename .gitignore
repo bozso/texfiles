@@ -9,6 +9,8 @@
 *.toc
 *.bbl
 *.blg
+*.fls
+*.fdb_latexmk
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

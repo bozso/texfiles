@@ -1,0 +1,231 @@
+\documentclass[a0, 18pt, landscape]{a0poster}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{graphicx, tikz, helvet, pagecolor, multicol, float, siunitx, caption}
+\usepackage{epstopdf, amsmath, booktabs, multirow}
+
+\usepackage[colorlinks]{hyperref}
+\usepackage[left=25pt, right=25pt, top=25pt, bottom=25pt]{geometry}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage[font=small,labelfont=bf]{caption}
+
+\usetikzlibrary{arrows}
+
+\input{/home/istvan/insar/latex_aux.tex}
+
+\pagecolor{blue!10!white}
+\graphicspath{{/home/istvan/insar/images/}}
+\columnsep=30pt
+
+\renewcommand{\familydefault}{\sfdefault} % helvetica font
+
+\begin{document}
+
+%-----------------------------------------------------------------------
+% TITLE
+%-----------------------------------------------------------------------
+
+\bfseries
+
+\begin{mdframed}[linecolor=black, linewidth=5pt, innerleftmargin=10pt, innerrightmargin=10pt, innertopmargin=25pt, innerbottommargin=25pt, backgroundcolor=red!12.5!white, roundcorner=10pt]
+    \hspace{25pt}
+    \begin{minipage}[c]{0.1\textwidth}
+        \includegraphics[width=0.75\textwidth]{ggi_logo.png}
+    \end{minipage}
+    \hspace{-50pt}
+    \begin{minipage}[c]{0.7\textwidth}
+      \centering \LARGE {\color{blue!40!black} BENCHMARK OF C-BAND RADAR CORNER REFLECTORS BASED ON SENTINEL-1 SAR IMAGES. FIRST RESULTS IN THE MONITORING OF THE DUNASZEKCSŐ LANDSLIDE (HUNGARY) USING CORNER REFLECTORS.}\\[25pt] % Title
+      István Bozsó, Eszter Szűcs, László Bányai, Viktor Wesztergom \\[10pt]% Author(s)
+     \large \normalfont Hungarian Academy of Sciences, Research Centre for Astronomy and Earth Sciences, Geodetic and Geophysical Institute\\[10pt]
+    \Large \texttt{bozso.istvan@csfk.mta.hu}
+    \end{minipage}
+    \hspace{50pt}
+    %
+    \begin{minipage}[c]{0.1\textwidth}
+        \includegraphics[width=0.75\textwidth]{esa_logo.eps}
+    \end{minipage}
+    %
+    \begin{minipage}[c]{0.1\textwidth}
+        \includegraphics[width=0.75\textwidth]{EGU2018_OSPP_label_blue.png}
+        
+        \vspace{10pt}
+        \includegraphics[width=0.75\textwidth]{CreativeCommons_Attribution_License.png}
+    \end{minipage}
+\end{mdframed}
+
+%-----------------------------------------------------------------------
+% ABSTRACT
+%-----------------------------------------------------------------------
+
+\small
+
+\begin{mdframed}[linecolor=red!80!black, linewidth=4pt,
+    innerleftmargin=20pt, innerrightmargin=20pt,
+    innerbottommargin=25pt, innertopmargin=30pt,
+    backgroundcolor=green!10!white,
+    frametitleaboveskip=15pt, frametitlebelowskip=10pt,
+    roundcorner=20pt, frametitle={\LARGE Abstract},
+    frametitlealignment=\center]
+
+\begin{multicols}{2}
+
+Synthetic Aperture Radar (SAR) based interferometry (InSAR) is a technique widely used for the detection and monitoring of the deformation of different surfaces that reflect the electromagnetic (EM) wave emitted by the SAR sensor. SAR imaging is a coherent technique, meaning that not only the amplitude but the phase of the reflected EM wave is captured by the antenna. Calculation of surface displacement is possible from the phase differences produced by subtracting the phase values of one SAR scene from another SAR scene.
+
+Deformations of the Earth’s surface caused by volcanoes, earthquakes, landslides and other surface processes are studied by the geoscientists using a single interferogram created from a SAR image pair acquired by spaceborne sensors. Time-series analysis of multiple interferograms made the assessment of slow, long-term deformation  possible, however displacement time-series derived from the time-series analysis, are only reliable when there are sufficient number of pixels that provide ``stable'' phase values over a long period of time. In areas where there are not enough stable pixels, interferometric processing becomes challenging if not impossible. In such areas, artificial scattering objects, so-called corner reflectors, can be installed that provide stable phase values for deformation monitoring purposes.
+
+In the framework of an ESA PECS project (project ID: 4000118850/16/NL/SC) the Department of Broadband Infocommunications and Electromagnetic Theory of the Budapest University of Technology and Economics in cooperation with the MTA CSFK Geodetic and Geophysical Institute, developed a twin corner reflector based on the sensor characteristics of the Sentinel-1 satellites, capable of providing stable phase information for geodynamic investigations. The reflector geometry and dimensions were optimized for deformation monitoring using numerical and analogue modelling.
+Several reflector networks were deployed  in Hungary. Three monitoring networks are located in areas susceptible to landslide activity: Fonyód (landslide area at Lake Balaton), Dunaszekcső and Kulcs (landslides near the banks of the Danube). Another test network is installed in Sopron, a non-deforming area.
+
+In this contribution we present the first deformation time-series of one test network in Dunaszekcső, Hungary. To capture the high gradient of the deformation and avoid the undersampling of the signals, both Sentinel-1A and B SAR scenes were processed. Altogether 72 scenes were processed with the GAMMA software. The phase of the reflectors was extracted from the SLC scenes, referenced to a nearby reflector and unwrapped. A rapid subsidence signal of $\approx$ 4.8 mm / 12 days was revealed to the north-east of the IB1 reference reflector in the stable area, and a slower $\approx$ 2 mm / 12 days signal to the south of the reflector IB3 in a moving area, suggesting that landslide is still ongoing and the area has not yet stabilized. Line-of-sight deformation was compared to campaign GNSS measurements. The results show that the subsidance rates derived from measurement techniques, i.e. GNSS and InSAR, are in the agreement within the error bounds.
+
+\end{multicols}
+
+\end{mdframed}
+
+%-----------------------------------------------------------------------
+% POSTER
+%-----------------------------------------------------------------------
+
+\normalfont\bfseries
+
+\begin{multicols}{3}
+
+\begin{mdframed}[style=block, frametitle={Geological background}]
+    \begin{itemize}
+        \item banks along the Danube river -- susceptible to landsliding
+        \item hydrological forcing -- periodic variation of Danube river water level $\rightarrow$ landslide \cite{Ujvari2009}
+        \item 2007 Dunaszekcső, \SI{220}{\meter} rupture, sliding mass: \SI{0.3d6}{\cubic\meter} \cite{Ujvari2009}
+        \item Vár Hill test area mainly  composed of loess
+    \end{itemize}
+        
+    \ffig{dszekcso_schematic.png}{Schematic cross-section of the landslide at Vár Hill, Dunaszekcső. Figure from \cite{Ujvari2009}, based on \cite{Moyzes1978}. GWL = Ground Water Level; HW = Highest Water; LW = Lowest Water}{0.65\textwidth}
+\end{mdframed}
+\vspace{20pt}
+\begin{mdframed}[style=block, frametitle={Processing flow of data}]
+    \def\io_shift{-220pt}
+
+    \begin{figure}[H]
+        \centering
+        \begin{tikzpicture}[node distance=2cm]
+            % Place nodes
+            \node [startstop, align=center] (raw_slcs) {Sentinel-1A/B ascending SLCs};
+            
+            \node [process, align=center, yshift=-50pt, below of=raw_slcs] (preproc) {Preprocessing of\\SLCs \\(cropping, geocoding and\\coregistration)};
+            \node [process, align=center, yshift=-60pt, below of=preproc] (extract) {Extract phase of\\reflectors from SLCs};
+            \node [process, align=center, yshift=-30pt, below of=extract] (reference) {Subtract phase of\\reference reflector};
+            \node [process, align=center, yshift=-30pt, below of=reference] (unwrap) {Unwrap phase of\\reflectors};
+    
+            \node [startstop, align=center, yshift=-25pt, below of=unwrap] (compare) {Compare deformations};
+    
+            \node [io, align=center, left of=preproc, xshift=\io_shift] (dem) {SRTM DEM \cite{SRTM}};
+            \node [io, align=center, left of=extract, xshift=\io_shift] (gnssllh) {GNSS\\latitude, longitude,\\height};
+            \node [io, align=center, left of=compare, xshift=\io_shift] (gnss_data) {GNSS data};
+    
+            % Draw arrows
+            \draw [arrow] (raw_slcs) -- (preproc);
+            \draw [arrow] (preproc) -- (extract);
+            \draw [arrow] (extract) -- (reference);
+            \draw [arrow] (reference) -- (unwrap);
+            \draw [arrow] (unwrap) -- (compare);
+            
+            \draw [arrow] (dem) -- (preproc);
+            \draw [arrow] (gnssllh) -- (extract);
+            \draw [arrow] (gnss_data) -- (compare);
+        \end{tikzpicture}
+        \caption{Flowchart of processing steps}\label{fig:flow}
+    \end{figure}
+    
+    \begin{itemize}
+        \item Preprocessing and phase extraction were carried out with the \href{https://www.gamma-rs.ch/}{GAMMA Software}.
+        \item Unwrapping was done with the \code{unwrap} function of the \texttt{numpy} package for \texttt{Python}.
+        % \item the SRTM DEM (resolution: \ang{;;30}) was used for geocoding \cite{SRTM}
+    \end{itemize}
+\end{mdframed}
+%
+\begin{mdframed}[style=block, frametitle={Reflectors in the landslide area}]
+    \def\boxcolor{yellow!70!black}
+    \begin{figure}[H]
+        \begin{anfig}{dszekcso_refl_1.jpg}{0.49\textwidth}{Reflector IB2 with rod and GNSS antenna (A); rod and antenna are only present during GNSS observations}
+            \anfigbox{0.375, 0.25}{0.475, 0.96}{A}{\boxcolor}
+        \end{anfig}
+        %
+        \begin{anfig}{dszekcso_refl_2.jpg}{0.49\textwidth}{Reflector IB4 with the landslide scarp (B)}
+            \anfigbox{0.035, 0.675}{0.8, 0.9}{B}{\boxcolor}
+        \end{anfig}
+        \\
+        \begin{center}
+        \begin{anfig}{dszekcso_network.png}{0.45\textwidth}{Spatial distribution of reflectors with the landslide area outlined (C); from \href{https://www.google.com/maps}{Google Maps}}
+            \anfigbox{0.25, 0.3}{0.75, 0.8}{C}{yellow!80!white}
+        \end{anfig}
+        \end{center}
+    \end{figure}    
+\end{mdframed}
+
+\begin{mdframed}[style=block, frametitle={Calculation of Line-of-Sight (LOS) deformations}]
+    \def\ibdiff{\text{IB}i - \text{IB}j}
+    \def\ibi{\text{IB}i}
+    \def\ibj{\text{IB}j}
+    
+    {
+        \normalfont
+        \begin{align*}
+            \vec{C}_{\ibdiff} &= \vec{C}_{\ibi} \cdot \text{K}(\vec{C}_{\ibj}) \\
+            \tvec{D}_{\text{InSAR}, \ibdiff} &= \text{Unwrap} \{ \text{Phase}(\vec{C}_{\ibdiff}) \} \\
+            \tvec{D}_{\text{GNSS}, \ibdiff} &= \text{Project}_{\text{LOS}}\{\tvec{GNSS}_{\ibi}\} - \text{Project}_{\text{LOS}}\{\tvec{GNSS}_{\ibj}\}
+        \end{align*}
+    
+        \begin{itemize}
+            \item $\tvec{D}_{X, \ibdiff}$: LOS deformation derived from $X$ measurements at reflector $\ibi$ relative to reflector $\ibj$
+            \item $\tvec{GNSS}$ : vector of GNSS observations
+            \item $\vec{C}_{\ibi}$: vector of complex values from SLC images at reflector $\ibi$
+            \item $\text{K}(\vec{C})$: complex conjugates of complex values in $\vec{C}$
+        \end{itemize}
+    }
+    
+\end{mdframed}
+
+\begin{mdframed}[style=block, frametitle={LOS Deformations}]
+    \ffig{deformation.eps}{LOS deformations derived from InSAR and GNSS measurements at reflector IB2 with respect to (w.r.t) IB1, IB3 w.r.t IB1 and IB4 w.r.t IB3 and fitted linear trend. The InSAR signal at IB1 is most likely due to atmospheric effects. Negative LOS deformation means movement away from the satellite.}{0.95\textwidth}
+    {
+        \normalfont
+        \begin{center}
+            Table of fitted linear displacement velocity values and the RMSE of the fit:
+            \vspace{15pt}
+            
+            \begin{tabular}{|c||c c|c c|} \hline
+                \multirow{2}{*}{Reflector} & \multicolumn{2}{c|}{Velocity [mm / 12 days]} & \multicolumn{2}{c|}{RMSE [$\si{\milli\meter}$]} \\
+                & GNSS & InSAR & GNSS & InSAR \\ \hline \hline
+                $\text{IB2}-\text{IB1}$ & \num{-4.797} & \num{-4.931} & \num{17.54} & \num{19.35} \\ 
+                $\text{IB4}-\text{IB3}$ & \num{-1.951} & \num{-2.186} & \num{10.02} & \num{6.4} \\ \hline
+            \end{tabular}
+        \end{center}
+    }
+
+\end{mdframed}
+
+\begin{mdframed}[style=block, frametitle={Discussion}]
+    \begin{itemize}
+        \item Reflectors are capable of determining velocity trend -- promising results
+        \item We do not yet know what causes the divergence between measured GNSS and InSAR LOS deformation time-series in the case of $\text{IB3}-\text{IB1}$ (multiple phase jumps?)
+        \item In the future the emphasis will be on investigating the discrepancy between GNSS and InSAR measurments at reflector IB3
+    \end{itemize}
+\end{mdframed}
+
+
+\vspace{7pt}
+
+%-----------------------------------------------------------------------
+% REFERENCES
+%-----------------------------------------------------------------------
+
+\begin{mdframed}[style=ref]
+    \normalfont\footnotesize
+    \bibliographystyle{plain}
+    \bibliography{/home/istvan/insar/insar}
+\end{mdframed}
+
+\end{multicols}
+
+\end{document}
