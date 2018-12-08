@@ -1,0 +1,74 @@
+\documentclass[aspectratio=169]{beamer}
+\mode<presentation>
+{
+    \usetheme{Boadilla}
+    \usecolortheme{default}
+    \usefonttheme{default}
+    \setbeamertemplate{navigation symbols}{}
+    \setbeamertemplate{caption}[numbered]
+} 
+
+\usepackage[magyar]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx, tikz, pgf, pgfplots}
+\usepgfplotslibrary{polar}
+\usepackage[framemethod=TikZ]{mdframed}
+
+\input{../../aux/anfig.tex}
+\input{../../aux/presentation.tex}
+%\input{../../aux/insar.tex}
+
+\graphicspath{{../../images/}}
+
+\title[Műholdas Távérzékelés Labor, 2018/19.I.]{Műholdas Radar Interferometria elmélete és alkalmazásai}
+\author[Bozsó István]{Bozsó István}
+\institute[MTA CSFK GGI]{MTA CSFK Geodéziai és Geofizikai Intézet}
+\date{2018.12.13.}
+
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+    \begin{center}
+        \begin{minipage}[c]{0.3\textwidth}
+            \includegraphics[width=0.75\textwidth]{ggi_logo.png}
+        \end{minipage}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Áttekintés}
+    \tableofcontents
+\end{frame}
+
+
+\section{Ismétlés - Szintetikus Apertúrájú Radar}
+\frametitle{Ismétlés - Szintetikus Apertúrájú Radar}
+
+\begin{frame}{Ismétlés - Szintetikus Apertúrájú Radar (SAR)}
+    \begin{itemize}
+        \item kiváló felbontás, de csak egy csatornán (mikrohullámú tartomány)
+        \item koherens radar: amplitúdó ÉS fázis regisztrálása
+        \item alkalmazás amplitúdóra: Freidl Zoli előadása
+        \item tudunk valami információt kinyerni a fázisból?
+    \end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}{Egy hullám fázisa}
+    \input{wave_phase.tex}
+\end{frame}
+
+
+\begin{frame}{Egy SAR felvétel fázisképe}
+    \begin{minic}{0.5}
+        \figc{vrancea.png}{Asd}
+    \end{minic}
+\end{frame}
+
+
+
+\end{document}

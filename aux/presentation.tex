@@ -1,4 +1,4 @@
-\newcommand{\ffig}[1]{
+\newcommand{\fig}[1]{
     \begin{mdframed}[linecolor=blue!65!white, linewidth=1.75pt, roundcorner=0.75pt,
                      innerrightmargin=0pt, innerleftmargin=0pt,
                      innertopmargin=0pt, innerbottommargin=0pt,
@@ -7,6 +7,45 @@
     \end{mdframed}
 }
 
+\newenvironment{minic}[1]
+{
+    \begin{center}
+    \begin{minipage}[c]{#1\textwidth}
+}
+{
+    \end{minipage}
+    \end{center}
+}
+
+
+\newenvironment{figp}[4]
+{
+    \begin{minipage}[c]{#3\textwidth}
+    \centering
+    \includegraphics[width=1.0\textwidth]{#1}
+    
+    #2
+    \end{minipage}
+    \begin{minipage}[c]{#4\textwidth}
+}
+{
+    \end{minipage}
+}
+
+
+\newcommand{\figc}[2]
+{
+    \begin{center}
+    \begin{mdframed}[linecolor=blue!65!white, linewidth=1.75pt, roundcorner=0.75pt,
+                     innerrightmargin=0pt, innerleftmargin=0pt,
+                     innertopmargin=0pt, innerbottommargin=0pt,
+                     backgroundcolor=white, frametitle={}, align=center]
+    
+    \includegraphics[width=1.0\textwidth]{#1}
+    \end{mdframed}
+    #2
+    \end{center}
+}
 
 \newcommand\sepframe[1] {
     \begin{frame}
