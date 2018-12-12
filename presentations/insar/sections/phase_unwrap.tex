@@ -1,0 +1,35 @@
+\def\ft{Fáziskicsomagolás}
+
+\begin{frame}{\ft}
+    \begin{minipage}[c]{0.475\textwidth}
+        \inc{phase_unwrapping.jpg}
+    \end{minipage}
+    \begin{minipage}[c]{0.475\textwidth}
+        \inc{unwrap1.png}
+    \end{minipage}
+    \vspace{10pt}
+    \begin{minipage}[c]{0.475\textwidth}
+    \begin{itemize}
+        \item fázis $2\pi$-ként periodukus
+        \item $\pi$-nél nagyobb \quo{ugrásokat} korrigálni kell
+        \item ez a lépés a fáziskicsomagolás
+        \item nem triviális és nem lineáris probléma
+        \item $k_n$ egész számok meghatározása
+    \end{itemize}
+    \end{minipage}
+    \begin{minipage}[c]{0.475\textwidth}
+        \inc{unwrap2.png}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}{\ft}
+    \begin{figp}{\fig{wrapped_and_unwrapped_ifg.jpg}}{}{0.6}{0.35}
+        \begin{itemize}
+            \item interferogram 2D-s
+            \item bonyolultabb probléma; több lehetőség ellenőrzésre
+            \item viszonyítási pont kiválasztása
+            \item deformáció meghatározása relatív egy kijelölt ponthoz képest: $\delta\rho = -\frac{\lambda}{4\pi}\subt{\phi}{def}$
+        \end{itemize}
+    \end{figp}
+\end{frame}

@@ -1,0 +1,87 @@
+\def\ft{Topográfiai fázis}
+
+\begin{frame}{\ft}
+    \begin{figp}{\inc{insar_phase.png}}{}{0.675}{0.3}
+        Interferogram = két SAR felvétel fázisértékeinek különbsége:
+        \begin{align*}
+            \phi\{k,l\} = & A_1\{k,l\} e^{i\psi_1\{k,l\}} \cdot \\
+                          & A_2\{k,l\} e^{-i\psi_2\{k,l\}}
+        \end{align*}
+    \end{figp}
+\end{frame}
+
+
+\begin{frame}{\ft}
+    \begin{minic}{0.6}
+        \inc{ifg_flattening.png}
+        \centering
+        
+        Az interferogram \quo{kilapítása} (IFG flattening)
+    \end{minic}
+\end{frame}
+
+
+\begin{frame}{\ft}
+    \begin{figp}{\inc{burgmann_geom.png}}{Két SAR felvétel geometriája}{0.4}{0.5}
+        \begin{itemize}
+            \item $\phi = \frac{4\pi}{\lambda}\rho_1\left[\left(1 - \frac{2 \vec{B}\hat{l}_1}{\rho_1} + \frac{B^2}{\rho_1^2}\right)^2\right]$
+            \item ha $B \ll \rho_{1,2}$ akkor $$\phi \approx - \frac{4\pi}{\lambda} (\vec{B}\hat{l}_1) = - \frac{4\pi}{\lambda} B \sin(\theta - \alpha)$$
+            \item a magasság pedig: $$h = H - \rho_1 \cos\theta$$
+            \item magassági \quo{bizonytalanság} (height ambiguity): $$\subt{h}{a} = 2\pi \pard{h}{\phi} = \frac{\lambda\rho_1\sin\theta}{2B\cos(\theta - \alpha)}$$
+        \end{itemize}
+    \end{figp}
+\end{frame}
+
+
+\begin{frame}{\ft}
+    \begin{center}
+    \begin{minipage}[c]{0.45\textwidth}
+        \fig{hooper_topo_1.png}
+    \end{minipage}
+    \hspace{10pt}
+    \begin{minipage}[c]{0.45\textwidth}
+        \fig{hooper_topo_2.png}
+    \end{minipage}
+    \centering
+    
+    Topográfiai fázisértékek két különböző merőleges bázisvonal esetén.
+    \end{center}
+\end{frame}
+
+\def\ft{Deformációs fázis}
+
+\begin{frame}{\ft}
+    \begin{figp}{\inc{burgmann_geom.png}}{Két SAR felvétel geometriája}{0.4}{0.5}
+        \begin{itemize}
+            \item $\phi \approx \frac{4\pi}{\lambda} (- \vec{B}\hat{l}_1 + \vec{D}\hat{l}_1))$
+            \item $\delta\rho = \vec{D}\hat{l}_1$
+            \item topográfiai fázis eltávolítása DEM segítségével; maradék fázis ideális esetben a deformációs fázis $$\phi \approx \frac{4\pi}{\lambda}\delta\rho$$
+            \item CSAK műholdirányú elmozdulások detektálhatóak
+        \end{itemize}
+    \end{figp}
+\end{frame}
+
+
+\def\ft{Egyéb fázistagok}
+
+\begin{frame}{\ft}
+    \begin{minic}{0.75}
+        \fig{kilauea.png}
+    \end{minic}
+\end{frame}
+
+\begin{frame}{\ft}
+    $$ \phi = \subt{\phi}{DEM} + \subt{\phi}{def} + \subt{\phi}{atmo} + \subt{\phi}{iono} + \subt{\phi}{pálya} + \subt{\phi}{zaj} $$
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{l l l} \toprule
+            Fázistag & térbeli jellemző & időbeli jellemző\\ \midrule
+            $\phi_{\text{def}}$ & hosszú hullámhosszú & alacsony frekvenciájú\\
+            $\phi_{\text{DEM}}$ & hosszú hullámhosszú & bázisvonallal korrelált \\
+            $\phi_{\text{atmo}}$ & hosszú hullámhosszú & magas frekvenciájú\\
+            $\phi_{\text{pálya}}$ & hosszú hullámhosszú & magas frekvenciájú \\
+            $\phi_{\text{zaj}}$ & rövid hullámhosszú & magas frekvenciájú \\ \bottomrule
+        \end{tabular}
+    \end{table}
+    \cite{Hooper2012}
+\end{frame}

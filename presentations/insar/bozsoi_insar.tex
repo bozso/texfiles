@@ -22,7 +22,6 @@
 %\input{../../aux/insar.tex}
 
 
-
 \graphicspath{{../../images/}}
 
 \title[Műholdas Távérzékelés Labor, 2018/19.I.]{Műholdas Radar Interferometria elmélete és alkalmazásai}
@@ -31,7 +30,7 @@
 \date{2018.12.13.}
 
 
-\includeonly{sections/phase_topo}
+\includeonly{sections/ts_anal}
 
 \begin{document}
 
@@ -44,27 +43,15 @@
     \end{center}
 \end{frame}
 
-\begin{frame}{Áttekintés}
-    \tableofcontents
-\end{frame}
 
 \include{sections/intro_sar}
 \include{sections/intro_insar}
-\include{sections/phase_topo}
-\include{sections/phase_def}
+\include{sections/phase_topodef}
+\include{sections/phase_coh_filt}
+\include{sections/phase_unwrap}
+\include{sections/ts_anal}
 
 
-%\begin{frame}{\ft}
-    %Goldstein-szűrés:
-    %\[
-        %H(u,v) = Z(u,v) \abs{Z(u,v)}^{\alpha}
-    %\]
-    %\begin{itemize}
-        %\item $H(u,v)$: szűrt értékek
-        %\item $Z(u,v)$: eredeti értékek
-        %\item $\alpha$: szűrés erőssége; $\alpha = 0$ nincs szűrés
-    %\end{itemize}
-%\end{frame}
 
 \begin{frame}{Hivatkozáslista}
     \bibliographystyle{apalike}
