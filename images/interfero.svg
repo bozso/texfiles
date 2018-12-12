@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="600"
+   height="480"
+   viewBox="0 0 600 480"
+   id="svg3518"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="interfero.svg">
+  <metadata
+     id="metadata3591">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Gnuplot</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3589">
+    <defs
+       id="defs3527">
+      <circle
+         stroke-width="0.5"
+         r="0.5"
+         id="gpDot" />
+      <path
+         d="M-1,0 h2 M0,-1 v2"
+         stroke="currentColor"
+         stroke-width="0.222"
+         id="gpPt0" />
+      <path
+         d="M-1,-1 L1,1 M1,-1 L-1,1"
+         stroke="currentColor"
+         stroke-width="0.222"
+         id="gpPt1" />
+      <path
+         d="M-1,0 L1,0 M0,-1 L0,1 M-1,-1 L1,1 M-1,1 L1,-1"
+         stroke="currentColor"
+         stroke-width="0.222"
+         id="gpPt2" />
+      <rect
+         height="2"
+         width="2"
+         y="-1"
+         x="-1"
+         stroke="currentColor"
+         stroke-width="0.222"
+         id="gpPt3" />
+      <rect
+         height="2"
+         width="2"
+         y="-1"
+         x="-1"
+         fill="currentColor"
+         stroke="currentColor"
+         stroke-width="0.222"
+         id="gpPt4" />
+      <circle
+         r="1"
+         cy="0"
+         cx="0"
+         stroke="currentColor"
+         stroke-width="0.222"
+         id="gpPt5" />
+      <use
+         stroke="none"
+         fill="currentColor"
+         id="gpPt6"
+         xlink:href="#gpPt5" />
+      <path
+         d="M0,-1.33 L-1.33,0.67 L1.33,0.67 z"
+         stroke="currentColor"
+         stroke-width="0.222"
+         id="gpPt7" />
+      <use
+         stroke="none"
+         fill="currentColor"
+         id="gpPt8"
+         xlink:href="#gpPt7" />
+      <use
+         transform="rotate(180)"
+         stroke="currentColor"
+         id="gpPt9"
+         xlink:href="#gpPt7" />
+      <use
+         stroke="none"
+         fill="currentColor"
+         id="gpPt10"
+         xlink:href="#gpPt9" />
+      <use
+         transform="rotate(45)"
+         stroke="currentColor"
+         id="gpPt11"
+         xlink:href="#gpPt3" />
+      <use
+         stroke="none"
+         fill="currentColor"
+         id="gpPt12"
+         xlink:href="#gpPt11" />
+    </defs>
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1056"
+     id="namedview3587"
+     showgrid="false"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="305.65684"
+     inkscape:cy="241.85779"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3518" />
+  <title
+     id="title3520">Gnuplot</title>
+  <desc
+     id="desc3522">Produced by GNUPLOT 4.6 patchlevel 4 </desc>
+  <rect
+     style="fill:none"
+     id="rect3525"
+     height="480"
+     width="600"
+     y="0"
+     x="0"
+     inkscape:export-filename="/home/istvan/insar/images/interfero.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90" />
+  <g
+     id="g3543"
+     style="color:#ffffff;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter"
+     inkscape:export-filename="/home/istvan/insar/images/interfero.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90" />
+  <g
+     id="g3559"
+     style="color:#000000;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter"
+     inkscape:export-filename="/home/istvan/insar/images/interfero.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90" />
+  <g
+     id="g3577"
+     style="color:#ffffff;fill:none;stroke:#5e9c36;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter"
+     inkscape:export-filename="/home/istvan/insar/images/interfero.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90" />
+  <g
+     id="g3186"
+     transform="translate(-10.590133,2.0548e-4)"
+     inkscape:export-filename="/home/istvan/insar/images/interfero.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90">
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/istvan/insar/images/interfero.png"
+       transform="matrix(0.5474053,0,0,0.5474053,227.99587,-6.978848)"
+       id="gnuplot_plot_1-2">
+      <title
+         id="title3149">gnuplot_plot_1</title>
+      <g
+         style="color:#ffffff;fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter"
+         id="g3151" />
+      <g
+         style="color:#ff0000;fill:none;stroke:currentColor;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter"
+         id="g3153">
+        <g
+           id="g3283">
+          <path
+             style="stroke:#8b1a0e"
+             inkscape:connector-curvature="0"
+             id="path3155"
+             d="m 20.7,398 1.9,-8.9 1.8,-9.4 1.9,-9.9 1.8,-10.2 1.9,-10.6 1.8,-10.9 1.9,-11.2 1.8,-11.5 1.9,-11.7 1.8,-11.9 1.9,-12.1 1.8,-12.1 1.9,-12.3 1.9,-12.3 1.8,-12.3 1.9,-12.3 1.8,-12.2 1.9,-12.2 1.8,-11.9 1.9,-11.9 1.8,-11.5 1.9,-11.4 1.8,-11.1 1.9,-10.7 1.8,-10.4 1.9,-10 1.9,-9.6 1.8,-9.2 1.9,-8.7 1.8,-8.2 1.9,-7.7 1.8,-7.1 1.9,-6.6 1.8,-6 1.9,-5.4 1.8,-4.8 1.9,-4.1 1.8,-3.5 1.9,-2.9 1.9,-2.1 1.8,-1.5 1.9,-0.9 1.8,-0.1 1.9,0.5 1.8,1.2 1.9,1.9 1.8,2.6 1.9,3.2 1.8,3.9 1.9,4.5 1.8,5.1 1.9,5.7 1.9,6.4 1.8,6.9 1.9,7.4 1.8,8 1.9,8.5 1.8,9 1.9,9.4 1.8,9.9 1.9,10.2 1.8,10.6 1.9,10.9 1.8,11.3 1.9,11.4 1.9,11.8 1.8,11.9 1.9,12 1.8,12.2 1.9,12.3 1.8,12.3 1.9,12.3 1.8,12.3 1.9,12.2 1.8,12.2 1.9,11.9 1.8,11.8 1.9,11.6 1.9,11.3 1.8,11.1 1.9,10.7 1.8,10.4 1.9,10 1.8,9.6 1.9,9.1 1.8,8.7 1.9,8.2 1.8,7.7 1.9,7.1 1.8,6.5 1.9,6 1.9,5.4 1.8,4.7 1.9,4.1 1.8,3.5 1.9,2.8 1.8,2.1 1.9,1.5 1.8,0.8 1.9,0.1 1.8,-0.6 1.9,-1.2 1.8,-1.9 1.9,-2.6 1.9,-3.3 1.8,-3.9 1.9,-4.5 1.8,-5.2 1.9,-5.7 1.8,-6.4 1.9,-6.9 1.8,-7.5 1.9,-8 1.8,-8.5 1.9,-9 1.8,-9.5 1.9,-9.8 1.9,-10.3 1.8,-10.6 1.9,-10.9 1.8,-11.3 1.9,-11.5 1.8,-11.7 1.9,-11.9 1.8,-12.1 1.9,-12.2 1.8,-12.3 1.9,-12.3 1.8,-12.3 1.9,-12.3 1.9,-12.2 1.8,-12.1 1.9,-12 1.8,-11.8 1.9,-11.5 1.8,-11.4 1.9,-11 1.8,-10.7 1.9,-10.4 1.8,-10 1.9,-9.5 1.8,-9.1 1.9,-8.7 1.9,-8.2 1.8,-7.6 1.9,-7.1 1.8,-6.5 1.9,-6 1.8,-5.3 1.9,-4.7 1.8,-4.1 1.9,-3.4 1.8,-2.8 1.9,-2.1 1.8,-1.4 1.9,-0.8 1.9,-0.1 1.8,0.6 1.9,1.3 1.8,1.9 1.9,2.7 1.8,3.2 1.9,4 1.8,4.5 1.9,5.2 1.8,5.8 1.9,6.4 1.8,7 1.9,7.5 1.9,8 1.8,8.5 1.9,9.1 1.8,9.4 1.9,9.9 1.8,10.3 1.9,10.6 1.8,11 1.9,11.2 1.8,11.6 1.9,11.7 1.8,11.9 1.9,12.1 1.9,12.2 1.8,12.3 1.9,12.3 1.8,12.3 1.9,12.3 1.8,12.2 1.9,12.1 1.8,12 1.9,11.7 1.8,11.6 1.9,11.3 1.8,11 1.9,10.7 1.9,10.4 1.8,9.9 1.9,9.6 1.8,9.1 1.9,8.6 1.8,8.1 1.9,7.7 1.8,7 1.9,6.5 1.8,5.9 1.9,5.3 1.8,4.7 1.9,4.1 1.9,3.4 1.8,2.7 1.9,2.1 1.8,1.4 1.9,0.7 1.8,0.1 1.9,-0.7 1.8,-1.3 1.9,-1.9 1.8,-2.7 1.9,-3.3 1.8,-4 1.9,-4.6 1.9,-5.2 1.8,-5.8 1.9,-6.4 1.8,-7 1.9,-7.5 1.8,-8.1 h 0.01" />
+        </g>
+      </g>
+    </g>
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/istvan/insar/images/interfero.png"
+       transform="matrix(1.957053,0,0,0.99946449,-447.75161,0.01831987)"
+       id="g3345">
+      <g
+         style="color:#000000;fill:none;stroke:none"
+         id="g3161"
+         transform="matrix(0.5474053,0,0,0.5474053,227.99587,-6.978848)">
+        <polygon
+           points="438.6,463.4 445.3,463.4 445.3,16.8 438.6,16.8 "
+           id="polygon3163"
+           style="fill:#000000" />
+      </g>
+      <path
+         d="m 468.08784,246.68877 0,-244.471209 3.66761,0 0,244.471209 -3.66761,0 h 0.005"
+         id="path3165"
+         inkscape:connector-curvature="0"
+         style="color:#000000;fill:none;stroke:#000000;stroke-width:0.5474053;stroke-linecap:butt;stroke-linejoin:miter" />
+    </g>
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/istvan/insar/images/interfero.png"
+       sodipodi:linespacing="125%"
+       id="text3632-1"
+       y="226.74976"
+       x="492.43781"
+       style="font-size:20.25050926px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="226.74976"
+         x="492.43781"
+         id="tspan3634-2"
+         sodipodi:role="line">Δd</tspan></text>
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/istvan/insar/images/interfero.png"
+       transform="matrix(0.20625518,0,0,0.17157266,539.28455,158.74566)"
+       id="g3688-7">
+      <rect
+         style="fill:#ffffff;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none"
+         id="rect3658-0"
+         width="81.976448"
+         height="33.797306"
+         x="-255.27753"
+         y="172.94788" />
+      <rect
+         style="fill:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none"
+         id="rect3664-9"
+         width="250"
+         height="24.7006"
+         x="-300"
+         y="205.29939" />
+      <rect
+         style="fill:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none"
+         id="rect3668-3"
+         width="20"
+         height="125"
+         x="-300"
+         y="155.00002" />
+      <rect
+         style="fill:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none"
+         id="rect3668-6-6"
+         width="20"
+         height="125"
+         x="-50"
+         y="155" />
+    </g>
+  </g>
+  <g
+     id="g3164"
+     transform="translate(-13.007175,0)"
+     inkscape:export-filename="/home/istvan/insar/images/interfero.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90">
+    <g
+       transform="matrix(0.50626272,0,0,0.50626272,245.05885,242.86654)"
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/istvan/insar/images/interfero.png"
+       id="gnuplot_plot_1">
+      <title
+         id="title3562">gnuplot_plot_1</title>
+      <g
+         style="color:#ffffff;fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter"
+         id="g3564" />
+      <g
+         style="color:#ff0000;fill:none;stroke:currentColor;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter"
+         id="g3566">
+        <path
+           d="m 20.7,398 1.9,-8.9 1.8,-9.4 1.9,-9.9 1.8,-10.2 1.9,-10.6 1.8,-10.9 1.9,-11.2 1.8,-11.5 1.9,-11.7 1.8,-11.9 1.9,-12.1 1.8,-12.1 1.9,-12.3 1.9,-12.3 1.8,-12.3 1.9,-12.3 1.8,-12.2 1.9,-12.2 1.8,-11.9 1.9,-11.9 1.8,-11.5 1.9,-11.4 1.8,-11.1 1.9,-10.7 1.8,-10.4 1.9,-10 1.9,-9.6 1.8,-9.2 1.9,-8.7 1.8,-8.2 1.9,-7.7 1.8,-7.1 1.9,-6.6 1.8,-6 1.9,-5.4 1.8,-4.8 1.9,-4.1 1.8,-3.5 1.9,-2.9 1.9,-2.1 1.8,-1.5 1.9,-0.9 1.8,-0.1 1.9,0.5 1.8,1.2 1.9,1.9 1.8,2.6 1.9,3.2 1.8,3.9 1.9,4.5 1.8,5.1 1.9,5.7 1.9,6.4 1.8,6.9 1.9,7.4 1.8,8 1.9,8.5 1.8,9 1.9,9.4 1.8,9.9 1.9,10.2 1.8,10.6 1.9,10.9 1.8,11.3 1.9,11.4 1.9,11.8 1.8,11.9 1.9,12 1.8,12.2 1.9,12.3 1.8,12.3 1.9,12.3 1.8,12.3 1.9,12.2 1.8,12.2 1.9,11.9 1.8,11.8 1.9,11.6 1.9,11.3 1.8,11.1 1.9,10.7 1.8,10.4 1.9,10 1.8,9.6 1.9,9.1 1.8,8.7 1.9,8.2 1.8,7.7 1.9,7.1 1.8,6.5 1.9,6 1.9,5.4 1.8,4.7 1.9,4.1 1.8,3.5 1.9,2.8 1.8,2.1 1.9,1.5 1.8,0.8 1.9,0.1 1.8,-0.6 1.9,-1.2 1.8,-1.9 1.9,-2.6 1.9,-3.3 1.8,-3.9 1.9,-4.5 1.8,-5.2 1.9,-5.7 1.8,-6.4 1.9,-6.9 1.8,-7.5 1.9,-8 1.8,-8.5 1.9,-9 1.8,-9.5 1.9,-9.8 1.9,-10.3 1.8,-10.6 1.9,-10.9 1.8,-11.3 1.9,-11.5 1.8,-11.7 1.9,-11.9 1.8,-12.1 1.9,-12.2 1.8,-12.3 1.9,-12.3 1.8,-12.3 1.9,-12.3 1.9,-12.2 1.8,-12.1 1.9,-12 1.8,-11.8 1.9,-11.5 1.8,-11.4 1.9,-11 1.8,-10.7 1.9,-10.4 1.8,-10 1.9,-9.5 1.8,-9.1 1.9,-8.7 1.9,-8.2 1.8,-7.6 1.9,-7.1 1.8,-6.5 1.9,-6 1.8,-5.3 1.9,-4.7 1.8,-4.1 1.9,-3.4 1.8,-2.8 1.9,-2.1 1.8,-1.4 1.9,-0.8 1.9,-0.1 1.8,0.6 1.9,1.3 1.8,1.9 1.9,2.7 1.8,3.2 1.9,4 1.8,4.5 1.9,5.2 1.8,5.8 1.9,6.4 1.8,7 1.9,7.5 1.9,8 1.8,8.5 1.9,9.1 1.8,9.4 1.9,9.9 1.8,10.3 1.9,10.6 1.8,11 1.9,11.2 1.8,11.6 1.9,11.7 1.8,11.9 1.9,12.1 1.9,12.2 1.8,12.3 1.9,12.3 1.8,12.3 1.9,12.3 1.8,12.2 1.9,12.1 1.8,12 1.9,11.7 1.8,11.6 1.9,11.3 1.8,11 1.9,10.7 1.9,10.4 1.8,9.9 1.9,9.6 1.8,9.1 1.9,8.6 1.8,8.1 1.9,7.7 1.8,7 1.9,6.5 1.8,5.9 1.9,5.3 1.8,4.7 1.9,4.1 1.9,3.4 1.8,2.7 1.9,2.1 1.8,1.4 1.9,0.7 1.8,0.1 1.9,-0.7 1.8,-1.3 1.9,-1.9 1.8,-2.7 1.9,-3.3 1.8,-4 1.9,-4.6 1.9,-5.2 1.8,-5.8 1.9,-6.4 1.8,-7 1.9,-7.5 1.8,-8.1 1.9,-8.6 1.8,-9 1.9,-9.5 1.8,-9.9 1.9,-10.3 1.8,-10.6 h 0.01"
+           id="path3568"
+           inkscape:connector-curvature="0"
+           style="stroke:#8b1a0e" />
+      </g>
+    </g>
+    <g
+       transform="matrix(0.50626272,0,0,0.50626272,245.05885,242.86654)"
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/istvan/insar/images/interfero.png"
+       id="gnuplot_plot_2">
+      <title
+         id="title3571">gnuplot_plot_2</title>
+      <g
+         style="color:#ff0000;fill:none;stroke:currentColor;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter"
+         id="g3573">
+        <path
+           d="m 443.4,396.3 1.8,-9 1.9,-9.5 1.8,-9.9 1.9,-10.3 1.8,-10.6 1.9,-11 1.9,-11.3 1.8,-11.5 1.9,-11.7 1.8,-12 1.9,-12.1 1.8,-12.2 1.9,-12.2 1.8,-12.4 1.9,-12.3 1.8,-12.3 1.9,-12.2 1.8,-12.1 1.9,-11.9 1.9,-11.8 1.8,-11.5 1.9,-11.3 1.8,-11 1.9,-10.7 1.8,-10.3 1.9,-10 1.8,-9.5 1.9,-9.1 1.8,-8.6 1.9,-8.1 1.8,-7.6 1.9,-7 1.9,-6.5 1.8,-5.9 1.9,-5.3 1.8,-4.6 1.9,-4 1.8,-3.4 1.9,-2.7 1.8,-2.1 1.9,-1.3 1.8,-0.7 1.9,-0.1 1.8,0.7 1.9,1.4 1.9,2 1.8,2.6 1.9,3.4 1.8,4 1.9,4.6 1.8,5.2 1.9,5.9 1.8,6.4 1.9,7.1 1.8,7.5 1.9,8.1 1.8,8.6 1.9,9 1.9,9.6 1.8,9.9 1.9,10.3 1.8,10.7 1.9,10.9 1.8,11.3 1.9,11.6 1.8,11.7 1.9,12 1.8,12.1 1.9,12.2 1.8,12.2 1.9,12.4 h 0.01"
+           id="path3575"
+           inkscape:connector-curvature="0"
+           style="stroke:#5e9c36" />
+      </g>
+    </g>
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/istvan/insar/images/interfero.png"
+       sodipodi:linespacing="125%"
+       id="text3632"
+       y="475.46063"
+       x="490.43805"
+       style="font-size:20.25050926px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="475.46063"
+         x="490.43805"
+         id="tspan3634"
+         sodipodi:role="line">ΔΦ</tspan></text>
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/istvan/insar/images/interfero.png"
+       transform="matrix(0.20625518,0,0,0.17157266,537.28494,407.45653)"
+       id="g3688">
+      <rect
+         style="fill:#ffffff;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none"
+         id="rect3658"
+         width="81.976448"
+         height="33.797306"
+         x="-255.27753"
+         y="172.94788" />
+      <rect
+         style="fill:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none"
+         id="rect3664"
+         width="250"
+         height="24.7006"
+         x="-300"
+         y="205.29939" />
+      <rect
+         style="fill:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none"
+         id="rect3668"
+         width="20"
+         height="125"
+         x="-300"
+         y="155.00002" />
+      <rect
+         style="fill:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none"
+         id="rect3668-6"
+         width="20"
+         height="125"
+         x="-50"
+         y="155" />
+    </g>
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/istvan/insar/images/interfero.png"
+       transform="matrix(1.957053,0,0,0.99946449,-381.87565,233.90786)"
+       id="g3345-3">
+      <g
+         style="color:#000000;fill:none;stroke:none"
+         id="g3161-6"
+         transform="matrix(0.5474053,0,0,0.5474053,227.99587,-6.978848)">
+        <polygon
+           points="445.3,463.4 445.3,16.8 438.6,16.8 438.6,463.4 "
+           id="polygon3163-7"
+           style="fill:#000000" />
+      </g>
+      <path
+         d="m 468.08784,246.68877 0,-244.471209 3.66761,0 0,244.471209 -3.66761,0 h 0.005"
+         id="path3165-5"
+         inkscape:connector-curvature="0"
+         style="color:#000000;fill:none;stroke:#000000;stroke-width:0.5474053;stroke-linecap:butt;stroke-linejoin:miter" />
+    </g>
+  </g>
+  <g
+     id="g3342"
+     inkscape:export-filename="/home/istvan/insar/images/interfero.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90">
+    <image
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/istvan/insar/images/interfero.png"
+       transform="matrix(0,-1,1,0,0,0)"
+       y="0"
+       x="-228"
+       id="image3271"
+       xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACxAR0DASIA AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3 ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3 uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii gAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKA CiiigA4o4rntc8Z6H4eG2/vV+0fw20Xzyt/wEcj8cVy/hn4pReKPGi6PbWqRQNC7fNJmTK4IyBwO M8dadmK56TRRRSGFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUU UUAFFFFABRRVLUNTstKtWuL+6itoV/jlYAfh60AXajeRY0Lu6qq/eZjgfnXlXiX44aRpm+LS4Wnf +GaZWCH3Cj5iPrtrx7xH8TNc193+0XDeV/d6L+Cjj881XL3Fc+gfEHxS8PaGjpHN9snX+GEjaD7s eK8e8TfGfWdV3xWsv2W3/wCedsxTcPQyfe/LFebJFe6nJsRJZ3/RRjj2FT/YrW2/4/77c/8Az7Wm JG9wzn5R+tO3YCG41G9vXdJZWZJG+6vAbPrjkn65rvfhJbS6Z8QdFuJv3XnM8XlsuDzG4H64riUl urNHvbKJoLWdgkbNhiuOwJ5z3rQ8HX91D450e6i/e3S3K7fMb7xLYwT2z0oA+y6KKKgYUUUUAFFF FABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRTHdY49zMFX1NcT4h+KPh7Qkd Fm+2XC/wwsNoPu54/LJ9qaVwO5rB1vxfonh9GN/fIrr/AMs0+Z/yHT8a8C8TfGjXNV3xWTfZbdv4 Ycjj3Y/Mfw2ivPJLjUtWn/5azuzfdXOPx/8Ar0WQj2XxP8d2+aDRYliX/no2Hk/AfdH61B47v9Q1 z4P+G9S855b2R/3knG5sjnnt07V45aRWqbZbq4+6x/0eOMsxxxyThQPxr1fVtRif4A6bLbv5Uq3h WNeCVGW/LjFUgPJ2sbhI0uLpHiSSQLuk6+5IPJ+tWPM021/1UTXkv96T5I/yHJpdLltZtSd9XdpY vKf7zDO7+Hlves1f8KYFq41K6uY/KeXbF/zwj+RfyHX8c1VX+D8KB/n86P8AP60gLzapcPoUWlP/ AMe8cplX/ePHTFP0Wf7N4g0+4/553at+oqh/9enxHZPE/wDdlVqYj7nBpap6VN9p0eyn/wCekCN+ ag1crMoKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKx9T8RabpUiQT3O66b7t tCpklb6KOfxPFY0+oeKdVTNpbxaJa/8APS5xLcMP9lAdq/8AAiaaQrnS32pWWl25nvrqKCL+9IwH 5etcHrnxUt7ZGXSLRp2/57TfIn4DqaydW0u1st9xdXEt5df8/N3Jvbo33R0Xt90CuM1X59+z/vqr 5UhXNT4o6/qVzHorfaHW3vNMjnkjViI9zbsnHft19K8qe0luZHeWVYkVvmaZsbfoOtd34t1GV9K8 NfKsTx6YibtwckDocdj1rhtQji8i3l81mlky027+E54578UdAKrNYWv3Ee8l/vSfJH+XU9qrXWo3 VzG8W/yov+ecPyL+Q6/jUbioyKBlvVRZfaovsH+q+zR7v+umPm/WvRLOSym+AN7E/wDx9R3Jde+3 DAcenBFeX4r13wdGlz8BfFkWxd8cmd3f+E0nfoB5CaP8/rTgP8/hSkf1p2Ab/wDX/nQR/X/Gn7f6 0oX+v8qLCuNx/n8KCP3f5NUoH9P8KXb+7/4Cf0NVYVz7B8CPv8DaO2/d/oy/NXR1xfwquPtPw40n /pnGY/yJ/wAa7SsnuWFFFFIAooooAKKKKACiiq17ewafaPdXT+XFGNzNQBZorG0PxTo3iNGbS9Qi nZfvR5wy/VTyK1887aAHUUmaWgAooqrd39rp8Pm3dxFAnrIwH5etAFqmM6xpudtqjua54+Ipb13t 9OtJVdo90M11GUic7lU/7RA3Z6c1XuNDt3RbjxJqbX235vLkbyrcfSMH5v8AgRanbuK5am8WWskj waRby6ncLw32f/VIf9qQ/KPwzWdqsWuTabdXV/qa2CRxF1htOOR0DSHk/hitOO+d40i0rT/3S/Kr SfuYl+gxk/gKz9Us7fWdKvYr24ef7KhWSGPMcPmAFgcdTjjqccUwJNO1DTU1K4t4ombUmdfOaO3J Pzcgs2MYxjvS3n9qzb97xWcX+z+8kYfU8D9aZp9pLN4YurKJ2glkV0jkkZiVLKdrEjB754waW4f7 LYxW7vueNFRm/vEADP6U0hNnI6rbW8O9/mll/wCekjbz09+nXtXEaiX8x9/97+9nv+ldfrFx/n/v muJ1CStSQ8UyWr+FPDHkf61baVJvl5yHGOe4+9XBTivSPFGx/hv4Sf8Auvdp+Ug/wrzuZalIoznW oitXGWo9lVyiuV9tes/DWOW6+G/jS1Vtq+R5nvkAk/oory3y69Q+Ev217DxLZWvlbJLPdJ5n93aw wPfmlJWVwWp5Sq/c/Cnhf8/hUojqTynT76ben3q0UBXK4X/P4U5V/pUwWlC1SgTcbDbyzSIkSb32 /d+lHlfwf7y1e0y7TT9Siunt4p0jYt5ci5VvqKhkbfO77Nu5y23suaagK59D/BC/in8C/Zd/723n bcv90Ngj+temV5D8BHX+w9UT+NZ1/LFev1xzVpM2WwUUUVIwooooAKKKKAErnvFErparGqbojkyb umOB9e/+cVtzXMUPDOu7+73NeZ6v42S5126tYtQltrLaixywr8zkg7tp6ggqR7c+tRNXjqVDfQ4r xfDquh3yXVrLFEkjebDcwyJuQEYKkjnH14rF8K+JtVtvED6pL4hlaVY9m2bc6uD/ALJOAB1zUHjC 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 "
+       height="136.63156"
+       width="220" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/istvan/insar/images/interfero.png"
+       sodipodi:linespacing="125%"
+       id="text3309"
+       y="124"
+       x="141.44531"
+       style="font-size:80px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       xml:space="preserve"><tspan
+         y="124"
+         x="141.44531"
+         id="tspan3311"
+         sodipodi:role="line">...</tspan></text>
+  </g>
+  <g
+     transform="translate(0,249.79185)"
+     id="g3342-5"
+     inkscape:export-filename="/home/istvan/insar/images/interfero.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90">
+    <image
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/istvan/insar/images/interfero.png"
+       transform="matrix(0,-1,1,0,0,0)"
+       y="0"
+       x="-228"
+       id="image3271-3"
+       xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACxAR0DASIA AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3 ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3 uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii gAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKA CiiigA4o4rntc8Z6H4eG2/vV+0fw20Xzyt/wEcj8cVy/hn4pReKPGi6PbWqRQNC7fNJmTK4IyBwO M8dadmK56TRRRSGFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUU UUAFFFFABRRVLUNTstKtWuL+6itoV/jlYAfh60AXajeRY0Lu6qq/eZjgfnXlXiX44aRpm+LS4Wnf +GaZWCH3Cj5iPrtrx7xH8TNc193+0XDeV/d6L+Cjj881XL3Fc+gfEHxS8PaGjpHN9snX+GEjaD7s eK8e8TfGfWdV3xWsv2W3/wCedsxTcPQyfe/LFebJFe6nJsRJZ3/RRjj2FT/YrW2/4/77c/8Az7Wm JG9wzn5R+tO3YCG41G9vXdJZWZJG+6vAbPrjkn65rvfhJbS6Z8QdFuJv3XnM8XlsuDzG4H64riUl urNHvbKJoLWdgkbNhiuOwJ5z3rQ8HX91D450e6i/e3S3K7fMb7xLYwT2z0oA+y6KKKgYUUUUAFFF FABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRTHdY49zMFX1NcT4h+KPh7Qkd Fm+2XC/wwsNoPu54/LJ9qaVwO5rB1vxfonh9GN/fIrr/AMs0+Z/yHT8a8C8TfGjXNV3xWTfZbdv4 Ycjj3Y/Mfw2ivPJLjUtWn/5azuzfdXOPx/8Ar0WQj2XxP8d2+aDRYliX/no2Hk/AfdH61B47v9Q1 z4P+G9S855b2R/3knG5sjnnt07V45aRWqbZbq4+6x/0eOMsxxxyThQPxr1fVtRif4A6bLbv5Uq3h WNeCVGW/LjFUgPJ2sbhI0uLpHiSSQLuk6+5IPJ+tWPM021/1UTXkv96T5I/yHJpdLltZtSd9XdpY vKf7zDO7+Hlves1f8KYFq41K6uY/KeXbF/zwj+RfyHX8c1VX+D8KB/n86P8AP60gLzapcPoUWlP/ AMe8cplX/ePHTFP0Wf7N4g0+4/553at+oqh/9enxHZPE/wDdlVqYj7nBpap6VN9p0eyn/wCekCN+ ag1crMoKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKx9T8RabpUiQT3O66b7t tCpklb6KOfxPFY0+oeKdVTNpbxaJa/8APS5xLcMP9lAdq/8AAiaaQrnS32pWWl25nvrqKCL+9IwH 5etcHrnxUt7ZGXSLRp2/57TfIn4DqaydW0u1st9xdXEt5df8/N3Jvbo33R0Xt90CuM1X59+z/vqr 5UhXNT4o6/qVzHorfaHW3vNMjnkjViI9zbsnHft19K8qe0luZHeWVYkVvmaZsbfoOtd34t1GV9K8 NfKsTx6YibtwckDocdj1rhtQji8i3l81mlky027+E54578UdAKrNYWv3Ee8l/vSfJH+XU9qrXWo3 VzG8W/yov+ecPyL+Q6/jUbioyKBlvVRZfaovsH+q+zR7v+umPm/WvRLOSym+AN7E/wDx9R3Jde+3 DAcenBFeX4r13wdGlz8BfFkWxd8cmd3f+E0nfoB5CaP8/rTgP8/hSkf1p2Ab/wDX/nQR/X/Gn7f6 0oX+v8qLCuNx/n8KCP3f5NUoH9P8KXb+7/4Cf0NVYVz7B8CPv8DaO2/d/oy/NXR1xfwquPtPw40n /pnGY/yJ/wAa7SsnuWFFFFIAooooAKKKKACiiq17ewafaPdXT+XFGNzNQBZorG0PxTo3iNGbS9Qi nZfvR5wy/VTyK1887aAHUUmaWgAooqrd39rp8Pm3dxFAnrIwH5etAFqmM6xpudtqjua54+Ipb13t 9OtJVdo90M11GUic7lU/7RA3Z6c1XuNDt3RbjxJqbX235vLkbyrcfSMH5v8AgRanbuK5am8WWskj waRby6ncLw32f/VIf9qQ/KPwzWdqsWuTabdXV/qa2CRxF1htOOR0DSHk/hitOO+d40i0rT/3S/Kr SfuYl+gxk/gKz9Us7fWdKvYr24ef7KhWSGPMcPmAFgcdTjjqccUwJNO1DTU1K4t4ombUmdfOaO3J Pzcgs2MYxjvS3n9qzb97xWcX+z+8kYfU8D9aZp9pLN4YurKJ2glkV0jkkZiVLKdrEjB754waW4f7 LYxW7vueNFRm/vEADP6U0hNnI6rbW8O9/mll/wCekjbz09+nXtXEaiX8x9/97+9nv+ldfrFx/n/v muJ1CStSQ8UyWr+FPDHkf61baVJvl5yHGOe4+9XBTivSPFGx/hv4Sf8Auvdp+Ug/wrzuZalIoznW oitXGWo9lVyiuV9tes/DWOW6+G/jS1Vtq+R5nvkAk/oory3y69Q+Ev217DxLZWvlbJLPdJ5n93aw wPfmlJWVwWp5Sq/c/Cnhf8/hUojqTynT76ben3q0UBXK4X/P4U5V/pUwWlC1SgTcbDbyzSIkSb32 /d+lHlfwf7y1e0y7TT9Siunt4p0jYt5ci5VvqKhkbfO77Nu5y23suaagK59D/BC/in8C/Zd/723n bcv90Ngj+temV5D8BHX+w9UT+NZ1/LFev1xzVpM2WwUUUVIwooooAKKKKAErnvFErparGqbojkyb umOB9e/+cVtzXMUPDOu7+73NeZ6v42S5126tYtQltrLaixywr8zkg7tp6ggqR7c+tRNXjqVDfQ4r xfDquh3yXVrLFEkjebDcwyJuQEYKkjnH14rF8K+JtVtvED6pL4hlaVY9m2bc6uD/ALJOAB1zUHjC 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 "
+       height="136.63156"
+       width="220" />
+    <text
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/istvan/insar/images/interfero.png"
+       sodipodi:linespacing="125%"
+       id="text3309-5"
+       y="124"
+       x="141.44531"
+       style="font-size:80px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       xml:space="preserve"><tspan
+         y="124"
+         x="141.44531"
+         id="tspan3311-6"
+         sodipodi:role="line">...</tspan></text>
+  </g>
+</svg>

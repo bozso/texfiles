@@ -15,7 +15,9 @@
 \usepgfplotslibrary{polar}
 \usepackage[framemethod=TikZ]{mdframed}
 
+
 \input{../../aux/anfig.tex}
+\input{../../aux/common.tex}
 \input{../../aux/presentation.tex}
 %\input{../../aux/insar.tex}
 
@@ -42,21 +44,101 @@
     \tableofcontents
 \end{frame}
 
+\def\ft{Ismétlés - Szintetikus Apertúrájú Radar}
+\section{\ft}
 
-\section{Ismétlés - Szintetikus Apertúrájú Radar}
-\frametitle{Ismétlés - Szintetikus Apertúrájú Radar}
 
-\begin{frame}{Ismétlés - Szintetikus Apertúrájú Radar (SAR)}
+\begin{frame}{\ft}
     \begin{itemize}
-        \item kiváló felbontás, de csak egy csatornán (mikrohullámú tartomány)
+        \item kiváló térbeli felbontás, egy csatornán (mikrohullámú tartomány)
+        \begin{itemize}
+            \item L-sáv: 1-2 GHz; 30-15 cm (PalSAR)
+            \item S-sáv: 2-4 GHz; 15-7.5 cm
+            \item C-sáv: 4-8 GHz; 7.5-3.8 cm (Sentinel-1, ERS, Envisat)
+            \item X-sáv: 8-12 GHz; 3.82.5 cm (TerraSAR-X)
+        \end{itemize}
         \item koherens radar: amplitúdó ÉS fázis regisztrálása
         \item alkalmazás amplitúdóra: Freidl Zoli előadása
-        \item tudunk valami információt kinyerni a fázisból?
     \end{itemize}
 \end{frame}
 
 
+\begin{frame}{\ft}
+    % \cite{RamonHanssen}
+    \begin{figp}{ramon_SAR.png}{Radar felvétel geometriája}{0.5}{0.4}
+        RAR (Real Aperture Radar) felbontása: azimut / slant range $\approx 5$ km, ground range $\approx 14$ km:
+        $$ \subt{W}{a} = \frac{\lambda}{\subt{L}{a}} R $$
+        $$ \subt{\Delta}{r} = \frac{c\tau}{2} $$
+    \end{figp}
+\end{frame}
 
+\def\ft{Range felbontás növelése}
+\subsection{\ft}
+
+\begin{frame}{\ft}
+    \begin{figp}{chirp_demod.png}{}{0.4}{0.4}
+        Chirp jel kibocsájtása, visszavert jel feldolgozása illesztett szűréssel:
+        \begin{align*}
+            f(t) &= a t & \text{lineárisan növekvő frekvencia} \\
+            \subt{B}{R} &= a \tau & \text{sávszélesség} \\
+            \subt{\Delta}{r} &= \frac{c}{2 \subt{B}{R}} \approx 9.6 m & \text{slant range felbontás}
+        \end{align*}
+        $\approx 25$ m ground range felbontás
+    \end{figp}
+\end{frame}
+
+\def\ft{Azimut felbontás növelése}
+\subsection{\ft}
+
+\begin{frame}{\ft}
+    \begin{center}
+    \begin{minipage}[c]{0.45\textwidth}
+        \fig{sar_synthetic_length.png}
+    \end{minipage}
+    \hspace{10pt}
+    \begin{minipage}[c]{0.45\textwidth}
+        \fig{chirp_azimuth.png}
+    \end{minipage}
+    \end{center}
+\end{frame}
+
+
+\def\ft{Nyers SAR felvétel fókuszálása}
+\subsection{\ft}
+
+\begin{frame}{\ft}
+    \begin{minic}{0.8}
+        \inc{rng_azi_compression.png}
+        
+        \centering
+        Felbontás fókuszálás után: ground range: $\approx 25$ m, azimut: $\approx 10$ m (ERS-1,2)
+    \end{minic}
+\end{frame}
+
+
+\def\ft{Ismétlés - Szintetikus Apertúrájú Radar}
+
+\begin{frame}{\ft}
+    \begin{minic}{0.85}
+        \inc{mw_bands.png}
+        
+        \centering
+        Különböző radarsávban készült felvételek egy területről.
+    \end{minic}
+\end{frame}
+
+
+\begin{frame}{\ft}
+    % insartut
+    \begin{figp}{sar_speckle.png}{}{0.45}{0.45}
+        \begin{itemize}
+            \item amplitúdó ÉS fázis érték pixelenként; komplex számként reprezentálható
+            \item $\subt{C}{SAR} = A e^{i\phi}$
+            \item $\subt{C}{SAR} = \sum_j c_{\text{SAR},j}$
+            \item 
+        \end{itemize}
+    \end{figp}
+\end{frame}
 
 \begin{frame}{Egy hullám fázisa}
     \input{wave_phase.tex}
@@ -70,5 +152,18 @@
 \end{frame}
 
 
+\begin{frame}{\ft}
+    Goldstein-szűrés:
+    \[
+        H(u,v) = Z(u,v) \abs{Z(u,v)}^{\alpha}
+    \]
+    \begin{itemize}
+        \item $H(u,v)$: szűrt értékek
+        \item $Z(u,v)$: eredeti értékek
+        \item $\alpha$: szűrés erőssége; $\alpha = 0$ nincs szűrés
+    \end{itemize}
+\end{frame}
+
+%\bibliography{../../insar}
 
 \end{document}

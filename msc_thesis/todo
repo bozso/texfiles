@@ -1,0 +1,20 @@
+Auto SBAS hálozat betenni
+SBAS zajparaméter változtatása, hogy változnak a PS-ek
+
+
+##########################################################
+
+
+kész:
+SBAS PS helyett szórópont
+hány része esik a LOS sebességeknek a +/- 5 mm/év-be
+Merőleges és párhuzamos B, H_2pi a topo fejezetben
+Hoeven2005 szerzők?
+irodalomjegyzék nevek kijavítása
+Programok hivatkozás
+PS kiválasztás valószínűségi alap
+igen erős ellentét
+
+rho_min = 0.5
+dt_max = 1500 nap
+b_perp_max = 1070 m
