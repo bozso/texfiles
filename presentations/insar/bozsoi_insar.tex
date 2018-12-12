@@ -234,7 +234,7 @@
 
 
 \begin{frame}{\ft}
-    \begin{figp}{\inc{burgmann_geom.png}}{Két SAR felvétel geometriája}{0.4}{0.45}
+    \begin{figp}{\inc{burgmann_geom.png}}{Két SAR felvétel geometriája}{0.4}{0.5}
         \begin{itemize}
             \item $\phi = \frac{4\pi}{\lambda}\rho_1\left[\left(1 - \frac{2 \vec{B}\hat{l}_1}{\rho_1} + \frac{B^2}{\rho_1^2}\right)^2\right]$
             \item ha $B \ll \rho_{1,2}$ akkor $$\phi \approx - \frac{4\pi}{\lambda} (\vec{B}\hat{l}_1) = - \frac{4\pi}{\lambda} B \sin(\theta - \alpha)$$
@@ -245,17 +245,47 @@
 \end{frame}
 
 
+\begin{frame}{\ft}
+    \begin{center}
+    \begin{minipage}[c]{0.45\textwidth}
+        \fig{hooper_topo_1.png}
+    \end{minipage}
+    \hspace{10pt}
+    \begin{minipage}[c]{0.45\textwidth}
+        \fig{hooper_topo_2.png}
+    \end{minipage}
+    \centering
+    
+    Topográfiai fázisértékek két különböző merőleges bázisvonal esetén.
+    \end{center}
+\end{frame}
+
+
 \def\ft{Az interferogram fázisértékei: deformációs fázis}
 \subsection{\ft}
 
 \begin{frame}{\ft}
-    \begin{figp}{\inc{burgmann_geom.png}}{Két SAR felvétel geometriája}{0.4}{0.45}
+    \begin{figp}{\inc{burgmann_geom.png}}{Két SAR felvétel geometriája}{0.4}{0.5}
         \begin{itemize}
             \item $\phi \approx \frac{4\pi}{\lambda} (- \vec{B}\hat{l}_1 + \vec{D}\hat{l}_1))$
             \item $\delta\rho = \vec{D}\hat{l}_1$
+            \item topográfiai fázis eltávolítása DEM segítségével; maradék fázis ideális esetben a deformációs fázis $$\phi \approx \frac{4\pi}{\lambda}\delta\rho$$
+            \item CSAK műholdirányú elmozdulások detektálhatóak
         \end{itemize}
     \end{figp}
 \end{frame}
+
+
+\def\ft{Az interferogram fázisértékei: egyéb fázistagok}
+\subsection{\ft}
+
+
+\begin{frame}{\ft}
+    \begin{minic}{0.75}
+        \fig{kilauea.png}
+    \end{minic}
+\end{frame}
+
 
 
 \begin{frame}{\ft}
