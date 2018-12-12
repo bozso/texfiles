@@ -1,0 +1,84 @@
+\newcommand{\sinPhase}[2] {
+    \addplot[smooth, domain=0:360,line width=1.5pt, #2]{sin(x - (#1))};
+}
+
+\newcommand{\phase}[2] {
+    \addplot[->, >=latex, line width=2.5pt, #2] coordinates { (0,0) (#1,1.5) };
+}
+
+\newcommand{\wavesAmpl}[1]{
+\begin{tikzpicture}[baseline,scale=#1]
+\begin{axis}[
+    domain=0.0:360,
+    xlabel={$x$ (deg)},
+    ylabel={$y = f(x)$},
+    enlarge x limits=false,
+    legend style={at={(0.5, -0.2)}, anchor=north, legend columns=3},
+]
+    \sinPhase{0}{blue}
+    \sinPhase{90}{red}
+    \sinPhase{210}{green}
+    \legend{$\sin(x)$, $\sin(x - 90^\circ)$, $\sin(x - 210^\circ)$}
+\end{axis}
+\end{tikzpicture}
+}
+
+
+\newcommand{\wavesPhase}[1]{
+\begin{tikzpicture}[baseline,scale=#1]
+\begin{polaraxis} [
+    xlabel={Fázis (deg)},
+    ytick = \empty,
+]
+    \phase{0}{blue}
+    \phase{90}{red}
+    \phase{210}{green}
+\end{polaraxis}
+\end{tikzpicture}
+}
+
+
+\sepframe{Radarinterferometriai alapok}
+\section{Radarinterferometriai alapok}
+
+\def\ft{Periodukus függvény fázisának tulajdonságai}
+\subsection{\ft}
+
+\begin{frame}{\ft}
+    \begin{center}
+    \begin{tabular}{rl}
+    \wavesAmpl{0.8}
+    &
+    \wavesPhase{0.6}
+    \end{tabular}
+    \vspace{20pt}
+    
+    \centering
+    360 fokonként ($2 \pi$) periodikus; $f(x) = f(x + n \cdot 2 \pi)$, $n$ egész szám
+    \end{center}
+\end{frame}
+
+
+\def\ft{Egy SAR felvétel fázisértékei}
+\subsection{\ft}
+
+\begin{frame}{\ft}
+    \begin{minic}{0.8}
+        \fig{sar_phase.png}
+        \centering
+        
+        Egy SLC fázisképe.
+    \end{minic}
+\end{frame}
+
+
+\begin{frame}{\ft}
+    \begin{figp}{\fig{sar_phase.png}}{Egy SLC fázisképe.}{0.6}{0.35}
+        \begin{itemize}
+            \item $\phi = \frac{4\pi}{\lambda}R$; $2\pi$-ként periodikus!
+            \item $R = 700-1000 $ km \hspace{10pt} $\lambda \approx 5$ cm
+            \item Több millió ciklus!
+            \item Nem tartalmaz hasznos információt.
+        \end{itemize}
+    \end{figp}
+\end{frame}

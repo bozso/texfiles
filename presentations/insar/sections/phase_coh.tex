@@ -1,0 +1,24 @@
+\def\ft{InSAR fázis koherenciája}
+\subsection{\ft}
+
+\begin{frame}{\ft}
+    \begin{minic}{0.75}
+        \fig{kilauea.png}
+    \end{minic}
+\end{frame}
+
+
+\begin{frame}{\ft}
+    % agram2015noise
+    \begin{minipage}[c]{0.5\textwidth}
+        \inc{insar_coherence.png}
+    \end{minipage}
+    \hspace{10pt}
+    \begin{minipage}[c]{0.4\textwidth}
+    Koherencia definíciója:
+    $$ \gamma = \frac{|\langle s_1 s_2^* \rangle|}{\sqrt{\langle s_1 s_1^*
+        \rangle \langle s_2 s_2^* \rangle}}, $$
+    $s_1$, $s_2$ a két felvétel komplex pixelértékei. Átlagolás csúszóablakkal (boxcar) vagy egyéb módszerrel.
+    \end{minipage}
+
+\end{frame}
