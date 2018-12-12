@@ -21,6 +21,8 @@
 \input{../../aux/presentation.tex}
 %\input{../../aux/insar.tex}
 
+\include{wave_phase}
+
 \graphicspath{{../../images/}}
 
 \title[Műholdas Távérzékelés Labor, 2018/19.I.]{Műholdas Radar Interferometria elmélete és alkalmazásai}
@@ -65,7 +67,7 @@
 
 \begin{frame}{\ft}
     % \cite{RamonHanssen}
-    \begin{figp}{ramon_SAR.png}{Radar felvétel geometriája}{0.5}{0.4}
+    \begin{figp}{\inc{ramon_SAR.png}}{Radar felvétel geometriája}{0.5}{0.4}
         RAR (Real Aperture Radar) felbontása: azimut / slant range $\approx 5$ km, ground range $\approx 14$ km:
         $$ \subt{W}{a} = \frac{\lambda}{\subt{L}{a}} R $$
         $$ \subt{\Delta}{r} = \frac{c\tau}{2} $$
@@ -76,7 +78,7 @@
 \subsection{\ft}
 
 \begin{frame}{\ft}
-    \begin{figp}{chirp_demod.png}{}{0.4}{0.4}
+    \begin{figp}{\inc{chirp_demod.png}}{}{0.4}{0.4}
         Chirp jel kibocsájtása, visszavert jel feldolgozása illesztett szűréssel:
         \begin{align*}
             f(t) &= a t & \text{lineárisan növekvő frekvencia} \\
@@ -107,7 +109,7 @@
 \subsection{\ft}
 
 \begin{frame}{\ft}
-    \begin{minic}{0.8}
+    \begin{minic}{0.75}
         \inc{rng_azi_compression.png}
         
         \centering
@@ -130,25 +132,100 @@
 
 \begin{frame}{\ft}
     % insartut
-    \begin{figp}{sar_speckle.png}{}{0.45}{0.45}
+    \begin{figp}{\fig{sar_speckle.png}}{}{0.45}{0.45}
         \begin{itemize}
             \item amplitúdó ÉS fázis érték pixelenként; komplex számként reprezentálható
-            \item $\subt{C}{SAR} = A e^{i\phi}$
-            \item $\subt{C}{SAR} = \sum_j c_{\text{SAR},j}$
-            \item 
+            \item egyetlen SAR pixel értéke: $\subt{C}{SAR} = A e^{i\phi}$
+            \item $\subt{C}{SAR} = \sum_j c_j$
         \end{itemize}
     \end{figp}
 \end{frame}
 
-\begin{frame}{Egy hullám fázisa}
-    \input{wave_phase.tex}
+
+\begin{frame}{\ft}
+    \begin{minic}{0.64}
+        %RamonHanssen
+        \fig{ramon_shortening.png}
+        \centering
+        
+        Topográfia által okozott geometriai torzulásai a felbontási cellának.
+    \end{minic}
 \end{frame}
 
 
-\begin{frame}{Egy SAR felvétel fázisképe}
-    \begin{minic}{0.5}
-        \figc{vrancea.png}{Asd}
+\begin{frame}{\ft}
+    \begin{minic}{0.85}
+        \inc{mt_merapi.png}
+        \centering
+        
+        Különböző felvételi geometriából készült felvételek a Merapi-hegyről (Indonézia)
     \end{minic}
+\end{frame}
+
+
+\sepframe{Radarinterferometriai alapok}
+\section{Radarinterferometriai alapok}
+
+\def\ft{Periodukus függvény fázisának tulajdonságai}
+\subsection{\ft}
+
+\begin{frame}{\ft}
+    \begin{center}
+    \begin{tabular}{rl}
+    \wavesAmpl{0.8}
+    &
+    \wavesPhase{0.6}
+    \end{tabular}
+    \vspace{20pt}
+    
+    \centering
+    360 fokonként ($2 \pi$) periodikus; $f(x) = f(x + n \cdot 2 \pi)$, $n$ egész szám
+    \end{center}
+\end{frame}
+
+
+\def\ft{Egy SAR felvétel fázisértékei}
+\subsection{\ft}
+
+\begin{frame}{\ft}
+    \begin{minic}{0.8}
+        \fig{sar_phase.png}
+        \centering
+        
+        Egy SLC fázisképe.
+    \end{minic}
+\end{frame}
+
+\begin{frame}{\ft}
+    \begin{figp}{\fig{sar_phase.png}}{Egy SLC fázisképe.}{0.6}{0.35}
+        \begin{itemize}
+            \item $\phi = \frac{4\pi}{\lambda}R$; $2\pi$-ként periodikus!
+            \item $R = 700-1000 $ km \hspace{10pt} $\lambda \approx 5$ cm
+            \item Több millió ciklus!
+            \item Nem tartalmaz hasznos információt.
+        \end{itemize}
+    \end{figp}
+\end{frame}
+
+
+\def\ft{Az interferogram fázisértékei}
+\subsection{\ft}
+
+
+\begin{frame}{\ft}
+    \begin{minic}{0.6}
+        \inc{insar_phase.png}
+        \centering
+        
+        Interferogram: két SAR felvétel fázisértékeinek különbsége.
+    \end{minic}
+\end{frame}
+
+
+\begin{frame}{\ft}
+    \begin{figp}{}{}{0.6}{0.35}
+        
+    \end{figp}
 \end{frame}
 
 
