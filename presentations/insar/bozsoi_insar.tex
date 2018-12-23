@@ -14,7 +14,7 @@
 \usepackage{graphicx, tikz, pgf, pgfplots, booktabs, amsmath}
 \usepgfplotslibrary{polar}
 \usepackage[framemethod=TikZ]{mdframed}
-
+\bibliographystyle{apalike}
 
 \input{../../aux/anfig.tex}
 \input{../../aux/common.tex}
@@ -52,10 +52,22 @@
 \include{sections/earthquake}
 \include{sections/ts_an}
 
+\begin{frame}{Összefoglalás}
+    \begin{itemize}
+        \item InSAR, nagy felszíni felbontással felszíni elmozdulások térképezése
+        \item jó pár feldolgozási lépés amiről nem beszéltem
+        \item elektromágneses hullámterjedés, jelfeldolgozás (Fourier-transzformáció, digitális szűrés), adatfeldolgozási módszerek
+    \end{itemize}
+\end{frame}
 
+\begin{frame}
+    \begin{center}
+        \Huge \color{blue!55!black}
+        Köszönöm a figyelmet!
+    \end{center}
+\end{frame}
 
-\begin{frame}{Hivatkozáslista}
-    \bibliographystyle{apalike}
+\begin{frame}[allowframebreaks]{Hivatkozáslista}
     \bibliography{../../insar}    
 \end{frame}
 
