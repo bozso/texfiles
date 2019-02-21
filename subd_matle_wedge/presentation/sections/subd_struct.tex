@@ -1,0 +1,176 @@
+\sepcite{A szubdukciós zónák hőmérsékleti és kőzettani felépítése}{peacock}
+
+
+\begin{frame}{A szubdukciós zónák hőmérsékleti és kőzettani felépítése}
+    \begin{minipage}[c]{0.4\textwidth}
+        \centering
+        \inc{peacock_subd_schem.png}
+        {\footnotesize
+        \begin{itemize}
+            \item $T$: hőmérséklet (K)
+            \item $Q_0$: hőfluxus (W/$\text{m}^2$)
+            \item $Q_{\text{sh}}$: nyírási hőtermelés (W/$\text{m}^2$)
+            \item $z_f$: a vetőtől számított mélység
+            \item $b$: konstans ($\approx 1$)
+            \item $V$: lemezek közeledési sebessége (m/s)
+            \item $\delta$: a szubdukció szöge
+            \item $\kappa$: hődiffuzivitás ($\text{m}^2$/s)
+        \end{itemize}
+        }
+    \end{minipage}
+    \begin{minipage}[c]{0.5\textwidth}
+        Analitikus modell ($z < $ 50 km):
+        \[
+            T = \frac{(Q_0 + Q_{\text{sh}}) z_f / k}{S}
+        \]
+        \[
+            S = 1 + b \sqrt{(V z_f \sin\delta) / \kappa}
+        \]
+        Numerikus modell:
+        \[
+            \frac{\partial T}{\partial t} = \kappa \nabla^2 T - \mathbf{v} \nabla T + \frac{A}{\rho C}
+        \]
+        {\footnotesize
+        \begin{itemize}
+            \item $t$: idő (s)
+            \item $\mathbf{v}$: sebességmező (m/s)
+            \item $\rho$: sűrűség (kg/$\text{m}^3$)
+            \item $A$: térfogati hőtermelés (W/$\text{m}^3$)
+            \item $C$: hőkapacitás (J/(kg K))
+        \end{itemize}
+        }
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}{Modellfuttatások eredményei}
+    \begin{minipage}[c]{0.45\textwidth}
+        \inc{peacock_sim_res1.png}
+        
+        \inc{peacock_sim_res_cap.png}
+    \end{minipage}
+    \begin{minipage}[c]{0.45\textwidth}
+        \begin{itemize}
+            \item $\delta = 26.6^\circ$
+            \item $t_{\text{litoszféra}} = 50$ Ma
+            \item köpenyék sebességmező $\lar$ analitikus modell
+            \item stacionárius (steady-state) megoldás
+            \item főbb praméterek: litoszféra hőmersékleti szerkezete (kora), közeledési sebesség, szubdukció geometriája, nyírási hőtermelés, radioaktív hőtermelés, köpenyék áramlás
+            \item legfontosabb tényezők: nyírási hőtermelés, indukalt köpenyék konvekcio
+        \end{itemize}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}{A nyírási hőtermelés szerepe}
+    \begin{minipage}[c]{0.45\textwidth}
+        \inc{peacock_sim_res2.png}
+        
+        \inc{peacock_sim_res_cap.png}
+    \end{minipage}
+    \begin{minipage}[c]{0.45\textwidth}
+        \[
+            Q_{\text{sh}} = \tau V
+        \]
+        \begin{itemize}
+            \item $\tau$: nyírasi feszültseg (Pa)
+            \item $V$: lemezek közeledési sebessége (m/s)
+        \end{itemize}
+        \vspace{10pt}
+        
+        $V$ jól ismert, $\tau$ becslés felszíni hőfluxus alapján: 0 -- néhany 10 -- $\approx$ 100 MPa
+        \vspace{10pt}
+        
+        hőmerseklet a nyírasi zónában 100 km mélységben nyírási fűtes nélkul: 300 - 750 $^\circ$C, 100 MPa nyírási feszültség nyírasi hőtermelés: 1000 $^\circ$C
+    \end{minipage}
+\end{frame}
+
+
+
+\begin{frame}{Modellek a nyírási hőtermelés kiszámitására}
+    Konstans:
+    \[
+        \tau = \text{konstans}
+    \]
+
+    Lineáris függvénye a nyomásnak/mélységnek; töréses (súrlódásos) deformáció:
+    \[
+        \tau = \gamma P
+    \]
+    
+    
+    Plasztikus (creep) deformáció; jól közelíti a plasztikus anyagok reológiáját:
+    \[
+        \tau = \tau_{\text{BP}} \exp{[(T - T_{\text{BP}}) / L]}
+    \]
+    
+    \begin{itemize}
+        \item $\tau_{\text{BP}}$: nyírási feszültség a brittle-plastic határon
+        \item $T_{\text{BP}}$: hőmérséklet a brittle-plastic határon
+        \item $L$: karakterisztikus relaxációs skála
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Modellfuttatások eredényei}
+    \begin{minipage}[c]{0.65\textwidth}
+        \centering
+        \inc{peacock_mmf_facies1.png}
+        \begin{itemize}
+            \item ha nincs nyírási hőtermelés, gyorsabb közeledés $\rar$ kisebb szubdukciós nyírási zóna hőmérsékletek
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}[c]{0.3\textwidth}
+        \begin{itemize}
+            \item nyírási hőtermelés + gyorsabb közeledés $\rar$ nagyobb hőmérsékletek
+            \item fiatalabb lemez $\rar$ ``melegebb'' szubdukció
+            \item indukált köpenyék könvekció $\rar$ + 200-350 $\circ$C
+        \end{itemize}
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Ábrafelirat}
+    \begin{minic}{0.95}
+        \inc{peacock_mmf_facies_cap1.png}
+    \end{minic}
+\end{frame}
+
+\begin{frame}{Modellfuttatások eredényei}
+    \begin{figp}{\inc{peacock_mmf_facies2.png}}{$T_{\text{BP}}$ különböző ásványokra kiszámítva: 300 $^\circ$C kvarcit, 500 $^\circ$C diabáz, márvány és kvarcit, 800 $^\circ$C olivin.}{0.65}{0.3}
+        \begin{itemize}
+            \item $ T > T_{\text{BP}}$ nyírási hőtermelés gyors csökkenés
+            \item mérési adatok $\rar$ nyírási hőtermelés hatásának meghatározása: 10 - 30 MPa
+            \item becsült hőmérséklet 100 - 125 km mélységben: 500 - 700 $\circ$C
+        \end{itemize}
+    \end{figp}
+\end{frame}
+
+
+\begin{frame}{Ábrafelirat}
+    \begin{minic}{0.95}
+        \inc{peacock_mmf_facies_cap2.png}
+    \end{minic}
+\end{frame}
+
+
+\begin{frame}{Kőzettani szerkezet}
+    \begin{minipage}[c]{0.45\textwidth}
+        \centering
+        \inc{peacock_subd_petro.png}
+    \end{minipage}
+    \hspace{5pt}
+    \begin{minipage}[c]{0.45\textwidth}
+        \begin{itemize}
+            \item P-T görbék apapján $\rar$ szubdukálódó óceáni lemez nem olvad meg; szubszoliduszon keresztül kékpala $\rar$ eklogit átalakulás; ritka esetekben parciális ovladás
+            \item Na-amfibol, lawsonit és klorit dehidratáviója $\rar$ nagy mennyiségű \ce{H_2 O} kibocsájtása $\rar$ parciális olvadás a köpenyékben
+            \item modell bizonytalanságok $\rar$ kőzettani szerkezet bizonytalanságai
+        \end{itemize}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}{Ábrafelirat}
+    \begin{minic}{0.8}
+        \inc{peacock_subd_petro_cap.png}
+    \end{minic}
+\end{frame}
