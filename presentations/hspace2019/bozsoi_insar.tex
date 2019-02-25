@@ -91,9 +91,11 @@
     \begin{center}
         \includegraphics[width=0.55\textwidth]{wrapped_and_unwrapped_ifg.jpg}
     \end{center}
+
     \[
         \subt{d}{defo.} = \frac{\lambda}{4\pi} \subt{\Phi}{defo.,unwrapped}
     \]
+
     Multiple interferograms $\rar$ time-series analysis $\rar$ LOS deformation time-series.
 \end{frame}
 
@@ -119,7 +121,7 @@
         \includegraphics[width=0.6\textwidth]{parajd.png}
     \end{center}
     
-    First results show deformation on the southern flanks of the salt diapir. Subsidence in the $3-4$ cm/yr  range. Lack of scatterers on the top of the salt diapir $\rar$ artificial reflectors.
+    First results show deformation on the southern flanks of the salt diapir. Subsidence is in the $3-4$ cm/yr range. Lack of scatterers on the top of the salt diapir $\rar$ artificial reflectors.
 \end{frame}
 
 
@@ -127,7 +129,7 @@
     \begin{center}
         \includegraphics[width=0.8\textwidth]{parajd_ts.png}
     
-    Clear trend of linear movement away from the satellite.    
+    Clear trend of near constant velocity deformation away from the satellite.    
     \end{center}
 \end{frame}
 
@@ -156,7 +158,7 @@
     \begin{center}
         \includegraphics[width=1.0\textwidth]{dszekcso_ts.png}
         
-        Similar time-series for all 3 moving reflectors, subsidence and movement towards east, the Danube.
+        Similar time-series for all 3 moving reflectors, subsidence and movement towards the east (Danube).
     \end{center}
 \end{frame}
 
@@ -179,7 +181,7 @@
             \frac{\mathrm{ZWD}}{\mathrm{IWD}} &= 10^{-8} \left(k_2 - \frac{R_d}{R_w} k_1 + \frac{k_3}{T_m} \right) R_w \\
             T_m &= 70.2 + 0.72 T_s
         \end{align*}
-        Constants: $k_1$, $k_2$, $k_3$, $R_d$, $R_w$
+        Constants: $k_1$, $k_2$, $k_3$, $R_d$, $R_w$ REFS
         \item SAR images processed with Gamma and StaMPS software REF
     \end{itemize}    
 \end{frame}
@@ -204,8 +206,8 @@
     \begin{itemize}
         \item two PALSAR-1 SAR scenes covering the Yamagochi Prefecture in Japan, L-band, more sensitive to ionospheric effects
         \item dispersive propagation of electromagnetic waves in ionosphere, phase delay depends on frequency
-        \item filtering IFG creating high and low sub-band IFGs,  $\dtec$ is proportional to sub-band IFG phase differences
-        \item robust method developed by ref:
+        \item filtering IFG creating high and low sub-band IFGs, $\dtec$ is proportional to sub-band IFG phase differences REF
+        \item robust method developed by REF based on REF:
         \[
             \subt{\Phi}{iono.} = x \Phi_0 + y (\subt{\Phi}{high} - \subt{\Phi}{low}) = \frac{4\pi K}{c f_0} \dtec
         \]
@@ -226,7 +228,10 @@
 \end{frame}
 
 
-\begin{frame}{Summary}
+\begin{frame}{}
+
+    {\Large \fcol Discussion}
+    
     \begin{itemize}
         \item multiple applications of InSAR technology
         \item Sentinel-1 extremely useful for monitoring surface deformation
@@ -234,7 +239,10 @@
         \item long-term time series of integrated quantities: trends, their correlation, troposphere - ionosphere interaction
     \end{itemize}
     
+    \vspace{10pt}
+    
     {\Large \fcol Future plans}
+    
     \begin{itemize}
         \item Refinement of deformation monitoring techniques.
         \item $\dtec$ estimation based on Sentinel-1 images
@@ -256,6 +264,7 @@
     \vspace{10pt}
     
     Contains modified Copernicus Sentinel data 2014-2018, processed by ESA.
+    \vspace{5pt}
     
     This study was supported by the TopoTransylvania - a multidisciplinary Earth science initiative in Central Europe to tackle local and global challenges project (NKFI NN 128629).
 \end{frame}
