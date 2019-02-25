@@ -39,15 +39,22 @@
         \item high resolution; $20 \mathrm{m} \times 5 \mathrm{m}$ sized pixels - Low Earth Orbit C-band (5.405 MHz) SAR satellites
         \item each pixel: amplitude and phase represented as a complex number
         \item single scene phases are random
-        \item formation of an interferogram: phase differences between two SAR scenes
+        \item formation of an interferogram (IFG): phase differences between two SAR scenes
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Interferogram}
+
+\begin{frame}{Phase of an interferogram}
     \begin{center}
-        \includegraphics[width=0.8\textwidth]{insar_phase.png}
+        \includegraphics[width=0.7\textwidth]{insar_phase.png}
+        
+        \begin{align*}
+            \phi\{k,l\} = & A_1\{k,l\} e^{i\psi_1\{k,l\}} \times \\
+                          & A_2\{k,l\} e^{-i\psi_2\{k,l\}}
+        \end{align*}
     \end{center}
 \end{frame}
+
 
 \begin{frame}{Phase of the interferogram}
     \[
@@ -63,6 +70,7 @@
     \end{itemize}    
 \end{frame}
 
+
 \begin{frame}{Processing the interferometric phase}
     \[
         \subt{\Phi}{IFG} = \subt{\Phi}{defo.} + \subt{\Phi}{atmo.} + \subt{\Phi}{topo.} + \subt{\Phi}{orbit} + \subt{\Phi}{noise}
@@ -72,7 +80,7 @@
         \item $\subt{\Phi}{topo.}$: using DEM, residuals correlated with baseline
         \item $\subt{\Phi}{atmo.}$: atmopsheric models, temporal filtering
         \item $\subt{\Phi}{oribt}$: more precise orbit data, deramping
-        \item spatial filtering Goldstein-filter %\ref{}
+        \item spatial filtering Goldstein-filter REF
     \end{itemize}
 \end{frame}
 
@@ -101,6 +109,7 @@
         \item salt deformation governed by weather phenomena
         \item TopoTransyvania project: investigation of the Carpathian Bend and subduction zone
         \item analyse geodynamic processes (seismic activity, post volcanic activity, salt tectonics)
+        \item SAR images processed with the Gamma Software REF
     \end{itemize}
 \end{frame}
 
@@ -109,20 +118,23 @@
     \begin{center}
         \includegraphics[width=0.6\textwidth]{parajd.png}
     \end{center}
+    
     First results show deformation on the southern flanks of the salt diapir. Subsidence in the $3-4$ cm/yr  range. Lack of scatterers on the top of the salt diapir $\rar$ artificial reflectors.
 \end{frame}
 
 
 \begin{frame}{\ft}
     \begin{center}
-        \includegraphics[width=0.6\textwidth]{parajd_ts.png}
+        \includegraphics[width=0.8\textwidth]{parajd_ts.png}
+    
+    Clear trend of linear movement away from the satellite.    
     \end{center}
 \end{frame}
 
 
 \def\ft{Monitoring the displacement time-series of benchmark reflector networks}
-
 \sepframe{Examples of InSAR applications: \ft}
+
 
 \begin{frame}{\ft}
     \begin{itemize}
@@ -131,6 +143,7 @@
         \item IB network, settlement (Dunaszekcső) along the loess banks of the Danube
         \item GNSS measurements 1 year apart
         \item 3D displacements from combination of InSAR and GNSS data with Kalman filtering
+        \item SAR images processed with Gamma and StaMPS software REF
     \end{itemize}
 
     \begin{center}
@@ -141,8 +154,111 @@
 
 \begin{frame}{\ft}
     \begin{center}
-        \includegraphics[width=0.9\textwidth]{dszekcso_ts.png}
+        \includegraphics[width=1.0\textwidth]{dszekcso_ts.png}
+        
+        Similar time-series for all 3 moving reflectors, subsidence and movement towards east, the Danube.
     \end{center}
 \end{frame}
+
+
+\def\ft{Estimation of Integrated Water Vapor (IWV) maps using InSAR}
+\sepframe{Examples of InSAR applications: \ft}
+
+
+\begin{frame}{\ft}
+    \begin{itemize}
+        \item Sentinel-1 A and B ascending dataset covering the area around previously described benchmarks
+        \item assumptions:
+        \begin{itemize}
+            \item no surface displacement (except for the landslide area)
+            \item IFG phase due to change in IWV dominates over IFG phase caused by change in pressure and temperature profiles
+        \end{itemize}
+        \item calculation of Zenith Wet Delay (ZWD) changes and converting them into absolute ZWV values using the ECMWF ERA-Interim model
+        \item conversion of ZWD into IWD:
+        \begin{align*}
+            \frac{\mathrm{ZWD}}{\mathrm{IWD}} &= 10^{-8} \left(k_2 - \frac{R_d}{R_w} k_1 + \frac{k_3}{T_m} \right) R_w \\
+            T_m &= 70.2 + 0.72 T_s
+        \end{align*}
+        Constants: $k_1$, $k_2$, $k_3$, $R_d$, $R_w$
+        \item SAR images processed with Gamma and StaMPS software REF
+    \end{itemize}    
+\end{frame}
+
+
+\begin{frame}{\ft}
+    \begin{center}
+        \includegraphics[width=0.85\textwidth]{iwv.png}
+        \vspace{-20pt}
+        
+        {\small Integrated Water Vapor (IWV) values. Dates:  1 - 2016.09.24., 2 - 2016.10.06., 3 - 2016.10.16., 4 - 2016.10.24., 5 - 2016.12.30., 6 - 2016.12.05.}
+    \end{center}
+\end{frame}
+
+
+\def\ft{Calculation of slant range ionospheric TEC differences}
+\sepframe{Examples of InSAR applications: \ft}
+
+\def\dtec{\Delta\mathrm{TEC}}
+
+\begin{frame}{\ft}
+    \begin{itemize}
+        \item two PALSAR-1 SAR scenes covering the Yamagochi Prefecture in Japan, L-band, more sensitive to ionospheric effects
+        \item dispersive propagation of electromagnetic waves in ionosphere, phase delay depends on frequency
+        \item filtering IFG creating high and low sub-band IFGs,  $\dtec$ is proportional to sub-band IFG phase differences
+        \item robust method developed by ref:
+        \[
+            \subt{\Phi}{iono.} = x \Phi_0 + y (\subt{\Phi}{high} - \subt{\Phi}{low}) = \frac{4\pi K}{c f_0} \dtec
+        \]
+        Constants: $x$, $y$ depend on sub-band frequencies, $K = 40.31$ $\mathrm{m}^3 \mathrm{s}^{-2}$, $c$ - speed of light, $f_0$ - radar center frequency
+        \item SAR images processed with Gamma and StaMPS software REF
+    \end{itemize}
+    
+\end{frame}
+
+
+\begin{frame}{\ft}
+    \begin{minipage}[c]{0.7\textwidth}
+        \includegraphics[width=1.0\textwidth]{iono.png}
+    \end{minipage}
+    \begin{minipage}[c]{0.28\textwidth}
+         Total Electron Content (TEC) changes between 2009.03.28. and 2009.06.28. above the Yamagochi Prefecture Japan. TEC changes are relative to the upper left corner of the SAR scene. 1 TECU = $10^{16}$ $\mathrm{electron} / \mathrm{m}^2$. Background image is the SAR backscatter intensity image of the 2009.03.28. scene.
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}{Summary}
+    \begin{itemize}
+        \item multiple applications of InSAR technology
+        \item Sentinel-1 extremely useful for monitoring surface deformation
+        \item estimation of slant-range and vertical integrated quantities (IWV, TEC) describing the state of the atmosphere
+        \item long-term time series of integrated quantities: trends, their correlation, troposphere - ionosphere interaction
+    \end{itemize}
+    
+    {\Large \fcol Future plans}
+    \begin{itemize}
+        \item Refinement of deformation monitoring techniques.
+        \item $\dtec$ estimation based on Sentinel-1 images
+        \item IWV calculation without the need for auxiliary data (weather model).
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \begin{center}
+        \Huge \fcol
+        Thank you for your attention!
+    \end{center}
+    \vspace{25pt}
+    
+    \begin{center}
+        \Large \fcol \center Acknowledgement
+    \end{center}
+    \vspace{10pt}
+    
+    Contains modified Copernicus Sentinel data 2014-2018, processed by ESA.
+    
+    This study was supported by the TopoTransylvania - a multidisciplinary Earth science initiative in Central Europe to tackle local and global challenges project (NKFI NN 128629).
+\end{frame}
+
 
 \end{document}
