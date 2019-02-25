@@ -1,0 +1,148 @@
+\documentclass{beamer}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx, tikz}
+\usepackage[framemethod=TikZ]{mdframed}
+
+\mode<presentation>
+{
+    \usetheme{Boadilla}
+    \usecolortheme{default}
+    \usefonttheme{default}
+    \setbeamertemplate{navigation symbols}{}
+    \setbeamertemplate{caption}[numbered]
+} 
+
+
+\title[H-SPACE, Budapest 2019]{Exploitation of Sentinel-1 SAR data for studying geodynamic, tropospheric and ionospheric processes.}
+\author[Bozsó et al.]{István Bozsó, Eszter Szűcs, László Bányai, Viktor Wesztergom}
+\institute[MTA CSFK GGI]{MTA CSFK Geodetic and Geophysical Institute}
+\date{2019.02.28.}
+
+\input{../../aux/common.tex}
+\input{../../aux/presentation.tex}
+
+\graphicspath{{../../images/}}
+
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}{Introduction}
+    InSAR technology: Synthetic Aperture Radar (SAR) based interferometry:
+    \begin{itemize}
+        \item SAR images: ground-based, airplane, UAV, satellite
+        \item high resolution; $20 \mathrm{m} \times 5 \mathrm{m}$ sized pixels - Low Earth Orbit C-band (5.405 MHz) SAR satellites
+        \item each pixel: amplitude and phase represented as a complex number
+        \item single scene phases are random
+        \item formation of an interferogram: phase differences between two SAR scenes
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Interferogram}
+    \begin{center}
+        \includegraphics[width=0.8\textwidth]{insar_phase.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Phase of the interferogram}
+    \[
+        \subt{\Phi}{IFG} = \subt{\Phi}{defo.} + \subt{\Phi}{atmo.} + \subt{\Phi}{topo.} + \subt{\Phi}{orbit} + \subt{\Phi}{noise}
+    \]
+    \begin{itemize}
+        \item $\subt{\Phi}{IFG}$: phase of the interferogram 
+        \item $\subt{\Phi}{defo.}$ : phase caused by surface deformation, that occurred between the two SAR acquisitions, in the Line-of-Sight (LOS) direction
+        \item $\subt{\Phi}{atmo.}$: phase caused by the change in atmospheric microwave propagation speed
+        \item $\subt{\Phi}{topo.}$: phase due to topography
+        \item $\subt{\Phi}{orbit}$: phase from errors of the orbital state vector
+        \item $\subt{\Phi}{noise}$: noise from residual phase terms, that cannot be modeled
+    \end{itemize}    
+\end{frame}
+
+\begin{frame}{Processing the interferometric phase}
+    \[
+        \subt{\Phi}{IFG} = \subt{\Phi}{defo.} + \subt{\Phi}{atmo.} + \subt{\Phi}{topo.} + \subt{\Phi}{orbit} + \subt{\Phi}{noise}
+    \]
+    Separation and estimation of the different phase terms:
+    \begin{itemize}
+        \item $\subt{\Phi}{topo.}$: using DEM, residuals correlated with baseline
+        \item $\subt{\Phi}{atmo.}$: atmopsheric models, temporal filtering
+        \item $\subt{\Phi}{oribt}$: more precise orbit data, deramping
+        \item spatial filtering Goldstein-filter %\ref{}
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Deformation}
+    If estimation of $\subt{\Phi}{defo.}$ is done $\rar$ phase unwrapping $\rar$ LOS deformation.
+
+    \begin{center}
+        \includegraphics[width=0.55\textwidth]{wrapped_and_unwrapped_ifg.jpg}
+    \end{center}
+    \[
+        \subt{d}{defo.} = \frac{\lambda}{4\pi} \subt{\Phi}{defo.,unwrapped}
+    \]
+    Multiple interferograms $\rar$ time-series analysis $\rar$ LOS deformation time-series.
+\end{frame}
+
+
+\def\ft{Mapping surface displacement based on natural scatterers}
+\sepframe{Examples of InSAR applications: \ft}
+
+
+\begin{frame}{\ft}
+    \begin{itemize}
+        \item $\approx$ 3.5 years of Sentinel-1 A descending orbit data (105 scenes)
+        \item covering the Praid salt extrusion in Carpathian Bend area
+        \item salt deformation governed by weather phenomena
+        \item TopoTransyvania project: investigation of the Carpathian Bend and subduction zone
+        \item analyse geodynamic processes (seismic activity, post volcanic activity, salt tectonics)
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{\ft}
+    \begin{center}
+        \includegraphics[width=0.6\textwidth]{parajd.png}
+    \end{center}
+    First results show deformation on the southern flanks of the salt diapir. Subsidence in the $3-4$ cm/yr  range. Lack of scatterers on the top of the salt diapir $\rar$ artificial reflectors.
+\end{frame}
+
+
+\begin{frame}{\ft}
+    \begin{center}
+        \includegraphics[width=0.6\textwidth]{parajd_ts.png}
+    \end{center}
+\end{frame}
+
+
+\def\ft{Monitoring the displacement time-series of benchmark reflector networks}
+
+\sepframe{Examples of InSAR applications: \ft}
+
+\begin{frame}{\ft}
+    \begin{itemize}
+        \item $\approx$ 1 year of Sentinel-1 A and B ascending and descending orbit data
+        \item geodetic/geodynamic integrated benchmarks (IBs)
+        \item IB network, settlement (Dunaszekcső) along the loess banks of the Danube
+        \item GNSS measurements 1 year apart
+        \item 3D displacements from combination of InSAR and GNSS data with Kalman filtering
+    \end{itemize}
+
+    \begin{center}
+        \figm{dszekcso_refl_1.jpg}{0.5}
+    \end{center}
+\end{frame}
+
+
+\begin{frame}{\ft}
+    \begin{center}
+        \includegraphics[width=0.9\textwidth]{dszekcso_ts.png}
+    \end{center}
+\end{frame}
+
+\end{document}

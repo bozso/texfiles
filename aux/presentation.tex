@@ -7,6 +7,19 @@
     \end{mdframed}
 }
 
+\newcommand{\figm}[2]{
+    \begin{center}
+    \begin{minipage}[c]{#2\textwidth}
+    \begin{mdframed}[linecolor=blue!65!white, linewidth=1.75pt, roundcorner=0.75pt,
+                     innerrightmargin=0pt, innerleftmargin=0pt,
+                     innertopmargin=0pt, innerbottommargin=0pt,
+                     backgroundcolor=white, frametitle={}, align=center]
+        \includegraphics[width=1.0\textwidth]{#1}
+    \end{mdframed}
+    \end{minipage}
+    \end{center}
+}
+
 \newenvironment{minic}[1]
 {
     \begin{center}
