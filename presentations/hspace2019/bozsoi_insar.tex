@@ -4,6 +4,11 @@
 \usepackage[T1]{fontenc}
 \usepackage{graphicx, tikz}
 \usepackage[framemethod=TikZ]{mdframed}
+\usepackage[backend=bibtex,style=verbose-trad2]{biblatex}
+
+\bibliography{../../insar.bib}
+
+%\addbibresource{../../insar.bib}
 
 \mode<presentation>
 {
@@ -80,7 +85,8 @@
         \item $\subt{\Phi}{topo.}$: using DEM, residuals correlated with baseline
         \item $\subt{\Phi}{atmo.}$: atmopsheric models, temporal filtering
         \item $\subt{\Phi}{oribt}$: more precise orbit data, deramping
-        \item spatial filtering Goldstein-filter REF
+        %\item spatial filtering Goldstein-filter \footfullcite{ZebkerGoldstein1986}
+        \item spatial filtering Goldstein-filter \autocite{ZebkerGoldstein1986}
     \end{itemize}
 \end{frame}
 
@@ -269,5 +275,9 @@
     This study was supported by the TopoTransylvania - a multidisciplinary Earth science initiative in Central Europe to tackle local and global challenges project (NKFI NN 128629).
 \end{frame}
 
+
+\begin{frame}{}
+    \printbibliography
+\end{frame}
 
 \end{document}
