@@ -2,13 +2,9 @@
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{graphicx, tikz}
+\usepackage{graphicx, tikz, multicol}
 \usepackage[framemethod=TikZ]{mdframed}
-\usepackage[backend=bibtex,style=verbose-trad2]{biblatex}
 
-\bibliography{../../insar.bib}
-
-%\addbibresource{../../insar.bib}
 
 \mode<presentation>
 {
@@ -85,8 +81,7 @@
         \item $\subt{\Phi}{topo.}$: using DEM, residuals correlated with baseline
         \item $\subt{\Phi}{atmo.}$: atmopsheric models, temporal filtering
         \item $\subt{\Phi}{oribt}$: more precise orbit data, deramping
-        %\item spatial filtering Goldstein-filter \footfullcite{ZebkerGoldstein1986}
-        \item spatial filtering Goldstein-filter \autocite{ZebkerGoldstein1986}
+        \item spatial filtering Goldstein-filter \cite{GoldsteinFilter}
     \end{itemize}
 \end{frame}
 
@@ -117,7 +112,7 @@
         \item salt deformation governed by weather phenomena
         \item TopoTransyvania project: investigation of the Carpathian Bend and subduction zone
         \item analyse geodynamic processes (seismic activity, post volcanic activity, salt tectonics)
-        \item SAR images processed with the Gamma Software REF
+        \item SAR images processed with the Gamma Software \cite{werner2000gamma}
     \end{itemize}
 \end{frame}
 
@@ -151,11 +146,11 @@
         \item IB network, settlement (Dunaszekcső) along the loess banks of the Danube
         \item GNSS measurements 1 year apart
         \item 3D displacements from combination of InSAR and GNSS data with Kalman filtering
-        \item SAR images processed with Gamma and StaMPS software REF
+        \item SAR images processed with Gamma and StaMPS software \cite{Hooper2008}
     \end{itemize}
 
     \begin{center}
-        \figm{dszekcso_refl_1.jpg}{0.5}
+        \figm{dszekcso_refl_1.jpg}{0.45}
     \end{center}
 \end{frame}
 
@@ -181,14 +176,14 @@
             \item no surface displacement (except for the landslide area)
             \item IFG phase due to change in IWV dominates over IFG phase caused by change in pressure and temperature profiles
         \end{itemize}
-        \item calculation of Zenith Wet Delay (ZWD) changes and converting them into absolute ZWV values using the ECMWF ERA-Interim model
-        \item conversion of ZWD into IWD:
+        \item estimate Zenith Wet Delay (ZWD) changes and convert into absolute ZWV using the ECMWF ERA-Interim model \cite{ERA_I}
+        \item ZWD $\rar$ IWD \cite{saastamoinen1972atmospheric}:
         \begin{align*}
             \frac{\mathrm{ZWD}}{\mathrm{IWD}} &= 10^{-8} \left(k_2 - \frac{R_d}{R_w} k_1 + \frac{k_3}{T_m} \right) R_w \\
             T_m &= 70.2 + 0.72 T_s
         \end{align*}
-        Constants: $k_1$, $k_2$, $k_3$, $R_d$, $R_w$ REFS
-        \item SAR images processed with Gamma and StaMPS software REF
+        Constants: $k_1$, $k_2$, $k_3$, $R_d$, $R_w$ \cite{thayer1974improved, smith1953constants, hopfield1969two}
+        \item SAR images processed with Gamma and StaMPS software
     \end{itemize}    
 \end{frame}
 
@@ -213,12 +208,12 @@
         \item two PALSAR-1 SAR scenes covering the Yamagochi Prefecture in Japan, L-band, more sensitive to ionospheric effects
         \item dispersive propagation of electromagnetic waves in ionosphere, phase delay depends on frequency
         \item filtering IFG creating high and low sub-band IFGs, $\dtec$ is proportional to sub-band IFG phase differences REF
-        \item robust method developed by REF based on REF:
+        \item robust method developed by \cite{wegmuller2018reformulating} based on \cite{meyer2006potential,gomba2015estimation}:
         \[
             \subt{\Phi}{iono.} = x \Phi_0 + y (\subt{\Phi}{high} - \subt{\Phi}{low}) = \frac{4\pi K}{c f_0} \dtec
         \]
         Constants: $x$, $y$ depend on sub-band frequencies, $K = 40.31$ $\mathrm{m}^3 \mathrm{s}^{-2}$, $c$ - speed of light, $f_0$ - radar center frequency
-        \item SAR images processed with Gamma and StaMPS software REF
+        \item SAR images processed with Gamma software
     \end{itemize}
     
 \end{frame}
@@ -276,8 +271,9 @@
 \end{frame}
 
 
-\begin{frame}{}
-    \printbibliography
+\begin{frame}[allowframebreaks]{Bibliography}
+    \tiny\bibliography{../../../insar}
+    \bibliographystyle{abbrv}
 \end{frame}
 
 \end{document}
