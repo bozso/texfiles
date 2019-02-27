@@ -2,7 +2,7 @@
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{graphicx, tikz, multicol}
+\usepackage{graphicx, tikz, multicol, wrapfig}
 \usepackage[framemethod=TikZ]{mdframed}
 
 
@@ -31,6 +31,11 @@
 
 \begin{frame}
     \titlepage
+    \begin{center}
+        \begin{minipage}[c]{0.3\textwidth}
+            \includegraphics[width=0.75\textwidth]{ggi_logo.png}
+        \end{minipage}
+    \end{center}
 \end{frame}
 
 \begin{frame}{Introduction}
@@ -148,9 +153,13 @@
         \item 3D displacements from combination of InSAR and GNSS data with Kalman filtering
         \item SAR images processed with Gamma and StaMPS software \cite{Hooper2008}
     \end{itemize}
-
+\end{frame}
+\begin{frame}{\ft}
     \begin{center}
-        \figm{dszekcso_refl_1.jpg}{0.45}
+        \figm{dszekcso_refl_1.jpg}{0.75}
+        \vspace{10pt}
+        
+        Integrated benchmark on top of a subsiding loess bank of the Danube.
     \end{center}
 \end{frame}
 
@@ -273,7 +282,7 @@
 
 \begin{frame}[allowframebreaks]{Bibliography}
     \tiny\bibliography{../../../insar}
-    \bibliographystyle{abbrv}
+    \bibliographystyle{apalike}
 \end{frame}
 
 \end{document}
