@@ -1,5 +1,6 @@
 \documentclass[a4paper,10pt]{letter}
 \usepackage[magyar]{babel}
+\usepackage[utf8]{inputenc}
 \usepackage[left=5pt, right=5pt, bottom=5pt, top=5pt]{geometry}
 
 
@@ -8,28 +9,27 @@
 
 % load misc stuff
 \usepackage{graphicx, tikz, xcolor}
-\usetikzlibrary{positioning}
+%\usetikzlibrary{positioning}
 
 \def\mcol{blue!25!white!40!black}
 
-\def\header
-{
+\def\header{%
     \begin{tikzpicture}
-        \draw node[draw, rectangle, fill=\mcol, minimum width=2.18cm] at (0,0)
-        {
-            \begin{tikzpicture}
-                \node[inner sep=0pt] (logo)  { \includegraphics[height=0.75cm]{Logo_sima_kitoltes.png} };
-                \node[right=of logo, xshift=-4em] { \large\bfseries \quad Magyar Űrkutatási Fórum};
-            \end{tikzpicture}
+        \draw node[draw=\mcol, rectangle, fill=\mcol, rounded corners=2pt] at (0,0) {%
+            \begin{minipage}[c]{0.75cm}
+                \includegraphics[height=0.75cm]{Logo_sima_kitoltes.png}
+            \end{minipage}
+            \begin{minipage}[c]{5.75cm}
+                { \large \bfseries \quad \color{white!80!black} Magyar Űrkutatási Fórum }
+            \end{minipage}
         };
-        %\draw node[inner sep=0pt] at (0, 0) 
     \end{tikzpicture}
 }
 
 
 % make your default ticket. \ticketdefault is somewhat like a background
 \renewcommand{\ticketdefault}{%
-    \put( -1,  40){\header}
+    \put( 0,  40){\header}
     \put( 5, 13){\line(1,0){60}}
     \put( 7, 10){\scriptsize Magyar Űrkutatási Fórum}
     \put( 7,  7){\scriptsize MTA CSFK GGI}
@@ -37,32 +37,17 @@
 }
 
 
-%\newcommand{\badge}[2]
-%{%
-    %\begin{minipage}{8cm}
-        %\begin{center}
-            %\header
-
-            %\makebox[0mm]{\bfseries\Large #1}
-            
-            %\makebox[0mm]{\bfseries\large #2}
-        %\end{center}
-    %\end{minipage}
-%}
-
 % now what do you like to put in your ticket
-\newcommand{\badge}[2]{\ticket{%
-    \put(35,32){\makebox[0mm]{\bfseries\Large #1}}
-    \put(35,24){\makebox[0mm]{\bfseries\large #2}}%
-}}
+\newcommand{\badge}[2]{%
+    \ticket{%
+        \put(35,32){\makebox[0mm]{\bfseries\Large #1}}
+        \put(35,24){\makebox[0mm]{\bfseries\large #2}}%
+    }
+}
 
 
-%% the pins for the partipiciants ... ;-)
-%% you can generate this part from a database!
 \begin{document}
-
 \sffamily
-\badge{Camelus dromedarius}{North Africa}
-%\badge{Camelus dromedarius}{North Africa}
+\badge{Kovács János}{ELTE XY Tanszék}
 
 \end{document}
