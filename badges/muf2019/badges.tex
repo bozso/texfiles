@@ -1,8 +1,7 @@
 \documentclass[a4paper,10pt]{letter}
-\usepackage[magyar]{babel}
+%\usepackage[magyar]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[left=5pt, right=5pt, bottom=5pt, top=5pt]{geometry}
-
 
 % load ticket.sty with the appropriate ticket definition
 \usepackage[freepin,crossmark]{ticket}
@@ -12,15 +11,24 @@
 %\usetikzlibrary{positioning}
 
 \def\mcol{blue!25!white!40!black}
+\def\hcol{white!80!black}
+
 
 \def\header{%
     \begin{tikzpicture}
-        \draw node[draw=\mcol, rectangle, fill=\mcol, rounded corners=2pt] at (0,0) {%
-            \begin{minipage}[c]{0.75cm}
-                \includegraphics[height=0.75cm]{Logo_sima_kitoltes.png}
+        %\draw node[draw=\mcol, rectangle, top color=\mcol, bottom color=white] at (0,0) {%
+        \draw node[draw=\mcol, rectangle, fill=\mcol] at (0,0) {%
+            \begin{minipage}[c]{0.9cm}
+                \includegraphics[height=1cm]{Logo_sima_kitoltes.png}
             \end{minipage}
-            \begin{minipage}[c]{5.75cm}
-                { \large \bfseries \quad \color{white!80!black} Magyar Űrkutatási Fórum }
+            \begin{minipage}[c]{5.75cm} {
+                    \color{\hcol} \bfseries \quad 
+                    { \large Magyar Űrkutatási Fórum }
+                    \begin{center}
+                        { Sopron, 2019 }
+                    \end{center}
+                    
+                }
             \end{minipage}
         };
     \end{tikzpicture}
@@ -29,25 +37,49 @@
 
 % make your default ticket. \ticketdefault is somewhat like a background
 \renewcommand{\ticketdefault}{%
-    \put( 0,  40){\header}
-    \put( 5, 13){\line(1,0){60}}
-    \put( 7, 10){\scriptsize Magyar Űrkutatási Fórum}
-    \put( 7,  7){\scriptsize MTA CSFK GGI}
-    \put( 7,  4){\scriptsize 2019 április 24.-26., Sopron}
+    \put( 0,  36.5){\header}
+    %\put( 5, 13){\line(1,0){60}}
+    %\put( 7, 10){\scriptsize Magyar Űrkutatási Fórum}
+    %\put( 7,  7){\scriptsize MTA CSFK GGI}
+    %\put( 7,  4){\scriptsize 2019 április 24.-26., Sopron}
 }
 
+\newcommand{\Name}[2] {%
+    \begin{tikzpicture}
+        %\draw node[rectangle, shade, shading=axis, left color=white,
+                   %right color=\mcol, shading angle=-135,
+                   %minimum height=3.6cm, minimum width=7.15cm] at (0,0) {%
+        \draw node[rectangle, shade, draw=white, top color=white,
+                   bottom color=\mcol,
+                   minimum height=3.6cm, minimum width=7.015cm] at (0,0) {%
+            \begin{minipage}{6cm}
+            \begin{center} {
+                \bfseries
+                \vspace{-20pt}
+                
+                { \huge \color{white!75!blue!25!black} #1 }
+                \vspace{20pt}
+                
+                { \large \color{white!85!blue} #2 }
+            }
+            \end{center}
+            \end{minipage}
+        };
+    \end{tikzpicture}
+}
 
 % now what do you like to put in your ticket
-\newcommand{\badge}[2]{%
+\newcommand{\badge}[2] {%
     \ticket{%
-        \put(35,32){\makebox[0mm]{\bfseries\Large #1}}
-        \put(35,24){\makebox[0mm]{\bfseries\large #2}}%
+        \put(-1.25, 0.35){ \Name{#1}{#2} }
     }
 }
 
 
 \begin{document}
+
 \sffamily
-\badge{Kovács János}{ELTE XY Tanszék}
+\badge{Példa János}{ELTE XY Tanszék}
+%\badge{Példa János}{ELTE XY Tanszék}
 
 \end{document}
