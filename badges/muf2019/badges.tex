@@ -12,14 +12,15 @@
 
 %\def\mcolh{blue!25!white!40!black}
 
-\def\mcol{blue!25!white!70!black}
-\def\hcol{white!95!blue}
+\definecolor{muf}{RGB}{210,210,181}
+\definecolor{muf_txt_header}{RGB}{75,67,100}
+\definecolor{muf_txt_name}{RGB}{100,60,125}
 
 
 \def\headerOne{%
     \begin{tikzpicture}
         %\draw node[draw=\mcol, rectangle, top color=\mcol, bottom color=white] at (0,0) {%
-        \draw node[draw=\mcol, rectangle, fill=\mcol] at (0,0) {%
+        \draw node[draw=muf, rectangle, fill=muf] at (0,0) {%
             \begin{minipage}[c]{0.9cm}
                 \includegraphics[height=1cm]{Logo_sima_kitoltes.png}
             \end{minipage}
@@ -40,13 +41,13 @@
 \def\headerTwo{%
     \begin{tikzpicture}
         %\draw node[draw=\mcol, rectangle, top color=\mcol, bottom color=white] at (0,0) {%
-        \draw node[draw=\mcol, rectangle, fill=\mcol, minimum width=7cm] at (0,0) {%
+        \draw node[draw=muf, rectangle, fill=muf, minimum width=7cm] at (0,0) {%
             \begin{minipage}[c]{0.9cm}
                 \includegraphics[height=0.9cm]{Logo_sima_kitoltes.png}
             \end{minipage}
             \hspace{7.5pt}
             \begin{minipage}[c]{5.25cm} {
-                    \color{\hcol} \bfseries \quad 
+                    \color{muf_txt_header} \bfseries \quad 
                     \begin{center}
                         { \large Magyar Űrkutatási Fórum }
                         
@@ -68,18 +69,18 @@
 
 \newcommand{\Name}[3] {%
     \begin{tikzpicture}
-        \draw node[rectangle, shade, draw=\mcol, top color=white,
-                   bottom color=\mcol, shading=axis, shading angle=#3,
+        \draw node[rectangle, shade, draw=muf, top color=white,
+                   bottom color=muf, shading=axis, shading angle=#3,
                    minimum height=3.6cm, minimum width=7cm] at (0,0) {%
             \begin{minipage}{6cm}
             \begin{center} {
                 \bfseries
                 %\vspace{-20pt}
+                \color{muf_txt_name}
+                { \huge  #1 }
+                \vspace{10pt}
                 
-                { \huge \color{blue!25!black} #1 }
-                \vspace{15pt}
-                
-                { \large \color{white!95!blue} #2 }
+                { \large #2 }
             }
             \end{center}
             \end{minipage}
@@ -99,7 +100,8 @@
 \begin{document}
 
 \sffamily
-\badge{Példa János}{ELTE XY Tanszék}{0}
-\badge{Példa János}{ELTE XY Tanszék}{-45}
+\badge{Wesztergom Viktor}{MTA CSFK GGI}{0}
+\badge{Lichtenberger János}{Eötvös Loránd Tudományegyetem}{-45}
+\badge{Baranyai Anna}{Magyar Tudományos Akadémia Energiatudományi Kutatóközpont}{-135}
 
 \end{document}
