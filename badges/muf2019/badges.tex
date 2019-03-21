@@ -1,7 +1,7 @@
 \documentclass[a4paper,10pt]{letter}
 %\usepackage[magyar]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage[left=5pt, right=5pt, bottom=5pt, top=5pt]{geometry}
+\usepackage[left=0pt, right=0pt, bottom=0pt, top=0pt]{geometry}
 
 % load ticket.sty with the appropriate ticket definition
 \usepackage[freepin,crossmark]{ticket}
@@ -12,36 +12,14 @@
 
 %\def\mcolh{blue!25!white!40!black}
 
-\definecolor{muf}{RGB}{210,210,181}
-\definecolor{muf_txt_header}{RGB}{75,67,100}
-\definecolor{muf_txt_name}{RGB}{100,60,125}
+\definecolor{muf}{RGB}{0,200,225}
+\definecolor{muf_txt_header}{RGB}{50,50,100}
+\definecolor{muf_txt_name}{RGB}{155,0,130}
 
-
-\def\headerOne{%
+\def\header{%
     \begin{tikzpicture}
         %\draw node[draw=\mcol, rectangle, top color=\mcol, bottom color=white] at (0,0) {%
-        \draw node[draw=muf, rectangle, fill=muf] at (0,0) {%
-            \begin{minipage}[c]{0.9cm}
-                \includegraphics[height=1cm]{Logo_sima_kitoltes.png}
-            \end{minipage}
-            \begin{minipage}[c]{5.75cm} {
-                    \color{\hcol} \bfseries \quad 
-                    \begin{center}
-                        { \large Magyar Űrkutatási Fórum }
-                        
-                        { Sopron, 2019 }
-                    \end{center}
-                    
-                }
-            \end{minipage}
-        };
-    \end{tikzpicture}
-}
-
-\def\headerTwo{%
-    \begin{tikzpicture}
-        %\draw node[draw=\mcol, rectangle, top color=\mcol, bottom color=white] at (0,0) {%
-        \draw node[draw=muf, rectangle, fill=muf, minimum width=7cm] at (0,0) {%
+        \draw node[draw=muf, rounded corners=2.5pt, rectangle, fill=muf, minimum width=7cm] at (0,0) {%
             \begin{minipage}[c]{0.9cm}
                 \includegraphics[height=0.9cm]{Logo_sima_kitoltes.png}
             \end{minipage}
@@ -63,15 +41,15 @@
 
 % make your default ticket. \ticketdefault is somewhat like a background
 \renewcommand{\ticketdefault}{%
-    %\put( 0,  36.5){\headerOne}
-    \put( 0,  0){\headerTwo}
+    \put( 0,  0){\header}
 }
 
 \newcommand{\Name}[3] {%
     \begin{tikzpicture}
         \draw node[rectangle, shade, draw=muf, top color=white,
                    bottom color=muf, shading=axis, shading angle=#3,
-                   minimum height=3.6cm, minimum width=7cm] at (0,0) {%
+                   minimum height=3.6cm, minimum width=7cm,
+                   rounded corners=0pt] at (0,0) {%
             \begin{minipage}{6cm}
             \begin{center} {
                 \bfseries
