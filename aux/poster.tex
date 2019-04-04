@@ -1,11 +1,17 @@
-\newenvironment{block}[2]
+\newenvironment{block}[3]
 {
-    \begin{mdframed}[linecolor=#1, linewidth=1.75pt, roundcorner=0.75pt,
+    \begin{mdframed}[linecolor=#2, linewidth=3.75pt, roundcorner=1.75pt,
                      innerrightmargin=15pt, innerleftmargin=15pt,
                      innertopmargin=15pt, innerbottommargin=15pt,
-                     backgroundcolor=white, frametitle={#2}, align=center,
-                     frametitlefont=\huge\bfseries, frametitlealignment=\center]
+                     backgroundcolor=white, frametitle={#1}, frametitlerule=true,
+                     frametitleaboveskip=20pt, frametitlebelowskip=20pt,
+                     frametitlerulewidth=5pt, align=center, frametitlebackgroundcolor=#3,
+                     frametitlefont=\HUGE\bfseries, frametitlealignment=\center]
 }
 {
     \end{mdframed}
 }
+
+
+\def\bblock{ \begin{block} }
+\def\eblock{ \end{block} }

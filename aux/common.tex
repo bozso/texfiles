@@ -4,10 +4,39 @@
 \newcommand\quo[1]{``#1''}
 \newcommand\subt[2]{#1_{\text{#2}}}
 \newcommand\pard[2]{\frac{\partial #1}{\partial #2}}
+\newcommand\abs[1]{\left|#1\right|}
 
 
 \newcommand\inc[1] {
     \includegraphics[width=\textwidth]{#1}
 }
 
-\newcommand\abs[1]{\left|#1\right|}
+
+\newenvironment{fig}[2]
+{
+    \begin{center}
+    \begin{minipage}{#1}
+    \begin{mdframed}[linecolor=#2, linewidth=3.0pt, roundcorner=3.5pt,
+                     innerrightmargin=0pt, innerleftmargin=0pt,
+                     innertopmargin=0pt, innerbottommargin=0pt,
+                     skipabove=25pt, skipbelow=25pt
+                     backgroundcolor=white, frametitle={}, align=center]
+}
+{
+    \end{mdframed}
+    \end{minipage}
+    \end{center}
+}
+
+
+\newcommand{\genenv}[1] {
+    \def\b#1 { \begin{#1} }
+    \def\e#1 { \end{#1} }
+}
+
+
+\def\bfig { \begin{fig} }
+\def\efig { \end{fig} }
+
+\def\bitz { \begin{itemize} }
+\def\eitz{ \end{itemize} }
