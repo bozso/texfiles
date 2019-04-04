@@ -1,0 +1,101 @@
+\documentclass[a0, 18pt, landscape]{a0poster}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{graphicx, tikz, helvet, pagecolor, multicol, float, siunitx, caption}
+
+\usepackage[colorlinks]{hyperref}
+\usepackage[left=25pt, right=25pt, top=25pt, bottom=25pt]{geometry}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage[font=small,labelfont=bf]{caption}
+
+\input{/home/istvan/Dokumentumok/texfiles/aux/common.tex}
+\input{/home/istvan/Dokumentumok/texfiles/aux/poster.tex}
+
+\graphicspath{{/home/istvan/Dokumentumok/texfiles/images/}}
+
+\pagecolor{blue!5!white}
+
+\definecolor{bcol}{RGB}{0,200,225}
+\definecolor{tcol}{RGB}{0,200,225}
+\definecolor{acol}{RGB}{255,150,0}
+\definecolor{abcol}{RGB}{0,250,250}
+
+
+\begin{document}
+
+%-----------------------------------------------------------------------
+% TITLE
+%-----------------------------------------------------------------------
+
+\bfseries
+
+\begin{mdframed}[linecolor=black, linewidth=5pt, innerleftmargin=10pt, innerrightmargin=10pt, innertopmargin=25pt, innerbottommargin=25pt, backgroundcolor=tcol, roundcorner=10pt]
+    \hspace{25pt}
+    \begin{minipage}[c]{0.1\textwidth}
+        \includegraphics[width=\textwidth]{ggi_logo.png}
+    \end{minipage}
+    \begin{minipage}[c]{0.8\textwidth}
+      \centering {\Huge MONITORING 3D DEFORMATION OF RADAR REFLECTORS WITH THE FUSION OF SENTINEL-1 SAR INTERFEROMETRY AND GNSS}\\[35pt] % Title
+      {\Large István Bozsó, Eszter Szűcs, László Bányai, Viktor Wesztergom }\\[20pt]
+     {\Large \normalfont Hungarian Academy of Sciences, Research Centre for Astronomy and Earth Sciences, Geodetic and Geophysical Institute}\\[25pt]
+    {\Large \texttt{bozso.istvan@csfk.mta.hu}}
+    \end{minipage}
+    \hspace{50pt}
+    %
+    \begin{minipage}[c]{0.05\textwidth}
+    \begin{center}
+        \includegraphics[width=\textwidth]{graphic_egu_photo_yes.png}\\[10pt]
+        \includegraphics[width=0.95\textwidth]{CreativeCommons_Attribution_License.png}
+    \end{center}
+    \end{minipage}
+\end{mdframed}
+
+
+%-----------------------------------------------------------------------
+% ABSTRACT
+%-----------------------------------------------------------------------
+
+\small
+
+\begin{mdframed}[linecolor=acol, linewidth=4pt,
+    innerleftmargin=20pt, innerrightmargin=20pt,
+    innerbottommargin=25pt, innertopmargin=30pt,
+    backgroundcolor=abcol,
+    frametitleaboveskip=15pt, frametitlebelowskip=10pt,
+    roundcorner=20pt, frametitle={\LARGE Abstract},
+    frametitlealignment=\center]
+
+\columnsep=30pt
+
+
+\begin{multicols}{2}
+
+Space-borne radar interferometry (InSAR) is an excellent tool for measuring surface displacements. Using the phase information stored in the SAR images it is possible to calculate the phase difference due to surface movements between two acquisitions and from the differential phase, calculate the surface displacements.
+This method can be used reliably to create surface deformation time-series for mapping large areas and monitoring single reflecting targets. Some areas, however, are not suitable for InSAR analysis due to heavy vegetation or other factors that decrease phase coherence. In such cases, it is possible to install artificial reflecting objects (radar reflectors) that provide a stable phase over a long period of time.
+The MTA CSFK Geodetic and Geophysical Institute in collaboration with the Department of Broadband Infocommunications and Electromagnetic Theory of the Budapest University of Technology and Economics under ESA PECS project (project ID: 4000118850/16/NL/SC) developed such artificial reflectors.
+To overcome the other limitation of InSAR, namely that only deformation that is parallel to the satellite line-ofsight (LOS) can be measured, we have also carried out GNSS measurements at our reflector benchmarks.
+Three reflector networks were deployed in Hungary, two along the loess banks of River Danube, where landslide activity is frequent and one near Lake Balaton in an area affected by landslides as well.
+We used Sentinel-1 A and B satellite data between two GNSS campaign measurements (from July of 2016 to March of 2017) to calculate ascending and descending LOS displacements at our reflector benchmarks and through a technique called Kalman-filtering we fused data from ascending and descending satellite passes and the GNSS measurements to calculate the 3D displacements of our reflector networks, relative to a single reference reflector for each network.
+We present the 3D movements we have calculated with the previously described method at the three reflector networks and comment on the potential error sources and the possible improvements to our methodology.
+\end{multicols}
+
+\end{mdframed}
+
+
+\normalfont\bfseries
+
+\begin{multicols}{3}
+
+\begin{block}{bcol}{Introduction}
+    \begin{itemize}
+        \item InSAR = Synthetic Aperture Radar (SAR) Interferometry
+        \item 
+    \end{itemize}
+
+\end{block}
+
+\end{multicols}
+
+\end{document}

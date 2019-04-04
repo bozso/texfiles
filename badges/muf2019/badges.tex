@@ -1,3 +1,4 @@
+
 \documentclass[a4paper,10pt]{letter}
 %\usepackage[magyar]{babel}
 \usepackage[utf8]{inputenc}
@@ -7,7 +8,7 @@
 \usepackage[freepin,crossmark]{ticket}
 
 % load misc stuff
-\usepackage{graphicx, tikz, xcolor}
+\usepackage{graphicx, tikz, xcolor, multicol}
 %\usetikzlibrary{positioning}
 
 %\def\mcolh{blue!25!white!40!black}
@@ -19,13 +20,13 @@
 \def\header{%
     \begin{tikzpicture}
         %\draw node[draw=\mcol, rectangle, top color=\mcol, bottom color=white] at (0,0) {%
-        \draw node[draw=muf, rounded corners=2.5pt, rectangle, fill=muf, minimum width=7cm] at (0,0) {%
+        \draw node[rounded corners=2.5pt, rectangle, minimum width=7cm] at (0,0) {%
             \begin{minipage}[c]{0.9cm}
                 \includegraphics[height=0.9cm]{Logo_sima_kitoltes.png}
             \end{minipage}
             \hspace{7.5pt}
             \begin{minipage}[c]{5.25cm} {
-                    \color{muf_txt_header} \bfseries \quad 
+                    \bfseries \quad 
                     \begin{center}
                         { \large Magyar Űrkutatási Fórum }
                         
@@ -41,20 +42,18 @@
 
 % make your default ticket. \ticketdefault is somewhat like a background
 \renewcommand{\ticketdefault}{%
-    \put( 0,  0){\header}
+    %\put( 0,  0){\header}
+    \put( 0,  0){}
 }
 
-\newcommand{\Name}[3] {%
+\newcommand{\Name}[2] {%
     \begin{tikzpicture}
-        \draw node[rectangle, shade, draw=muf, top color=white,
-                   bottom color=muf, shading=axis, shading angle=#3,
-                   minimum height=3.6cm, minimum width=7cm,
-                   rounded corners=0pt] at (0,0) {%
+        \draw node[rectangle, minimum height=3.6cm,
+                   minimum width=7cm, rounded corners=0pt] at (0,0) {%
             \begin{minipage}{6cm}
             \begin{center} {
                 \bfseries
                 %\vspace{-20pt}
-                \color{muf_txt_name}
                 { \huge  #1 }
                 \vspace{10pt}
                 
@@ -67,10 +66,16 @@
 }
 
 % now what do you like to put in your ticket
-\newcommand{\badge}[3] {%
+\newcommand{\badge}[2] {%
     \ticket{%
-        %\put(-1.25, 0.35){ \Name{#1}{#2} }
-        \put(-1.15, 12){ \Name{#1}{#2}{#3} }
+        \put(-1.15, 12){ \Name{#1}{#2} }
+        \put(-1.15, 0.0){ \header }
+    }
+}
+
+\newcommand{\etikett}[2] {%
+    \ticket{%
+        \put(0.0, 7){ \Name{#1}{#2} }
     }
 }
 
@@ -78,8 +83,16 @@
 \begin{document}
 
 \sffamily
-\badge{Wesztergom Viktor}{MTA CSFK GGI}{0}
-\badge{Lichtenberger János}{Eötvös Loránd Tudományegyetem}{-45}
-\badge{Baranyai Anna}{Magyar Tudományos Akadémia Energiatudományi Kutatóközpont}{-135}
+
+\badge{Wesztergom Viktor}{MTA CSFK GGI}
+\badge{Lichtenberger János}{Eötvös Loránd Tudományegyetem}
+\badge{Baranyai Anna}{Magyar Tudományos Akadémia Energiatudományi Kutatóközpont}
+
+%\newpage
+
+\etikett{Wesztergom Viktor}{MTA CSFK GGI}
+\etikett{Lichtenberger János}{Eötvös Loránd Tudományegyetem}
+\etikett{Baranyai Anna}{Magyar Tudományos Akadémia Energiatudományi Kutatóközpont}
+
 
 \end{document}
