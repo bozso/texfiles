@@ -4,11 +4,11 @@
 \usepackage[T1]{fontenc}
 
 
-\usepackage{graphicx, tikz, helvet, pagecolor, multicol, float, siunitx, caption}
+\usepackage{graphicx, tikz, helvet, pagecolor, multicol, siunitx, epstopdf}
 
-\usepackage[colorlinks]{hyperref}
+%\usepackage[colorlinks]{hyperref}
+\usepackage[framemethod=tikz]{mdframed}
 \usepackage[left=25pt, right=25pt, top=25pt, bottom=25pt]{geometry}
-\usepackage[framemethod=TikZ]{mdframed}
 \usepackage[font=small,labelfont=bf]{caption}
 
 
@@ -17,9 +17,9 @@
 \pagecolor{blue!5!white}
 
 
-\definecolor{bcol}{RGB}{0,200,225}
+\definecolor{bcol}{RGB}{0,100,125}
 \definecolor{tcol}{RGB}{0,200,225}
-\definecolor{fcol}{RGB}{0,105,105}
+\definecolor{fcol}{RGB}{80,45,45}
 \definecolor{acol}{RGB}{255,150,0}
 \definecolor{abcol}{RGB}{0,250,250}
 \definecolor{ftback}{RGB}{0,200,250}
@@ -27,6 +27,19 @@
 
 \input{/home/istvan/Dokumentumok/texfiles/aux/common.tex}
 \input{/home/istvan/Dokumentumok/texfiles/aux/poster.tex}
+
+
+\newcommand{\finc}[1] {
+    \begin{mdframed}[linecolor=fcol, linewidth=5.0pt, roundcorner=5pt,
+                     innerrightmargin=0pt, innerleftmargin=0pt,
+                     innertopmargin=0pt, innerbottommargin=0pt,
+                     skipabove=0pt, skipbelow=0pt,
+                     backgroundcolor=white, frametitle={}, align=center]
+    \begin{center}
+        \inc{#1}
+    \end{center}
+    \end{mdframed}
+}
 
 
 \begin{document}
@@ -38,9 +51,14 @@
 \bfseries
 
 \begin{minipage}{0.935\textwidth}
-\begin{mdframed}[linecolor=black, linewidth=5pt, innerleftmargin=10pt, innerrightmargin=10pt, innertopmargin=25pt, innerbottommargin=25pt, backgroundcolor=tcol, roundcorner=10pt]
-    \begin{minipage}[c]{0.1\textwidth}
+\begin{mdframed}[linecolor=black, linewidth=5pt, innerleftmargin=10pt, innerrightmargin=10pt, innertopmargin=25pt,
+                 innerbottommargin=25pt, backgroundcolor=tcol, roundcorner=50pt]
+    \hspace{10pt}
+    \begin{minipage}[c]{0.08\textwidth}
         \includegraphics[width=\textwidth]{ggi_logo.png}
+        \vspace{2.5pt}
+        
+        { \normalfont \bfseries EGU General Assembly 2019 -- X3.173 }
     \end{minipage}
     \begin{minipage}[c]{0.9\textwidth}
       \centering {\Huge MONITORING 3D DEFORMATION OF RADAR REFLECTORS WITH THE FUSION OF SENTINEL-1 SAR INTERFEROMETRY AND GNSS}\\[35pt] % Title
@@ -69,7 +87,7 @@
 \begin{mdframed}[linecolor=acol, linewidth=4pt,
     innerleftmargin=20pt, innerrightmargin=20pt,
     innerbottommargin=25pt, innertopmargin=30pt,
-    backgroundcolor=abcol,
+    backgroundcolor=abcol, roundcorner=2.5pt
     frametitleaboveskip=15pt, frametitlebelowskip=10pt,
     roundcorner=20pt, frametitle={\LARGE Abstract},
     frametitlealignment=\center]
@@ -90,37 +108,141 @@ We present the 3D movements we have calculated with the previously described met
 
 \end{mdframed}
 
+\vspace{5pt}
 
-\Large\bfseries
+\columnsep=30pt
+
+\large\bfseries
 
 \begin{multicols}{3}
 
-\bblock{Introduction}{bcol}{ftback}
+\bblock{Introduction}{bcol}
     \bitz
         \item InSAR = Synthetic Aperture Radar (SAR) Interferometry
-        \item ground based, air or spaceborne platform, emits reveives microwave
+        \item ground based, air or spaceborne platform: emits and receives
+              microwave signal reflected from the surface
         \item registers reflected wave amplitude and phase $\rar$ complex number, Single Look Complex image (SLC)
         \item phase difference of two SAR scenes (SLCs) $\rar$ interferogram
+        \item unwrapped, filtered and corrected phase proportional to line-of-sight (LOS) surface displacement
     \eitz
     
+    Interferometric phase terms:
     \[
         \subt{\Phi}{IFG} = \subt{\Phi}{defo.} + \subt{\Phi}{atmo.} + \subt{\Phi}{topo.} + \subt{\Phi}{orbit} + \subt{\Phi}{noise}
     \]
     
-    \bfig{0.5\textwidth}{fcol}
+    \[
+        \subt{\Phi}{defo.} = \frac{4\pi}{\lambda} d, \hspace{25pt} d: \text{satellite line-of-sight deformation}
+    \]
+    
+    \bcent
+    \bmini{0.475\textwidth}
+    \bffig{fcol}
         \inc{DInSAR_concept.jpg}
-    \efig
-    
-    \vspace{20pt}
-    
+        \fcap{Phase difference between aqcuisitions caused by satellite LOS displacement.}
+    \effig
+    \emini
+    \bmini{0.475\textwidth}
+        \inc{unwrap1.png}
+        \fcap{1D unwrapping of interfeometric phase.}
+    \emini
+    \ecent
+    \vspace{10pt}
     
     \bitz
         \item $\subt{\Phi}{IFG}$: phase of the interferogram 
-        \item $\subt{\Phi}{defo.}$ : phase caused by surface deformation, that occurred between the two SAR acquisitions, in the Line-of-Sight (LOS) direction
-        \item $\subt{\Phi}{atmo.}$: phase caused by the change in atmospheric microwave propagation speed
+        \item $\subt{\Phi}{defo.}$ : phase due to surface deformation, that occurred between the two SAR acquisitions, in the Line-of-Sight (LOS) direction
+        \item $\subt{\Phi}{atmo.}$: phase due to change in atmospheric microwave propagation speed
         \item $\subt{\Phi}{topo.}$: phase due to topography
         \item $\subt{\Phi}{orbit}$: phase from errors of the orbital state vector
-        \item $\subt{\Phi}{noise}$: noise from residual phase terms, that cannot be modeled
+        \item $\subt{\Phi}{noise}$: noise adn/or unmodeled from residual phase terms
+    \eitz
+    
+    Phase unwrapping: phase only known modulo 2$\pi$. Search for correct $n$ ($n \cdot 2\pi$ phase cycles,
+    $n$ is an integer) addition factors. Can and often will fail in case of high deformation
+    gradients (both in space and time).
+\eblock
+
+
+\bblock{Methodology}{bcol}
+    \bitz
+        \item Integrated Reflector benchmarks are needed, where InSAR coherence is unsatisfactory
+              for reliable LOS displacement calculation.
+        \item Sentinel-1 SLC scenes preprocessed (coregistration, geocoding, interferogram formation)
+              with the Gamma Software \cite{werner2000gamma}.
+        \item Selection of point scatterer (PS) and distributed scatterer (DS) points and unwrapping done by StaMPS Software \cite{Hooper2008}.
+        \item Combination of LOS deformation from ascending (ASC) and descending (DSC) tracks and GNSS observations carried
+              out by ISIGN software, developed at our Institute based on \cite{Banyai2016}:
+        \bitz
+            \item identification of reflectors in interferograms and extraction LOS time-series,
+            \item manual unwrapping of unwrapped phases if necessary,
+            \item interpolation of ASC and DSC LOS time-series,
+            \item fusion of LOS time-series with GNSS data using Kalman-filtering \cite{kalmanfilt}.
+        \eitz
+    \eitz
+    \vspace{25pt}
+    
+    \bmini{0.475\textwidth}
+        \finc{hungary_networks.png}
+        \fcap{Integrated Artificial Reflector Benchmark networks in Hungary.}
+    \emini
+    \bmini{0.475\textwidth}
+        \inc{daisy_schematic.png}
+        \fcap{Geometric properties of satellite LOS directions. \cite{Banyai2016}}
+    \emini
+
+\eblock
+\vspace{15pt}
+
+\begin{ack}
+    \small
+    Contains modified Copernicus Sentinel data 2014-2018, processed by ESA.
+\end{ack}
+\vspace{15pt}
+
+\begin{bib}{bcol}
+    \tiny\bibliography{/home/istvan/Dokumentumok/texfiles/insar}
+    \bibliographystyle{apalike}
+\end{bib}
+
+
+\newcommand{\kcap}[1] {
+    \fcap{3D displacement time-series of combined \\InSAR LOS time-series and GNSS measurements at the #1-network.}
+}
+
+
+\bblock{Results}{bcol}
+    \bfig{0.45}
+        \inc{dszekcso_kalman.pdf}
+        \kcap{Dunaszekcső}
+    \efig
+    \bfig{0.45}
+        \inc{kulcs_kalman.pdf}
+        \kcap{Kulcs}
+    \efig
+    \\[25pt]
+    \bfig{0.45}
+        \inc{fonyod_kalman.pdf}
+        \kcap{Fonyód}
+    \efig
+    \bfig{0.45}
+        \finc{dszekcso_refl_1.jpg}
+        \fcap{Integrated Reflector Benchmark on top of a loess bank of Danube (near Dunaszekcső settlement).}
+    \efig
+\eblock
+
+
+\bblock{Discussion and future plans}{bcol}
+    \bitz
+        \item The theory developed for the fusion of InSAR and GNSS datasets have been implemented and tested.
+        \item GNSS measurments are needed for proper 3D displecment calculation (High
+              deformation velocity of reflector benchmark).
+        \item Reprocessing of interferograms with the IPTA Software \cite{ipta} (point target analysis,
+              unwrapping). 
+        \item Further development of ISIGN software: atmospheric correction algorithm for distant reflectors,
+              interpolation of GNSS data to the position of coherent natural scatterers,
+              rework \texttt{C} code in \texttt{C++} and integrate with Python.
+        \item Process newly installed benchmark networks estabilished at Praid and Ciomadul-volcano, Transylvania. 
     \eitz
 \eblock
 

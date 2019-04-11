@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 
 from os.path import join as pjoin
-import gnuplot.gnuplot as gp
+import gnuplot as gp
 from tempfile import NamedTemporaryFile as tmp
 
 
@@ -33,8 +33,9 @@ def parse_kout(path):
 
 
 def style_kalman(colors):
-    lw = 4
-    tpl = "set style line {num} lc rgb '{color}' pt 7 ps 0.75 lt 0 lw {lw}"
+    # InSAR
+    lw = 1
+    tpl = "set style line {num} lc rgb '{color}' pt 7 ps 0.25 lt 0 lw {lw}"
     
     gp.call(tpl.format(num=1, color=colors["red"], lw=lw))
     
@@ -43,8 +44,9 @@ def style_kalman(colors):
     gp.call(tpl.format(num=3, color=colors["blue"], lw=lw))
     
     
-    lw = 4
-    tpl = "set style line {num} lc rgb '{color}' pt 0 ps 2 lt 1 lw {lw}"
+    # GNSS
+    lw = 2
+    tpl = "set style line {num} lc rgb '{color}' pt 0 ps 1 lt 1 lw {lw}"
     
     gp.call(tpl.format(num=4, color=colors["red"], lw=lw))
     
@@ -70,8 +72,6 @@ def plot(*stations, ref=None, rootdir=None, outdir=None, fontsize=15, term="eps"
     colors = gp.nicer()
     
     gp.set("xlabel", "'Decimal year' font ',22'")
-    
-    #gp["key"] = "out horiz"
     gp.set("key", keypos)
     
     
@@ -88,7 +88,7 @@ def plot(*stations, ref=None, rootdir=None, outdir=None, fontsize=15, term="eps"
             f1.write(los)
             f2.write(gnss)
             
-            gp.output(pjoin(outdir, "%s-%s_kalman.png" % (station, ref)),
+            gp.output(pjoin(outdir, "%s-%s_kalman.ps" % (station, ref)),
                       term=term, fontsize=fontsize)
                       
             #gp.ranges(y=gnss_range)
@@ -122,46 +122,52 @@ def plot(*stations, ref=None, rootdir=None, outdir=None, fontsize=15, term="eps"
            .format(asc_g, asc_s, dsc_g, dsc_s))
 
 
+ticfont = 13
 
-def plot_kalman(*stations, ref=None, rootdir=None, outdir=None, fontsize=15,
-                term="eps", keypos="left top", ranges=None):
+def plot_kalman(*stations, ref=None, prefix="", rootdir=None, outdir=None, fontsize=15,
+                term="eps", keypos="left top", ranges=None, size=(800,600), layout=(2,2),
+                incr=1.0):
 
-    gp.set("key", False)
-    gp.set("xlabel", "'Decimal year since 2016' font ',%g'" % fontsize)
+    gp.set(key=False, xlabel=False, ylabel=False, xtics="0.15 font ', %d'" % ticfont,
+           ytics="%g font ', %d'" % (incr, ticfont))
     
-    gp.output(pjoin(outdir, "dszekcso_kalman.png"),
-              term=term, fontsize=fontsize, size=(1200,500), enhanced=True)
+    gp.output(pjoin(outdir, "%s_kalman.pdf" % prefix),
+              term=term, fontsize=fontsize, enhanced=True)
 
-    multi = gp.multiplot(len(stations), left=10, between=7.5, key_width=0.0,
-                         width=20, ckeys=True)
-
-    gp.set("ylabel", "'Deformation [mm]' font ',%g'" % fontsize)
     style_kalman(gp.nicer())
     
-
+    gp.call("set multiplot layout %d,%d rowsfirst title '%s'; unset key"
+            % (layout[0], layout[1], "y-axis: Decimal year since 2016"))
+    
+    if ranges is not None:
+        gp.call("set autoscale y")
+    
+    
+    nstat = len(stations)
+    
     for ii, station in enumerate(stations):
         filename = pjoin(rootdir, "%s-%s_s_interpol.kout" % (station, ref))
         
         los, gnss = parse_kout(filename)
         
-        if ranges is not None:
-            gp.ranges(y=ranges)
-        
-        
         with tmp("w", delete=False) as f1, tmp("w", delete=False) as f2:
             
             f1.write(los)
             f2.write(gnss)
+
+            gp.title("Deform. %s - %s [mm]" % (station, ref))
             
-            gp.title(r"Movement of reflector %s \nrelative to %s" % (station, ref))
+            #if ii == nstat - 1:
+                #gp.set(xlabel="'Decimal year since 2016'")
             
-            multi.plot(ii, "plot '{name1}' u ($2-2016):3 title 'North'      with lp ls 1,"
-                           "     '{name1}' u ($2-2016):4 title 'East'       with lp ls 2,"
-                           "     '{name1}' u ($2-2016):5 title 'Height'     with lp ls 3,"
-                           "     '{name2}' u ($2-2016):3 title 'GPS-North'  with lp ls 4,"
-                           "     '{name2}' u ($2-2016):4 title 'GPS-East'   with lp ls 5,"
-                           "     '{name2}' u ($2-2016):5 title 'GPS-Height' with lp ls 6"
-                           .format(name1=f1.name, name2=f2.name))
+            # multi.plot(ii, "plot '{name1}' u ($2-2016):3 title 'North'      with lp ls 1,"
+            gp.call("plot '{name1}' u ($2-2016):3 title 'North'      with lp ls 1,"
+                    "     '{name1}' u ($2-2016):4 title 'East'       with lp ls 2,"
+                    "     '{name1}' u ($2-2016):5 title 'Height'     with lp ls 3,"
+                    "     '{name2}' u ($2-2016):3 title 'GPS-North'  with lp ls 4,"
+                    "     '{name2}' u ($2-2016):4 title 'GPS-East'   with lp ls 5,"
+                    "     '{name2}' u ($2-2016):5 title 'GPS-Height' with lp ls 6"
+                    .format(name1=f1.name, name2=f2.name))
         
     gp.call("unset title")
     
@@ -169,10 +175,11 @@ def plot_kalman(*stations, ref=None, rootdir=None, outdir=None, fontsize=15,
     
     plot = ", ".join("2 title '%s' with lp ls %d" % (title, ii+1) for ii, title in enumerate(titles))
     
+    # set lmargin at screen %g
+    # set rmargin at screen 1
+    
     gp.call(
     """
-    set lmargin at screen %g
-    set rmargin at screen 1
     set key center center
     set border 0
     unset tics
@@ -180,30 +187,41 @@ def plot_kalman(*stations, ref=None, rootdir=None, outdir=None, fontsize=15,
     unset ylabel
     set yrange [0:1]
     plot %s
-    """ % (multi.margins(multi.nplot)[0] - 0.35, plot))
+    unset multiplot
+    """ % (plot))
 
         
 def main():
     
-    term = "pngcairo"
-    ext = "png"
+    term = "pdfcairo"
     
     outdir = "/home/istvan/Dokumentumok/texfiles/images"
-    root = "/home/istvan/Dokumentumok/texfiles/presentations/geomatika2018"
+    root = "/home/istvan/Dokumentumok/texfiles/data/isign"
     
     #gp.debug()
     
-    rootdir = root + "/dszekcso"
-    plot_kalman("IB2", "IB3", "IB4", ref="IB1", rootdir=rootdir, outdir=outdir,
-                term=term, fontsize=13, ranges=[-600,400])
+    fontsize = 14
+    size = (1, 1)
     
-    return 0
-    
-    rootdir = root + "/fonyod"
-    plot("KV", "RE", ref="PH", rootdir=rootdir, outdir=outdir, term=term)
+    if 1:
+        rootdir = root + "/dszekcso"
+        plot_kalman("IB2", "IB3", "IB4", ref="IB1", rootdir=rootdir, outdir=outdir,
+                    term=term, fontsize=fontsize, ranges=[-600,400], size=size,
+                    prefix="dszekcso", layout=(2,2), incr=200.0)
 
-    rootdir = root + "/kulcs"
-    plot("A1", "A2", "A3", "A4", ref="AR", rootdir=rootdir, outdir=outdir, term=term)
+                
+    if 1:
+        rootdir = root + "/fonyod"
+        plot_kalman("KV", "RE", ref="PH", rootdir=rootdir, outdir=outdir,
+                    term=term, fontsize=fontsize, size=size, incr=5.0,
+                    prefix="fonyod", layout=(2,2), ranges=[-10,10])
+
+    
+    if 1:
+        rootdir = root + "/kulcs"
+        plot_kalman("A1", "A2", "A3", ref="AR", rootdir=rootdir, outdir=outdir,
+                    term=term, fontsize=fontsize, prefix="kulcs", size=size,
+                    layout=(2,2), ranges=[-10,10], incr=12.5)
          
 
 

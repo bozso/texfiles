@@ -1,12 +1,16 @@
-\newenvironment{block}[3]
+\newenvironment{block}[2]
 {
-    \begin{mdframed}[linecolor=#2, linewidth=3.75pt, roundcorner=1.75pt,
+    \begin{mdframed}[linecolor=#2, linewidth=6.0pt, roundcorner=12.5pt,
                      innerrightmargin=15pt, innerleftmargin=15pt,
                      innertopmargin=15pt, innerbottommargin=15pt,
-                     backgroundcolor=white, frametitle={#1}, frametitlerule=true,
-                     frametitleaboveskip=20pt, frametitlebelowskip=20pt,
-                     frametitlerulewidth=5pt, align=center, frametitlebackgroundcolor=#3,
-                     frametitlefont=\HUGE\bfseries, frametitlealignment=\center]
+                     backgroundcolor=white, frametitle={}, align=center]
+    \vspace{15pt}
+    
+    \begin{center}
+        { \Huge \underline{\textbf{#1}} }
+    \end{center}
+    
+    \vspace{15pt}
 }
 {
     \end{mdframed}
@@ -15,3 +19,36 @@
 
 \def\bblock{ \begin{block} }
 \def\eblock{ \end{block} }
+
+
+\newenvironment{bib}[1]
+{
+    \begin{mdframed}[linecolor=green, linewidth=3.75pt, roundcorner=3.0pt,
+                     innerrightmargin=15pt, innerleftmargin=15pt,
+                     innertopmargin=5pt, innerbottommargin=5pt,
+                     backgroundcolor=white, frametitle={}, align=center]
+}
+{
+    \end{mdframed}
+}
+
+
+\newenvironment{ack}
+{
+    \begin{mdframed}[linecolor=orange, linewidth=3.75pt, roundcorner=3.0pt,
+                     innerrightmargin=15pt, innerleftmargin=15pt,
+                     innertopmargin=5pt, innerbottommargin=5pt,
+                     backgroundcolor=white, frametitle={}, align=center]
+    \vspace{15pt}
+        { \normalfont \textbf{Acknowledgements} }
+    \vspace{15pt}
+    \newline
+}
+{
+    \end{mdframed}
+}
+
+A: 407
+X1: 58, 60, 62
+X2: 195,
+X4: 219, 252, 253, 254, 328

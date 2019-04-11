@@ -11,23 +11,38 @@
     \includegraphics[width=\textwidth]{#1}
 }
 
+\newcommand\img[2] {
+    \includegraphics[width=#2\textwidth]{#1}
+}
 
-\newenvironment{fig}[2]
+\newenvironment{ffig}[1]
 {
-    \begin{center}
-    \begin{minipage}{#1}
-    \begin{mdframed}[linecolor=#2, linewidth=3.0pt, roundcorner=3.5pt,
-                     innerrightmargin=0pt, innerleftmargin=0pt,
-                     innertopmargin=0pt, innerbottommargin=0pt,
-                     skipabove=25pt, skipbelow=25pt
+    \begin{mdframed}[linecolor=#1, linewidth=5.0pt, roundcorner=5pt,
+                     innerrightmargin=10pt, innerleftmargin=10pt,
+                     innertopmargin=0pt, innerbottommargin=5pt,
+                     skipabove=0pt, skipbelow=0pt,
                      backgroundcolor=white, frametitle={}, align=center]
+    \begin{center}
 }
 {
-    \end{mdframed}
-    \end{minipage}
     \end{center}
+    \end{mdframed}
 }
 
+\newenvironment{fig}[1]
+{
+    \begin{minipage}{#1\textwidth}
+    \begin{center}
+}
+{
+    \end{center}
+    \end{minipage}
+}
+
+
+\newcommand{\fcap}[1] {
+    \captionof{figure}{#1}
+}
 
 \newcommand{\genenv}[1] {
     \def\b#1 { \begin{#1} }
@@ -35,8 +50,17 @@
 }
 
 
+\def\bffig { \begin{ffig} }
+\def\effig {   \end{ffig} }
+
 \def\bfig { \begin{fig} }
-\def\efig { \end{fig} }
+\def\efig {   \end{fig} }
 
 \def\bitz { \begin{itemize} }
-\def\eitz{ \end{itemize} }
+\def\eitz {   \end{itemize} }
+
+\def\bmini { \begin{minipage} }
+\def\emini {   \end{minipage} }
+
+\def\bcent { \begin{center} }
+\def\ecent {   \end{center} }
