@@ -1,12 +1,16 @@
 # Bevezetés
 
 \(
+    \def\laplace{{\mathop{}\!\mathbin\bigtriangleup}}
     \def\bold#1{{\bf #1}}
     \def\tr{{\mathrm{Tr} \hspace{2pt}}}
-    \def\div{{\mathrm{div} \hspace{2pt}}}
-    \def\vec#1{{\mathbf{#1}}}
+    \def\div{{\nabla \hspace{2pt}}}
+    \def\gdiv#1{{\nabla \left(\nabla #1 \right) \hspace{2pt}}}
+    \def\rot{{\nabla \times \hspace{2pt}}}
+    \def\mat#1{{\mathbf{#1}}}
     \def\mdef{{\mathbf{\varepsilon}}}
     \def\half{{\frac{1}{2}}}
+    \def\par#1{{\hspace{2pt} \partial_{#1}}}
 \)
 
 - földrengések regisztrálása, Föld belső szerkezetének meghatározása
@@ -32,7 +36,7 @@ derivative work: <a href="//commons.wikimedia.org/wiki/User:Mircalla22" title="U
 
 Deformációs tenzor:
 $$ \mdef_{ij} = \half (\partial_i u_j + \partial_j u_i ) $$
-$$ \theta = \frac{\Delta V}{V} = \tr \mdef = \div\vec{u}$$
+$$ \theta = \frac{\Delta V}{V} = \tr \mdef = \div\mat{u} $$
 
 Rugalmas feszültség tenzor:
 
@@ -47,4 +51,31 @@ $$ \mu = \frac{E}{2(1 + \sigma)} $$
 anyagi minőség, hőmérséklet, nyomás függvényei
 
 $$ p_{ij} = \delta_{ij} \lambda \theta + 2 \mu \mdef_{ij} $$
+
+vagy
+
+$$ \mat{p} = \lambda\theta\mat{I} + 2 \mu \mdef $$
+
+$$ \rho \par{t}^2 \mat{u} = \mat{f} + \div\mat{p} $$
+$$ \rho \par{t}^2 u_i = f_i + \par{j} p_{ij} $$
+
+$$ \par{j} p_{ij} = \lambda \delta_{ij} \par{j} \par{k} u_k  + \mu \par{j} (\par{i} u_j + \par{j} u_i) $$
+$$ \par{j} p_{ij} = \lambda \par{i} \par{k} u_k  + \mu \par{j} \par{i} u_j + \mu \par{j} \par{j} u_i $$
+$$ \div \mat{p} = \lambda \gdiv{\mat{u}}  + \mu \gdiv{\mat{u}} + \mu \laplace \mat{u} $$
+$$ \laplace \mat{u} = \gdiv{\mat{u}} - \rot \rot \mat{u} $$
+$$ \div \mat{p} = (\lambda + 2\mu) \gdiv{\mat{u}}  - \mu \rot \rot \mat{u} $$
+$$ \rho \par{t}^2 \mat{u} = qmat{f} + (\lambda + 2\mu) \gdiv{\mat{u}}  - \mu \rot \rot \mat{u} $$
+
+Szeparálás:
+
+$$ \Theta = \div \mat{u} $$
+$$ \rho \par{t}^2 \Theta = (\lambda + 2\mu) \laplace \Theta $$
+$$ \par{t}^2 \Theta = \alpha^{-2} \laplace \Theta \hspace{25pt} \alpha = \sqrt{\frac{\lambda + 2 \mu}{\rho}} $$
+
+$$ \phi = \rot \mat{u} $$
+$$ \rho \par{t}^2 \phi = \mu \laplace \phi $$
+$$ \par{t}^2 \phi = \beta^{-2} \laplace \phi \hspace{25pt} \beta = \sqrt{\frac{\mu}{\rho}} $$
+
+
+
 
