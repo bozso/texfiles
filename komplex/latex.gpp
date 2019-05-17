@@ -1,0 +1,11 @@
+\define{\center{in}}{<center> \in </center>}
+\define{\imref{in}{title}}{<img src="\in" title="\title", alt="\title"> <br><a href="\in"> \title </a> </br>}
+\define{\mat{in}}{\mathbf{\in}}
+\define{\gdiv{in}}{\nabla \left(\nabla \in \right) \hspace{2pt}}
+\define{\par{in}}{\hspace{2pt} \partial_{\in}}
+
+\define{\laplace}{\mathop{}\!\mathbin\bigtriangleup}
+\define{\tr}{\mathrm{Tr} \hspace{2pt}}
+\define{\div}{\nabla \hspace{2pt}}
+\define{\rot}{\nabla \times \hspace{2pt}}
+\define{\half}{\frac{1}{2}}
