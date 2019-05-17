@@ -1,17 +1,24 @@
-# Bevezetés
+$[
+    from latex import *
+    mdef = r"\mathbf{\varepsilon}"
+    laplace = r"\mathop{}\!\mathbin\bigtriangleup"
+    tr = r"\mathrm{Tr} \hspace{2pt}"
+    div = r"\nabla \hspace{2pt}"
+    rot = r"\nabla \times \hspace{2pt}"
+    half = r"\frac{1}{2}"
 
-\(
-    \def\laplace{{\mathop{}\!\mathbin\bigtriangleup}}
-    \def\bold#1{{\bf #1}}
-    \def\tr{{\mathrm{Tr} \hspace{2pt}}}
-    \def\div{{\nabla \hspace{2pt}}}
-    \def\gdiv#1{{\nabla \left(\nabla #1 \right) \hspace{2pt}}}
-    \def\rot{{\nabla \times \hspace{2pt}}}
-    \def\mat#1{{\mathbf{#1}}}
-    \def\mdef{{\mathbf{\varepsilon}}}
-    \def\half{{\frac{1}{2}}}
-    \def\par#1{{\hspace{2pt} \partial_{#1}}}
-\)
+    def mat(txt):
+        write(r"\nabla \left(\nabla %s \right) \hspace{2pt}" % txt)
+    
+    def gdiv(txt):
+        write(r"\nabla \left(\nabla %s \right) \hspace{2pt}" % txt)
+    
+    def par(txt):
+        write(r"\hspace{2pt} \partial_{%s}" % txt)
+]
+
+## Bevezetés
+
 
 - földrengések regisztrálása, Föld belső szerkezetének meghatározása
 - földrengés komoly veszélyforrás, emberi életek
@@ -27,6 +34,8 @@ horizontális elmozdulás
 </a><br>By <a href="//commons.wikimedia.org/wiki/File:2D_geometric_strain.png" title="File:2D geometric strain.png">2D_geometric_strain.png</a>: <a href="//commons.wikimedia.org/wiki/User:Sanpaz" title="User:Sanpaz">Sanpaz</a>
 derivative work: <a href="//commons.wikimedia.org/wiki/User:Mircalla22" title="User:Mircalla22">Mircalla22</a> (<a href="//commons.wikimedia.org/wiki/User_talk:Mircalla22" title="User talk:Mircalla22"><span class="signature-talk">talk</span></a>) - <a href="//commons.wikimedia.org/wiki/File:2D_geometric_strain.png" title="File:2D geometric strain.png">2D_geometric_strain.png</a>, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=7680077">Link</a></p>
 
+<img src="https://raw.githubusercontent.com/bozso/texfiles/master/images/SAR_Kilauea_topo_interferogram.jpg">
+
 <p>
 <a href="https://commons.wikimedia.org/wiki/File:Stress_Strain_Ductile_Material.png#/media/File:Stress_Strain_Ductile_Material.png">
 <center>
@@ -34,48 +43,76 @@ derivative work: <a href="//commons.wikimedia.org/wiki/User:Mircalla22" title="U
 </center>
 </a><br>By Breakdown - <span class="int-own-work" lang="en">Own work</span>,<a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=3702892">Link</a></p>
 
-Deformációs tenzor:
-$$ \mdef_{ij} = \half (\partial_i u_j + \partial_j u_i ) $$
-$$ \theta = \frac{\Delta V}{V} = \tr \mdef = \div\mat{u} $$
+## Deformációs tenzor
 
-Rugalmas feszültség tenzor:
+$[
+    vu = r"\mathbf{u}"
+]
 
-Általánosított Hooke-törvény:
-$$ p_{ij} = c_{ijkl} \mdef_{kl}$$
+$$ $[mdef]_{ij} = $[half] (\partial_i u_j + \partial_j u_i ) $$
+$$ \theta = \frac{\Delta V}{V} = $[tr] $[mdef] = $[div] $[vu] $$
 
-Izotróp testek  
-Lamé-állandók:
+## Rugalmas feszültség tenzor
+
+## Általánosított Hooke-törvény
+$$ p_{ij} = c_{ijkl} $[mdef]_{kl}$$
+
+## Izotróp testek - Lamé-állandók:
+
 $$ \lambda  = \frac{E \sigma}{ (1 + \sigma)(1 - 2\sigma)}$$
 és
 $$ \mu = \frac{E}{2(1 + \sigma)} $$
 anyagi minőség, hőmérséklet, nyomás függvényei
 
-$$ p_{ij} = \delta_{ij} \lambda \theta + 2 \mu \mdef_{ij} $$
+$$ p_{ij} = \delta_{ij} \lambda \theta + 2 \mu $[mdef]_{ij} $$
 
 vagy
 
-$$ \mat{p} = \lambda\theta\mat{I} + 2 \mu \mdef $$
+$$ mat(p) = \lambda\theta mat(u) + 2 \mu $[mdef] $$
 
-$$ \rho \par{t}^2 \mat{u} = \mat{f} + \div\mat{p} $$
-$$ \rho \par{t}^2 u_i = f_i + \par{j} p_{ij} $$
+## Hullámegyenlet
 
-$$ \par{j} p_{ij} = \lambda \delta_{ij} \par{j} \par{k} u_k  + \mu \par{j} (\par{i} u_j + \par{j} u_i) $$
-$$ \par{j} p_{ij} = \lambda \par{i} \par{k} u_k  + \mu \par{j} \par{i} u_j + \mu \par{j} \par{j} u_i $$
-$$ \div \mat{p} = \lambda \gdiv{\mat{u}}  + \mu \gdiv{\mat{u}} + \mu \laplace \mat{u} $$
-$$ \laplace \mat{u} = \gdiv{\mat{u}} - \rot \rot \mat{u} $$
-$$ \div \mat{p} = (\lambda + 2\mu) \gdiv{\mat{u}}  - \mu \rot \rot \mat{u} $$
-$$ \rho \par{t}^2 \mat{u} = qmat{f} + (\lambda + 2\mu) \gdiv{\mat{u}}  - \mu \rot \rot \mat{u} $$
+$$ \rho par(t)^2 mat(u) = mat(f) + div mat(p) $$
+$$ \rho par(t)^2 u_i = f_i + par(j) p_{ij} $$
 
-Szeparálás:
+#define gdiv_u gdiv(mat(u))
 
-$$ \Theta = \div \mat{u} $$
-$$ \rho \par{t}^2 \Theta = (\lambda + 2\mu) \laplace \Theta $$
-$$ \par{t}^2 \Theta = \alpha^{-2} \laplace \Theta \hspace{25pt} \alpha = \sqrt{\frac{\lambda + 2 \mu}{\rho}} $$
+$$ par(i) p_{ij} = \lambda \delta_{ij} par(j) par(k) u_k  + \mu par(j) (par(i) u_j + par(j) u_i) $$
+$$ par(j) p_{ij} = \lambda par(i) par(k) u_k  + \mu par(j) par(i) u_j + \mu par(j) par(j) u_i $$
+$$ div mat(p) = \lambda gdiv_u  + \mu gdiv_u + \mu laplace mat(u) $$
+$$ laplace mat(u) = gdiv_u - rot rot mat(u) $$
+$$ div mat(p) = (\lambda + 2\mu) gdiv_u  - \mu rot rot mat(u) $$
+$$ \rho par(t)^2 mat(u) = mat(f) + (\lambda + 2\mu) gdiv_u  - \mu rot rot mat(u) $$
 
-$$ \phi = \rot \mat{u} $$
-$$ \rho \par{t}^2 \phi = \mu \laplace \phi $$
-$$ \par{t}^2 \phi = \beta^{-2} \laplace \phi \hspace{25pt} \beta = \sqrt{\frac{\mu}{\rho}} $$
+### Szeparálás
+
+$$ \Theta = div mat(u) $$
+$$ \rho par(t)^2 \Theta = (\lambda + 2\mu) laplace \Theta $$
+$$ par(t)^2 \Theta = \alpha^{-2} laplace \Theta \hspace{25pt} \alpha = \sqrt{\frac{\lambda + 2 \mu}{\rho}} $$
+
+$$ \phi = rot mat(u) $$
+$$ \rho par(t)^2 \phi = \mu laplace \phi $$
+$$ par(t)^2 \phi = \beta^{-2} laplace \phi \hspace{25pt} \beta = \sqrt{\frac{\mu}{\rho}} $$
+
+### Általános megoldás
+
+$$ \Theta(mat(r), t) = G(mat(k) mat(r) \pm c t) $$
+
+Tipikus választás
+
+$$ \Theta = mat(A) \exp (i (mat(k) mat(r) \pm \omega t)) $$
+$$ mat(k) = \frac{2 \pi}{\lambda} mat(n) \hspace{25pt} \omega = \frac{2\pi}{T}$$
+
+Fázissebesség: $ v_f = \frac{\omega}{k} $
+Csoportsebesség: $ mat(v) _g = \frac{\partial \omega}{\partial mat(k)} $
+
+### Energiasűrűség
+
+$$ e =  half  \rho \omega^2 A^2 $$
+
+## Rugalmas hullámok törése
 
 
 
+center(imref(http://ds.iris.edu/spudservice/data/9991842?nolog=y))
 
