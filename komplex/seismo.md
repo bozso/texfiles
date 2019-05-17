@@ -1,11 +1,6 @@
 $[
-    from latex import *
+    # from latex import *
     mdef = r"\mathbf{\varepsilon}"
-    laplace = r"\mathop{}\!\mathbin\bigtriangleup"
-    tr = r"\mathrm{Tr} \hspace{2pt}"
-    div = r"\nabla \hspace{2pt}"
-    rot = r"\nabla \times \hspace{2pt}"
-    half = r"\frac{1}{2}"
 
     def mat(txt):
         write(r"\nabla \left(\nabla %s \right) \hspace{2pt}" % txt)
@@ -15,6 +10,21 @@ $[
     
     def par(txt):
         write(r"\hspace{2pt} \partial_{%s}" % txt)
+
+    
+    use("/home/istvan/Dokumentumok/texfiles/komplex/latex.py")
+    
+    # laplace = r"\mathop{}\!\mathbin\bigtriangleup"
+    # tr = r"\mathrm{Tr} \hspace{2pt}"
+    # div = r"\nabla \hspace{2pt}"
+    # rot = r"\nabla \times \hspace{2pt}"
+    # half = r"\frac{1}{2}"
+    # 
+    # def imref(url):
+    #     write(r'<img src="%s"> <a href="%s"> Forrás </a>' % (url, url))
+    # 
+    # def center(txt):
+    #     write(r"<center> %s </center>" % txt)        
 ]
 
 ## Bevezetés
@@ -48,6 +58,7 @@ derivative work: <a href="//commons.wikimedia.org/wiki/User:Mircalla22" title="U
 $[
     vu = r"\mathbf{u}"
 ]
+
 
 $$ $[mdef]_{ij} = $[half] (\partial_i u_j + \partial_j u_i ) $$
 $$ \theta = \frac{\Delta V}{V} = $[tr] $[mdef] = $[div] $[vu] $$
@@ -114,5 +125,5 @@ $$ e =  half  \rho \omega^2 A^2 $$
 
 
 
-center(imref(http://ds.iris.edu/spudservice/data/9991842?nolog=y))
+$[imref("http://ds.iris.edu/spudservice/data/9991842?nolog=y")]
 
