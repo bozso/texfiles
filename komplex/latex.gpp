@@ -1,11 +1,42 @@
+#define @hspace \hspace{#1}
+#define @vspace \vspace{#1}
+
+
+#define @center <center> #1 </center>
+#define @imref <img src="#1" title="#2", alt="#2"> <br><a href="#1"> #2 </a> </br>
+#define @imgit <img src="https://raw.githubusercontent.com/bozso/texfiles/master/images/#1" title="#2" alt="#2"> <br><a href="https://raw.githubusercontent.com/bozso/texfiles/master/images/#1"> #2 </a> </br>
+
+#define @mat \mathbf{#1}
+#define @gdiv \nabla \left(\nabla #1 \right) @hspace(2pt)
+#define @par @hspace(2pt) \partial_{#1}
+#define @frac \frac{#1}{#2}
+
+
+#define @laplace \mathop{}\!\mathbin\bigtriangleup
+#define @tr \mathrm{Tr} @hspace(2pt)
+#define @div \nabla @hspace(2pt)
+#define @rot \nabla \times @hspace(2pt)
+#define @half \frac{1}{2}
+
+
+#define @htag(tag, content) <#1> #2 </#1>
+
+
+
+/*
 \define{\center{in}}{<center> \in </center>}
 \define{\imref{in}{title}}{<img src="\in" title="\title", alt="\title"> <br><a href="\in"> \title </a> </br>}
+\define{\imgit{in}{title}}{<img src="https://raw.githubusercontent.com/bozso/texfiles/master/images/\in" title="\title" alt="\title"> <br><a href="https://raw.githubusercontent.com/bozso/texfiles/master/images/\in"> \title </a> </br>}
+
 \define{\mat{in}}{\mathbf{\in}}
 \define{\gdiv{in}}{\nabla \left(\nabla \in \right) \hspace{2pt}}
 \define{\par{in}}{\hspace{2pt} \partial_{\in}}
+
+\define{\htag{tag}{content}}{<\tag> \content </\tag>}
 
 \define{\laplace}{\mathop{}\!\mathbin\bigtriangleup}
 \define{\tr}{\mathrm{Tr} \hspace{2pt}}
 \define{\div}{\nabla \hspace{2pt}}
 \define{\rot}{\nabla \times \hspace{2pt}}
 \define{\half}{\frac{1}{2}}
+*/

@@ -1,12 +1,11 @@
-\include{latex.gpp}
+#include "latex.gpp"
 
-\define{\vu}{\mat{u}}
-\define{\vp}{\mat{p}}
-\define{\mdef}{\mat{\varepsilon}}
+#define @vp @mat(p)
+#define @vu @mat(u)
+#define @mdef @mat(\varepsilon)
 
 
 ## Bevezetés
-
 
 - földrengések regisztrálása, Föld belső szerkezetének meghatározása
 - földrengés komoly veszélyforrás, emberi életek
@@ -32,7 +31,6 @@ derivative work: <a href="//commons.wikimedia.org/wiki/User:Mircalla22" title="U
 </a><br>By Breakdown - <span class="int-own-work" lang="en">Own work</span>,<a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=3702892">Link</a></p>
 
 ## Deformációs tenzor
-
 
 $$ \mdef _{ij} = \half (\partial_i u_j + \partial_j u_i ) $$
 $$ \theta = \frac{\Delta V}{V} = \tr \mdef = \div \vu $$
@@ -99,5 +97,7 @@ Csoportsebesség: $ \mat{v} _g = \frac{\partial \omega}{\partial \vk} $
 $$ e = \half \rho \omega^2 A^2 $$
 
 ## Rugalmas hullámok törése
+
+
 
 \center{\imref{https://ds.iris.edu/spudservice/data/9991842?nolog=y}{PREM modell.}}
