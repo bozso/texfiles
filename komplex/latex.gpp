@@ -1,3 +1,37 @@
+\define{\mat{in}}{\mathbf{\in}}
+\define{\gdiv{in}}{\nabla \left(\nabla \in \right) \hspace{2pt}}
+\define{\par{in}}{\hspace{2pt} \partial_{\in}}
+
+\define{\htag{tag}{content}{args}}{<\tag \args> \content </\tag>}
+
+\define{\center{in}}{<center> \in </center>}
+\define{\imref{in}{title}}{<img src="\in" title="\title", alt="\title"> <br><a href="\in"> \title </a> </br>}
+\define{\imgit{in}{title}}{<img src="https://raw.githubusercontent.com/bozso/texfiles/master/images/\in" title="\title" alt="\title"> <br><a href="https://raw.githubusercontent.com/bozso/texfiles/master/images/\in"> \title </a> </br>}
+
+\define{\pow{base}{power}}{{\base}^{\power}}
+\define{\inv{in}}{\pow{\in}{-1}}
+
+\define{\unit{in}}{\text{\in} \hspace{1pt}}
+\define{\meter}{\unit{m}}
+\define{\centi}{\unit{cm}}
+\define{\second}{\unit{s}}
+\define{\year}{\unit{yr}}
+
+\define{\b{content}{args}}{<b \args> \content </b>}
+
+
+\define{\laplace}{\mathop{}\!\mathbin\bigtriangleup}
+\define{\tr}{\mathrm{Tr} \hspace{2pt}}
+\define{\div}{\nabla \hspace{2pt}}
+\define{\rot}{\nabla \times \hspace{2pt}}
+\define{\half}{\frac{1}{2}}
+
+
+
+
+
+
+/*
 #define @hspace \hspace{#1}
 #define @vspace \vspace{#1}
 
@@ -20,23 +54,4 @@
 
 
 #define @htag(tag, content) <#1> #2 </#1>
-
-
-
-/*
-\define{\center{in}}{<center> \in </center>}
-\define{\imref{in}{title}}{<img src="\in" title="\title", alt="\title"> <br><a href="\in"> \title </a> </br>}
-\define{\imgit{in}{title}}{<img src="https://raw.githubusercontent.com/bozso/texfiles/master/images/\in" title="\title" alt="\title"> <br><a href="https://raw.githubusercontent.com/bozso/texfiles/master/images/\in"> \title </a> </br>}
-
-\define{\mat{in}}{\mathbf{\in}}
-\define{\gdiv{in}}{\nabla \left(\nabla \in \right) \hspace{2pt}}
-\define{\par{in}}{\hspace{2pt} \partial_{\in}}
-
-\define{\htag{tag}{content}}{<\tag> \content </\tag>}
-
-\define{\laplace}{\mathop{}\!\mathbin\bigtriangleup}
-\define{\tr}{\mathrm{Tr} \hspace{2pt}}
-\define{\div}{\nabla \hspace{2pt}}
-\define{\rot}{\nabla \times \hspace{2pt}}
-\define{\half}{\frac{1}{2}}
 */

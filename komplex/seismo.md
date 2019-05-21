@@ -1,8 +1,8 @@
-#include "latex.gpp"
+\include{latex.gpp}
 
-#define @vp @mat(p)
-#define @vu @mat(u)
-#define @mdef @mat(\varepsilon)
+\define{\vp}{\mat{p}}
+\define{\vu}{\mat{u}}
+\define{\mdef}{\mat{\varepsilon}}
 
 
 ## Bevezetés
