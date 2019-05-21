@@ -1,12 +1,23 @@
+<head>
+<link rel="stylesheet" type="text/css"
+ href="/home/istvan/Dokumentumok/texfiles/komplex/common.css">
+</head>
+
+
 \define{\mat{in}}{\mathbf{\in}}
 \define{\gdiv{in}}{\nabla \left(\nabla \in \right) \hspace{2pt}}
 \define{\par{in}}{\hspace{2pt} \partial_{\in}}
 
-\define{\htag{tag}{content}{args}}{<\tag \args> \content </\tag>}
+\define{\htag{tag}{args}{content}}{<\tag \args> \content </\tag>}
 
 \define{\center{in}}{<center> \in </center>}
-\define{\imref{in}{title}}{<img src="\in" title="\title", alt="\title"> <br><a href="\in"> \title </a> </br>}
-\define{\imgit{in}{title}}{<img src="https://raw.githubusercontent.com/bozso/texfiles/master/images/\in" title="\title" alt="\title"> <br><a href="https://raw.githubusercontent.com/bozso/texfiles/master/images/\in"> \title </a> </br>}
+\define{\imref{in}{title}{attr}}{<img src="\in" \attr title="\title" alt="\title"> <br> \title <a href="\in"> Forrás </a>}
+\define{\imgit{in}{title}{attr}}{<img src="https://raw.githubusercontent.com/bozso/texfiles/master/images/\in" \attr title="\title" alt="\title"> <br> \title <a href="https://raw.githubusercontent.com/bozso/texfiles/master/images/\in"> Forrás </a>}
+
+\define{\col{in}}{<div class="column"> \in </div>}
+\define{\row{in}}{<div class="row"> \in </div>}
+
+\define{\float{in}}{<div class="float"> \in </div>}
 
 \define{\pow{base}{power}}{{\base}^{\power}}
 \define{\inv{in}}{\pow{\in}{-1}}
