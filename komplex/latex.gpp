@@ -1,6 +1,5 @@
 <head>
-<link rel="stylesheet" type="text/css"
- href="/home/istvan/Dokumentumok/texfiles/komplex/common.css">
+<link rel="stylesheet" type="text/css" href="/home/istvan/Dokumentumok/texfiles/komplex/common.css">
 </head>
 
 
@@ -8,27 +7,65 @@
 \define{\gdiv{in}}{\nabla \left(\nabla \in \right) \hspace{2pt}}
 \define{\par{in}}{\hspace{2pt} \partial_{\in}}
 
-\define{\htag{tag}{args}{content}}{<\tag \args> \content </\tag>}
+\define{\htag{tag}{args}{content}}{<\tag \args>\content</\tag>}
 
 \define{\center{in}}{<center> \in </center>}
-\define{\imref{in}{title}{attr}}{<img src="\in" \attr title="\title" alt="\title"> <br> \title <a href="\in"> Forrás </a>}
+\define{\imref{in}{title}{attr}}{<img src="\in" \attr title="\title" alt="\title"> <br> \title Forrás: <a href="\in"> \in </a>}
 \define{\imgit{in}{title}{attr}}{<img src="https://raw.githubusercontent.com/bozso/texfiles/master/images/\in" \attr title="\title" alt="\title"> <br> \title <a href="https://raw.githubusercontent.com/bozso/texfiles/master/images/\in"> Forrás </a>}
 
-\define{\col{in}}{<div class="column"> \in </div>}
-\define{\row{in}}{<div class="row"> \in </div>}
+\define{\col{in}}{<div class="column">\in</div>}
+\define{\row{in}}{<div class="row">\in</div>}
 
-\define{\float{in}}{<div class="float"> \in </div>}
+\define{\ul{in}}{<ul> \in </ul>}
+\define{\ol{in}}{<ol> \in </ol>}
+\define{\li{in}}{<li>\in</li>}
 
 \define{\pow{base}{power}}{{\base}^{\power}}
 \define{\inv{in}}{\pow{\in}{-1}}
 
+\define{\milli}{\text{m}}
+\define{\centi}{\text{c}}
+\define{\kilo}{\text{k}}
+\define{\mega}{\text{M}}
+
 \define{\unit{in}}{\text{\in} \hspace{1pt}}
+
 \define{\meter}{\unit{m}}
-\define{\centi}{\unit{cm}}
+\define{\cm}{\centi\meter}
+\define{\km}{\kilo\meter}
+
 \define{\second}{\unit{s}}
 \define{\year}{\unit{yr}}
 
-\define{\b{content}{args}}{<b \args> \content </b>}
+\define{\watt}{\unit{W}}
+\define{\myr}{\mega\year}
+
+\define{\cube{in}}{\pow{\in}{3}}
+
+\define{\si{in}{unitn}}{\in \hspace{2.5pt} \unitn}
+
+
+\define{\b{in}}{<b>\in</b>}
+\define{\p{in}}{<p>\in</p>}
+\define{\p{in}}{<p>\in</p>}
+\define{\em{in}}{<em>\in</em>}
+\define{\it{in}}{<i>\in</i>}
+\define{\del{in}}{<del>\in</del>}
+\define{\strong{in}}{<strong>\in</strong>}
+
+
+\define{\h1{in}}{<h1>\in</h1>}
+\define{\h2{in}}{<h2>\in</h2>}
+\define{\h3{in}}{<h3>\in</h3>}
+\define{\h4{in}}{<h4>\in</h4>}
+\define{\h5{in}}{<h5>\in</h5>}
+\define{\h5{in}}{<h6>\in</h6>}
+
+
+\define{\body{in}}{<body> \in </body>}
+\define{\head{in}}{<head> \in </head>}
+
+\define{\with{class}{in}}{<div class="\class"> \in </div>}
 
 
 \define{\laplace}{\mathop{}\!\mathbin\bigtriangleup}
@@ -36,10 +73,6 @@
 \define{\div}{\nabla \hspace{2pt}}
 \define{\rot}{\nabla \times \hspace{2pt}}
 \define{\half}{\frac{1}{2}}
-
-
-
-
 
 
 /*
