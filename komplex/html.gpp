@@ -16,6 +16,10 @@
 \define{\col{in}}{<div class="column">\in</div>}
 \define{\row{in}}{<div class="row">\in</div>}
 
+\define{\tr{in}}{<tr> \in </tr>}
+\define{\th{in}}{<th>\in</th>}
+\define{\td{in}}{<td>\in</td>}
+
 \define{\ul{in}}{<ul> \in </ul>}
 \define{\ol{in}}{<ol> \in </ol>}
 \define{\li{in}}{<li>\in</li>}
@@ -69,7 +73,7 @@
 
 
 \define{\laplace}{\mathop{}\!\mathbin\bigtriangleup}
-\define{\tr}{\mathrm{Tr} \hspace{2pt}}
+\define{\trace}{\mathrm{Tr} \hspace{2pt}}
 \define{\div}{\nabla \hspace{2pt}}
 \define{\rot}{\nabla \times \hspace{2pt}}
 \define{\half}{\frac{1}{2}}

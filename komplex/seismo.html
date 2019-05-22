@@ -1,0 +1,181 @@
+\include{html.gpp}
+
+\define{\vp}{\mat{p}}
+\define{\vu}{\mat{u}}
+
+\define{gdiv_u}{\gdiv{\vu}}
+
+\define{\vr}{\mat{r}}
+\define{\vk}{\mat{k}}
+
+\define{\mdef}{\mat{\varepsilon}}
+
+\h2{Bevezetés}
+
+
+\ul{
+    \li{földrengések regisztrálása, Föld belső szerkezetének meghatározása}
+    \li{földrengés komoly veszélyforrás, emberi életek}
+    \li{legnagyobb történelmi földrengés: Lisszabon (1755); &approx; 60 000
+        halálos áldozat; tűzvész és cunami; Skóciában, Skandináviában érezték hatását; becsült Richter magnitúdó: 8.75}
+    \li{ESA ERS-1 műhold; 1992-es Szent András-törésvonal földrengés,
+        2-3 m-es horizontális elmozdulás}
+}
+
+
+<p><a href="https://commons.wikimedia.org/wiki/File:2D_geometric_strain.svg#/media/File:2D_geometric_strain.svg">
+<center>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/2D_geometric_strain.svg/1200px-2D_geometric_strain.svg.png" width="600" alt="2D geometric strain.svg">
+</center>
+</a><br>By <a href="//commons.wikimedia.org/wiki/File:2D_geometric_strain.png" title="File:2D geometric strain.png">2D_geometric_strain.png</a>: <a href="//commons.wikimedia.org/wiki/User:Sanpaz" title="User:Sanpaz">Sanpaz</a>
+derivative work: <a href="//commons.wikimedia.org/wiki/User:Mircalla22" title="User:Mircalla22">Mircalla22</a> (<a href="//commons.wikimedia.org/wiki/User_talk:Mircalla22" title="User talk:Mircalla22"><span class="signature-talk">talk</span></a>) - <a href="//commons.wikimedia.org/wiki/File:2D_geometric_strain.png" title="File:2D geometric strain.png">2D_geometric_strain.png</a>, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=7680077">Link</a></p>
+
+<p>
+<a href="https://commons.wikimedia.org/wiki/File:Stress_Strain_Ductile_Material.png#/media/File:Stress_Strain_Ductile_Material.png">
+<center>
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Stress_Strain_Ductile_Material.png" width="600" alt="Stress Strain Ductile Material.png">
+</center>
+</a><br>By Breakdown - <span class="int-own-work" lang="en">Own work</span>,<a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=3702892">Link</a></p>
+
+\h2{Deformációs tenzor}
+
+$$ \mdef _{ij} = \half (\partial_i u_j + \partial_j u_i ) $$
+$$ \theta = \frac{\Delta V}{V} = \trace \mdef = \div \vu $$
+
+\h2{Rugalmas feszültség tenzor}
+
+\h2{Általánosított Hooke-törvény}
+
+$$ p_{ij} = c_{ijkl} \mdef _{kl}$$
+
+\h2{Izotróp testek - Lamé-állandók:}
+
+$$ \lambda  = \frac{E \sigma}{ (1 + \sigma)(1 - 2\sigma)}$$
+és
+$$ \mu = \frac{E}{2(1 + \sigma)} $$
+anyagi minőség, hőmérséklet, nyomás függvényei
+
+$$ p_{ij} = \delta_{ij} \lambda \theta + 2 \mu \mdef _{ij} $$
+
+vagy
+
+$$ \vp = \lambda\theta \vu + 2 \mu \mdef $$
+
+\h2{Hullámegyenlet}
+
+$$ \rho \par{t}^2 \vu = \mat{f} + \div \vp $$
+$$ \rho \par{t}^2 u_i = f_i + \par{j} p_{ij} $$
+
+
+$$ \par{i} p_{ij} = \lambda \delta_{ij} \par{j} \par{k} u_k  + \mu \par{j} (\par{i} u_j + \par{j} u_i) $$
+$$ \par{j} p_{ij} = \lambda \par{i} \par{k} u_k  + \mu \par{j} \par{i} u_j + \mu \par{j} \par{j} u_i $$
+$$ \div \vp = \lambda \gdiv_u  + \mu \gdiv_u + \mu \laplace \vu $$
+$$ \laplace \vu = \gdiv_u - \rot \rot \vu $$
+$$ \div \vp = (\lambda + 2 \mu) \gdiv_u  - \mu \rot \rot \vu $$
+$$ \rho \par{t}^2 \vu = \mat{f} + (\lambda + 2 \mu) \gdiv_u  - \mu \rot \rot \vu $$
+
+\h3{Szeparálás}
+
+$$ \Theta = \div \vu $$
+$$ \rho \par{t}^2 \Theta = (\lambda + 2 \mu) \laplace \Theta $$
+$$ \par{t}^2 \Theta = \alpha^{-2} \laplace \Theta \hspace{25pt} \alpha = \sqrt{\frac{\lambda + 2 \mu}{\rho}} $$
+
+$$ \phi = \rot \vu $$
+$$ \rho \par{t}^2 \phi = \mu \laplace \phi $$
+$$ \par{t}^2 \phi = \beta^{-2} \laplace \phi \hspace{25pt} \beta = \sqrt{\frac{\mu}{\rho}} $$
+
+\h3{Általános megoldás}
+
+
+$$ \Theta(\vr, t) = G(\vk \vr \pm c t) $$
+
+Tipikus választás
+
+$$ \Theta = \mat{A} \exp (i (\vk \vr \pm \omega t)) $$
+$$ \vk = \frac{2 \pi}{\lambda} \mat{n} \hspace{25pt} \omega = \frac{2\pi}{T}$$
+
+Fázissebesség: $ v_f = \frac{\omega}{k} $
+Csoportsebesség: $ \mat{v} _g = \frac{\partial \omega}{\partial \vk} $
+
+\h3{Energiasűrűség}
+
+$$ e = \half \rho \omega^2 A^2 $$
+
+\h2{Rugalmas hullámok törése}
+
+
+\h2{A Föld belső szerkezete - PREM modell}
+
+információ: szeizmika, magas nyomáson és hőmérsékleten végzett kísérletek,
+geokémia, mgnetotellúrika, ásványfizika
+
+\h3{A Föld radiális szerkezete}
+
+\ul{
+    \li{Andrija Mohorovicic (1909): kéreg-köpeny határ (Moho)}
+    \li{Beno Gutenberg (1913): Köpeny-Mag határ (Gutenberg-felület)}
+    \li{Inge Lehmann (1936): belső és külső mag közötti határ
+        (Lehmann-felület)}
+    \li{Sir Harold Jeffreys (1939): bizonyítékok az átmeneti zóna létezésére}
+    \li{Bullen (1940): összegzés, hat zóna}
+    \center{
+        <table style="width:50%">
+            \tr{\th{Betűjel} \th{Zóna}}
+            \tr{\td{A} \td{Kéreg}}
+            \tr{\td{B} \td{Felső köpeny}}
+            \tr{\td{C} \td{Átmeneti Zóna}}
+            \tr{\td{D} \td{Alsó köpeny}}
+            \tr{\td{E} \td{Külső mag}}
+            \tr{\td{F} \td{Belső mag}}
+        </table>
+    }
+    \li{Ma már nem használatos felosztás}
+}
+
+
+\h4{A Föld radiális kémiai összetétele}
+
+\ol{
+    \li{\b{Kéreg}}
+    \ul{
+        \li{óceáni kéreg - vastagság $0 - \si{6}{\km}$, főként üledék és bazalt}
+        \li{kontinentális kéreg - vastagság $\approx \si{30}{\km}$,
+            üledékek, granodiorit}
+        \li{óceáni kéreg sűrűbb}
+    }
+    \li{\b{Köpeny}}
+    \ul{
+        \li{kéregtől kb. $\si{2900}{\km}$-ig tart, döntően magnéziumszilikát}
+        \li{60% olivin, 30% piroxén, 10% gránát}
+    }
+    \li{\b{Mag}: fémes összetétel, 80% vas, 5% nikkel, kisebb sűrűségű ötvözetek,
+        és ötvöző anyagok}
+}
+
+
+\h4{A Föld radiális mechanikai szerkezete}
+
+\ol{
+    \li{\b{Litoszféra}: szilárd burok, kb. $\si{100}{\km}$ vastag,
+        kontinentális litoszféra ennek kétszerese is lehet, minden
+        idősálán szilárd}
+    \li{\b{Mezoszféra}: asztenoszféra alatt, emberi időskálán döntően szilárd}
+    \li{\b{Külső mag}: $2890 - \si{5150}{\km}$, folyékony}
+    \li{\b{Belső mag}: $5150 - \si{6370}{\km}$, szilárd}
+}
+
+
+\h3{PREM-modell}
+
+\ul{
+    \li{\it{Preliminary Reference Earth Model}, kiinduló radiális (1D-s) modell}
+    \li{bementi adat: szeizmológiai menetidőgörbék és a Föld
+        sajátrezgéseinek frekvenciái}
+    \li{$v_p(r)$ és $v_s(r)$ szeizmikus hullámterjedési sebességek a mélység
+        függvényében + Adams-Williamson-egyenlet &rarr; $\rho(r)$ és $g(r)$
+        &rarr; rugalmas paraméterek (Lamé-állandók, Young-modulus, Poisson-arány)}
+}
+
+\center{\imref{https://ds.iris.edu/spudservice/data/9991842?nolog=y}{PREM modell.}}
+
+
