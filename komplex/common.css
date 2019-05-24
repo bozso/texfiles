@@ -1,11 +1,23 @@
-td {
-  border: 1px solid black;
+table {
+  page-break-inside: avoid;
 }
+
+th, td {
+  text-align: center;
+  border: 10px solid black;
+  page-break-inside: avoid;
+}
+
+th {
+  background-color: #b3cccc;
+}
+
 
 .row {
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
+  page-break-inside: avoid;
 }
 
 /* Create two equal columns that sits next to each other */
@@ -35,3 +47,24 @@ td {
     max-width: 100%;
   }
 }
+
+.page-break	{ page-break-before: always; }
+
+
+@page {
+  size: A4;
+}
+
+/*
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  html, body {
+    width: 210mm;
+    height: 297mm;
+  }
+}
+*/

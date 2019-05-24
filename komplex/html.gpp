@@ -1,11 +1,17 @@
 <head>
 <link rel="stylesheet" type="text/css" href="/home/istvan/Dokumentumok/texfiles/komplex/common.css">
+<link rel="stylesheet" href="print.css" type="text/css" media="print" />
 </head>
 
+
+\define{\pbreak}{<div class="page-break"></div>}
 
 \define{\mat{in}}{\mathbf{\in}}
 \define{\gdiv{in}}{\nabla \left(\nabla \in \right) \hspace{2pt}}
 \define{\par{in}}{\hspace{2pt} \partial_{\in}}
+\define{\part}{\hspace{2pt} \partial_{t}}
+\define{\md}{\mathrm{d}}
+\define{\der{nom}{denom}}{\frac{\md \nom}{\md \denom}}
 
 \define{\htag{tag}{args}{content}}{<\tag \args>\content</\tag>}
 
@@ -16,7 +22,7 @@
 \define{\col{in}}{<div class="column">\in</div>}
 \define{\row{in}}{<div class="row">\in</div>}
 
-\define{\tr{in}}{<tr> \in </tr>}
+\define{\tr{in}}{<tr>\in</tr>}
 \define{\th{in}}{<th>\in</th>}
 \define{\td{in}}{<td>\in</td>}
 
@@ -25,33 +31,45 @@
 \define{\li{in}}{<li>\in</li>}
 
 \define{\pow{base}{power}}{{\base}^{\power}}
+
+\define{\cube{in}}{\pow{\in}{3}}
+\define{\sqrd{in}}{\pow{\in}{2}}
+
 \define{\inv{in}}{\pow{\in}{-1}}
 
 \define{\milli}{\text{m}}
 \define{\centi}{\text{c}}
 \define{\kilo}{\text{k}}
 \define{\mega}{\text{M}}
+\define{\giga}{\text{G}}
 
 \define{\unit{in}}{\text{\in} \hspace{1pt}}
 
 \define{\meter}{\unit{m}}
+\define{\newton}{\unit{N}}
+\define{\pa}{\unit{Pa}}
 \define{\cm}{\centi\meter}
 \define{\km}{\kilo\meter}
+\define{\kmps}{\kilo\meter\pow{\second}{-1}}
+
+\define{\sci{num}{tpow}}{\num \cdot 10^{\tpow}}
 
 \define{\second}{\unit{s}}
 \define{\year}{\unit{yr}}
+\define{\celsius}{^{\text{o}}\unit{C}}
+\define{\deg{in}}{{\in}^{\text{o}}}
 
 \define{\watt}{\unit{W}}
 \define{\myr}{\mega\year}
 
-\define{\cube{in}}{\pow{\in}{3}}
 
 \define{\si{in}{unitn}}{\in \hspace{2.5pt} \unitn}
-
 
 \define{\b{in}}{<b>\in</b>}
 \define{\p{in}}{<p>\in</p>}
 \define{\p{in}}{<p>\in</p>}
+\define{\q{in}}{<q>\in</q>}
+\define{\u{in}}{<u>\in</u>}
 \define{\em{in}}{<em>\in</em>}
 \define{\it{in}}{<i>\in</i>}
 \define{\del{in}}{<del>\in</del>}
@@ -78,6 +96,7 @@
 \define{\trace}{\mathrm{Tr} \hspace{2pt}}
 \define{\div}{\nabla \hspace{2pt}}
 \define{\rot}{\nabla \times \hspace{2pt}}
+\define{\cross{one}{two}}{\one \times \two}
 \define{\half}{\frac{1}{2}}
 
 
