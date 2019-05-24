@@ -57,6 +57,8 @@
 \define{\del{in}}{<del>\in</del>}
 \define{\strong{in}}{<strong>\in</strong>}
 
+\define{\par{in}}{\left( \in \right)}
+
 
 \define{\h1{in}}{<h1>\in</h1>}
 \define{\h2{in}}{<h2>\in</h2>}
