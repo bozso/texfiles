@@ -1,10 +1,176 @@
 \include{html.gpp}
 
-
 \define{\e0}{\epsilon_0}
+\define{\vv}{\mat{v}}
+\define{\vE}{\mat{E}}
+\define{\vB}{\mat{B}}
+\define{\ome}{\omega_{pe}}
+\define{\pdens}{\pow{\cm}{-3}}
+
 
 \h2{Bevezetés}
 
-$$ \omega_{pe} = \pow{\par{ n_e \pow{e}{2} \inv{(m_e \e0)}}}{\half} $$
+\h3{Plazma definíciója}
 
+\ul{
+    \li{töltött részecske gáz, egyenlő számú
+        pozitív és negatív töltésű részecske}
+    \li{stacionárius állapotban kvázineutrális}
+    \li{néhány $\eV$ termikus energia, forró ionizált gáz}
+    \li{szabad mozgás, ütközésektől eltekintve}
+    \li{univerzum anyagának $\approx 99\%$-a plazma}
+}
+
+\h3{Debye árnyékolás}
+
+\ul{
+    \li{térfogatelemben ugyanannyi pozitív és negatív töltésű
+        részecske &rarr; részecskék leárnyékolják egymás elektromos
+        terét}
+    \li{\em{Debye-távolság} $\lambda_D \prop T_e, \inv{n_e}$}
+    \li{Debye-távolságon túl részecske tere leárnyékolódik}
+    \li{\b{Első kritérium:} kvázineutrális a plazma ha $\lambda_D \ll L$}
+    \li{\b{Második kritérium:} plazmaparaméter $\Lambda = n_e \cubed{\lambda_D} \gg 1 $}
+}
+
+
+\h3{Plazmafrekvencia}
+
+\ul{
+    \li{plazmáknak karakterisztikus rezgési frekvenciája}
+    \li{külső zavar &rarr; elektronok rezgőmozgást végeznek}
+    \li{nem teljesen ionizált gáz &rarr; elektronok ütköznek a semleges
+        részecskékkel, karakterisztikus idő $\tau_n$}
+    \li{\b{Harmadik kritérium:} $ \ome \tau_n \gg 1 $}
+}
+
+$$ \ome = \pow{\par{ n_e \pow{e}{2} \inv{(m_e \e0)}}}{\half} $$
+
+
+\h3{Geofizikai plazmák}
+
+\h4{Napszél}
+
+\ul{
+    \li{napkorona szuperszónikus tágulása, nagy vezetőképesség,
+        $v \approx \si{500}{\kps}$, $n_e \approx \si{5}{\pdens} $} 
+    \li{elektronok és protonok, kb. 5% He}
+    \li{nap mágneses mezeje \q{befagyva} a plazmába, napszél elvonszolja}
+    \li{}
+}
+
+
+<table>
+    \tr{
+        \th{Plazma}
+        \th{Elektronsűrűség $[\pdens]$}
+        \th{Sebesség $[\kps]$}
+        \th{Hőmérséklet $[K]$}
+        \th{Mágneses tér $[\text{nT}]$}
+    }
+    \tr{
+        \td{Napszél}
+        \td{5}
+        \td{500}
+        \td{$\pow{10}{5}$}
+        \td{5}
+    }
+    \tr{
+        \td{Van Allen övek}
+        \td{1}
+        \td{-}
+        \td{$\sci{5}{7}$}
+        \td{$100 - 1000$}
+    }
+    \tr{
+        \td{Plasma sheet}
+        \td{0.5}
+        \td{-}
+        \td{$\sci{5}{6}$}
+        \td{10}
+    }
+    \tr{
+        \td{Mágneses csóva}
+        \td{$\pow{10}{-2}$}
+        \td{-}
+        \td{$\pow{10}{5}$}
+        \td{$\approx 30$}
+    }
+    \tr{
+        \td{Ionoszféra}
+        \td{$\pow{10}{5}$}
+        \td{-}
+        \td{$\pow{10}{3}$}
+        \td{$\pow{10}{4}$}
+    }    
+    \tr{
+        \td{Plazmapauza}
+        \td{$\sci{5}{2}$}
+        \td{-}
+        \td{$\sci{5}{3}$}
+        \td{$\pow{10}{4}$}
+    }    
+</table>
+
+\h2{Egyetlen részecske mozgása}
+
+$$ \omega_g = q B \inv{m} $$
+
+$$ \vv _R = \cross{\vE}{\vB} \pow{B}{-2} $$
+
+
+\h2{Csapdázott részecskék}
+
+$$ B(\lambda, L) = \frac{B_e}{\cubed{L}}
+   \frac{\pow{\par{1 + 3 \pow{\sin}{2} \lambda}}{\half}}{\pow{\cos}{6} \lambda} $$
+
+$$ \cos^2 \lambda_E = \inv{L} $$
+
+
+\h2{Ütközéses plazmák vezetőképessége}
+
+\define{\sp}{\sigma_P}
+\define{\sh}{\sigma_H}
+\define{\spar}{\sigma_{\parallel}}
+
+
+$$
+\sigma = 
+\begin{bmat}
+\sp & -\sh & 0 \\
+\sh & \sp & 0 \\
+0 & 0 & \spar
+\end{bmat}
+$$
+
+
+$$ n_n(z) = n_0 \exp(-z \inv{H}) $$
+
+$$ H = \frac{k_B T_n}{m_n g} $$
+
+$$ n_e = \pow{\par{\frac{q_{v,e}}{\alpha_r}}}{\half} $$
+
+$$ n_e = \frac{q_{v,e}}{\beta_r} $$
+
+$$ \sigma_C = \sp + \frac{\pow{\sh}{2}}{\sp} $$
+
+
+\h2{Hullámok plazmákban és fluidumokban}
+
+$$ \sqrd{\ome} = \frac{n_e \pow{e}{2}}{m_e \e0)} $$
+
+$$ \sqrd{\omega_l} = \sqrd{\ome} + \sqrd{k} \gamma_e \sqrd{v_{the}} $$
+
+$$ \sqrd{\omega_{ia}} = \frac{\gamma_e k_B T_e}{m_i} \sqrd{k} $$
+
+$$ \sqrd{\omega_{om}} = \sqrd{\ome} + \sqrd{c} \sqrd{k} $$
+
+$$ \omega_A = \pm k_{\parallel} v_A $$
+
+$$ \omega_w = \sqrd{k} \sqrd{c} \omega_{ge} \pow{\ome}{-2} $$
+
+$$ \sqrd{\omega_{uh}} = \sqrd{\omega_{ge}} + \sqrd{\ome} $$
+
+$$ \omega_{lh} = \frac{\sqrd{\omega_{pi}} + \sqrd{\omega_{gi}}}
+                      {1 + \sqrd{\ome} \pow{\omega_{ge}}} $$
 

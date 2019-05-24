@@ -32,7 +32,7 @@
 
 \define{\pow{base}{power}}{{\base}^{\power}}
 
-\define{\cube{in}}{\pow{\in}{3}}
+\define{\cubed{in}}{\pow{\in}{3}}
 \define{\sqrd{in}}{\pow{\in}{2}}
 
 \define{\inv{in}}{\pow{\in}{-1}}
@@ -50,7 +50,7 @@
 \define{\pa}{\unit{Pa}}
 \define{\cm}{\centi\meter}
 \define{\km}{\kilo\meter}
-\define{\kmps}{\kilo\meter\pow{\second}{-1}}
+\define{\kps}{\kilo\meter\pow{\second}{-1}}
 
 \define{\sci{num}{tpow}}{\num \cdot 10^{\tpow}}
 
@@ -61,6 +61,7 @@
 
 \define{\watt}{\unit{W}}
 \define{\myr}{\mega\year}
+\define{\eV}{\unit{eV}}
 
 
 \define{\si{in}{unitn}}{\in \hspace{2.5pt} \unitn}
