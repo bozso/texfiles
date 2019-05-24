@@ -22,7 +22,7 @@
 \define{\col{in}}{<div class="column">\in</div>}
 \define{\row{in}}{<div class="row">\in</div>}
 
-\define{\tr{in}}{<tr> \in </tr>}
+\define{\tr{in}}{<tr>\in</tr>}
 \define{\th{in}}{<th>\in</th>}
 \define{\td{in}}{<td>\in</td>}
 
@@ -94,6 +94,7 @@
 \define{\trace}{\mathrm{Tr} \hspace{2pt}}
 \define{\div}{\nabla \hspace{2pt}}
 \define{\rot}{\nabla \times \hspace{2pt}}
+\define{\cross{one}{two}}{\one \times \two}
 \define{\half}{\frac{1}{2}}
 
 
