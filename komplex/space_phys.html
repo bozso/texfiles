@@ -4,8 +4,13 @@
 \define{\vv}{\mat{v}}
 \define{\vE}{\mat{E}}
 \define{\vB}{\mat{B}}
+\define{\vj}{\mat{j}}
 \define{\ome}{\omega_{pe}}
 \define{\pdens}{\pow{\cm}{-3}}
+
+\define{\sp}{\sigma_P}
+\define{\sh}{\sigma_H}
+\define{\spar}{\sigma_{\parallel}}
 
 
 \h2{Bevezetés}
@@ -56,9 +61,35 @@ $$ \ome = \pow{\par{ n_e \pow{e}{2} \inv{(m_e \e0)}}}{\half} $$
         $v \approx \si{500}{\kps}$, $n_e \approx \si{5}{\pdens} $} 
     \li{elektronok és protonok, kb. 5% He}
     \li{nap mágneses mezeje \q{befagyva} a plazmába, napszél elvonszolja}
-    \li{}
+    \li{Föld mágneses tere lelassítja és eltéríti}
+    \li{\em{bow shock} napszél lelassul szuperszónikus sebességről
+        szubszónikusra, kinetikus energia &rarr; termális energia}
 }
 
+
+\h4{Magnetoszféra}
+
+\ul{
+    \li{IMF erővonalak nem keresztezik a földi mágneses tér erővonalait}
+    \li{\em{magnetopauza}, mágneses \q{üreg}: \em{magnetoszféra}}
+    \li{napszél kinetikus nyomása &harr; földi mágneses tér nyomása}
+    \li{napfelöli oldal \q{összenyomva}, éjszakai oldal elnyújtva,
+        \q{mágneses csóva}}
+    \li{elsősorban elektronok és protonok, kis részben hélium, oxigén ionok}
+    \li{\q{sugárzási zónák}: $2 - 6 R_E$ távolság, nagy energiájú elektronok
+        és protonok}
+}
+
+
+\h4{Ionoszféra}
+
+\ul{
+    \li{UV sugárzás a Napból ionizálja a semleges atmoszféra egy részét}
+    \li{$\approx \si{80}{\km}$ felett túl ritka az ütközéses rekombináció}
+    \li{átmenet a \em{plamzmaszférába}, hideg sűrű plazma, tórusz alakú régió
+        a sugárzási-öveken belül, együtt forog a Földdel}
+    \li{\em{plazmapauza} $4 R_E$, sűrűség lecsökken $\si{1}{\pdens}$-re}
+}
 
 <table>
     \tr{
@@ -76,7 +107,7 @@ $$ \ome = \pow{\par{ n_e \pow{e}{2} \inv{(m_e \e0)}}}{\half} $$
         \td{5}
     }
     \tr{
-        \td{Van Allen övek}
+        \td{Sugárzási övek}
         \td{1}
         \td{-}
         \td{$\sci{5}{7}$}
@@ -104,53 +135,245 @@ $$ \ome = \pow{\par{ n_e \pow{e}{2} \inv{(m_e \e0)}}}{\half} $$
         \td{$\pow{10}{4}$}
     }    
     \tr{
-        \td{Plazmapauza}
+        \td{Plazmaszéra}
         \td{$\sci{5}{2}$}
         \td{-}
         \td{$\sci{5}{3}$}
-        \td{$\pow{10}{4}$}
+        \td{$\pow{10}{3}$}
     }    
 </table>
 
+
+\h3{Magnetoszferikus áramok}
+
+\ul{
+    \li{sokszor elektronok és ionok nem mozognak együtt &rarr; elektromos
+        áram &rarr; töltés, energia, tömeg és impulzus szállítás, mágneses tér}
+    \li{földi dipóltér torzulása &harr; elektromos áramok}
+    \li{\em{magnetopauza áram}, \em{csóva áram}, \em{neutrális ív áram}}
+    \li{\em{gyűrűáram} sugárzási-zóna részecskéi, nyugati irány,
+        pattogó mozgás + drift}
+}
+
+\imref{https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.geomag.us%2Finfo%2FMagnetosphere%2Fmagnetosphere.jpg&f=1}
+
+
 \h2{Egyetlen részecske mozgása}
 
-$$ \omega_g = q B \inv{m} $$
+\ul{
+    \li{t.f.h.: nem kölcsönható részecskék, nem befolyásolják a külső
+        mágneses teret; igaz ritka plazmáknál, ahol nincs kollektív mozgás,
+        külső mgáneses térnek elég erősnek kell lennie}
+    \li{Coulomb- és Lorentz-erők: $m \dot{\vv} = q (\vE + \cross{\vv}{\vB})$}
+}
 
-$$ \vv _R = \cross{\vE}{\vB} \pow{B}{-2} $$
+\h3{Körmozgás}
+
+\ul{
+    \li{ha $\vE = 0$, csak Lorentz-erő &rarr; körmozgás:
+        $ \omega_g = q B \inv{m} $, girofrekvencia, ciklotronfrekvencia}
+    \li{részecske körmozgása által generált mágneses mező ellentétes a
+        külsővel, \em{diamágneses hatás}}
+}
+
+\h3{Elektromos drift}
+
+\ul{
+    \li{mágneses térrel párhuzamos elektromos komponens nem tarható fennt
+        &larr; elektromok nagyon mozgékonyak a mágneses
+        mező mentén}
+    \li{stacionárius elektromos és mágneses mező esetén &rarr;
+        \em{$\cross{E}{B}$ drift}: $ \vv _R = (\cross{\vE}{\vB})\pow{B}{-2} $}
+    \li{elektromos töltés előjelétől független}
+    \li{fizikai háttér: Lorentz-transzformáció}
+}
 
 
 \h2{Csapdázott részecskék}
 
-$$ B(\lambda, L) = \frac{B_e}{\cubed{L}}
-   \frac{\pow{\par{1 + 3 \pow{\sin}{2} \lambda}}{\half}}{\pow{\cos}{6} \lambda} $$
+\h3{Dipól mező}
 
-$$ \cos^2 \lambda_E = \inv{L} $$
+\ul{
+    \li{földfelszíntől nem túl távol a Föld mágneses tere jól közelíthető
+        egy mágneses dipólus terével}
+    $$ B(\lambda, L) = \frac{B_e}{\cubed{L}}
+       \frac{\pow{\par{1 + 3 \pow{\sin}{2} \lambda}}{\half}}{\pow{\cos}{6} \lambda} $$
+    \li{$L = r_e \inv{R_E}$; $\hspace{5pt} B_E$ egyenlítői mágneses mező nagysága
+        a Föld felszínén}
+    \li{egy adott $L$ értkkel rendelkező erővonal hol metszi a Föld felszínét:}
+    $$ \cos^2 \lambda_E = \inv{L} $$
+}
+
+
+\h3{Gyűrűáram}
+
+\ul{
+    \li{nyugati irányú áramerősség, minden mozgó részecske egy kis gyűrűáramot
+        eredményez; összes részecske hatása &rarr; gyűrűáram}
+    \li{gyűrűáram &rarr; \em{mágneses zavar} a földi mágneses térben}
+    \li{\em{mágneses vihar} több részecske érkezik a csóvából a gyűrűáramba
+        &rarr; gyűrűáram teljes energiája megnő &rarr; egyenlítői
+        magnetogrammokon látható mágneses térerősség lecsökken}
+    \li{mágneses vihar, két fázis}
+    \ol{
+        \li{megnövekedett elektromos tér több részecskét szállít a belső
+            magnetoszférába megnövelve a gyűrűáram erősségét}
+        \li{1-2 nappal a vihar kezdete után az elektromos tér és a részecske
+            szállítás intenzitása visszatér a normális erősségre,
+            a gyűrűáram részecskék száma lecsökken, több napig is elterthat}
+    }
+    \li{extra energia kiszámítható a \em{Dst index} alapján}
+    \li{\em{Dst index}: egyenlítői zavar átlagos értéke, 4 alacsony
+        szélességű mágneses obszervatórium adataiból}
+    \li{nagyobb mágneses vihar során: $+\si{\sci{5}{15}}{\joule}$ és $+ \si{\pow{10}{7}}{\ampere}$}
+}
 
 
 \h2{Ütközéses plazmák vezetőképessége}
 
-\define{\sp}{\sigma_P}
-\define{\sh}{\sigma_H}
-\define{\spar}{\sigma_{\parallel}}
+
+\ul{
+    \li{\em{ütközéses} (részlegesen- és teljesen ionizált) és
+        \em{ütközésmentes} (ütközések rendkívül ritkán) plazmák}
+    \li{részelgesen ionozált plazma: Coulomb- és direkt-ütközések,
+        teljesen ionozált plazma: csak Coulomb-ütközések}
+}
 
 
-$$
-\sigma = 
-\begin{bmat}
-\sp & -\sh & 0 \\
-\sh & \sp & 0 \\
-0 & 0 & \spar
-\end{bmat}
-$$
+\h3{Részlegesen ionizált plazma}
 
 
-$$ n_n(z) = n_0 \exp(-z \inv{H}) $$
+\ul{
+    \li{legtöbb ütközés töltött és semleges részecskék (nehéz, kompakt
+        akadály) között}
+    \li{átlagos szabadúthossz: $\lambda_n = \inv{(n_n \sigma_n)}$}
+    \li{befolyásol: rekombináció, ellenállás, áramsűrűség, töltött részecsék
+        diffúziója}
+}
 
-$$ H = \frac{k_B T_n}{m_n g} $$
 
-$$ n_e = \pow{\par{\frac{q_{v,e}}{\alpha_r}}}{\half} $$
+\h3{Teljesen ionizált plazma}
 
-$$ n_e = \frac{q_{v,e}}{\beta_r} $$
+\ul{
+    \li{Coulomb-kölcsönhatás, atmosugárnál sokkal nagyobb távolságon
+        kölcsönhatnak}
+    \li{Debye-árnyékolás hatása, Debye-gömb $\ne$
+        ütközés hatáskeresztmetszete, nagy energiájú részecskék átjutnak}
+    \li{ütközési frekvencia: $\nu_{ei} \propto n_e \pow{m_e}{-2} \pow{v_e}{-3}$}
+    \li{átlagos szabadúthossz: $\lambda_e \propto \lambda_D \Lambda
+        \inv{\par{\ln \Lambda}} $}
+    \li{geofizikai plazmák általábna ütközésmentesnek tekinthetőek:}
+    \ul{
+        \li{$lambda_e \gg \text{plazma kiterjedése}$}
+        \li{$\nu_{ei} \ll \ome$}
+    }
+    \li{elektron-elektron és ion-ion ütközések esetén, egyensúly
+        gyorsan kialakul az impulzus cserék során}
+}
+
+\h3{A plazma vezetőképessége}
+
+Mozgásegyenlet kiegészítése plusz ütközési taggal.
+
+\h4{Nem előmágnesezett plazma}
+
+\ul{
+    \li{t.f.h.: $\vB = 0$, elektronok sebessége: $\vv _e$, ütközési cetrumok
+        mozdulatlanok, $\vE = \eta \vj$, $\eta \propto \nu_c \inv{n_e}$}
+}
+
+
+\h4{Előmágnesezett plazma}
+
+\ul{
+    \li{\em{általánosított Ohm-törvény:} $\vj = \sigma_0 (\vE +
+        \cross{\vv}{\vB}$, $\sigma_0 = \inv{\eta}$}
+    \li{alsó-ionoszféra, ion-semleges részecske ütközések &rarr;
+        vezetőképesség mátrix (anizotrópia)}
+    \li{z-tengely irányába mutató mágneses tér esetén:}
+    $$
+    \sigma = 
+    \begin{bmatrix}
+    \sp & -\sh & 0 \\
+    \sh & \sp & 0 \\
+    0 & 0 & \spar
+    \end{bmatrix}
+    $$
+    ahol,
+    \ul{
+        \li{$\sp = \sqrd{\nu_c} \inv{\par{\sqrd{\nu_c} + \sqrd{\omega_{ge}}}}
+            \sigma_0 $, \em{Pedersen-vezetőképesség}, mágneses térre merőleges}
+        \li{$\sh = - \omega_{ge} \nu_c \inv{\par{\sqrd{\nu_c} + \sqrd{\omega_{ge}}}}
+            \sigma_0 $, \em{Hall-vezetőképesség}, iránya: $-\cross{\vE}{\vB}$}
+        \li{$\spar = \sigma_0$, mágneses térrel párhuzamos vezetőképesség}
+    }
+    \li{$\abs{\omega_{ge}} \approx \nu_c$ maximum anizotrópia, Hall- és
+        Pedersen-vezetőképesség egyforma nagyságrendben}
+    \li{$\abs{\omega_{ge}} < \nu_c$ Pedersen-vezetőképesség dominál}
+    \li{$\abs{\omega_{ge}} > \nu_c$ elektronok $\cross{E}{B}$ drift,
+        Hall-vezetőképesség dominál}
+}
+
+
+\h3{Ionoszféra kialakulása}
+
+\h4{Napból származó UV sugárzás ionizáló hatása}
+
+\ul{
+    \li{$E_{\text{foton energia}} > E_{\text{ionozációs}}$ - UV tartomány,
+        magasabb energiatartományú sugárzás intenzitása kisebb}
+    \li{elsősorban horizontális struktúra, semleges gáz sűrűsége:}
+    $$ n_n(z) = n_0 \exp(-z \inv{H}) $$
+    \li{skálatényező:}
+    $$ H = \frac{k_B T_n}{m_n g} $$
+    \li{ionprodukciós rátának lesz egy maximuma.}
+}
+
+\row{
+    \col{
+        <p><a href="https://commons.wikimedia.org/wiki/File:Atmosphere_with_Ionosphere.svg#/media/File:Atmosphere_with_Ionosphere.svg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Atmosphere_with_Ionosphere.svg/1200px-Atmosphere_with_Ionosphere.svg.png" alt="Atmosphere with Ionosphere.svg"></a><br>By Bhamer, updated to SVG by <a href="//commons.wikimedia.org/wiki/User:Tomtheman5" title="User:Tomtheman5">tiZom</a> - English Wikipedia, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=2178742">Link</a></p>
+    }
+    \col{
+        <p><a href="https://commons.wikimedia.org/wiki/File:Diurnal_ionospheric_current.jpg#/media/File:Diurnal_ionospheric_current.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Diurnal_ionospheric_current.jpg" alt="Diurnal ionospheric current.jpg"></a><br>Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=306257">Link</a></p>
+        \imref{https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fmalagabay.files.wordpress.com%2F2012%2F10%2Finternational-quiet-solar-year-daytime-ionospheric-and-atmospheric-composition.gif&f=1}
+    }
+}
+
+
+\h4{Nagy energiájú részecskék ionizáló hatása}
+
+\ul{
+    \li{elsősorban erővonalak mentén mozgó nagy energiájú elektronok ütközéses
+        ionizációja}
+    \li{fontos szerep éjszaka és nagyobb szélességeken}
+    \li{$\sub{E}{elektron} > \sub{E}{ionizációs}$, pl. oxigén esetén
+        $\si{35}{\eV}$}
+    \li{nagyobb energiájú részecskék alacsonyabbra elérnek,
+        $\sub{E}{elektron} = \si{300}{\kilo\eV}$ &rarr; $\si{70}{\km}$}
+}
+
+\h4{Rekombináció és befogás}
+
+\ul{
+    \li{befogás: elektront semleges atom befogja &rarr; negatív ion}
+    \li{két együtthatóval írható le: $\alpha_r$ rekombinációs és
+        $beta_r$ befogási együttható}
+    \li{kontinuitási egyenlet: $\dot{n_e} = q_{v,e} - \alpha_r \sqrd{n_e}
+        - \beta_r n_e$, egyensúlyban $\dot{n_e} = 0$}
+    \li{alacsonyabban a rekombináció dominál $\beta_r = 0$}
+    $$ n_e = \pow{\par{\frac{q_{v,e}}{\alpha_r}}}{\half} $$
+    \li{magasabban a befogás dominál $\alpha_r = 0$}
+    $$ n_e = \frac{q_{v,e}}{\beta_r} $$
+}
+
+\h3{Ionoszféra rétegek}
+
+\ul{
+    \li{valós profil függ: semleges atmoszférát alkotó elemek abszorbciós
+        tulajdonságai - nagyon változékony, rekombinációs- és
+        befogási együtthatók &rarr; különböző rétegek alakulnak ki}
+}
+
 
 $$ \sigma_C = \sp + \frac{\pow{\sh}{2}}{\sp} $$
 

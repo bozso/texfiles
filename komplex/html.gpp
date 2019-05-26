@@ -51,6 +51,9 @@
 \define{\cm}{\centi\meter}
 \define{\km}{\kilo\meter}
 \define{\kps}{\kilo\meter\pow{\second}{-1}}
+\define{\joule}{\unit{J}}
+\define{\ampere}{\unit{A}}
+
 
 \define{\sci{num}{tpow}}{\num \cdot 10^{\tpow}}
 
@@ -99,6 +102,8 @@
 \define{\rot}{\nabla \times \hspace{2pt}}
 \define{\cross{one}{two}}{\one \times \two}
 \define{\half}{\frac{1}{2}}
+\define{\abs{in}}{| \in |}
+\define{\sub{var}{sub}}{{\var}_{\text{\sub}}}
 
 
 /*
