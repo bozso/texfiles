@@ -65,6 +65,8 @@
 \define{\watt}{\unit{W}}
 \define{\myr}{\mega\year}
 \define{\eV}{\unit{eV}}
+\define{\siemens}{\unit{S}}
+\define{\cond}{\siemens\inv{\meter}}
 
 
 \define{\si{in}{unitn}}{\in \hspace{2.5pt} \unitn}
