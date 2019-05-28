@@ -2,6 +2,9 @@
 
 \define{\e0}{\epsilon_0}
 \define{\vv}{\mat{v}}
+\define{\va}{\mat{A}}
+\define{\vx}{\mat{x}}
+\define{\vk}{\mat{k}}
 \define{\vE}{\mat{E}}
 \define{\vB}{\mat{B}}
 \define{\vj}{\mat{j}}
@@ -719,23 +722,116 @@ Mozgásegyenlet kiegészítése plusz ütközési taggal.
 \h2{Hullámok plazmákban és fluidumokban}
 
 \ul{
-    \li{plazmát sokfajta külső hatás megzavarhatja}
+    \li{plazmát sokfajta külső és belső hatás megzavarhatja}
+    \li{termális fluktuáció - kvantumelmélettel számíthatóak}
+    \li{külső zavar &rarr; plazmahullámok, zavar energiájának szállítása
+        egész plazmatérfogatra}
+    \li{ULF, ELF és VLF hullámok}
+    \li{szükséges: zavar aplitúdója nagyobb legyen mint a hőfluktuáció}
+    \li{feltételezések}
+    \ul{
+        \li{hideg plazma, hőfluktuáció alapból kicsik}
+        \li{nemlineáris hatásoktól eltekintünk}
+    }
+    \li{többfajta megközelítés, többfajta plazmamodell}
+    \li{zavar matematikai modellje:}
+    $$ \va(\vx,t) = \va(\vk, \omega) \exp{(i \vk \vx - i \omega t)}$$
+    \li{fázis-sebesség: $\sub{\vv}{ph} = \omega \vk \pow{k}{-2}$
+        csoportsebesség: $\sub{\vv}{gr} = \par{\vk} \omega$}
 }
 
-$$ \sqrd{\ome} = \frac{n_e \pow{e}{2}}{m_e \e0} $$
+\h3{Nem előmágnesezett plazma}
 
-$$ \sqrd{\omega_l} = \sqrd{\ome} + \sqrd{k} \gamma_e \sqrd{v_{the}} $$
+\h4{Langmuir rezgések}
 
-$$ \sqrd{\omega_{ia}} = \frac{\gamma_e k_B T_e}{m_i} \sqrd{k} $$
+\ul{
+    \li{\q{lomha} ionok, gyors elektronok, kis zavar}
+    \li{elektronok ionokhoz képest oszcillálnak, plazmafrekvencia}
+    $P_{e,i}^2 = n_{e,i} \pow{q_{e,i}}{2}\inv{(m_{e,i} \e0)}$
+}
 
-$$ \sqrd{\omega_{om}} = \sqrd{\ome} + \sqrd{c} \sqrd{k} $$
 
-$$ \omega_A = \pm k_{\parallel} v_A $$
+\h4{Langmuir hullám}
 
-$$ \omega_w = \sqrd{k} \sqrd{c} \omega_{ge} \pow{\ome}{-2} $$
+\ul{
+    \li{figyelembe véve az elektronok hőnyomásának adiabatikus
+        megváltozását a Newton-egyenletben és feltételezve konstans
+        elektron hőmérékletet}
+    $$ \omega_l^2 =  \sqrd{P_e} + \sqrd{k} \gamma_e
+                     \sqrd{v}_{\text{thermal}} $$
+    \li{\em{Langmuir diszperziós reláció}, ha az elektronok hőméréklete
+        nem zérus az oszcillációk elkezdenek terjedni a plazmában
+        &rarr; elektrosztatikus hullámok}
+}
 
-$$ \sqrd{\omega_{uh}} = \sqrd{\omega_{ge}} + \sqrd{\ome} $$
+\h4{Ion-akusztikus hullámok}
 
-$$ \omega_{lh} = \frac{\sqrd{\omega_{pi}} + \sqrd{\omega_{gi}}}
-                      {1 + \sqrd{\ome} \pow{\omega_{ge}}} $$
+\ul{
+    \li{alacsony frekvenciákon az ionok rezgését is figyelembe kell venni,
+        nyomásuk elhanyagolva}
+    \li{protonok esetén $P_e \approx 40 P_i$, ilyen alacsony frekvencián az
+        elektronok szinte azonnal reagálnak a változó elektromos mezőre
+        &rarr; elektronok dinamikája: elektronok nyomása és Coulomb-erő ki kell
+        egyenlítse egymást}
+    \li{elektronok számsűrűség-eloszlása Boltzmann-szerű lesz}
+    \li{\em{ion-akusztikus hullámok:} ugyanolyan tulajdonságúak mint a
+        semleges gázban terjedő hanghullámok}
+}
+
+
+\center{
+<table>
+    \tr{
+        \th{Mennyiség}
+        \th{Egyenlet}
+        \th{Plazma modell}
+    }
+    \tr{
+        \td{Plazmafrekvencia, Langmuir rezgés}
+        \td{$P_{e,i}^2 = n_{e,i} \pow{q_{e,i}}{2}\inv{(m_{e,i} \e0)}$}
+        \td{Kvázineutrális, nem előmágnesezett plazma}
+    }
+    \tr{
+        \td{Girofrekvencia}
+        \td{$G_{e,i}^2 = q_{e,i} \cdot B \cdot \inv{m_{e,i}}$}
+        \td{Előmágnesezett plazma, homogén mágneses tér}
+    }
+    \tr{
+        \td{Langmuir hullám}
+        \td{$\omega_l^2 =  \sqrd{P_e} + \sqrd{k} \gamma_e
+                           \sqrd{v}_{\text{thermal}}$}
+        \td{Kvázineutrális, nem előmágnesezett plazma, elektronok
+            hőnyomásának változása figyelembe véve}
+    }
+    \tr{
+        \td{Ion-akusztikus hullámok}
+        \td{$ \sqrd{\omega_{ia}} = \gamma_e k_B T_e \inv{m_i} \sqrd{k}$}
+        \td{Kvázineutrális, nem előmágnesezett plazma, elektronok
+            hőnyomása egynsúlyban az Coulomb-erővel, ion hőnyomás
+            elhanyagolva}
+    }
+    \tr{
+        \td{Ordenáris elektromágneses hullámok}
+        \td{$ \sqrd{\omega_{om}} = \sqrd{P_e} + \sqrd{c} \sqrd{k} $}
+    }
+    \tr{
+        \td{}
+        \td{$ \omega_A = \pm k_{\parallel} v_A $}
+    }
+    \tr{
+        \td{}
+        \td{$ \omega_w = \sqrd{k} \sqrd{c} G_e \pow{P_e}{-2} $}
+    }
+    \tr{
+        \td{Felső hibrid frekvencia}
+        \td{$ \sqrd{h_u} = \sqrd{G_e} + \sqrd{P_e} $}
+    }
+    \tr{
+        \td{Alsó hibrid frekvencia}
+        \td{$ \sqrd{h_l} = \sqrd{P_i} + \sqrd{G_i}
+                            \inv{(1 + \sqrd{P_e} \pow{G_e}{-2})} $}
+    }
+    
+</table>
+}
 
