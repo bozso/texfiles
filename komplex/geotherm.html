@@ -2,6 +2,8 @@
 
 \define{cmpyr}{\cm \inv{\year}}
 \define{heatflux}{\milli\watt\pow{\meter}{-2}}
+\define{\mdef}{\mat{\varepsilon}}
+\define{\vr}{\mat{r}}
 
 \h2{Áramlás a földköpenyben}
 
@@ -94,6 +96,7 @@
 
 \define{\vu}{\mat{u}}
 \define{\vg}{\mat{g}}
+\define{\vn}{\mat{n}}
 \define{\vomega}{\mat{\Omega}}
 \define{\vsigma}{\mat{\sigma}}
 
@@ -105,3 +108,241 @@ $$ \part \rho + \div \rho \vu = q $$
 
 $$ \rho \der{\vu}{t} = - 2 \hspace{2pt} \cross{\vomega}{\vu} + \rho \vg
   - \nabla p + \div \vsigma $$
+
+$$ \dot{\mdef} = \half \paren{\par{j} u_i + \par{i} u_j} $$
+
+\ol{
+    \li{newtoni viszkúzus reológia: $ \dot{\mdef} \propto \sigma_{ij} $,
+        diffúziós folyás}
+    \li{nem-newtoni viszkúzus reológia: $ \dot{\mdef} \propto
+        \pow{\sigma}{n - 1} \sigma_{ij} $, $n > 1$, diszlokációs folyás}
+    \li{elasztikus deformáció: $\dot{\mdef} \propto \dot{\sigma}}
+}
+
+\ul{
+    \li{t.f.h.: newtoni viszkózus folyadék:
+        $\sigma_{ij} = 2 \eta \dot{\mdef _{ij}}
+                       + \lambda \delta_{ij} \dot{\mdef _{ii}} $ }
+    \li{$\eta$: dinamikus viszkozitás, $\lambda$: második viszkozitás}
+    \li{t.f.h.: köpeny izoviszkózus és inkompresszibilis, ekkor}
+    $$ \rho \der{\vu}{t} = - 2 \hspace{2pt} \cross{\vomega}{\vu} + \rho \vg
+      - \nabla p + \eta \laplace \vu $$
+}
+  
+
+\h4{Hőtranszport egyenlet - energiamegmaradás}
+
+\ul{
+    \li{termodinamika második főtétele szerint: $\md Q = T \md S$}
+    \li{térfogatelem hőmennyiségének megváltozása:}
+    $$ \rho T \der{s}{t} = \nabla (K \nabla T) + \Phi + H $$
+    \li{$\Phi$: viszkózus disszipáció, $H$: hőtermelés}
+    \li{hőtermelés: elsősorban radioaktív izotópok (urán, tórium, kálium)
+        bomlása; exoterm, endoterm ásványi átalakulások, kémiai reakciók}
+    \li{Maxwell-realációkat felhasználva:}
+    $$ \rho c_p \der{T}{t} = \alpha T \der{p}{t} + \nabla (K \nabla T)
+                             + \Phi + H $$
+    \li{$c_p$ és $\alpha$ az azonos nyomáson vett fajhő és térfogati
+        hőtágulási tényező}
+    \li{új tag: \em{adiabatikus munka}, nyomás változása &rarr; hőmérséklet
+        változása}
+    \li{adiabatikus hőmérsékleti gradiens: $T(z) = T_0 \exp{(\alpha g \inv{c_p} z)}$}
+    \li{mélységgel növekednie kell a hőmérsékletnek, hőcsere nélkül
+        szubdukálódó lemez felmelegszik, köpenyoszlop lehül}
+    \li{lebukó lemez hőmérésklete a CMB-n: $\si{1450}{\text{K}}$}
+    \li{CMB-től felemelkedő köpenyoszlop felszíni hőmérséklete:
+        $\si{2160}{\text{K}}$}
+    \li{hőmennyiséghiányt a viszkózus disszipáció hőmennyiségtőbblete \q{fedezi}}
+}
+
+\h4{Állapotegyenlet}
+
+\ul{
+    \li{most: több ismeretlen mint egyenlet &rarr; alulhatározott}
+    \li{plusz egyenlet kell, ez az állapotegyenlet, kapcsolat:
+        sűrűség, nyomás, hőmérséklet}
+    \li{PREM: sűrűség változása nem erőteljes &rarr; lineáris közelítés megfelel}
+    $$ \rho(p, T) = \rho_r (1 + \chi_T \delta p - \alpha \delta T) $$
+    \li{$\chi_T$ izoterm kompresszibiliátás}
+    \li{$\rho_r$ referencia sűrűség, referncia nyomáson és hőméréskleten}
+}
+
+
+\h4{Alapegyenletek}
+
+\ol{
+    \li{Kontinuitási egyenlet}
+    $$ \par{t} \rho + \nabla(\rho \vu) = 0$$
+    \li{Navier-Stokes-egyenlet}
+    $$ \rho \der{\vu}{t} = - 2 \rho \cross{\mat{\Omega}}{\vu} + \rho \vg
+                           - \nabla p + \nabla \sigma $$
+    \li{Hőtranszport egyenlet}
+    $$ \rho c_p \der{T}{t} = \alpha T \der{p}{t} + \nabla (K \nablat T)
+                            + \Phi + H $$
+    \li{Állapotegyenlet}
+    $$ \rho(p, T) = \rho_r (1 + \chi_T \delta p - \alpha \delta T) $$
+    \li{Köpeny reológiája}
+    $$ \sigma_{ij} = \eta (\par{j} u_i + \par{i} u_j)
+                     - \frac{2}{3} \eta \delta_{ij} \par{i} u_i $$
+    \li{Arrhenius-törvény}
+    $$ \eta(p,T) = \eta_0 \exp{((E^* + pV^*)\inv{(RT)})} $$
+    \li{Viszkózus disszipáció}
+    $$ \Phi = \sigma_{ij} \par{j} u_i $$
+}
+
+\ul{
+    \li{nagyon bonyolult, sem analitikusan, sem numerikusan nem kezelhető}
+    \li{fenti egyenletek is sok feltételezést tartalmaznak! (newtoni
+        viszkózus reológia), homogén kémiai összetétel, állandó paraméterek}
+    \li{referencia és perturbációs tagok}
+    $$ p(T,\rho) = p_r (z) + \delta p(T,\rho) $$
+    $$ T(\rho,p) = T_r (z) + \delta T(\rho,p) $$
+    $$ \rho(p,T) = \rho_r (z) + \delta \rho(p,T) $$
+    \li{perturbációs tagok nem feltétlenül kicsik}
+    \li{feltételezések}
+    \ul{
+        \li{$p_r (z) = \rho_r g z$ hidrosztatikus nyomás}
+        \li{$\rho(p,T) = \rho_r (z)$, minden tagban, kivéve a
+            Navier-Stokes egyenletben, oké ha $ M^2 Pr \ll 1$
+            és $\alpha \Delta T  \ll 1$, $M$: Mach-szám, $Pr$: Prandtl-szám}
+        \li{$p(T,\rho) = p_r (z)$ minden tagban, kivéve a Navier-Stokes
+            egyenletben}
+    }
+    \li{Egyszerűsített egyenletek:}
+    \ol{
+        \li{Kontinuitási egyenlet}
+        $$ \nabla(\rho_r \vu) = 0 $$
+        \li{Navier-Stokes egyenlet}
+        $$ \rho_r \der{\vu}{t} = -2 \rho_r \cross{\mat{\Omega}}{\vu}
+                                + \rho_r \chi_T \delta p g \vn
+                                - \rho_r \alpha \delta T g \vn
+                                - \nabla \delta p + \nabla \sigma $$
+        \li{Hőtranszport egyenlet}
+        $$ \rho_r c_p \der{T}{t} = \alpha T \rho_r g w + K \laplace T + \Phi + H $$
+    }
+}
+
+\h4{Dimenziótlan egyenletek}
+
+Karakterisztikus mennyiségek:
+\ul{
+    \li{$d$: köpeny vastagsága}
+    \li{$\kappa$: köpeny hődiffuzivitása}
+    \li{$\Delta T$: CMB és felszín közötti hőméréskletkülönbség}
+    \li{$\rho_0$: felszíni sűrűség}
+    \li{$\Omega_0$: Föld forgási szögsebessége}
+    \li{$\eta_0$: asztenoszféra viszkozitása, leginkább ismert}
+}
+
+Anelasztikus közelítés (1-2% pontatlanság)
+\ol{
+    \li{Kontinuitási egyenlet}
+    $$ \nabla(\rho_r \vu) = 0 $$
+    \li{Navier-Stokes egyenlet}
+    $$ 0 = \frac{\text{Di}}{\Gamma}\rho_r \delta p \vn
+           - \text{Ra} \rho_r \delta T \vn - \nabla \delta p + \nabla \sigma $$
+    \li{Hőtranszport egyenlet}
+    $$ \rho_r \der{T}{t} = \text{Di} T \rho_r w + \laplace T
+                            + \frac{\text{Di}}{\text{Ra}}\Phi + H $$
+}
+
+\define{\dim{one}{two}}{\frac{\text{\one}}{\text{\two}}}
+
+Dimenziótlan mennyiségek:
+
+\center{
+<table>
+    \tr{
+        \th{Dimenziótlan szám}
+        \th{Mit mér?}
+        \th{Nagyságrendje a köpenyben}
+    }
+    \tr{
+        \td{$\text{Pr}$: Prandtl-szám}
+        \td{$\dim{viszkózus erő}{inercia erő}$}
+        \td{$\pow{10}{23}$}
+    }
+    \tr{
+        \td{$\text{Ek}$: Ekman-szám}
+        \td{$\dim{viszkózus erő}{Coriolis erő}$}
+        \td{$\pow{10}{8}$}
+    }
+    \tr{
+        \td{$\text{Di}$: Disszipációs-szám}
+        \td{$\dim{viszkózus erő}{Coriolis erő}$}
+        \td{$\approx 0.5$}
+    }
+    \tr{
+        \td{$\Gamma$: Grüneisen-paraméter}
+        \td{-}
+        \td{$1.01$}
+    }
+    \tr{
+        \td{$\text{Di} \inv{\Gamma}$}
+        \td{$\dim{kompressziós felhajtóerő}{viszkózus erő}$}
+        \td{$0.48$}
+    }
+    \tr{
+        \td{$\text{Ra}$: Rayleigh-szám}
+        \td{$\dim{termikus felhajtóerő}{viszkózus erő}$}
+        \td{$\pow{10}{7}$}
+    }
+</table>
+}
+
+\h4{Boussinesq-approximáció}
+
+\ul{
+    \li{inkompresszibilis köpeny ($\text{Di} = 0$) marginálisan teljesül,
+        paraméterek ($\alpha$, $c_p$, $K$, $\chi_t$, $g$) állandók}
+    \li{anelasztikus és Boussinesq-approximáció eltérése nem több néhány
+        százaléknál}
+}
+
+Egyenletek:
+\ol{
+    \li{Kontinuitási egyenlet}
+    $$ \nabla \vu = 0 $$
+    \li{Navier-Stokes egyenlet}
+    $$ 0 = - \text{Ra} \delta T \vn - \nabla \delta p \nabla \sigma $$
+    \li{Hőtranszport egyenlet}
+    $$ \par{t} T = \laplace T - \vu (\nabla T) + H $$
+}
+
+\ul{
+    \li{egyetlen dimenziótlan szám maradt: $\text{Ra}$ - köpenyben zajló
+        áramlás hevességét jellemzi}
+}
+
+
+\h3{Rayleigh-Bénard-probléma}
+
+\ul{
+    \li{termikus konvekció milyen körülmények között indul meg}
+    \li{két modell végtelen féltér között}
+    \li{belső hőtermelés nincs, newtoni-reológia, Boussinesq-approximáció}
+    \li{lineáris stabilitás elmélet: megindulás pillnatát vizsgáljuk,
+        minden másodrendben kicsiny tagot elhanyagolunk,
+        határok feszültségmentesek}
+    \li{referencia és perturbációs tagok (itt most valóban kicsik)}
+    \ol{
+        \li{$T(x,z,t) = T_0 + \beta_r z + \delta T(x,z,t)$}
+        \li{$p(x,z) = \rho_r g z + \delta p(x,z,t)$}
+        \li{$\rho(x,z) = \rho_r(z) + \delta \rho(x,z,t)
+                       = \rho_0 [1 - \alpha(T - T_0)]$}
+    }
+    \li{sok lépés után egy darab hatordrendű parciális differenciálegyenlet}
+    \li{Fourier-féle változók szeparálása: $f(x,y,z,t) = F(z) f(x,y) e^{\sigma t}$}
+    \li{paraméter $a^2 = \lambda^2 d^2 $, $\lambda$: horizontális hullámszám,
+        $d$: féltér vastagsága}
+    \li{egynlet megoldása:}
+    $$ \text{Ra} = \frac{(\pi^2 a^2)^3}{a^2} $$
+    $$ \der{\text{Ra}}{a} = 0 $$
+    $$ a = \pi \pow{2}{-\half} $$
+    $$ \text{Ra}_{\text{kritikus}} \approx 660 $$
+    \li{$\text{Ra}_{\text{kritikus}} \approx 10^2 - 10^3$ - modelltől függően}
+    \li{gömbhéjas geometria esetén: $\text{Ra}_{\text{kritikus}} \approx 980$,
+        kisebb fütőtt alsó felület}
+    \li{földköpeny szuperkritikus Rayleigh-számú folyadéknak tekinthető,
+        erősen időfüggő, kaotikus jellegű, 3D szerkezetű}
+}

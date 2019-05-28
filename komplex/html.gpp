@@ -15,7 +15,7 @@
 
 \define{\htag{tag}{args}{content}}{<\tag \args>\content</\tag>}
 
-\define{\center{in}}{<center> \in </center>}
+\define{\center{in}}{<center>\in</center>}
 \define{\imref{in}{title}{attr}}{<img src="\in" \attr title="\title" alt="\title"> <br> \title Forrás: <a href="\in"> \in </a>}
 \define{\imgit{in}{title}{attr}}{<img src="https://raw.githubusercontent.com/bozso/texfiles/master/images/\in" \attr title="\title" alt="\title"> <br> \title <a href="https://raw.githubusercontent.com/bozso/texfiles/master/images/\in"> Forrás </a>}
 
@@ -26,8 +26,8 @@
 \define{\th{in}}{<th>\in</th>}
 \define{\td{in}}{<td>\in</td>}
 
-\define{\ul{in}}{<ul> \in </ul>}
-\define{\ol{in}}{<ol> \in </ol>}
+\define{\ul{in}}{<ul>\in</ul>}
+\define{\ol{in}}{<ol>\in</ol>}
 \define{\li{in}}{<li>\in</li>}
 
 \define{\pow{base}{power}}{{\base}^{\power}}
@@ -81,7 +81,7 @@
 \define{\del{in}}{<del>\in</del>}
 \define{\strong{in}}{<strong>\in</strong>}
 
-\define{\par{in}}{\left( \in \right)}
+\define{\paren{in}}{\left( \in \right)}
 
 
 \define{\h1{in}}{<h1>\in</h1>}
