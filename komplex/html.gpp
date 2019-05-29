@@ -19,6 +19,8 @@
 \define{\imref{in}{title}{attr}}{<img src="\in" \attr title="\title" alt="\title"> <br> \title Forrás: <a href="\in"> \in </a>}
 \define{\imgit{in}{title}{attr}}{<img src="https://raw.githubusercontent.com/bozso/texfiles/master/images/\in" \attr title="\title" alt="\title"> <br> \title <a href="https://raw.githubusercontent.com/bozso/texfiles/master/images/\in"> Forrás </a>}
 
+\define{\img{name}{opts}}{<img src="\impath/\name" \opts>}
+
 \define{\col{in}}{<div class="column">\in</div>}
 \define{\row{in}}{<div class="row">\in</div>}
 

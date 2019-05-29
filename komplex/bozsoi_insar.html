@@ -1,3 +1,7 @@
+\include{html.gpp}
+
+\define{\impath}{/home/istvan/Dokumentumok/texfiles/images}
+
 <!DOCTYPE html>
 
 <html lang="hu">
@@ -5,7 +9,7 @@
     <title>Bozsó István</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/home/istvan/Dokumentumok/texfiles/shower/themes/ribbon/styles/styles.css">
+    <link rel="stylesheet" href="/home/istvan/Dokumentumok/texfiles/shower/themes/material/styles/styles.css">
     <style>
         .shower {
             --slide-ratio: calc(16 / 9);
@@ -16,23 +20,27 @@
 <body class="shower list">
 
     <header class="caption">
-        <h1>Shower Presentation Engine</h1>
-        <p>Bozsó István, MTA CSFK GGI</p>
+        <h1>Műholdradar interferometria és GNSS mérések kombinálása 3D-s
+            deformációs terek meghatározására</h1>
+        <p>Bozsó István, MTA CSFK Geodéziai és Geofizikai Intézet</p>
+        <p>Komplex viszga, ELTE 2019</p>
+        <p>2019.05.30.</p>
     </header>
 
     <section class="slide" id="cover">
-        <h2>Shower Presentation Engine</h2>
-        <p>Brought to you by <a href="http://pepelsbey.net">Bozsó István</a></p>
-        <figure>
-            <img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
-            <figcaption class="copyright right white">
-                <a href="http://fiftyfootshadows.net/">© John Carey</a>
-            </figcaption>
-        </figure>
+        <h2>Műholdradar interferometria és GNSS mérések kombinálása 3D-s
+            deformációs terek meghatározására</h2>
+        <p>Bozsó István, MTA CSFK Geodéziai és Geofizikai Intézet</p>
+        <p>Komplex viszga, ELTE Földtudományi Doktori Iskola</p>
+        <p>2019.05.30.</p>
+        
+        \img{ggi_logo.png}
+        <img src="../images/ggi_logo.png" style="width=10px">
+        
         <style>
             #cover h2 {
                 margin: 30px 0 0;
-                color: white;
+                color: black;
                 text-align: center;
                 font-size: 70px;
             }
@@ -40,27 +48,22 @@
             #cover p {
                 margin: 10px 0 0;
                 text-align: center;
-                color: white;
+                color: black;
                 font-style: italic;
                 font-size: 20px;
             }
 
             #cover p a {
-                color: white;
+                color: black;
             }
         </style>
     </section>
 
     <section class="slide">
-        <h2>Shower key features</h2>
-        <ol>
+        <h2>Szintetikus Apertúrájú Radarinterferometria - InSAR</h2>
+        <ul>
             <li>Built on HTML, CSS and JavaScript</li>
-            <li>Works in all modern browsers</li>
-            <li>Themes are separated from engine</li>
-            <li>Fully keyboard accessible</li>
-            <li>Printable to PDF</li>
-        </ol>
-        <p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
+        </ul>
     </section>
 
     <section class="slide">
@@ -198,15 +201,5 @@
             }
         </style>
     </section>
-
-    <footer class="badge">
-        <a href="https://github.com/shower/shower">Fork me on GitHub</a>
-    </footer>
-
-    <div class="progress"></div>
-
-    <script src="node_modules/shower-core/shower.min.js"></script>
-    <!-- Copyright © 3000 Yours Truly, Famous Inc. -->
-
 </body>
 </html>

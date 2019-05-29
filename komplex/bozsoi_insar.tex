@@ -1,0 +1,197 @@
+\documentclass{beamer}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx, tikz, multicol, wrapfig}
+\usepackage[framemethod=TikZ]{mdframed}
+
+
+\mode<presentation>
+{
+    \usetheme{Boadilla}
+    \usecolortheme{default}
+    \usefonttheme{default}
+    \setbeamertemplate{navigation symbols}{}
+    \setbeamertemplate{caption}[numbered]
+}
+
+
+\title[Komplex viszga, ELTE 2019]{Műholdradar interferometria és GNSS mérések
+                                  kombinálása 3D-s deformációs terek meghatározására}
+\author[Bozsó István]{Bozsó István}
+\institute[MTA CSFK GGI]{MTA CSFK Geodéziai és Geofizikai Intézet}
+\date{2019.05.30.}
+
+\input{../aux/common.tex}
+\input{../aux/presentation.tex}
+
+\graphicspath{{../images/}}
+
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+    \begin{center}
+        \begin{minipage}[c]{0.3\textwidth}
+            \includegraphics[width=0.75\textwidth]{ggi_logo.png}
+        \end{minipage}
+    \end{center}
+\end{frame}
+
+
+\begin{frame}{Szintetikus Apertúrájú Radarinterferometria - InSAR}
+
+\begin{itemize}
+    \item szintetikus aprtúrájó radar - mikrohullám tartományban működő
+    távérzékelési rendszer (műhold, replülő, drone)
+    \item felszíni elmozdulások nagyfelbontású térképezése
+    \item relatív módszer, térben, időben
+    \item geodinamikai szempontból felbecsükhetetlen jelentőség, komplex
+    dinamikai mintázattal rendelkező területek hosszútávú megfigyelése
+    \item ESA műholdas földmegfigyelési programjában kiemelt szerep
+    (Sentinel-1 A/B)
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{InSAR korlátai}
+
+\begin{itemize}
+    \item hullámhossztól függő felszíni felbontás, 
+    \item felszíni elmozdulás műholdirányú vetülete mérhető csak
+    (felszálló - ascending, leszálló - descending műholdáthaladás)
+    \item vegetációval sűrűn fedett területen jel koherenciája elvész
+    \item visszatérési idő: 6-12 vagy több nap
+    \item egyéb hullámterjedést befolyásoló tényezők szűrése: semleges
+    atmoszférában, ionoszférában az EM hullám terjedési sebességének változása
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{GGI - Űrgeodézia Kutatócsoport}
+
+\begin{itemize}
+    \item InSAR alkalmazási módjainak kiterjesztése
+    \item mesterséges reflektáló pontok kifejlesztése, sarokreflektor
+    \item InSAR elmozdulások kombinálása GPS mérésekkel $\rightarrow$ 3D elmozdulás
+    \item jelterjedés vizsgálata, atmoszferikus, ionoszferikus hatások
+    \item GGI: ionoszonda - kísérleti üzem, kísérleti eredmények
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{GGI - Űrgeodézia Kutatócsoport}
+
+\begin{itemize}
+    \item Magyarországon: 3 sarokreflektor hálózat (Fonyód, Kulcs, Dunaszekcső)
+    \item Erdélyben: 2 sarokreflektor hálózat (Parajd, Csomád);
+    1 tervezett (Vrancea-zóna)
+    \item eltérő felszínmozgási folyamatok (földcsuszamlás, sótektonika,
+    poszt vulkáni tevékenység)
+    \item ESA-PECS projekt keretérben kifejlesztett ISIGN programrendszer
+    InSAR és GPS adatok kombinálására
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Sarokreflektorok}
+
+\begin{center}
+\includegraphics[width=0.75\textwidth]{dszekcso_refl_3.jpg}
+\end{center}
+
+\begin{itemize}
+    \item több reflektor $\rightarrow$ reflektor hálózat
+    \item elmozdulások egy kijelölt stabil referencia reflektorhoz képest
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Erdélyi hálózatok}
+\includegraphics[width=\textwidth]{praid_ciomadul.png}
+\end{frame}
+
+
+\begin{frame}{Parajdi hálózat}
+\includegraphics[width=\textwidth]{praid_refl.png}
+\end{frame}
+
+
+\begin{frame}{Parajdi hálózat}
+\includegraphics[width=\textwidth]{parajd_ts1.png}
+\end{frame}
+
+
+\begin{frame}{Parajdi hálózat}
+\includegraphics[width=\textwidth]{parajd_ts2.png}
+\end{frame}
+
+\begin{frame}{Parajdi hálózat}
+\includegraphics[width=\textwidth]{parajd_ts3.png}
+\end{frame}
+
+\begin{frame}{Parajdi hálózat}
+\includegraphics[width=\textwidth]{parajd_ts4.png}
+\end{frame}
+
+
+\begin{frame}{Magyarországi hálózatok}
+\includegraphics[width=\textwidth]{hungary_networks.png}
+\end{frame}
+
+\begin{frame}{Magyarországi hálózatok}
+
+\begin{minipage}[c]{0.975\textwidth}
+    \begin{minipage}[c]{0.475\textwidth}
+        \includegraphics[width=\textwidth]{IB2-IB1_kalman.png}
+    \end{minipage}
+    \begin{minipage}[c]{0.475\textwidth}
+        \includegraphics[width=\textwidth]{IB3-IB1_kalman.png}
+    \end{minipage}
+\end{minipage}
+\begin{minipage}[c]{0.975\textwidth}
+    \begin{minipage}[c]{0.475\textwidth}
+        \includegraphics[width=\textwidth]{IB4-IB1_kalman.png}
+    \end{minipage}
+    \begin{minipage}[c]{0.475\textwidth}
+        
+    \end{minipage}
+\end{minipage}
+\end{frame}
+
+\begin{frame}{}
+
+\end{frame}
+
+
+\begin{frame}{Integrált Vízgőzmennyiség}
+\includegraphics[width=\textwidth]{iwv.png}
+\end{frame}
+
+
+\begin{frame}{Integrált Elektrontartalom változás}
+\includegraphics[width=\textwidth]{iono.png}
+\end{frame}
+
+
+\begin{frame}{Kutatási- és publikációs terv}
+
+\begin{itemize}
+    \item ISIGN programrendszer továbbfejlesztése, atmoszférikus
+    és ionoszférikus korrekciók beépítése
+    \item további reflektorhálózatok telepítése, meglévő hálózatok adatainak
+    feldolgozása
+    \item reflektorhálózatok feldolgozási eredményeinek publikálása
+    \item nem mozgó területeken atmoszféra, ionoszféra vizsgálata
+\end{itemize}
+
+\end{frame}
+
+
+\end{document}
