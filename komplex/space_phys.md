@@ -813,25 +813,32 @@ Mozgásegyenlet kiegészítése plusz ütközési taggal.
     \tr{
         \td{Ordenáris elektromágneses hullámok}
         \td{$ \sqrd{\omega_{om}} = \sqrd{P_e} + \sqrd{c} \sqrd{k} $}
+        \td{elektromágness hullám szabad térben, nem előmágnesezett plazma
+            jelenléteben, hullám nem terjedhet $P_e$ alatt}
     }
     \tr{
-        \td{}
+        \td{Alfvén hullám}
         \td{$ \omega_A = \pm k_{\parallel} v_A $}
+        \td{ideális MHD, erővonalak rezgése}
     }
     \tr{
-        \td{}
+        \td{Elektron whistler}
         \td{$ \omega_w = \sqrd{k} \sqrd{c} G_e \pow{P_e}{-2} $}
+        \td{hideg mágnesezett elektron plazma, párhuzamos terjedés
+            hosszú hullámú határeset (kis $k$)}
     }
     \tr{
         \td{Felső hibrid frekvencia}
         \td{$ \sqrd{h_u} = \sqrd{G_e} + \sqrd{P_e} $}
+        \td{hideg mágnesezett elektron plazma, merőleges terjedés,
+            ciklotron és plazma tulajdonságok keverednek}
     }
     \tr{
         \td{Alsó hibrid frekvencia}
         \td{$ \sqrd{h_l} = \sqrd{P_i} + \sqrd{G_i}
                             \inv{(1 + \sqrd{P_e} \pow{G_e}{-2})} $}
-    }
-    
+        \li{két folyadék elmélet, merőleges terjedés, $\omega \ll G_e$}
+    }    
 </table>
 }
 
