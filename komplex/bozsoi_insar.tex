@@ -1,5 +1,5 @@
 \documentclass{beamer}
-\usepackage[english]{babel}
+\usepackage[magyar]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx, tikz, multicol, wrapfig}
@@ -13,6 +13,13 @@
     \usefonttheme{default}
     \setbeamertemplate{navigation symbols}{}
     \setbeamertemplate{caption}[numbered]
+}
+
+\newcommand\figu[3]{
+    \begin{figure}
+        \includegraphics[width=#2\textwidth]{#1}
+        \caption{#3}
+    \end{figure}
 }
 
 
@@ -43,10 +50,16 @@
 \begin{frame}{Szintetikus Apertúrájú Radarinterferometria - InSAR}
 
 \begin{itemize}
-    \item szintetikus aprtúrájó radar - mikrohullám tartományban működő
-    távérzékelési rendszer (műhold, replülő, drone)
-    \item felszíni elmozdulások nagyfelbontású térképezése
+    \item szintetikus apertúrájú radar - mikrohullám tartományban működő
+    távérzékelési rendszer (műhold, repülő, drone)
+    \item felszíni deformációk nagyfelbontású térképezése
+    \item fedetlen felszínen potenciálisan végtelen reflektáló pont
     \item relatív módszer, térben, időben
+    \item felszíni deformáció mérés hibája ideális esetben $< \text{mm}$,
+    gyakorlatban általában elmondható $< \text{cm}$
+    \item tektinikus, eróziós, folyamatok; antropogén tevékenység okozta
+    deformációk térképezése, monitorozása
+    \item kritikus infrastruktúra megfigyelése ()
     \item geodinamikai szempontból felbecsükhetetlen jelentőség, komplex
     dinamikai mintázattal rendelkező területek hosszútávú megfigyelése
     \item ESA műholdas földmegfigyelési programjában kiemelt szerep
@@ -56,16 +69,58 @@
 \end{frame}
 
 
+\begin{frame}{InSAR alapelv}
+    %\begin{minipage}[c]{0.475\textwidth}
+    %    \includegraphics[width=\textwidth]{interfero.png}
+    %\end{minipage}
+    %\begin{minipage}[c]{0.475\textwidth}
+    %    \begin{itemize}
+    %        \item $\Delta d = \frac{\lambda}{4\pi} \Delta \Phi$
+    %        \item 
+    %    \end{itemize}
+    %\end{minipage}
+    
+    \begin{center}
+        \includegraphics[width=0.7\textwidth]{interfero.png}
+        
+        $\Delta d = \frac{\lambda}{4\pi} \Delta \Phi$
+    \end{center}
+\end{frame}
+
+\begin{frame}{Példa interferogramok}
+
+
+
+\begin{center}
+    \figu{hun_nkp1.png}{0.6}{Koherens, téli, interferogramok}
+    \figu{hun_nkp3.png}{0.6}{Inkoherens, nyári, interferogramok}
+\end{center}
+
+\end{frame}
+
+
 \begin{frame}{InSAR korlátai}
 
+\begin{table}
+\begin{tabular}{c | c | c}
+Sáv elnevezése & Frekvencia $[\text{GHz}]$ & Hullámhossz $[\text{cm}]$ \\ \hline
+X & 8.0 -- 12.0 & 3.75 -- 2.5 \\ \hline
+C & 4.0 -- 8.0 & 7.5 -- 3.75 \\ \hline
+L & 1.0 -- 2.0 & 30 -- 15 \\ \hline
+\end{tabular}
+\end{table}
+
 \begin{itemize}
-    \item hullámhossztól függő felszíni felbontás, 
     \item felszíni elmozdulás műholdirányú vetülete mérhető csak
     (felszálló - ascending, leszálló - descending műholdáthaladás)
-    \item vegetációval sűrűn fedett területen jel koherenciája elvész
+    \item felszín reflexiós tulajdonságai időben változnak - jel koherenciája
+    elvész (pl. vegetációval sűrűn fedett terület - X,C sáv, hó, homok, talaj
+    nedvességtartalma)
     \item visszatérési idő: 6-12 vagy több nap
     \item egyéb hullámterjedést befolyásoló tényezők szűrése: semleges
     atmoszférában, ionoszférában az EM hullám terjedési sebességének változása
+    \item cél: fenti limitációkat hatását kiküszöbölni - reflektor, atmoszféra
+    és ionoszféra modellek, szűrési módszerek
 \end{itemize}
 
 \end{frame}
@@ -74,11 +129,14 @@
 \begin{frame}{GGI - Űrgeodézia Kutatócsoport}
 
 \begin{itemize}
-    \item InSAR alkalmazási módjainak kiterjesztése
-    \item mesterséges reflektáló pontok kifejlesztése, sarokreflektor
+    \item InSAR alkalmazási területeinek kiterjesztése
+    \item mesterséges reflektáló pontok kifejlesztése
+    (geometria optimalizálása), sarokreflektor
     \item InSAR elmozdulások kombinálása GPS mérésekkel $\rightarrow$ 3D elmozdulás
-    \item jelterjedés vizsgálata, atmoszferikus, ionoszferikus hatások
-    \item GGI: ionoszonda - kísérleti üzem, kísérleti eredmények
+    \item jelterjedés vizsgálata, atmoszférikus, ionoszférikus hatások
+    \item GGI: ionoszonda - kísérleti üzem, kísérleti eredmények; hozzáférés
+    globális ionoszonda hálózathoz
+    \item regionális alkalamzások - első eredmények (Kelet-Magyarország)
 \end{itemize}
 
 \end{frame}
@@ -87,11 +145,13 @@
 \begin{frame}{GGI - Űrgeodézia Kutatócsoport}
 
 \begin{itemize}
+    \item reflektorhálózatok, területek, ahol nincs vagy csak kevés
+    koherens szórópont
     \item Magyarországon: 3 sarokreflektor hálózat (Fonyód, Kulcs, Dunaszekcső)
     \item Erdélyben: 2 sarokreflektor hálózat (Parajd, Csomád);
     1 tervezett (Vrancea-zóna)
     \item eltérő felszínmozgási folyamatok (földcsuszamlás, sótektonika,
-    poszt vulkáni tevékenység)
+    posztvulkáni tevékenység, szubdukció)
     \item ESA-PECS projekt keretérben kifejlesztett ISIGN programrendszer
     InSAR és GPS adatok kombinálására
 \end{itemize}
@@ -102,8 +162,10 @@
 \begin{frame}{Sarokreflektorok}
 
 \begin{center}
-\includegraphics[width=0.75\textwidth]{dszekcso_refl_3.jpg}
+    \figu{dszekcso_refl_3.jpg}{0.75}{Dunaszekcsői reflektorhálózat egyik
+          ikerreflektora, GNSS adapterrel}
 \end{center}
+
 
 \begin{itemize}
     \item több reflektor $\rightarrow$ reflektor hálózat
@@ -129,25 +191,24 @@
 
 
 \begin{frame}{Parajdi hálózat}
-\includegraphics[width=0.9\textwidth]{parajd_ts1.png}
-\end{frame}
-
-
-\begin{frame}{Parajdi hálózat}
-\includegraphics[width=0.9\textwidth]{parajd_ts2.png}
+\figu{parajd_ts1.png}{0.9}{Sósziklák deformációs idősora}
 \end{frame}
 
 \begin{frame}{Parajdi hálózat}
-\includegraphics[width=0.9\textwidth]{parajd_ts3.png}
+\figu{parajd_ts2.png}{0.9}{1-es reflektor deformációs idősora}
 \end{frame}
 
 \begin{frame}{Parajdi hálózat}
-\includegraphics[width=0.9\textwidth]{parajd_ts4.png}
+\figu{parajd_ts3.png}{0.9}{2-es reflektor deformációs idősora}
+\end{frame}
+
+\begin{frame}{Parajdi hálózat}
+\figu{parajd_ts4.png}{0.9}{3-as reflektor deformációs idősora}
 \end{frame}
 
 
 \begin{frame}{Magyarországi hálózatok}
-\includegraphics[width=0.9\textwidth]{hungary_networks.png}
+    \includegraphics[width=0.9\textwidth]{hungary_networks.png}
 \end{frame}
 
 \begin{frame}{Magyarországi hálózatok}
@@ -165,13 +226,36 @@
         \includegraphics[width=\textwidth]{IB4-IB1_kalman.png}
     \end{minipage}
     \begin{minipage}[c]{0.475\textwidth}
-        
+        Ide egy-egy ábra a három magyarországi hálózatról, különböző
+        deformációs idősorok, különböző jelenségek, egyes földcsuszamlások
+        epizodikus viselkedése, korreláltatni meteorológiával?
     \end{minipage}
 \end{minipage}
 \end{frame}
 
-\begin{frame}{}
 
+\begin{frame}{Kelet-Magyarországi regionális vizsgálat első eredményei}
+\includegraphics[width=0.6\textwidth]{hun_nkp2.png}
+\end{frame}
+
+
+\begin{frame}{Kutatási- és publikációs terv}
+
+\begin{itemize}
+    \item ISIGN programrendszer továbbfejlesztése, atmoszférikus
+    és ionoszférikus korrekciók beépítése
+    \item további reflektorhálózatok telepítése, meglévő hálózatok adatainak
+    feldolgozása, eredmények értelmezése
+    \item reflektorhálózatok feldolgozási eredményeinek publikálása
+    \item nem mozgó területeken atmoszféra, ionoszféra vizsgálata
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Publikációk}
+    \bibliography{/home/istvan/Dokumentumok/texfiles/insar}
+    \bibliographystyle{apalike}
 \end{frame}
 
 
@@ -184,18 +268,8 @@
 \includegraphics[width=0.7\textwidth]{iono.png}
 \end{frame}
 
-
-\begin{frame}{Kutatási- és publikációs terv}
-
-\begin{itemize}
-    \item ISIGN programrendszer továbbfejlesztése, atmoszférikus
-    és ionoszférikus korrekciók beépítése
-    \item további reflektorhálózatok telepítése, meglévő hálózatok adatainak
-    feldolgozása
-    \item reflektorhálózatok feldolgozási eredményeinek publikálása
-    \item nem mozgó területeken atmoszféra, ionoszféra vizsgálata
-\end{itemize}
-
+\begin{frame}{}
+\cite{Szucs2018, banyai2018mHuholdradar}
 \end{frame}
 
 

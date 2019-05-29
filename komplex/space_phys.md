@@ -601,10 +601,10 @@ Mozgásegyenlet kiegészítése plusz ütközési taggal.
     \li{néhány szubvihar egymás után &rarr; gyűrűáram jelentős megnövekedése}
 }
 
-\h4{Szubvihar kezdeti szakasza}
+\h4{Vihar beveztő fázisa}
 
 \ul{
-    \li{szubvihar kezdete, napfelöli rekonnekciós ráta megnövekedése, fluxus
+    \li{vihar kezdete, napfelöli rekonnekciós ráta megnövekedése, fluxus
         csóvába szállítódik, egy része vissza konvektávlódik a napfelöli
         oldalra}
     \li{megerősödött konvekció &rarr; erősödő aurora elektrojet
@@ -612,13 +612,13 @@ Mozgásegyenlet kiegészítése plusz ütközési taggal.
     \li{csóvában megnövekedett mágneses fluxus &rarr; megnövekedett semleges
         lepel áram &rarr; erővonalakat elnyűjtja &rarr; plazma lepel
         farokszerű geometria}
-    \li{\em{szubvihar növekedési fázis}, kb fél óráig tart, mágneses csóva
+    \li{\em{vihar bevezető fázisa}, kb fél óráig tart, mágneses csóva
         instabillá válik a felhalmozott mágneses energiától
-        &rarr; szubvihar kezdet}
+        &rarr; főfázis}
 }
 
 
-\h4{Szubvihar kezdet és tágulás}
+\h4{Vihar főfázisa}
 
 
 \ul{
@@ -635,14 +635,14 @@ Mozgásegyenlet kiegészítése plusz ütközési taggal.
 }
 
 
-\h4{Szubvihar recovery}
+\h4{Vihar utófázis}
 
 \ul{
     \li{45 perc elteltéval a rekonnekció a föld-közeli semleges vonalnál
         és a szubvihar aktivitás csillapodik, megszűnik}
     \li{ionoszféra áramok nagysága elkezd csökkenni}
     \li{1 - 2 óráig tart, magnetoszféra nyugodt állapotba visszatér}
-    \li{szubvihar vége és egy újabb kezdete átlapolódhat}
+    \li{vihar vége és egy újabb kezdete átlapolódhat}
     \li{föld-közeli semleges vonal csóva irányába kezd mozogni &rarr;
         plazmoidot csóva irányába nyomja, kidobódik a mágneses csóvából}
 }

@@ -48,6 +48,7 @@
         \col{
             \imref{https://lh4.googleusercontent.com/-DMgZ5zYAYs4/TXpFiTnU8wI/AAAAAAAAAmU/55dSVY99Kug/s1600/Earthquake_Depths.jpg}{Földrengések eloszlása.}
             <p><a href="https://commons.wikimedia.org/wiki/File:Earth_heat_flow.jpg#/media/File:Earth_heat_flow.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Earth_heat_flow.jpg" \attr alt="Earth heat flow.jpg"></a><br>By J. H. Davies and D. R. Davies - Davies, J. H., &amp; Davies, D. R. (2010). Earth's surface heat flux. Solid Earth, 1(1), 5-24., <a href="https://creativecommons.org/licenses/by/3.0" title="Creative Commons Attribution 3.0">CC BY 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=28866494"> Link </a></p>
+            \imref{http://geophysics.elte.hu/atlas/03_Heat-flow.png}
         }
         \col{
             \imref{https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/2008_age_of_oceans_plates.jpg/1200px-2008_age_of_oceans_plates.jpg}{Óceáni lemezek kora.}

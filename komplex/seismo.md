@@ -12,7 +12,6 @@
 
 \h2{Bevezetés}
 
-
 \ul{
     \li{földrengések regisztrálása, Föld belső szerkezetének meghatározása}
     \li{földrengés komoly veszélyforrás, emberi életek}
@@ -63,15 +62,6 @@ $$ \vp = \lambda\theta \vu + 2 \mu \mdef $$
 
 \h2{Hullámegyenlet}
 
-$$ \rho \par{t}^2 \vu = \mat{f} + \div \vp $$
-$$ \rho \par{t}^2 u_i = f_i + \par{j} p_{ij} $$
-
-
-$$ \par{i} p_{ij} = \lambda \delta_{ij} \par{j} \par{k} u_k  + \mu \par{j} (\par{i} u_j + \par{j} u_i) $$
-$$ \par{j} p_{ij} = \lambda \par{i} \par{k} u_k  + \mu \par{j} \par{i} u_j + \mu \par{j} \par{j} u_i $$
-$$ \div \vp = \lambda \gdiv_u  + \mu \gdiv_u + \mu \laplace \vu $$
-$$ \laplace \vu = \gdiv_u - \rot \rot \vu $$
-$$ \div \vp = (\lambda + 2 \mu) \gdiv_u  - \mu \rot \rot \vu $$
 $$ \rho \par{t}^2 \vu = \mat{f} + (\lambda + 2 \mu) \gdiv_u  - \mu \rot \rot \vu $$
 
 \h3{Szeparálás}
@@ -85,7 +75,6 @@ $$ \rho \par{t}^2 \phi = \mu \laplace \phi $$
 $$ \par{t}^2 \phi = \beta^{-2} \laplace \phi \hspace{25pt} \beta = \sqrt{\frac{\mu}{\rho}} $$
 
 \h3{Általános megoldás}
-
 
 $$ \Theta(\vr, t) = G(\vk \vr \pm c t) $$
 
@@ -102,6 +91,28 @@ Csoportsebesség: $ \mat{v} _g = \frac{\partial \omega}{\partial \vk} $
 $$ e = \half \rho \omega^2 A^2 $$
 
 \h2{Rugalmas hullámok törése}
+
+
+\h2{Földrengések intenzitása}
+
+\ul{
+    \li{felszíni jelenségek, pusztítás alapján; tapasztalati skála -
+        makroszeizmológiai megfigyeléseken alapul}
+    \li{Föld különböző területein, különböző skálák}
+    \li{történelmi földrengések leírása}
+    \li{\em{Mercalli-Cancai-Sieberg skála}, 1917; MSK-64 skála}
+    \li{pl. nem érzékelhető-, gyenge-, mérsékelt-, erős-, romboló-,
+        katasztrofális földrengés; épületek sérülése, pusztulása,
+        domborzat változása}
+    \li{Kövesligethy Radó eljárás, felszíni intenzitás eloszlás &rarr; fészekmélység}
+}
+
+\h2{Földrengések magnitúdója}
+
+\ul{
+    \li{műszeres megfigyelésen alapul, földrengés során felszabadult energáit
+        jellemzi; Richter vezette be 1935-ben, Kalifornia}
+}
 
 
 \h2{A Föld belső szerkezete - PREM modell}

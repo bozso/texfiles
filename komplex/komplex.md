@@ -1,13 +1,13 @@
 \include{html.gpp}
 
 \h1{Szeizmológia}
-\include{seismo.html}
+\include{seismo.md}
 
 \h1{Geotermika}
-\include{geotherm.html}
+\include{geotherm.md}
 
 \h1{Földmágnesség}
-\include{magneto.html}
+\include{magneto.md}
 
 \h1{Föld körüli térség fizikája}
-\include{space_phys.html}
+\include{space_phys.md}
