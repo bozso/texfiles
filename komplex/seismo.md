@@ -112,6 +112,13 @@ $$ e = \half \rho \omega^2 A^2 $$
 \ul{
     \li{műszeres megfigyelésen alapul, földrengés során felszabadult energáit
         jellemzi; Richter vezette be 1935-ben, Kalifornia}
+    \li{Richter: $M = \log A - \log A_0$, $A$: epicentrumtól 100 km-e mikronban
+    mért legnagyobb amplitúdó, $A_0$: skálatényező, zeró magnitúdójú rengés
+    amplitúdója}
+    \li{$M \propto \log E$}
+    \li{nincs felső határa, eddigi legnagyobb: 8.7-8.8}
+    \li{magyarországi rengések: $M = 0.5 I_0 + 1.75$m $I_0$: epicentrális
+        intenzitás}
 }
 
 
