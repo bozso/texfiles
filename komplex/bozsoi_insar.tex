@@ -23,10 +23,10 @@
 }
 
 
-\title[Komplex viszga, ELTE 2019]{Műholdradar interferometria és GNSS mérések
-                                  kombinálása 3D-s deformációs terek meghatározására}
+\title[Komplex viszga, ELTE]{Műholdradar interferometria és GNSS mérések
+                             kombinálása 3D-s deformációs terek meghatározására}
 \author[Bozsó István]{Bozsó István}
-\institute[MTA CSFK GGI]{MTA CSFK Geodéziai és Geofizikai Intézet}
+\institute[MTA CSFK GGI]{MTA CSFK Geodéziai és Geofizikai Intézet; ELTE Földtudományi Doktori Iskola}
 \date{2019.05.30.}
 
 \input{../aux/common.tex}
@@ -43,6 +43,9 @@
         \begin{minipage}[c]{0.3\textwidth}
             \includegraphics[width=0.75\textwidth]{ggi_logo.png}
         \end{minipage}
+        \begin{minipage}[c]{0.3\textwidth}
+            \includegraphics[width=0.75\textwidth]{elte_logo.png}
+        \end{minipage}
     \end{center}
 \end{frame}
 
@@ -53,13 +56,14 @@
     \item szintetikus apertúrájú radar - mikrohullám tartományban működő
     távérzékelési rendszer (műhold, repülő, drone)
     \item felszíni deformációk nagyfelbontású térképezése
-    \item fedetlen felszínen potenciálisan végtelen reflektáló pont
+    \item fedetlen felszínen potenciálisan több 1000, több 100 000 reflektáló pont
     \item relatív módszer, térben, időben
     \item felszíni deformáció mérés hibája ideális esetben $< \text{mm}$,
     gyakorlatban általában elmondható $< \text{cm}$
-    \item tektinikus, eróziós, folyamatok; antropogén tevékenység okozta
+    \item tektonikus, eróziós folyamatok; emberi tevékenység okozta
     deformációk térképezése, monitorozása
-    \item kritikus infrastruktúra megfigyelése ()
+    \item kritikus infrastruktúra megfigyelése (gátak, veszélyes hulladék
+    tározók)
     \item geodinamikai szempontból felbecsükhetetlen jelentőség, komplex
     dinamikai mintázattal rendelkező területek hosszútávú megfigyelése
     \item ESA műholdas földmegfigyelési programjában kiemelt szerep
@@ -89,21 +93,25 @@
 
 \begin{frame}{Példa interferogramok}
 
-
-
-\begin{center}
-    \figu{hun_nkp1.png}{0.6}{Koherens, téli, interferogramok}
-    \figu{hun_nkp3.png}{0.6}{Inkoherens, nyári, interferogramok}
-\end{center}
+    \begin{center}
+        \figu{hun_nkp1.png}{0.9}{Koherens, téli, interferogramok}
+    \end{center}
 
 \end{frame}
 
+\begin{frame}{Példa interferogramok}
+
+    \begin{center}
+        \figu{hun_nkp3.png}{0.9}{Inkoherens, nyári, interferogramok}
+    \end{center}
+
+\end{frame}
 
 \begin{frame}{InSAR korlátai}
 
 \begin{table}
-\begin{tabular}{c | c | c}
-Sáv elnevezése & Frekvencia $[\text{GHz}]$ & Hullámhossz $[\text{cm}]$ \\ \hline
+\begin{tabular}{| c | c | c |} \hline
+Sáv elnevezése & Frekvencia $[\text{GHz}]$ & Hullámhossz $[\text{cm}]$ \\ \hline \hline
 X & 8.0 -- 12.0 & 3.75 -- 2.5 \\ \hline
 C & 4.0 -- 8.0 & 7.5 -- 3.75 \\ \hline
 L & 1.0 -- 2.0 & 30 -- 15 \\ \hline
@@ -136,7 +144,7 @@ L & 1.0 -- 2.0 & 30 -- 15 \\ \hline
     \item jelterjedés vizsgálata, atmoszférikus, ionoszférikus hatások
     \item GGI: ionoszonda - kísérleti üzem, kísérleti eredmények; hozzáférés
     globális ionoszonda hálózathoz
-    \item regionális alkalamzások - első eredmények (Kelet-Magyarország)
+    \item InSAR regionális alkalamzások - első eredmények (Kelet-Magyarország)
 \end{itemize}
 
 \end{frame}
@@ -147,7 +155,7 @@ L & 1.0 -- 2.0 & 30 -- 15 \\ \hline
 \begin{itemize}
     \item reflektorhálózatok, területek, ahol nincs vagy csak kevés
     koherens szórópont
-    \item Magyarországon: 3 sarokreflektor hálózat (Fonyód, Kulcs, Dunaszekcső)
+    \item Magyarországon: 3 + 1 sarokreflektor hálózat (Fonyód, Kulcs, Dunaszekcső, Sopron)
     \item Erdélyben: 2 sarokreflektor hálózat (Parajd, Csomád);
     1 tervezett (Vrancea-zóna)
     \item eltérő felszínmozgási folyamatok (földcsuszamlás, sótektonika,
@@ -166,10 +174,10 @@ L & 1.0 -- 2.0 & 30 -- 15 \\ \hline
           ikerreflektora, GNSS adapterrel}
 \end{center}
 
-
 \begin{itemize}
     \item több reflektor $\rightarrow$ reflektor hálózat
     \item elmozdulások egy kijelölt stabil referencia reflektorhoz képest
+    \item mm alatti pontosság elérhető
 \end{itemize}
 
 \end{frame}
@@ -214,28 +222,38 @@ L & 1.0 -- 2.0 & 30 -- 15 \\ \hline
 \begin{frame}{Magyarországi hálózatok}
 
 \begin{minipage}[c]{0.975\textwidth}
-    \begin{minipage}[c]{0.475\textwidth}
-        \includegraphics[width=\textwidth]{IB2-IB1_kalman.png}
+    \begin{minipage}[c]{0.47\textwidth}
+        \figu{IB2-IB1_kalman.pdf}{1.0}{Dunszakcső, IB2 - IB1}
     \end{minipage}
-    \begin{minipage}[c]{0.475\textwidth}
-        \includegraphics[width=\textwidth]{IB3-IB1_kalman.png}
+    \begin{minipage}[c]{0.47\textwidth}
+        \figu{A1-AR_kalman.pdf}{1.0}{Kulcs, A1 - AR}
+        %\includegraphics[width=\textwidth]{}
     \end{minipage}
 \end{minipage}
 \begin{minipage}[c]{0.975\textwidth}
-    \begin{minipage}[c]{0.475\textwidth}
-        \includegraphics[width=\textwidth]{IB4-IB1_kalman.png}
+    \begin{minipage}[c]{0.47\textwidth}
+        \figu{KV-PH_kalman.pdf}{1.0}{Fonyód, VK - PH}
+        %\includegraphics[width=\textwidth]{IB4-IB1_kalman.png}
     \end{minipage}
     \begin{minipage}[c]{0.475\textwidth}
-        Ide egy-egy ábra a három magyarországi hálózatról, különböző
-        deformációs idősorok, különböző jelenségek, egyes földcsuszamlások
-        epizodikus viselkedése, korreláltatni meteorológiával?
+        \begin{itemize}
+            \item különböző dinamika
+            \item korreláció meteorológiával?
+            \item epizodikus vislkedés
+        \end{itemize}
     \end{minipage}
 \end{minipage}
 \end{frame}
 
 
 \begin{frame}{Kelet-Magyarországi regionális vizsgálat első eredményei}
-\includegraphics[width=0.6\textwidth]{hun_nkp2.png}
+    \begin{minipage}[c]{0.675\textwidth}
+        \includegraphics[width=1.0\textwidth]{hun_nkp2.png}
+    \end{minipage}
+    \hspace{10pt}
+    \begin{minipage}[c]{0.25\textwidth}
+        3.5 éves Sentinel-1 adatsor, előzetes eredmények
+    \end{minipage}
 \end{frame}
 
 
@@ -257,6 +275,23 @@ L & 1.0 -- 2.0 & 30 -- 15 \\ \hline
     \bibliography{/home/istvan/Dokumentumok/texfiles/insar}
     \bibliographystyle{apalike}
 \end{frame}
+
+\begin{frame}
+    \begin{center}
+        \Huge \fcol
+        Köszönöm a figyelmet!
+    \end{center}
+    \vspace{25pt}
+    
+    \begin{center}
+        \Large \center Köszönettel tartozom:
+        
+        Szűcs Eszter, Lichtenberger János, Wesztergom Viktor, Bányai László
+    \end{center}
+    \vspace{10pt}
+
+\end{frame}
+
 
 
 \begin{frame}{Integrált Vízgőzmennyiség}

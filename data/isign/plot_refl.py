@@ -34,7 +34,7 @@ def parse_kout(path):
 
 def style_kalman(colors):
     # InSAR
-    lw = 1
+    lw = 2.5
     tpl = "set style line {num} lc rgb '{color}' pt 7 ps 0.25 lt 0 lw {lw}"
     
     gp.call(tpl.format(num=1, color=colors["red"], lw=lw))
@@ -45,7 +45,7 @@ def style_kalman(colors):
     
     
     # GNSS
-    lw = 2
+    lw = 3.5
     tpl = "set style line {num} lc rgb '{color}' pt 0 ps 1 lt 1 lw {lw}"
     
     gp.call(tpl.format(num=4, color=colors["red"], lw=lw))
@@ -71,16 +71,14 @@ def plot(*stations, ref=None, rootdir=None, outdir=None, fontsize=15, term="eps"
     
     colors = gp.nicer()
     
-    gp.set("xlabel", "'Decimal year' font ',22'")
-    gp.set("key", keypos)
-    
+    gp.set(xlabel="'Decimal year' font ',22'", key=keypos)
     
     for station in stations:
         filename = pjoin(rootdir, "{}-{}_s_interpol.kout".format(station, ref))
         
         los, gnss = parse_kout(filename)
         
-        gp.set("ylabel", "'Deformation [mm]' font ',22'")
+        gp.set(ylabel="'Deformation [mm]' font ',22'")
         style_kalman(colors)
         
         with tmp("w", delete=False) as f1, tmp("w", delete=False) as f2:
@@ -88,7 +86,7 @@ def plot(*stations, ref=None, rootdir=None, outdir=None, fontsize=15, term="eps"
             f1.write(los)
             f2.write(gnss)
             
-            gp.output(pjoin(outdir, "%s-%s_kalman.ps" % (station, ref)),
+            gp.output(pjoin(outdir, "%s-%s_kalman.pdf" % (station, ref)),
                       term=term, fontsize=fontsize)
                       
             #gp.ranges(y=gnss_range)
@@ -101,25 +99,25 @@ def plot(*stations, ref=None, rootdir=None, outdir=None, fontsize=15, term="eps"
                     "     '{name2}' u 2:5 title 'GPS-Height'  with lp ls 6"
                     .format(name1=f1.name, name2=f2.name))
         
-        asc_g = pjoin(rootdir, "%s-%s_g_asc.los" % (station, ref))
-        dsc_g = pjoin(rootdir, "%s-%s_g_dsc.los" % (station, ref))
-        
-        asc_s = pjoin(rootdir, "{}-{}_s_asc.los".format(station, ref))
-        dsc_s = pjoin(rootdir, "{}-{}_s_dsc.los".format(station, ref))
+        #asc_g = pjoin(rootdir, "%s-%s_g_asc.los" % (station, ref))
+        #dsc_g = pjoin(rootdir, "%s-%s_g_dsc.los" % (station, ref))
+        #
+        #asc_s = pjoin(rootdir, "{}-{}_s_asc.los".format(station, ref))
+        #dsc_s = pjoin(rootdir, "{}-{}_s_dsc.los".format(station, ref))
 
-        gp.output(pjoin(outdir, "{}-{}_los.png".format(station, ref)),
-                  term=term, fontsize=fontsize)
+        #gp.output(pjoin(outdir, "{}-{}_los.png".format(station, ref)),
+        #          term=term, fontsize=fontsize)
         
-        style_los(gp, colors)
-        gp["ylabel"] = "'LOS deformation [mm]' font ',22'"
-        
-        #gp.ranges(y=los_range)
-        
-        gp("plot '{}' u 2:3 title 'ASC Gamma'  with lp ls 1,"
-           "     '{}' u 2:3 title 'ASC StaMPS' with lp ls 2,"
-           "     '{}' u 2:3 title 'DSC Gamma'  with lp ls 3,"
-           "     '{}' u 2:3 title 'DSC StaMPS' with lp ls 4"
-           .format(asc_g, asc_s, dsc_g, dsc_s))
+        #style_los(gp, colors)
+        #gp["ylabel"] = "'LOS deformation [mm]' font ',22'"
+        #
+        ##gp.ranges(y=los_range)
+        #
+        #gp("plot '{}' u 2:3 title 'ASC Gamma'  with lp ls 1,"
+        #   "     '{}' u 2:3 title 'ASC StaMPS' with lp ls 2,"
+        #   "     '{}' u 2:3 title 'DSC Gamma'  with lp ls 3,"
+        #   "     '{}' u 2:3 title 'DSC StaMPS' with lp ls 4"
+        #   .format(asc_g, asc_s, dsc_g, dsc_s))
 
 
 ticfont = 13
@@ -200,28 +198,35 @@ def main():
     
     #gp.debug()
     
-    fontsize = 14
+    fontsize = 16
     size = (1, 1)
     
     if 1:
         rootdir = root + "/dszekcso"
-        plot_kalman("IB2", "IB3", "IB4", ref="IB1", rootdir=rootdir, outdir=outdir,
-                    term=term, fontsize=fontsize, ranges=[-600,400], size=size,
-                    prefix="dszekcso", layout=(2,2), incr=200.0)
+        #plot_kalman("IB2", "IB3", "IB4", ref="IB1", rootdir=rootdir, outdir=outdir,
+        #            term=term, fontsize=fontsize, ranges=[-600,400], size=size,
+        #            prefix="dszekcso", layout=(2,2), incr=200.0)
+        plot("IB2", "IB3", "IB4", ref="IB1", rootdir=rootdir, outdir=outdir,
+             term=term, fontsize=fontsize, keypos="center top outside horizontal")
+
 
                 
     if 1:
         rootdir = root + "/fonyod"
-        plot_kalman("KV", "RE", ref="PH", rootdir=rootdir, outdir=outdir,
-                    term=term, fontsize=fontsize, size=size, incr=5.0,
-                    prefix="fonyod", layout=(2,2), ranges=[-10,10])
+        #plot_kalman("KV", "RE", ref="PH", rootdir=rootdir, outdir=outdir,
+        #            term=term, fontsize=fontsize, size=size, incr=5.0,
+        #            prefix="fonyod", layout=(2,2), ranges=[-10,10])
+        plot("KV", "RE", ref="PH", rootdir=rootdir, outdir=outdir,
+             term=term, fontsize=fontsize, keypos="center top outside horizontal")
 
     
     if 1:
         rootdir = root + "/kulcs"
-        plot_kalman("A1", "A2", "A3", ref="AR", rootdir=rootdir, outdir=outdir,
-                    term=term, fontsize=fontsize, prefix="kulcs", size=size,
-                    layout=(2,2), ranges=[-10,10], incr=12.5)
+        #plot_kalman("A1", "A2", "A3", ref="AR", rootdir=rootdir, outdir=outdir,
+        #            term=term, fontsize=fontsize, prefix="kulcs", size=size,
+        #            layout=(2,2), ranges=[-10,10], incr=12.5)
+        plot("A1", "A2", "A3", ref="AR", rootdir=rootdir, outdir=outdir,
+             term=term, fontsize=fontsize, keypos="center top outside horizontal")
          
 
 
