@@ -1,0 +1,5 @@
+#include "html.gpp"
+#include "latex.gpp"
+
+head1(Közel semleges határréteg)
+#include "bound_layer.md"

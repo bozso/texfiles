@@ -1,0 +1,123 @@
+#include "html.gpp"
+#include "latex.gpp"
+
+#define heatf watt inv2{meter}
+
+head2{Egyszerű, kopár felszínek éghajlata}
+
+head3{Homoksivatag}
+
+head4{Sugárzási mérleg, energiaegyenleg}
+
+ulist{
+    item{lég- és talajnedvesség hiánya}
+    item{energiamérleg: nagy bevétel és kiadás}
+    item{légkör nagyon tiszta, alacsony páratartalom, nincsenek felhők}
+    item{extraterresztrikus rövidhullámú sugárzás 80%-a eléri a felszínt}
+    item{szubtrópusokon Nap közel a zenithez, erős napi szoláris bevétel}
+    item{legtöbb sivatagi felszín - nagy albedo, rövidhullámú veszteség
+         jelentős}
+    item{nappal a sivatag felszíne nagyon felforrósodik &rarr; hosszúhullámú 
+         kisugárzás nagy}
+    item{nappali teljes hősugárzási mérleg nem nagy $\approx si{600 | heatf}$
+         &larr; nagy visszaverődés és kisugárzás}
+    item{éjszakai sugárzási mérleg erősen negatív &rarr;
+         derült égbolt, száraz levegő}
+    item{összes sugárzási energiának szenzibilis hő formájában kell
+         elszállítódnia (levegőt talajt melegítenie)}
+    item{párolgás miatti hőveszteség elhanyagolható}
+    item{nappali sugárzási többlet nagy része turbulencián keresztül a
+         levegőbe jut}
+    item{rövidebb periódusokban: vezetéssel szállított energia szerepe
+         jelentős, éjszaka és kora reggel kiegyensúlyozza a hosszúhullámú
+         sugárzási veszteséget, gyenge szél &rarr; turbulens szállítás
+         szünetel}
+    item{délelőtt, délután - légköri instabilitás &rarr; szélsebesség 
+         növekedése, légköt felé pumpálja a felszíni hőtöbbletet}
+    item{száraz talaj, homok hővezetőképessége kicsi, hőáramlás lefelé haladva
+         hamar megszűnik &rarr; felső réteg nagyon felforrósodik}
+    item{éjszaka felső talajréteg erős hődivergencia, lehülés}
+}
+
+head4{Klíma}
+
+ulist{
+    item{nedvesség hiánya, felső rétegben koncentrálódott hő nappali
+         felszínhőmérésklet igen magas lehet, felszín nagy napi hőingás,
+         pár centivel a felszín alatt &rarr; kb. állandó hűvös hőmérséklet}
+    item{nappali függőleges hőmérsékleti profil: sivatagi felszín alatt és
+         felett hőmérséklet hirtelen esése}
+    item{sivatag feletti légkör alsó része nagyon labilis}
+    item{portölcsér: erősen felfele kavargó túlmelgedett levegő lassan mozog
+         vízszintesen, további felszínközeli forró levegőrétegeket szív fel}
+    item{éjszakai hőmérsékleti profil: felszín lehülése miatt inverzió,
+         radiatív hűtés &rarr; hőmérséklet jelentős esése}
+    item{nagy napi hőmérséklet ingadozás $si{40 | celsius}$ vagy akár
+         $si{80 | celsius}$}
+    item{abszolút nedvesség nagyon alacsony, telítettségtől alig változik}
+    item{stabilitás napi változása &rarr; rendszeres napi szélsebesség
+         váltzozás}
+    item{nappali erős konvekció, magasabb légrétegekből nagyobb
+         mozgásmennyiséggel rendelkező levegőelemek felszínközeli rétegekbe
+         jutnak &rarr; szélsebességet növel}
+    item{éjszaka nem kedvez a légmozgásnak, felszín közeli mozgás
+         elcsendesedik}
+    item{nappali szelek elég erősek, por- és homokszemcsék szállítása &rarr;
+         erózió, lerakódás, abrázió (marás); durva szemcsék maradnak}
+}
+
+head3{Hó- és jégfelszín}
+
+head4{Sugárzási mérleg}
+
+ulist{
+    item{rövidhullámú sugárzás egy részét áteresztik}
+    item{behatoló sugárzás erőssége exponenciálisan csökken a mélység
+         függvényében}
+    item{rövidhullám átlagos behatolási mélység: hó: $si{1 | meter}$,
+         jég: $si{10 | meter}$}
+    item{hosszab hullámhosszak - elnyelés mértéke erősödik}
+    item{magas albedo, alacsony energiaállapot, visszaverődés rövidebb
+         hullámhosszak esetén nagyobb}
+    item{természetes felsuínek albedoja - jellegzetes napi menet: nagyobb
+         értékek reggel és este, kisebbek délben}
+    item{kora reggel és este fagyott felszín és aéacsony napállás &rarr;
+         magas albedo, kora délután vékony felszíni réteg megolvadása
+         lecsökkentheti az albedot}
+    item{hosszúhullámú tartomáyban a hó és jég kb. tökéletes kisugárzó,
+         nappali sugárzási mérleg kicsi &larr; nagy albedo}
+}
+
+head4{Energia- és vízegyenleg}
+
+ulist{
+    item{eső átszívárgása, megolvadt hó &rarr; rétegen belüli vízmozgás}
+    item{halmazállapotváltozás: energia felvétel vagy leadás}
+    item{bold{hideg} ($< si{0 | celsius}$) hóréteg, magasabb szélességeken télen,
+         nincs vagy kicsi szoláris bevitel, rétegeken belüli hővezetés kicsi,
+         alacsony hővezetőképesség}
+    item{teljes sugárzási mérleg és konvektív szállítású szenzibilis energia,
+         teljes mérleg negatív, hosszúhullámú kimenő áram}
+    item{felszín lehülése &rarr; kisugárzási inverzió, kis turbulencia &rarr;
+         felszín felé irányuló áramlás}
+    item{nyári nap, magasabb szélességen, hóval fedett gleccser elég nagy 
+         mennyiségű sugárzást kaphat &rarr; felső rétegek felmelegszenek,
+         meleg lefele is terjed; vízpára depozíciója is okozhat felmelegedést}
+    item{bold{nedves} ($\approx si{0 | celsius}$), levegő hőmérésklete
+         sokszor fagypont felett, csapadék eső formájában is}
+    item{eső által szállított energia jelentős energiaforrás lehet az olvadás
+         számára}
+    item{olvadó hó vagy jégfelszín páranyomása telítettség értékén van,
+         viszonylag alacsony érték; gyakran előfordul - felszín feletti meleg
+         levegőnek alacsony a páranyomása &rarr; nedvesség lefelé irányuló
+         áramlása, felszínen kondenzálódik}
+    item{}
+    
+    
+    
+    
+    
+    
+    
+    
+}

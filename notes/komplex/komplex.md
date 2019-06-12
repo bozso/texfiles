@@ -1,6 +1,5 @@
 \include{html.gpp}
 
-/*
 \h1{Szeizmológia}
 \include{seismo.md}
 
@@ -9,7 +8,6 @@
 
 \h1{Földmágnesség}
 \include{magneto.md}
-*/
 
 \h1{Gravitáció, földalak, változó forgás}
 
@@ -86,7 +84,5 @@
 }
 
 
-/*
 \h1{Föld körüli térség fizikája}
 \include{space_phys.md}
-*/
