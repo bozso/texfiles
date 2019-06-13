@@ -17,76 +17,56 @@
 
 head1{Fizikai Alapok}
 
-Közvetlen (direkt) sugárzás:
-$$ I = I_{\perp} \cdot \cos\theta $$
-
-Globál sugárzás:
-$$ Kd = I + D $$
-
-Visszavert rövidhullámú sugárzás
-$$ Ku = Kd \cdot \alpha $$
-
-
-Nap sugárzásából származó energiamérleg:
-$$ subt{K | Ex} = subt{ (Ku{f} + Ku{l}) | légköri visszaverődés} +   
-                  subt{ (Ks{f} + Ks{l}) | légköri elnyelődés} + 
-                  subt{ (Ku{F}) | földi visszaverődés} +
-                  subt{ (Ks{F}) | földi elnyelés} $$
-
-                  
-Rövidhullámú sugárzási mérleg:
-$$ Ks = Kd + Ku = Kd (1 - \alpha) $$
-
-
-Hosszúhullámú sugárzási mérleg:
-$$ Ls = Ld + Lu $$
-
-
-Nappali mérleg
-$$ star{Q} = Ks + Ls = Kd + Ku + Ld + Lu $$
-
-Éjszakai mérleg
-$$ star{Q} = Ls = Ld + Lu $$
-
-
-Felszín energiaegyenlege:
-$$ star{Q} + Qt{H} + Qt{E} + Qt{G} = 0 $$
-
-
-Rendszer szenzibilis hőtárolás-változása:
-$$ star{Q} + Qt{H} + Qt{E} = \Delta Qt{S}  $$
-
-Éves vízegyenleg:
-$$ p + E + \Delta r = 0 $$
-
-
-Felszíni vízegyenleg:
-$$ p + E + f + k + \Delta r = 0 $$
-
-Réteg vízegyenleg:
-$$ p + E + \Delta r = \Delta S $$
-
 ulist{
+    head2{Közvetlen (direkt) sugárzás:}
+    $$ I = I_{\perp} \cdot \cos\theta $$
     item{$I$: felszínen a sugárzási áramsűrűség, közvetlen (direkt) sugárzás}
     item{$I_{\perp}$: a sugár irányára merőleges felületen
          a sugárzási áramsűrűség}
     item{$\theta$: sugár beesési szöge a függőlegeshez képest}
+    head2{Globál sugárzás:}
+    $$ Kd = I + D $$
+    item{$D$: szórt (diffúz) sugárzás}
+    head2{Visszavert rövidhullámú sugárzás}
+    $$ Ku = Kd \cdot \alpha $$
+    item{$\alpha$: albedo}
     item{$Ku$: felszínről visszavert rövidhullámú sugárzás}
     item{$Kd$: felszínre beeső rövidhullámú sugárzás}
-    item{$D$: szórt (diffúz) sugárzás}
-    item{$\alpha$: albedo}
+    head2{Nap sugárzásából származó energiamérleg:}
+    $$ subt{K | Ex} = subt{ (Ku{f} + Ku{l}) | légköri visszaverődés} +   
+                      subt{ (Ks{f} + Ks{l}) | légköri elnyelődés} + 
+                      subt{ (Ku{F}) | földi visszaverődés} +
+                      subt{ (Ks{F}) | földi elnyelés} $$
     item{$subt{K | Ex}$: légkör felső részét elérő átlagos napsugárzás}
+    head2{Rövidhullámú sugárzási mérleg:}
+    $$ Ks = Kd + Ku = Kd (1 - \alpha) $$
+    head2{Hosszúhullámú sugárzási mérleg:}
+    $$ Ls = Ld + Lu $$
     item{$Ls$: hosszúhullámú sugárzási mérleg}
     item{$Lu$: felszínről kimenő rövidhullámú sugárzás}
     item{$Ld$: felszínre beérkező rövidhullámú sugárzás}
+    head2{Nappali mérleg}
+    $$ star{Q} = Ks + Ls = Kd + Ku + Ld + Lu $$
     item{$star{Q}$: teljes sugárzási mérleg}
     item{konvektív energiacsere a légkörrel: $Qt{H}$: érzékelhető és 
          $Qt{E}$: látens hő}
     item{talajjal vezetéssel történő energiacsere $Qt{G}$}
     item{$\Delta Qt{S}$: rendszer érzékelhető hőtárolás-változása}
+    head2{Éjszakai mérleg}
+    $$ star{Q} = Ls = Ld + Lu $$
+    head2{Felszín energiaegyenlege:}
+    $$ star{Q} + Qt{H} + Qt{E} + Qt{G} = 0 $$
+    head2{Rendszer szenzibilis hőtárolás-változása:}
+    $$ star{Q} + Qt{H} + Qt{E} = \Delta Qt{S}  $$
+    head2{Éves vízegyenleg:}
     item{$p$: csapadék, $E$: evapotranspiráció, $\Delta r$: nettó lefolyás}
     item{$f$: átszűrődés (filtráció), $k$: kapilláris melkedés, $\Delta S$:
          nedvességtartalom változása}
+    $$ p + E + \Delta r = 0 $$
+    head2{Felszíni vízegyenleg:}
+    $$ p + E + f + k + \Delta r = 0 $$
+    head2{Réteg vízegyenleg:}
+    $$ p + E + \Delta r = \Delta S $$
 }
 
 head1{Egyszerű, kopár felszínek éghajlata}
@@ -208,13 +188,105 @@ ulist{
          viszonylag alacsony érték; gyakran előfordul - felszín feletti meleg
          levegőnek alacsony a páranyomása &rarr; nedvesség lefelé irányuló
          áramlása, felszínen kondenzálódik}
-    item{vízegyenleg}
-    
-    
-    
-    
-    
-    
-    
-    
+    item{vízegyenleg, $f \approx 0$:}
+    $$ p + E + \Delta r = \Delta S $$
+    item{olvadás esetén:}
+    $$ \Delta Qt{M} = L_f \cdot \Delta r$$
 }
+
+head3{Klíma}
+
+ulist{
+    item{hőmérséklet maximuma a felszín alatt jelentkezik}
+    item{nappal a radiatív hőszállítás dominál a hővezetés felett (hó felső
+         $si{0.5 | meter}$; jég felső $si{5 | meter}$), rövidhullámú
+         sugárzás jobban áthatol}
+    item{$star{Q}(z)$ maximumot mutat közvetlenül a felszín alatt}
+    item{amikor $star{Q}$-nak döntő szerepe van az olvadásban &rarr; felszín
+         közelében lyukak, üregek keletkezhetnek}
+    item{tárgyak hőmerésklete (kő, gally, levél, fák, kerítés) elég nagy lehet
+         a körülöttük lévő hó megolvasztásához}
+    item{hó hatákony szigetelőréteg, segít a talaj hőtartalmának megörzésében}
+    item{talajban felszíbaduló látens hőt visszatartja}
+    item{tavaszi hóolvadás, foltokban marad hó, környező területek gyorsan
+         felmelegszenek}
+    item{éjszaka a hófelszín gyorsan hül, erős felszíni inverzió, }
+    item{levegő vízpára mennyisége kicsi, nedvességforrások hiánya, hideg
+         levegő alacsony telítettségi páranyomás, olvadás sem lehet erőteljes}
+    item{hófelszín simaságak &rarr; nagy sebességű szelek}
+    item{hótömegek átrendeződése, lavina}
+}
+
+
+head2{Vízfelszín}
+
+head3{Sugárzási mérleg}
+
+ulist{
+    item{elnyelődés mélység függvényében exponenciális, általában a rövidhullámú
+         sugárzás $si{10 | meter}$-ig hatol be, hosszúhullámú sugárzás esetén
+         jóval gyengébb áthatolás}
+    item{albedo erősen változékony; beesési szögtől erősen függ &rarr;
+         vízfelszín alak}
+    item{légköri $Ld$-t szinte teljesen elnyeli; $Lu$ kb. állandó a nap folymán}
+    item{$subt{K | Ex}$ görbe szabályos és szimmetrikus}
+    item{$Kd$ kb. 1/3-al csökkentett menet; $Ku$ kicsi, víz alacsony albedo}
+    item{$Ls$ kb. állandó a nap folymán}
+    item{nappal $Ks$ dominál, éjszaka $star{Q} = Ls$}
+    item{vízfelszín kiváló sugárzás elnyelő, rövidhullámú elnyelés egy
+         kiterjedt rétegben történik; felső rétegben melegedés}
+}
+
+
+head3{Energiaegyenleg}
+
+ulist{
+    $$ star{Q} (+ Qt{R}) + Qt{H} + Qt{E} + \Delta Qt{A} (+Qt{G})
+       = \Delta Qt{S} $$
+    item{$\Delta Qt{A}$: horizontális vízáramok által szállított szenzibilis
+         energia változása}
+    item{kicsi vízmélység $Qt{R}$ jelentős lehet; nagy víztömegek esetén
+         éves szinten $\Delta Qt{S} \approx 0$}
+    item{fő energiaveszteség $Qt{E}$ $\approx 90\%$}
+    head4{Sekély víz}
+    item{$\Delta Qt{A} \approx 0$, $Qt{G}$-vel számolni kell, elnyelt 
+         energia vagy a vizet melgíti fel ($\Delta Qt{S}$) vagy elvezetődik
+         a talajba ($Qt{G}$)}
+    item{késő délután a talaj és vízréteg válik a legfontosabb
+         energiaforrássá &rarr; hosszúhullámú kisugárzás és párolgás}
+    item{nap során nyeraségek és veszteségek kb. egyensúlyban}
+    item{nappali turbulens hőveszteség délutáni csúcspont}
+    head4{Óceán}
+    item{$si{27 | meter}$ mélyen a vízhómérséklet kb. állandó}
+    item{hasonló a rizsföldön tapasztalt mérési eredményekkel}
+    item{nappal főken energiaelnyelő, éjszaka energiaforrás}
+}
+
+head3{Klíma}
+
+
+ulist{
+    item{általában felszíni hőmérésklete ingás $< si{5 | celsius}$}
+    item{víz legjobb sugárelnyelő, de kis termális válaszreakció?}
+    olist{
+        item{átbocsátás - energiaelnyelés nagyobb térfogatban}
+        item{keveredés - nagy térfogatban eloszlik}
+        item{párolgás - hatékony energiaelnyelő}
+        item{hőkapacitás - igen nagy}
+    }
+    item{napi energia csrefolyamatok óceán felső $si{30 | meter}$-es rétegében
+         ez alatt bold{termoklin zóna}, hőmérséklet gyorsan csökken;
+         elválasztóréteg}
+    item{bold{epilimnion}ls item{hipolimnion}}
+    item{víz $si{4 | celsius}$-on a legsűrűbb}
+    item{óceán felett, alsó $si{10 | meter}$-en potenciális hőmérséklet
+         és specifikus nedvesség csökkenése; szélsebesség növekedése;
+         összhangban a szárazföldivel}
+    item{továbbiakban a különbségek kicsik, jól elkeveredett réteg,
+         passzát szél inverzió zárja le}
+}
+
+
+
+
+
