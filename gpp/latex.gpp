@@ -29,7 +29,7 @@
 #define cross{one | two} one \times two
 #define half \frac{1}{2}
 #define abs{in} | in |
-#define sub{var | sub}  {var}_{\text{sub}}
+#define subt{var | sub}  {var}_{\text{sub}}
 
 
 #endif

@@ -3,11 +3,97 @@
 
 #define heatf watt inv2{meter}
 
-head2{Egyszerű, kopár felszínek éghajlata}
+#define Kd{in} K_{\downarrow \text{in}}
+#define Ku{in} K_{\uparrow \text{in}}
+#define Ks{in} K^{*}_{\text{in}}
 
-head3{Homoksivatag}
+#define Ld{in} L_{\downarrow \text{in}}
+#define Lu{in} L_{\uparrow \text{in}}
+#define Ls{in} L^{*}_{\text{in}}
 
-head4{Sugárzási mérleg, energiaegyenleg}
+#define star{in} {in}^{*}
+#define Qt{in} Q_{\text{in}}
+
+
+head1{Fizikai Alapok}
+
+Közvetlen (direkt) sugárzás:
+$$ I = I_{\perp} \cdot \cos\theta $$
+
+Globál sugárzás:
+$$ Kd = I + D $$
+
+Visszavert rövidhullámú sugárzás
+$$ Ku = Kd \cdot \alpha $$
+
+
+Nap sugárzásából származó energiamérleg:
+$$ subt{K | Ex} = subt{ (Ku{f} + Ku{l}) | légköri visszaverődés} +   
+                  subt{ (Ks{f} + Ks{l}) | légköri elnyelődés} + 
+                  subt{ (Ku{F}) | földi visszaverődés} +
+                  subt{ (Ks{F}) | földi elnyelés} $$
+
+                  
+Rövidhullámú sugárzási mérleg:
+$$ Ks = Kd + Ku = Kd (1 - \alpha) $$
+
+
+Hosszúhullámú sugárzási mérleg:
+$$ Ls = Ld + Lu $$
+
+
+Nappali mérleg
+$$ star{Q} = Ks + Ls = Kd + Ku + Ld + Lu $$
+
+Éjszakai mérleg
+$$ star{Q} = Ls = Ld + Lu $$
+
+
+Felszín energiaegyenlege:
+$$ star{Q} + Qt{H} + Qt{E} + Qt{G} = 0 $$
+
+
+Rendszer szenzibilis hőtárolás-változása:
+$$ star{Q} + Qt{H} + Qt{E} = \Delta Qt{S}  $$
+
+Éves vízegyenleg:
+$$ p + E + \Delta r = 0 $$
+
+
+Felszíni vízegyenleg:
+$$ p + E + f + k + \Delta r = 0 $$
+
+Réteg vízegyenleg:
+$$ p + E + \Delta r = \Delta S $$
+
+ulist{
+    item{$I$: felszínen a sugárzási áramsűrűség, közvetlen (direkt) sugárzás}
+    item{$I_{\perp}$: a sugár irányára merőleges felületen
+         a sugárzási áramsűrűség}
+    item{$\theta$: sugár beesési szöge a függőlegeshez képest}
+    item{$Ku$: felszínről visszavert rövidhullámú sugárzás}
+    item{$Kd$: felszínre beeső rövidhullámú sugárzás}
+    item{$D$: szórt (diffúz) sugárzás}
+    item{$\alpha$: albedo}
+    item{$subt{K | Ex}$: légkör felső részét elérő átlagos napsugárzás}
+    item{$Ls$: hosszúhullámú sugárzási mérleg}
+    item{$Lu$: felszínről kimenő rövidhullámú sugárzás}
+    item{$Ld$: felszínre beérkező rövidhullámú sugárzás}
+    item{$star{Q}$: teljes sugárzási mérleg}
+    item{konvektív energiacsere a légkörrel: $Qt{H}$: érzékelhető és 
+         $Qt{E}$: látens hő}
+    item{talajjal vezetéssel történő energiacsere $Qt{G}$}
+    item{$\Delta Qt{S}$: rendszer érzékelhető hőtárolás-változása}
+    item{$p$: csapadék, $E$: evapotranspiráció, $\Delta r$: nettó lefolyás}
+    item{$f$: átszűrődés (filtráció), $k$: kapilláris melkedés, $\Delta S$:
+         nedvességtartalom változása}
+}
+
+head1{Egyszerű, kopár felszínek éghajlata}
+
+head2{Homoksivatag}
+
+head3{Sugárzási mérleg, energiaegyenleg}
 
 ulist{
     item{lég- és talajnedvesség hiánya}
@@ -39,7 +125,7 @@ ulist{
     item{éjszaka felső talajréteg erős hődivergencia, lehülés}
 }
 
-head4{Klíma}
+head3{Klíma}
 
 ulist{
     item{nedvesség hiánya, felső rétegben koncentrálódott hő nappali
@@ -66,9 +152,11 @@ ulist{
          erózió, lerakódás, abrázió (marás); durva szemcsék maradnak}
 }
 
-head3{Hó- és jégfelszín}
+head2{Hó- és jégfelszín}
 
-head4{Sugárzási mérleg}
+head3{Sugárzási mérleg}
+
+$$ Kd(z) = Kd{0} \cdot e^{-\delta z} $$
 
 ulist{
     item{rövidhullámú sugárzás egy részét áteresztik}
@@ -86,32 +174,41 @@ ulist{
          lecsökkentheti az albedot}
     item{hosszúhullámú tartomáyban a hó és jég kb. tökéletes kisugárzó,
          nappali sugárzási mérleg kicsi &larr; nagy albedo}
+    $$ Ls = Ld + Lu = \sigma (T_f^4 - T_0^4 ) $$
+    item{$T_f$: felhőalap hőmérséklete}
 }
 
-head4{Energia- és vízegyenleg}
+head3{Energia- és vízegyenleg}
 
 ulist{
     item{eső átszívárgása, megolvadt hó &rarr; rétegen belüli vízmozgás}
+    $$ star{Q} + Qt{H} + Qt{E} + \Delta Qt{M} (+ Qt{G}) = \Delta Qt{S} $$
+    item{$\Delta Qt{M}$: víz rétegen belüli fázisvátlzoásaihoz kapcsolódó
+         látenshő}
     item{halmazállapotváltozás: energia felvétel vagy leadás}
     item{bold{hideg} ($< si{0 | celsius}$) hóréteg, magasabb szélességeken télen,
          nincs vagy kicsi szoláris bevitel, rétegeken belüli hővezetés kicsi,
-         alacsony hővezetőképesség}
-    item{teljes sugárzási mérleg és konvektív szállítású szenzibilis energia,
-         teljes mérleg negatív, hosszúhullámú kimenő áram}
+         alacsony hővezetőképesség, $\Delta Qt{M} \approx Qt{E} \approx
+         \approx \Delta Qt{S} \approx Qt{G}\approx 0$}
+    item{teljes sugárzási mérleg ($star{Q}$ )és konvektív szállítású 
+         szenzibilis energia ($Qt{H}$) meghatározó, teljes mérleg negatív, 
+         hosszúhullámú kimenő áram ($Lu$)}
     item{felszín lehülése &rarr; kisugárzási inverzió, kis turbulencia &rarr;
-         felszín felé irányuló áramlás}
+         felszín felé irányuló áramlás ($Qt{H}$)}
     item{nyári nap, magasabb szélességen, hóval fedett gleccser elég nagy 
          mennyiségű sugárzást kaphat &rarr; felső rétegek felmelegszenek,
          meleg lefele is terjed; vízpára depozíciója is okozhat felmelegedést}
+    $$ Qt{E} = L_s \cdot E $$
     item{bold{nedves} ($\approx si{0 | celsius}$), levegő hőmérésklete
          sokszor fagypont felett, csapadék eső formájában is}
-    item{eső által szállított energia jelentős energiaforrás lehet az olvadás
-         számára}
+    $$ star{Q} + Qt{R} + Qt{H} + Qt{E} + \Delta Qt{M} = \Delta Qt{S} $$
+    item{eső által szállított energia ($Qt{R}$) jelentős energiaforrás lehet
+         az olvadás számára}
     item{olvadó hó vagy jégfelszín páranyomása telítettség értékén van,
          viszonylag alacsony érték; gyakran előfordul - felszín feletti meleg
          levegőnek alacsony a páranyomása &rarr; nedvesség lefelé irányuló
          áramlása, felszínen kondenzálódik}
-    item{}
+    item{vízegyenleg}
     
     
     
