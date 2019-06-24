@@ -9,13 +9,13 @@
 
 #define pbreak <div class="page-break"></div>
 
-#define htag{tag | cont | args} <tag args>content</tag>
+#define htag{tag}{cont}{args} <tag args>content</tag>
 
 #define hcenter{in} <center>in</center>
-#define imref{in | title | attr} <img src="in" attr title="title" alt="title"> <br> title Forrás: <a href="in"> in </a>
-#define imgit{in | title | attr} <img src="https://raw.githubusercontent.com/bozso/texfiles/master/images/in" attr title="title" alt="title"> <br> title <a href="https://raw.githubusercontent.com/bozso/texfiles/master/images/in"> Forrás </a>
+#define imref{in}{title}{attr} <img src="in" attr title="title" alt="title"> <br> title Forrás: <a href="in"> in </a>
+#define imgit{in}{title}{attr} <img src="https://raw.githubusercontent.com/bozso/texfiles/master/images/in" attr title="title" alt="title"> <br> title <a href="https://raw.githubusercontent.com/bozso/texfiles/master/images/in"> Forrás </a>
 
-#define image{name | opts} <img src="impath/name" opts>
+#define image{name}{opts} <img src="impath/name" opts>
 
 #define col{in} <div class="column">in</div>
 #define row{in} <div class="row">in</div>
@@ -52,7 +52,7 @@
 #define siemens unit{S}
 #define cond siemens inv{meter}
 
-#define si{in | unitin} in \hspace{2.5pt} unitin
+#define si{in}{unitin} in \hspace{2.5pt} unitin
 
 #define bold{in} <b>in</b>
 #define pa{in} <p>in</p>
@@ -76,7 +76,7 @@
 #define hbody{in} <body> in </body>
 #define hhead{in} <head> in </head>
 
-#define with{class | in} <div class="class"> in </div>
+#define with{class}{in} <div class="class"> in </div>
 
 
 /*

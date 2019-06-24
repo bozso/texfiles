@@ -71,14 +71,14 @@ def plot(*stations, ref=None, rootdir=None, outdir=None, fontsize=15, term="eps"
     
     colors = gp.nicer()
     
-    gp.set(xlabel="'Decimal year' font ',22'", key=keypos)
+    gp.set(xlabel="'2016-tól eltelt idő [év]' font ',22'", key=keypos)
     
     for station in stations:
         filename = pjoin(rootdir, "{}-{}_s_interpol.kout".format(station, ref))
         
         los, gnss = parse_kout(filename)
         
-        gp.set(ylabel="'Deformation [mm]' font ',22'")
+        gp.set(ylabel="'Deformáció [mm]' font ',22'")
         style_kalman(colors)
         
         with tmp("w", delete=False) as f1, tmp("w", delete=False) as f2:
@@ -86,17 +86,17 @@ def plot(*stations, ref=None, rootdir=None, outdir=None, fontsize=15, term="eps"
             f1.write(los)
             f2.write(gnss)
             
-            gp.output(pjoin(outdir, "%s-%s_kalman.pdf" % (station, ref)),
+            gp.output(pjoin(outdir, "%s-%s_kalman.png" % (station, ref)),
                       term=term, fontsize=fontsize)
                       
             #gp.ranges(y=gnss_range)
     
-            gp.call("plot '{name1}' u 2:3 title 'North'    with lp ls 1,"
-                    "     '{name1}' u 2:4 title 'East'    with lp ls 2,"
-                    "     '{name1}' u 2:5 title 'Height' with lp ls 3,"
-                    "     '{name2}' u 2:3 title 'GPS-North'     with lp ls 4,"
-                    "     '{name2}' u 2:4 title 'GPS-East'     with lp ls 5,"
-                    "     '{name2}' u 2:5 title 'GPS-Height'  with lp ls 6"
+            gp.call("plot '{name1}' u ($2-2016):3 title 'Észak'    with lp ls 1,"
+                    "     '{name1}' u ($2-2016):4 title 'Kelet'    with lp ls 2,"
+                    "     '{name1}' u ($2-2016):5 title 'magasság' with lp ls 3,"
+                    "     '{name2}' u ($2-2016):3 title 'GPS-Észak'     with lp ls 4,"
+                    "     '{name2}' u ($2-2016):4 title 'GPS-kelet'     with lp ls 5,"
+                    "     '{name2}' u ($2-2016):5 title 'GPS-Magasság'  with lp ls 6"
                     .format(name1=f1.name, name2=f2.name))
         
         #asc_g = pjoin(rootdir, "%s-%s_g_asc.los" % (station, ref))
@@ -191,7 +191,7 @@ def plot_kalman(*stations, ref=None, prefix="", rootdir=None, outdir=None, fonts
         
 def main():
     
-    term = "pdfcairo"
+    term = "pngcairo"
     
     outdir = "/home/istvan/Dokumentumok/texfiles/images"
     root = "/home/istvan/Dokumentumok/texfiles/data/isign"

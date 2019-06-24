@@ -8,7 +8,7 @@
 #define md \mathrm{d}
 #define der{nom | denom} \frac{md nom}{md denom}
 
-#define pow{base | power} {base}^{power}
+#define pow{base}{power} {base}^{power}
 #define pow2{base} {base}^{2}
 #define pow3{base} {base}^{3}
 #define pow4{base} {base}^{4}
@@ -20,16 +20,16 @@
 #define inv4{base} {base}^{-4}
 #define inv5{base} {base}^{-5}
 
-#define sci{num | tpow} num \cdot 10^{tpow}
+#define sci{num}{tpow} num \cdot 10^{tpow}
 
 #define laplace \mathop{}\!\mathbin\bigtriangleup
 #define trace \mathrm{Tr} \hspace{2pt}
 #define div \nabla \hspace{2pt}
 #define rot \nabla \times \hspace{2pt}
-#define cross{one | two} one \times two
+#define cross{one}{two} one \times two
 #define half \frac{1}{2}
 #define abs{in} | in |
-#define subt{var | sub}  {var}_{\text{sub}}
+#define subt{var}{sub}  {var}_{\text{sub}}
 
 
 #endif
