@@ -239,7 +239,18 @@ from erosion of the salt surface
     - Cascada Putnei
     - Bodza Valley
 - first test the possibility with hungarian network
-- 
+
+
+### Xenoliths - Thomas Lange
+
+- rocks from 40 - 60 km depth
+- ratio of minerals in rock; fluidums present in rock?
+- texture investigation: deformed, non-deformed
+- derive physical features: density, resistivity
+- Persani volcanic area is very young
+- increased volatile content
+- forward modelling, create model (rock density, mineral ratio) &rarr
+compare to geophysical inversion models (e.g. MT data inversion)
 
 
 ## Tasks
@@ -249,5 +260,4 @@ monitoring
 - Csaba Szabó - radon monitoring
 - GGI: Eszter Szűcs, Viktor Wesztergom, Dániel Piri, István Bozsó:
 CO<sub>2</sub> monitoring with camera
-
 
