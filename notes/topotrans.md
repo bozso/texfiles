@@ -1,8 +1,6 @@
-# Topo Transylvania
+# Kövesligethy Radó Seismological Observatory 2017.01.30.
 
-## Kövesligethy Radó Seismological Observatory 2017.01.30.
-
-### Geochemistry - Sándor Szakács
+## Geochemistry - Sándor Szakács
 
 - CABIN = Carpathian Bend Interior
 	- system for monitoring
@@ -12,27 +10,27 @@
 	- ATOMKI, Debrecen - also here?
 	- first part of May $\rightarrow$ benchmarks
 
-### Geothermal - László Lenkey
+## Geothermal - László Lenkey
 - new data needed $\leftarrow$ from thermometers, gases
 - cooling or warming?
 - background data from L.L.
 - needed: temperature measurements in wells + present day data
 
-### InSAR - Eszter Szűcs
+## InSAR - Eszter Szűcs
 - deformation rate: Vrancea, Ciomadul, $\dots$ concentrate in one and optimise
 - first evaluate data from Hungary
 - $\approx$ 5-6 reflectors in Ciomadul
 - $\approx$ 6 reflectors in Praid
 - 12 days ifg &check; $\leftrightarrow$ 1 year ifg &cross; -- due to loss of coherence
 
-### Miscellaneous
+## Miscellaneous
 - 3D seismic tomography for Vrancea + drilling?
 - secondary objective: geothermal potential, hazards - induced seismicity
 - Interreg program
 
-## Cisnadiora 2017.06.18.-20.
+# Cisnadiora 2017.06.18.-20.
 
-### Introductory meeting - 06.18.
+## Introductory meeting - 06.18.
 
 - Acta Geodaetica et Geophysica, special issue, editor: Sierd Cloething
 - invasion modeling, industry, data available
@@ -40,9 +38,9 @@
 - regional cross-country cooperation
 - ESA, EPOS connections with Sentinel
 
-### Meeting, Presentations 06.19.
+## Meeting, Presentations 06.19.
 
-#### Recap - Mircea Radulian
+### Recap - Mircea Radulian
 
 - meeting in Budapest - January 2017
 - setting up of the National Comitte for ILP in the framework of the Romanian Academy
@@ -72,11 +70,11 @@
     - Sentinel-1 time series, Vrancea, 2014.10. - 2016.10.
     - 5-10 mm/yr displacement vel.s
 
-#### InSAR - Eszter Szűcs
+### InSAR - Eszter Szűcs
 
 - gas storage monitoring w/ InSAR?, sandstone
 
-#### Progress Report - Sándor Szakács
+### Progress Report - Sándor Szakács
 
 - use internal resources, not successful projects
 - **scatterers**: Ciomadul and Praid salt diapir
@@ -97,14 +95,14 @@
     - prepare future deployment of Hungarian Seismic Array
     - field reconnaissance - deployment locations
 
-#### Samples - Csaba Szabó
+### Samples - Csaba Szabó
 
 - Bixad and Malnas quarry samples
 - carbonate vein in shoshonite
 - dark patches, 10 microns; gas?, fluid?
 - fluid inclusions?
 
-#### Gravity and Magnetic data - Seghedi
+### Gravity and Magnetic data - Seghedi
 
 - Calimani-Gurghiu-Harghita (CGH) volcanic chain, mainly composite volcanoes
 - partially overlap, dominantly andesitic composition
@@ -120,7 +118,7 @@
 - not final conclusion!
 - not a back arc, oblique collision 
 
-#### Water in magmatism - István Kovács
+### Water in magmatism - István Kovács
 
 - "water" makes volcanic eruptions more explosive, lowers density, etc.
 - difficult to measure water content, new methodology to constrain water content
@@ -137,11 +135,11 @@
     - how did the melt penetrate the lithosphere?
     - lithospheric folding: anticlines and sinclines - ruptures - pathway to surface
 
-#### Some geological and geophysical elements - Ioan Munteanu
+### Some geological and geophysical elements - Ioan Munteanu
 
 - different strength, elastic properties inside and outside of the Carpathians
 
-#### Crustal structure of the Carpathian orogen - Laura Petrescu
+### Crustal structure of the Carpathian orogen - Laura Petrescu
 
 - receiver functions: impulse response of the crust &rightarrow; v<sub>p</sub> / v<sub>s</sub> and depth of Moho, good for looking at sharp velocity changes, bad for: knowing about absolute velocities
 - v<sub>p</sub> / v<sub>s</sub> analogous to Poisson ratio &rightarrow; bulk crustal composition
@@ -150,7 +148,7 @@
     - basaltic underplating
     - partial eclogitization of lower crust (fluid deficient regime) - can be ruled out
 
-#### Plume, modeling - Sierd Cloething
+### Plume, modeling - Sierd Cloething
 
 - GPS vertical vel., Iberian-peninsula, intramountain basins an enigma &leftarrow; lithosphere folding
 - vertical vel. vs. topo. profile approx. same wavelength, entire Spain is subsiding
@@ -159,3 +157,97 @@
 - plume under Iceland - fingering, sidelobes
 - similarly in the African Rift System
 - model: plume + local heterogeneity (parameter: their distance) 
+
+
+
+# Geodetic and Geophysical Institute - 2019.06.27.
+
+
+## Introduction
+
+- todays agenda by Eszter Szűcs
+
+
+## Mofetta monitoring
+
+- approx 3 year monitoring time
+- in Covasna area
+- not recommended to switch instruments during the monitoring peroid
+- Persani-basin, similar study to be conducted
+
+
+### CO<sub>2</sub> monitoring with camera
+
+- mofetta monitoring near Vrancea, CO<sub>2</sub> outgassing, flux monitoring
+- using a conventional camera and a camera equipped with a filter
+- IR filter applied to surveillance camera - not good enough resolution!
+- meteorlogical station needed - Thomas Lange
+- informatics, technical personnel: Dániel Piri?, István Bozsó?
+- GPS receiver? - time synchronization
+- [alternatives?](portablefluxmater.com)
+- Portable variance CT4000
+
+
+### Radon monitoring
+
+- radon monitoring, continous monitoring max. 3 months
+- detectors should be buried passive system, cumulative activity;
+- CO2 comes from soil too, CO2 detector as well?
+- Radosys, hungarian company, discount for educational purposes; couple of
+thousands of HUF
+- data collection? company evaluates record data
+- active detector, AlphaGUARD intrument
+- passive can detect Thoron, daughter element of Radon
+- mothly collection of data from passive detectors
+
+
+## Corner reflectors - InSAR study
+
+- 2 networks complete (Praid, Ciomadul)
+- 
+
+
+## Results
+
+### InSAR monitoring - Eszter Szűcs 
+
+#### Priad (Parajd) salt diapir
+
+- Praid, 2014 fall - 2018 summer, Sentinel-1 descending track
+LOS deformation velocities
+- salt valley $\approx 5 \hspace{2.5pt} \text{cm} \hspace{1.25pt} \text{yr}^{-1}$ movement away from satellite, probably
+from erosion of the salt surface
+- István Horváth, salt mine geologist; contact; maps, pictures sent by him
+- dolinas under new mine
+- addtitional reflectors to be installed?
+- 
+
+#### Ocna Mures (Marosújvár) salt mine collapse, reference
+
+- salt mining operations by injecting water; salt mine collapsed
+- lakes formed (Plus Lake)
+- some points are moving away from satellite
+- Sándor Gönci, contact?
+
+
+#### Final reflector network - Vrancea, Focsani basin, Carpathian Bend
+
+- stable, uplifting parts of the Carpathians
+- large distance investigation unfeasible
+- short distance profile with reflectors? - could it work?
+- candidate areas:
+    - Cascada Putnei
+    - Bodza Valley
+- first test the possibility with hungarian network
+- 
+
+
+## Tasks
+
+- Thomas Lange - meteorological station, alternatives CO<sub>2</sub>
+monitoring
+- Csaba Szabó - radon monitoring
+- GGI: Eszter Szűcs, Viktor Wesztergom, Dániel Piri, István Bozsó:
+CO<sub>2</sub> monitoring with camera
+
+
