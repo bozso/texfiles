@@ -1,35 +1,40 @@
-#ifndef __LATEX_GPP
-#define __LATEX_GPP
+#ifndef{__LATEX_GPP}
+#define{__LATEX_GPP}
 
 
-#define gdiv{in} \nabla \left(\nabla in \right) \hspace{2pt}
-#define par{in} \hspace{2pt} \partial_{in}
-#define part \hspace{2pt} \partial_{t}
-#define md \mathrm{d}
-#define der{nom | denom} \frac{md nom}{md denom}
+#define{@trace{in}}{\text{Tr} \hspace{2pt} @in}
 
-#define pow{base}{power} {base}^{power}
-#define pow2{base} {base}^{2}
-#define pow3{base} {base}^{3}
-#define pow4{base} {base}^{4}
-#define pow5{base} {base}^{5}
+#define{@gdiv{in}}{\nabla \left(\nabla @in \right) \hspace{2pt}}
+#define{@paren{in}}{\left( @in \right)}
+#define{@par{in}}{\hspace{2pt} \partial_{@in}}
+#define{@part}{\hspace{2pt} \partial_{t}}
+#define{@md}{\mathrm{d}}
+#define{@Der{in}}{\mathrm{D}_t @in}
+#define{@der{nom}{denom}}{\frac{@md @nom}{@md @denom}}
 
-#define inv{base} {base}^{-1}
-#define inv2{base} {base}^{-2}
-#define inv3{base} {base}^{-3}
-#define inv4{base} {base}^{-4}
-#define inv5{base} {base}^{-5}
+#define{@pow{base}{power}}{{@base}^{@power}}
+#define{@tpow{power}}{{10}^{@power}}
+#define{@pow2{base}}{{@base}^{2}}
+#define{@pow3{base}}{{@base}^{3}}
+#define{@pow4{base}}{{@base}^{4}}
+#define{@pow5{base}}{{@base}^{5}}
 
-#define sci{num}{tpow} num \cdot 10^{tpow}
+#define{@inv{base}}{{@base}^{-1}}
+#define{@inv2{base}}{{@base}^{-2}}
+#define{@inv3{base}}{{@base}^{-3}}
+#define{@inv4{base}}{{@base}^{-4}}
+#define{@inv5{base}}{{@base}^{-5}}
 
-#define laplace \mathop{}\!\mathbin\bigtriangleup
-#define trace \mathrm{Tr} \hspace{2pt}
-#define div \nabla \hspace{2pt}
-#define rot \nabla \times \hspace{2pt}
-#define cross{one}{two} one \times two
-#define half \frac{1}{2}
-#define abs{in} | in |
-#define subt{var}{sub}  {var}_{\text{sub}}
+#define{@sci{num}{tpow}}{@num \cdot 10^{@tpow}}
+
+#define{@laplace}{\mathop{}\!\mathbin\bigtriangleup}
+#define{@trace}{\mathrm{Tr} \hspace{2pt}}
+#define{@div}{\nabla \hspace{2pt}}
+#define{@rot}{\nabla \times \hspace{2pt}}
+#define{@cross{one}{two}}{@one \times @two}
+#define{@half}{\frac{1}{2}}
+#define{@abs{in}}{| @in |}
+#define{@subt{var}{sub}}{{@var}_{\text{@sub}}}
 
 
 #endif
