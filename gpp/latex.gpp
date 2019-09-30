@@ -1,40 +1,67 @@
-#ifndef{__LATEX_GPP}
-#define{__LATEX_GPP}
+\ifndef{__LATEX_GPP}
+\define{__LATEX_GPP}
 
 
-#define{@trace{in}}{\text{Tr} \hspace{2pt} @in}
+\define{\half}{\frac{1}{2}}
+\define{\third}{\frac{1}{3}}
+\define{\quarter}{\frac{1}{4}}
 
-#define{@gdiv{in}}{\nabla \left(\nabla @in \right) \hspace{2pt}}
-#define{@paren{in}}{\left( @in \right)}
-#define{@par{in}}{\hspace{2pt} \partial_{@in}}
-#define{@part}{\hspace{2pt} \partial_{t}}
-#define{@md}{\mathrm{d}}
-#define{@Der{in}}{\mathrm{D}_t @in}
-#define{@der{nom}{denom}}{\frac{@md @nom}{@md @denom}}
+\define{\trace{in}}{\text{Tr} \hspace{2pt} \in}
 
-#define{@pow{base}{power}}{{@base}^{@power}}
-#define{@tpow{power}}{{10}^{@power}}
-#define{@pow2{base}}{{@base}^{2}}
-#define{@pow3{base}}{{@base}^{3}}
-#define{@pow4{base}}{{@base}^{4}}
-#define{@pow5{base}}{{@base}^{5}}
+\define{\gdiv{in}}{\nabla \left(\nabla \in \right) \hspace{2pt}}
+\define{\paren{in}}{\left( \in \right)}
+\define{\par{in}}{\hspace{2pt} \partial_{\in}}
+\define{\parx}{\par{x}}
+\define{\pary}{\par{y}}
+\define{\parz}{\par{z}}
+\define{\pari}{\par{i}}
+\define{\parj}{\par{j}}
+\define{\part}{\hspace{2pt} \partial_{t}}
+\define{\md}{\mathrm{d}}
+\define{\Der{in}}{\mathrm{D}_t \in}
+\define{\der{nom}{denom}}{\frac{\md \nom}{\md \denom}}
 
-#define{@inv{base}}{{@base}^{-1}}
-#define{@inv2{base}}{{@base}^{-2}}
-#define{@inv3{base}}{{@base}^{-3}}
-#define{@inv4{base}}{{@base}^{-4}}
-#define{@inv5{base}}{{@base}^{-5}}
+\define{\pow{base}{power}}{{\base}^{\power}}
+\define{\tpow{power}}{{10}^{\power}}
+\define{\pow2{base}}{{\base}^{2}}
+\define{\pow3{base}}{{\base}^{3}}
+\define{\pow4{base}}{{\base}^{4}}
+\define{\pow5{base}}{{\base}^{5}}
 
-#define{@sci{num}{tpow}}{@num \cdot 10^{@tpow}}
+\define{\inv{base}}{{\base}^{-1}}
+\define{\inv2{base}}{{\base}^{-2}}
+\define{\inv3{base}}{{\base}^{-3}}
+\define{\inv4{base}}{{\base}^{-4}}
+\define{\inv5{base}}{{\base}^{-5}}
 
-#define{@laplace}{\mathop{}\!\mathbin\bigtriangleup}
-#define{@trace}{\mathrm{Tr} \hspace{2pt}}
-#define{@div}{\nabla \hspace{2pt}}
-#define{@rot}{\nabla \times \hspace{2pt}}
-#define{@cross{one}{two}}{@one \times @two}
-#define{@half}{\frac{1}{2}}
-#define{@abs{in}}{| @in |}
-#define{@subt{var}{sub}}{{@var}_{\text{@sub}}}
+\define{\sci{num}{tpow}}{\num \cdot 10^{\tpow}}
+
+\define{\nano}{\text{n}}
+\define{\micro}{\text{\mu}}
+\define{\milli}{\text{m}}
+\define{\kilo}{\text{k}}
+\define{\mega}{\text{M}}
+\define{\giga}{\text{G}}
+\define{\tera}{\text{T}}
+
+\define{\meter}{\text{m}}
+\define{\second}{\text{s}}
+\define{\gram}{\text{g}}
+\define{\kilogram}{\text{kg}}
+\define{\watt}{\text{W}}
+\define{\joule}{\text{J}}
+\define{\newton}{\text{N}}
+\define{\kelvin}{\text{K}}
+\define{\pascal}{\text{Pa}}
+
+\define{\si{num}{unit}}{\num \hspace{2pt} \unit}
+\define{\laplace}{\mathop{}\!\mathbin\bigtriangleup}
+\define{\trace}{\mathrm{Tr} \hspace{2pt}}
+\define{\div}{\nabla \hspace{2pt}}
+\define{\rot}{\nabla \times \hspace{2pt}}
+\define{\cross{one}{two}}{\one \times \two}
+\define{\abs{in}}{| \in |}
+\define{\subt{var}{sub}}{{\var}_{\text{\sub}}}
 
 
-#endif
+\endif
