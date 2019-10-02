@@ -1,6 +1,9 @@
 \ifndef{__LATEX_GPP}
 \define{__LATEX_GPP}
 
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 
 \define{\half}{\frac{1}{2}}
 \define{\third}{\frac{1}{3}}
@@ -53,6 +56,7 @@
 \define{\newton}{\text{N}}
 \define{\kelvin}{\text{K}}
 \define{\pascal}{\text{Pa}}
+\define{\mol}{\text{mol}}
 
 \define{\si{num}{unit}}{\num \hspace{2pt} \unit}
 \define{\laplace}{\mathop{}\!\mathbin\bigtriangleup}

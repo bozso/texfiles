@@ -1,0 +1,264 @@
+/*<meta />*/
+/*This stylesheet has styled boxes that are configured to use images*/
+
+body
+{
+    font-family: Arial, Avenir, Myriad;
+    line-height: 1.7em;
+}
+
+h1
+{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 8px;
+    margin-top: 30px;
+    padding-bottom: 10px;
+}
+
+h2
+{
+    font-size: 1.2em;
+    font-weight: normal;
+    margin-bottom: 4px;
+    margin-top: 20px;
+}
+
+h3
+{
+    font-size: 1.1em;
+    font-weight: normal;
+    margin-bottom: 4px;
+    margin-top: 16px;
+}
+
+li
+{
+    margin-bottom: 6px;
+    margin-top: 6px;
+}
+
+MadCap|xref
+{
+    color: #2D8DCC;
+    font-weight: bold;
+    mc-format: '{para}';
+    text-decoration: underline;
+}
+
+MadCap|xref:hover
+{
+    color: #BED230;
+}
+
+p
+{
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+p.note
+{
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    background-color: #f0f7fb;
+    background-position: 9px 0px;
+    background-repeat: no-repeat;
+    border: solid 1px #3498db;
+    border-radius: 6px;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 15px 60px;
+}
+
+p.warning
+{
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    background-color: #f9e7e5;
+    background-position: 9px 0px;
+    background-repeat: no-repeat;
+    border: solid 1px #c0392b;
+    border-radius: 6px;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 15px 60px;
+}
+
+p.example
+{
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    background-color: #e7f6f0;
+    background-position: 9px 0px;
+    background-repeat: no-repeat;
+    border: solid 1px #27ae60;
+    border-radius: 6px;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 15px 60px;
+}
+
+p.tip
+{
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    background-color: #fffbea;
+    background-position: 9px 0px;
+    background-repeat: no-repeat;
+    border: solid 1px #f1c40f;
+    border-radius: 6px;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 15px 60px;
+}
+
+p.noteAlt
+{
+    background-color: #f0f7fb;
+    background-position: 9px 0px;
+    background-repeat: no-repeat;
+    border-left: solid 4px #3498db;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 15px 60px;
+}
+
+p.warningAlt
+{
+    background-color: #fcf7f2;
+    background-position: 9px 0px;
+    background-repeat: no-repeat;
+    border-left: solid 4px #e74c3c;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 15px 60px;
+}
+
+p.exampleAlt
+{
+    background-color: #e7f6f0;
+    background-position: 9px 0px;
+    background-repeat: no-repeat;
+    border-left: solid 4px #2ecc71;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 15px 60px;
+}
+
+p.tipAlt
+{
+    background-color: #fffbea;
+    background-position: 9px 0px;
+    background-repeat: no-repeat;
+    border-left: solid 4px #f1c40f;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 15px 60px;
+}
+
+
+/*Div styles*/
+
+div.note
+{
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    background-color: #f0f7fb;
+    background-position: 9px 0px;
+    background-repeat: no-repeat;
+    border: solid 1px #3498db;
+    border-radius: 6px;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 15px 60px;
+}
+
+div.warning
+{
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    background-color: #f9e7e5;
+    background-position: 9px 0px;
+    background-repeat: no-repeat;
+    border: solid 1px #c0392b;
+    border-radius: 6px;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 15px 60px;
+}
+
+div.example
+{
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    background-color: #e7f6f0;
+    background-position: 9px 0px;
+    background-repeat: no-repeat;
+    border: solid 1px #27ae60;
+    border-radius: 6px;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 15px 60px;
+}
+
+div.tip
+{
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    background-color: #fffbea;
+    background-position: 9px 0px;
+    background-repeat: no-repeat;
+    border: solid 1px #f1c40f;
+    border-radius: 6px;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 15px 60px;
+}
+
+div.noteAlt
+{
+    background-color: #f0f7fb;
+    background-position: 9px 0px;
+    background-repeat: no-repeat;
+    border-left: solid 4px #3498db;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 15px 60px;
+}
+
+div.warningAlt
+{
+    background-color: #fcf7f2;
+    background-position: 9px 0px;
+    background-repeat: no-repeat;
+    border-left: solid 4px #e74c3c;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 15px 60px;
+}
+
+div.exampleAlt
+{
+    background-color: #e7f6f0;
+    background-position: 9px 0px;
+    background-repeat: no-repeat;
+    border-left: solid 4px #2ecc71;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 15px 60px;
+}
+
+div.tipAlt
+{
+    background-color: #fffbea;
+    background-position: 9px 0px;
+    background-repeat: no-repeat;
+    border-left: solid 4px #f1c40f;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 15px 60px;
+}
+
+
+

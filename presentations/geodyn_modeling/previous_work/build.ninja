@@ -1,0 +1,4 @@
+rule pdflatex
+  command = latexrun ${in}
+
+build prev.pdf: pdflatex prev.tex

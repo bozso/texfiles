@@ -1,11 +1,6 @@
 \ifndef{__HTML_GPP}
 \define{__HTML_GPP}
 
-<head>
-<link rel="stylesheet" type="text/css" href="/home/istvan/Dokumentumok/texfiles/komplex/common.css">
-<link rel="stylesheet" href="print.css" type="text/css" media="print" />
-</head>
-
 \define{\center{in}}{<center>\in</center>}
 
 \define{\pbreak}{<div class="page-break"></div>}
