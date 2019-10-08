@@ -1,0 +1,167 @@
+\include{html.gpp}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Previous studies regarding the numercial simulation
+           of the Vrancea subduction</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/home/istvan/Dokumentumok/texfiles/shower/themes/material/styles/styles.css">
+    <style>
+        .shower {
+            --slide-ratio: calc(16 / 9);
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+    </style>
+</head>
+
+\define{\imgit{in}{title}{attr}}{
+    <img src="https://raw.githubusercontent.com/bozso/texfiles/master/images/geodyn/prev_work/\in"
+     \attr title="\title" alt="\title"> 
+    <br> <font size="4">\title </font>
+}
+
+\define{\imgitFloat{args}}{
+    \call{imgit_float geodyn/prev_work/\args --total_width=800}
+}
+
+\define{\imhref{source}{title}{attr}}{
+    <img src="\source" \attr title="\title" alt="\title"> 
+    <br> <font size="4"> \title <a href="\source"> Source </font> </a>
+}
+
+\include{latex.gpp}
+\include{presentation.gpp}
+
+<body class="shower list">
+
+    <header class="caption">
+        <h1>Previous studies regarding the numercial simulation
+            of the Vrancea subduction</h1>
+        <p>István Bozsó, CSFK Geodetic and Geophysical Institute</p>
+    </header>
+    
+    \cover{
+        \h1{Previous studies regarding the numercial simulation
+            of the Vrancea subduction}
+        \p{István Bozsó, CSFK Geodetic and Geophysical Institute}
+    }
+    
+    \slide{
+        \h2{Overview}
+        
+        \ul{
+            \li{Vrancea seismic zone; located in Romania, at the eastern edge
+                of the south-eastern Carpathians}
+            \li{intra-continental, intermediate depth seismicity}
+            \li{interesting topic: link between shallow and deep structures and
+                processes; crustal and mantle dynamics}
+            \li{earthquake simulation, seismic hazard, and earthquake forecasting
+                models &rarr; link between deep geodynamic processes and their
+                manifestation on the surface}
+        }
+    }
+    
+    \slide{
+        \h2{Overview}
+        Information from geology, geophysics, geodesy:
+        \ul{
+            \li{post-collisional to recent deformations,}
+            \li{syn- to post collisional magmatism,}
+            \li{orogenic exhumation along the East and South Carpathians,}
+            \li{seismic studies; reflection, refraction, body and surface wave
+                tomography,}
+            \li{geoelectric studies, density/gravity and thermal modelling,}
+            \li{qualitative and quantitative geodynamic models developed for Vrancea,}
+            \li{horizontal and vertical movements.}
+        }
+    }
+    
+    \slide{
+        \h2{Overview}
+        The problems to be solved:
+        \ul{
+            \li{origin of the high-velocity body revealed by seismic tomography,}
+            \li{lithospheric scale mechanism driving the Miocene subsidence
+                of the Transylvania basin,}
+            \li{sub-crustal structure between 40 and 70 \(\kilo\meter\)}
+            \li{contemporary regional horizontal and vertical movements}
+            \li{comprehensive seismic hazard assessment in the region}
+        }
+    }
+    
+    \slide{
+        \h2{Introduction}
+        
+        \ul{
+            \li{several places in the world, earthquakes at intermediate depths
+                in the mantle and far from the plate boundaries}
+            \li{Bucaramanga in Columbia; Hindu Kush region close to
+                collision zone Indian &harr; Eurasian plates; Vrancea in Romania}
+            \li{Circum-Pacific seismic belt: linear extended structure earthquakes
+                with focal depth up to 60 \(\kilo\meter\)}
+        }
+    }
+    
+    \slide{
+        \imgit{bucaramange_colombia_eq.jpeg}{Bucaramanga, Columbia}{height=300}
+        \imhref{http://images.mapsofworld.com/earthquake/1445856660earthquack-affected-areas-map.jpg}{Hindu Kush region earthquake.}{height=300}
+    }
+    
+    \slide{
+        \h2{Introduction}
+        
+        \ul{
+            \li{intra-continental seismicity: diffuse, does not correlate with
+                active subduction zones}
+            \li{large intermediate-depth earthquakes in Vrancea shake central
+                and eastern European cities several hundred kilometres away from
+                the hypocentres; destruction in Bucharest}
+            \li{earthquake-prone Vrancea region at the bend of the SE-Carpathians}
+        }
+    }
+    
+    \slide{
+        \h2{Boundaries of Vrancea:}
+        
+        \ul{
+            \li{north and northeast: East European platform}
+            \li{east: Scythian platform}
+            \li{south-east: Dobrogea orogen}
+            \li{south and south-west: Moesian platform}
+            \li{north-west: Carpathian orogen and the Transylvanian basin}
+        }
+    }
+    
+    \slide{
+        \imgitFloat{pan_basin_tect.png --title="Geological map of the
+               Pannonian Basin. (simplified after Schmid et al., 2008)" --width=700}
+    }
+    
+    \slide{
+        \imgitFloat{pan_basin_seism.png --title="Location of earthquakes.
+                    Epicentres taken from Bada et al. (2005) and the ROMPLUS
+                    catalogue (Radulian et al., 2002)" --width=650}
+    }
+    
+    
+    
+    \slide{
+        \imgitFloat{vrancea_tomo_cross.png --title "Tectonic cross section at crustal scale
+               (simplified after Matenco et al., 2007).
+               Teleseismic P-wave tomography (Bijwaard and Spakman, 2000;
+               Wortel and Spakman, 2000)
+               Earthquakes hypocentres taken the ROMPLUS catalogue
+               (Radulian et al., 2002)" --width=575}
+    }
+    
+    
+    <div class="progress"></div>
+</body>
+</html>

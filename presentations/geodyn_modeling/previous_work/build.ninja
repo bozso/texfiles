@@ -1,4 +1,7 @@
-rule pdflatex
-  command = latexrun ${in}
+rule html
+  command = gpp --nostdinc -I/home/istvan/Dokumentumok/texfiles/gpp -U "\\" $
+      "" "{" "}{" "}" "{" "}" "#" "" +c "/*" "*/" +c "%" "\n" -x -o $out $in 
+  description = html preprocessing
 
-build prev.pdf: pdflatex prev.tex
+build build/prev.html: html prev.cml
+
