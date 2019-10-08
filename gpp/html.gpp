@@ -31,46 +31,15 @@ FIXME: do not know the problem
 \define{\ol{in}}{<ol>\in</ol>}
 \define{\li{in}}{<li>\in</li>}
 
-\define{\milli}{\text{m}}
-\define{\centi}{\text{c}}
-\define{\kilo}{\text{k}}
-\define{\mega}{\text{M}}
-\define{\giga}{\text{G}}
-
-\define{\unit{in}}{\text{\in} \hspace{1pt}}
-
-\define{\meter}{\unit{m}}
-\define{\newton}{\unit{N}}
-\define{\pa}{\unit{Pa}}
-\define{\cm}{\centi \meter}
-\define{\km}{\kilo \meter}
-\define{\kps}{\kilo \meter \inv{\second}}
-\define{\joule}{\unit{J}}
-\define{\ampere}{\unit{A}}
-
-\define{\second}{\unit{s}}
-\define{\year}{\unit{yr}}
-\define{\celsius}{^{\text{o}} \unit{C}}
-\define{\deg{in}}{{\in}^{\text{o}}}
-
-\define{\watt}{\unit{W}}
-\define{\myr}{\mega \year}
-\define{\eV}{\unit{eV}}
-\define{\siemens}{\unit{S}}
-\define{\cond}{siemens \inv{\meter}}
-
-\define{\si{in}{unitin}}{\in \hspace{2.5pt} \unitin}
-
 \define{\bold{in}}{<b>\in</b>}
 \define{\p{in}}{<p>\in</p>}
+\define{\pb{in}}{<p><b>\in</b></p>}
 \define{\quote{in}}{<q>\in</q>}
 \define{\underline{in}}{<u>\in</u>}
 \define{\emph{in}}{<em>\in</em>}
 \define{\it{in}}{<i>\in</i>}
 \define{\del{in}}{<del>\in</del>}
 \define{\strong{in}}{<strong>\in</strong>}
-
-\define{\paren{in}}{\left( \in \right)}
 
 \define{\h1{in}}{<h1>\in</h1>}
 \define{\h2{in}}{<h2>\in</h2>}
@@ -83,6 +52,10 @@ FIXME: do not know the problem
 \define{\head{in}}{<head> \in </head>}
 
 \define{\with{class}{in}}{<div class="\class"> \in </div>}
-
+\define{\div{in}{attr}}{
+    <div \attr>
+        \in
+    </div>
+}
 
 \endif

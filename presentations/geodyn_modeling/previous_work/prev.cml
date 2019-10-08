@@ -1,5 +1,10 @@
 \include{html.gpp}
 
+\define{\mag}{M_W}
+\define{\ma}{\text{Ma}}
+\define{\km}{\kilo\meter}
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,7 +38,7 @@
 
 \define{\imhref{source}{title}{attr}}{
     <img src="\source" \attr title="\title" alt="\title"> 
-    <br> <font size="4"> \title <a href="\source"> Source </font> </a>
+    <br> <font size="4"> \title <a href="\source"> Source </a> </font>
 }
 
 \include{latex.gpp}
@@ -85,7 +90,7 @@
     
     \slide{
         \h2{Overview}
-        The problems to be solved:
+        \p{The problems to be solved:}
         \ul{
             \li{origin of the high-velocity body revealed by seismic tomography,}
             \li{lithospheric scale mechanism driving the Miocene subsidence
@@ -110,8 +115,12 @@
     }
     
     \slide{
-        \imgit{bucaramange_colombia_eq.jpeg}{Bucaramanga, Columbia}{height=300}
-        \imhref{http://images.mapsofworld.com/earthquake/1445856660earthquack-affected-areas-map.jpg}{Hindu Kush region earthquake.}{height=300}
+        \div{
+            \imgit{bucaramange_colombia_eq.jpeg}{Bucaramanga, Columbia}{height=420}
+        }{style="float: left;"}
+        \div{
+            \imhref{http://images.mapsofworld.com/earthquake/1445856660earthquack-affected-areas-map.jpg}{Hindu Kush region earthquake.}{height=420}
+        }{style="float: right;"}
     }
     
     \slide{
@@ -128,7 +137,7 @@
     }
     
     \slide{
-        \h2{Boundaries of Vrancea:}
+        \h2{Boundaries of Vrancea}
         
         \ul{
             \li{north and northeast: East European platform}
@@ -150,10 +159,8 @@
                     catalogue (Radulian et al., 2002)" --width=650}
     }
     
-    
-    
     \slide{
-        \imgitFloat{vrancea_tomo_cross.png --title "Tectonic cross section at crustal scale
+        \imgitFloat{vrancea_tomo_cross.png --title="Tectonic cross section at crustal scale
                (simplified after Matenco et al., 2007).
                Teleseismic P-wave tomography (Bijwaard and Spakman, 2000;
                Wortel and Spakman, 2000)
@@ -161,7 +168,329 @@
                (Radulian et al., 2002)" --width=575}
     }
     
+    \slide{
+        \h2{Seismicity of Vrancea}
+        
+        \ul{
+            \li{epicentres of mantle earthquakes concentrated within a very small area}
+            \li{projection of the foci on a NW–SE vertical plane across the
+                East Carpathians &rarr; seismogenic volume about
+                \(\si{110}{\km} \hspace{3pt} \text{(deep)} \times \si{70}{\km}
+                  \times \si{30}{\km}\)}
+            \li{beyond this depth seismicity ends suddenly (1 exception)}
+        }
+    }
+
+    \slide{
+        \h2{Historical catalogue of Vrancea events}
+        \ul{
+            \li{large intermediatedepth shocks with magnitudes \(\mag > 6.5\)
+                occur three to five times per century}
+            \li{20th century: large events at depths \(d\) of \(70 - \si{180}{\km}\)
+                occurred}
+            \ul{
+                \li{in 1940 \(\mag = 7.7\), \(d = \si{160}{\km}\)}
+                \li{in 1977 \(\mag = 7.5\), \(d = \si{100}{\km}\)}
+                \li{in 1986 \(\mag = 7.2\), \(d = \si{140}{\km}\)}
+                \li{in 1990 \(\mag = 6.9\), \(d = \si{80}{\km}\)}
+            }
+        }
+    }
+
+    \slide{
+        \h2{Geodynamic models}
+        
+        \p{several regional geodynamic models (qualitative and quantitative)
+           have been proposed}
+        
+        \ul{
+            \li{mantle seismicity in Vrancea region is associated
+                with a relic oceanic lithosphere (attached to or already detached)}
+            \li{Vrancea lithosphere thickened during continental collision,
+                became unstable, and started to sink, delaminating from the crust
+                producing intermediate-depth earthquakes}
+        }
+    }
     
-    <div class="progress"></div>
+    \slide{
+        \h2{Qualitative geodynamic models}
+        
+        \ul{
+            \li{one of the first: seismic gap model by Fuchs et al. (1979)}
+            \li{observation: spatial gap in seismicity at the depths
+                \(40-\si{70}{\km}\) beneath Vrancea &rarr; sinking
+                lithospheric plate had already detached}
+           \li{Linzer (1996): nearly vertical position of Vrancea slab \(=\)
+                final roll-back stage of a small fragment of
+                oceanic lithosphere}
+            \li{Pana and Erdmer (1996) and Pana and Morris (1999):
+                no geological evidence of oceanic crust in Miocene evolution of
+                East Carpathians}
+        }
+    }
+    \slide{
+        \h2{Qualitative geodynamic models}
+        
+        \ul{
+            \li{Knapp et al. (2005) and Fillerup et al. (2010): oceanic
+                origin of Vrancea seismogenic body &harr; geologic constraints
+                from the East Carpathians and adjacent foreland}
+            \li{uncertainty: oceanic lithosphere created by Ceahlău-Severin
+                ocean opening entirely subducted by the end of Cretaceous or
+                large part of the remaining Carpathian embayment still
+                contained the oceanic lithosphere post-Cretaceous times}
+            \li{\bold{none of these qualitative models can be fully tested}}
+        }
+    }
+    
+    \slide{
+        \imgit{vrancea_qaul_model.png}{Several qualitative models.
+               (after Wortel and Spakman, 2000; after Gvirtzman, 2002;
+                after Knapp et al., 2005)}{width=850}
+    }
+    
+    \slide{
+        \h2{Quantitative geodynamic models}
+        \ul{
+            \li{investigate Ismail-Zadeh et al. (2000) in more detail, then}
+            \li{concentrate on just a couple}
+        }
+    }
+        
+    \slide{
+        \p{\bold{Stress in the Descending Relic Slab beneath the Vrancea
+                 Region, Romania}}
+        \p{A. T. Ismail-Zadeh, G. F. Panza and B. M. Naimark}
+        
+        \ul{
+            \li{study a numerical model of the descending relic slab}
+            \li{examine the influence of the basalt-eclogite phase transition
+                within the slab}
+            \li{discuss possible role of the dehydration}
+        }
+    }
+    
+    \slide{
+        \pb{Stress in the Descending Relic Slab beneath the Vrancea
+            Region, Romania}
+        
+        \ul{
+            \p{Assumptions:}
+            \ol{
+                \li{intermediate depth earthquakes are related to the
+                    level of viscous stress in the slab}
+                \li{earth’s mantle behaves as a viscous fluid at the
+                    geological time scale}
+                \li{regional tectonic processes are associated with mantle
+                    flows regulated by Newtonian rheology}
+            }
+            
+        }
+    }
+    
+    \slide{
+        \pb{Stress in the Descending Relic Slab beneath the Vrancea
+            Region, Romania}
+        
+        \ul{
+            \li{viscous incompressible fluid with variable density and
+                viscosity fills the model square; (\(0 \le x \le L,
+                -H \le z \le h\))}
+            \li{four domains, bounded by material interfaces where \(\rho\)
+                (density) and \(\eta\) (viscosity) are discontinous}
+            \ol{
+                    \li{atmosphere above: \(z = 0\),}
+                    \li{crust,}
+                    \li{slab,}
+                    \li{mantle}
+            }
+        }
+    }
+    
+    \slide{
+        \pb{Stress in the Descending Relic Slab beneath the Vrancea
+            Region, Romania}
+        
+        \ul{
+            \li{free surface at \(z = 0\): density equals zero, and
+                viscosity is sufficiently low}
+            \li{slab is modeled as being denser than the surrounding mantle
+                &rarr; e tends to sink under its own weight}
+            \li{several values of viscosity ratio between the slab and the
+                mantle were considerd: 5, 10, and 50}
+            \li{solve Stokes' equation:}
+            $$ 4 \parx \parz \eta \parx \parz \Psi +
+               (\parz^2 - \parx^2) \eta (\parz^2 \Psi - \parx^2 \Psi) = 
+               - g \parx \rho $$
+        }
+    }
+    
+    \slide{
+        \pb{Stress in the Descending Relic Slab beneath the Vrancea
+            Region, Romania}
+        
+        \ul{
+            \li{\(g\) is the acceleration due to gravity}
+            \li{velocity components: \(v_x = \parz\Psi\), \(v_z = -\parx\Psi\)}
+            \li{impenetrability and free-slip boundary conditions:}
+            \[
+                \Psi = \parx^2 \Psi = 0 \hspace{10pt} \text{at} \hspace{10pt}
+                x = 0 \hspace{10pt} \text{and} \hspace{10pt} x = L
+            \]
+            \[
+                \Psi = \parz^2 \Psi = 0 \hspace{10pt} \text{at} \hspace{10pt}
+                z = -H \hspace{10pt} \text{and} \hspace{10pt} z = h
+            \]
+        }
+    }
+    
+    
+    \slide{
+        \pb{Stress in the Descending Relic Slab beneath the Vrancea
+            Region, Romania}
+        
+        \ul{
+            \li{time dependence of \(\rho\) and \(\eta\):}
+            \[
+                \part A = \parx \Psi \parz A - \parz \Psi \parx A
+            \]
+            \li{\(A\) can be either \(\rho\) and \(\eta\)}
+            \li{position of material interfaces:}
+            \[
+                \frac{\md X}{\md t} = \parz \Psi; \hspace{25pt}
+                \frac{\md Z}{\md t} = - \parx \Psi
+            \]
+        }
+    }
+    
+    \slide{
+        \pb{Stress in the Descending Relic Slab beneath the Vrancea
+            Region, Romania}
+        
+        \ul{
+            \li{Eulerian finite lement technique to solve the equations}
+            \li{scaled variables}
+            \[
+                t^* = \frac{\eta^*}{\rho^* g(H + h)}; \hspace{20pt}
+                v^* = \frac{\rho^* g(H + h)^2}{\eta^*}
+            \]
+            \[
+                \sigma^* = \rho^* g(H + h)
+            \]
+            \li{\(\eta^* = \si{\tpow{20}}{\pascal\second}\) and
+                \(\rho^* = \si{\sci{3.3}{3}}{\kilo\gram\inv3{\meter}}\)
+                are typical values for mantle}
+        }
+    }
+    
+    \slide{
+        \pb{Stress in the Descending Relic Slab beneath the Vrancea
+            Region, Romania}
+        
+        \imgitFloat{ismail2000_model_setup.png --title="Model setup" --width=750}
+    }
+    
+    \slide{
+        \pb{Stress in the Descending Relic Slab beneath the Vrancea
+            Region, Romania}
+        
+        \imgitFloat{ismail2000_model.png --title="Results of numerical modeling
+                    for a density contrast of
+                    \(\si{\sci{0.7}{2}}{\kilo\gram\inv3{\meter}}\)
+                    and a viscosity ratio of \(10\) (Ismail-Zadeh et al., 2000)" --width=600}
+    }
+    
+    \slide{
+        \pb{Stress in the Descending Relic Slab beneath the Vrancea
+            Region, Romania}
+        
+        \ul{
+            \li{subducting slab gives rise to two mantle flows}
+            \li{flow on the left moves clockwise, contributing to the
+                evolution of the Transylvanian basin and the folded arc}
+            \li{other rotates counterclockwise and possibly affects the
+                development of the Pre-Carpathian foredeep and the
+                Moesian platform}
+            \li{ shape of the slab controlled by the circulation of
+                mantle material}
+            \li{mantle flows make the slab dip at a higher angle}
+            \li{magnitudes of tension and of compression are the same}
+        }
+    }
+    
+    \slide{
+        \pb{Stress in the Descending Relic Slab beneath the Vrancea
+            Region, Romania}
+        
+        \ul{
+            \li{maximum viscous stress is reached within the slab}
+            \li{axes of compression are close to the horizontal direction}
+            \li{maximum stress in the narrow and subvertical region of
+                the model, are in agreement with the observations}
+            \li{variations of the viscosity ratio &rarr; changes in
+                stress distribution and velocity of descending slab}
+        }
+    }
+    
+    \slide{
+        \pb{Stress in the Descending Relic Slab beneath the Vrancea
+            Region, Romania}
+        
+        \ul{
+            \li{depth distribution of released seismic energy contains
+                two peaks &rarr; faulting processes other than viscous
+                stress release}
+            \li{heterogenities in the volume change due to phase transitions
+                and/or by the dehydration of rocks &rarr; fluid-assisted
+                faulting}
+        }
+    }
+    
+    \slide{
+        \pb{Stress in the Descending Relic Slab beneath the Vrancea
+            Region, Romania}
+    
+        \p{intermediate-depth earthquakes &larr; phase changes 
+           basalt &rarr; eclogite in the slab; effects:}
+        
+        \ol{
+            \li{volume change &rarr; contraction in the direction of
+                the maximum principal stress and increased compressive
+                stress}
+            \li{denser phase = additional load, pulls down the slab &rarr;
+                increase of the viscous stress}
+            \li{large deviatoric stresses &rarr; seismic failure}
+        }
+    }
+    
+    \slide{
+        \pb{Stress in the Descending Relic Slab beneath the Vrancea
+            Region, Romania}
+            
+        \ul{
+            \li{estimation of Vrancea per year seismicity due to volume change:
+                \(\si{\sci{2}{17}}{\newton\meter}\)}
+            \li{observed seismic moment rate (OSMR) from harvard Unversity
+                Centroid-Moment Tensor Catalog and data from
+                the 1940 earthquake: \(\si{\sci{8}{18}}{\newton\meter\inv{\year}}\)}
+            \li{pure phase-transition does not explain Vrancea seismicity}
+        }
+    }
+    
+    \slide{
+        \pb{Stress in the Descending Relic Slab beneath the Vrancea
+            Region, Romania}
+        
+        \ul{
+            \li{serpentinites become brittle as a result of dehydration}
+            \li{fluid from dehydration fills microcracks in rock, together
+                with the stress contributes &rarr; opening of microcracks}
+            \li{increasing macroscopic stress &rarr; local region is fractured
+                &rarr; small fault, filled with pore pressure}
+            \li{source of volatiles - possibility of high-pressure faulting}
+            \li{\(H_2 O\) carried down, detacted as electrical conducting anomaly}
+            \li{in Vrancea resistivity drops below \(\si{1}{\ohm\meter}\)}
+        }
+    }
 </body>
 </html>

@@ -37,7 +37,7 @@
 \define{\inv4{base}}{{\base}^{-4}}
 \define{\inv5{base}}{{\base}^{-5}}
 
-\define{\sci{num}{tpow}}{\num \cdot 10^{\tpow}}
+\define{\sci{num}{power}}{\num \cdot 10^{\power}}
 
 \define{\nano}{\text{n}}
 \define{\micro}{\text{\mu}}
@@ -58,11 +58,12 @@
 \define{\pascal}{\text{Pa}}
 \define{\mol}{\text{mol}}
 \define{\hertz}{\text{Hz}}
+\define{\year}{\text{yr}}
+\define{\ohm}{\Omega}
 
 \define{\si{num}{unit}}{\num \hspace{2pt} \unit}
 \define{\laplace}{\mathop{}\!\mathbin\bigtriangleup}
 \define{\trace}{\mathrm{Tr} \hspace{2pt}}
-\define{\div}{\nabla \hspace{2pt}}
 \define{\rot}{\nabla \times \hspace{2pt}}
 \define{\cross{one}{two}}{\one \times \two}
 \define{\abs{in}}{| \in |}
