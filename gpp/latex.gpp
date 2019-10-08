@@ -57,6 +57,7 @@
 \define{\kelvin}{\text{K}}
 \define{\pascal}{\text{Pa}}
 \define{\mol}{\text{mol}}
+\define{\hertz}{\text{Hz}}
 
 \define{\si{num}{unit}}{\num \hspace{2pt} \unit}
 \define{\laplace}{\mathop{}\!\mathbin\bigtriangleup}
