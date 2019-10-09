@@ -375,15 +375,11 @@
         
         \ul{
             \li{time dependence of \(\rho\) and \(\eta\):}
-            \[
-                \part A = \parx \Psi \parz A - \parz \Psi \parx A
-            \]
+            \[ \part A = \parx \Psi \parz A - \parz \Psi \parx A \]
             \li{\(A\) can be either \(\rho\) and \(\eta\)}
             \li{position of material interfaces:}
-            \[
-                \frac{\md X}{\md t} = \parz \Psi; \hspace{25pt}
-                \frac{\md Z}{\md t} = - \parx \Psi
-            \]
+            \[ \frac{\md X}{\md t} = \parz \Psi; \hspace{25pt}
+               \frac{\md Z}{\md t} = - \parx \Psi \]
         }
     }
     
@@ -517,7 +513,79 @@
         }
     }
     
-    \slide{}
+    \define{\vu}{\mathrm{u}}
+    
+    \define{\st}{\pb{Thermo-mechanical controls on the mode of continental
+                     collision in the SE Carpathians (Romania)}}
+    
+    \slide{
+        \st
+        \p{S. A. P. L. Cloetingh, E. Burov, L. Matenco, G. Toussaint,
+           G. Bertotti, P. A. M. Andriessen, M. J. R. Wortel, W. Spakman}
+        
+        \ul{
+            \li{fully coupled thermo-mechanical code; incorporates
+                rheological stratification, brittle-elastic-ductile rheology,
+                surface erosion and metamorhic reactions in th sinking slab}
+        }
+    }
+    
+    \slide{
+        \st
+        
+        \ul{
+            \li{Lagrangian framework for solving the equations of motions:}
+            \[ \rho \part (\part \vu) - \nabla \sigma - \rho g = 0 \]
+            \[ \Der \sigma = F(\sigma, \vu, \nabla \part \vu, \dots T \dots)\]
+            \[ \Der T = \nabla (\chi \nabla T) + \frac{H_r}{\rho C_p}; \hspace{20pt}
+               \part h = k_e \laplace h \]
+        }
+    }
+    
+    \slide{
+        \st
+        
+        \ul{
+            \li{finite difference scheme}
+            \li{explicit elastic-ductile-plastic non-linear rheology derived
+                from rock mechanics}
+            \li{can reproduce brittle and viscous strain localization &rarr;
+                model formation of shear zones and faults}
+            \li{full \(P\)-\(T\)-\(t\) dependent phase transitions (affect:
+                rheology, density, thermal conductivity)}
+        }
+    }
+    
+    \slide{
+        \st
+        
+        \ul{
+            \li{erosion and sedimentation; erosion can force mountain building
+                as long as the removed material is replaced}
+            \li{may prevent lower plate from subduction &rarr; folding instead}
+            \li{boundary conditions:}
+            \ul{
+                \li{horizontal velocities from obsrved convergence rates}
+                \li{upper boudary is a free surface}
+            }
+        }
+    }
+    
+    
+    \slide{
+        \imgitFloat{cloetingh2003_1.png --title="Results of numerical modeling
+                    with high thermal age (\(\si{150}{\mega\anni}\))
+                    low buoyancy in the subducting plate and active surface
+                    processes (Cloetingh et al., 2003)" --width=650}
+    } 
+    
+    \slide{
+        \imgitFloat{cloetingh2003_2.png --title="Results of numerical modeling
+                    with young thermal age high high buoyancy 
+                    of the lower plate and no surface processes
+                    (Cloetingh et al., 2003)" --width=650}
+    } 
+    
     
     \define{\st}{\pb{Modelling of Block Structure Dynamics for the
                      Vrancea Region: Source Mechanisms of the
@@ -528,12 +596,18 @@
         \st
         \p{A. A. Soloviev, I. A. Vorobieva and G. F. Panza}
         
-        \p{Vrancea main strucural elements:}
-        \ol{
-            \li{East-European plate}
-            \li{Moesian subplate}
-            \li{Black Sea subplate}
-            \li{Intra-Alpine (Pannonian-Carpathian) subplate}
+        \fleft{
+            \imgit{soloviev2000_3.png}{}{width=275}
+        }
+        
+        \fright{
+            \p{Vrancea main strucural elements:}
+            \ol{
+                \li{East-European plate}
+                \li{Moesian subplate}
+                \li{Black Sea subplate}
+                \li{Intra-Alpine (Pannonian-Carpathian) subplate}
+            }
         }
     }
     
@@ -568,10 +642,10 @@
     
     \slide{
         \fleft{
-            \imgit{soloviev_2000_1.png}{}{width=400}
+            \imgit{soloviev2000_1.png}{}{width=400}
         }
         \fright{
-            \imgit{soloviev_2000_1.png}{}{width=400}
+            \imgit{soloviev2000_2.png}{}{width=400}
         }
         
         \p{Observed (1900-1995) and modelled (7000 years) seismicity in Vrancea;

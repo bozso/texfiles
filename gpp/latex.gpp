@@ -59,6 +59,7 @@
 \define{\mol}{\text{mol}}
 \define{\hertz}{\text{Hz}}
 \define{\year}{\text{yr}}
+\define{\anni}{\text{a}}
 \define{\ohm}{\Omega}
 
 \define{\si{num}{unit}}{\num \hspace{2pt} \unit}
