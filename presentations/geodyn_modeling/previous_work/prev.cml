@@ -4,6 +4,18 @@
 \define{\ma}{\text{Ma}}
 \define{\km}{\kilo\meter}
 
+\define{\identity}{\mathbf{I} \hspace{2pt}}
+\define{\SI{in}}{[\text{\in}]}
+
+\define{\ms}{\mathbf{\sigma}}
+\define{\vv}{\mathbf{v}}
+\define{\vg}{\mathbf{g}}
+\define{\vq}{\mathbf{q}}
+\define{\eps}{\varepsilon}
+\define{\deps}{\dot{\varepsilon}}
+\define{\me}{\mathbf{\eps}}
+\define{\sec{in}}{\subt{\in}{II}}
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -39,6 +51,18 @@
 \define{\imhref{source}{title}{attr}}{
     <img src="\source" \attr title="\title" alt="\title"> 
     <br> <font size="4"> \title <a href="\source"> Source </a> </font>
+}
+
+\define{\fleft{in}{attrib}}{
+    <div style="float: left;" \attrib>
+        \in
+    </div>
+}
+
+\define{\fright{in}{attrib}}{
+    <div style="float: right;" \attrib>
+        \in
+    </div>
 }
 
 \include{latex.gpp}
@@ -184,7 +208,7 @@
     \slide{
         \h2{Historical catalogue of Vrancea events}
         \ul{
-            \li{large intermediatedepth shocks with magnitudes \(\mag > 6.5\)
+            \li{large intermediate depth shocks with magnitudes \(\mag > 6.5\)
                 occur three to five times per century}
             \li{20th century: large events at depths \(d\) of \(70 - \si{180}{\km}\)
                 occurred}
@@ -314,10 +338,10 @@
         \ul{
             \li{free surface at \(z = 0\): density equals zero, and
                 viscosity is sufficiently low}
-            \li{slab is modeled as being denser than the surrounding mantle
+            \li{slab is modelled as being denser than the surrounding mantle
                 &rarr; e tends to sink under its own weight}
             \li{several values of viscosity ratio between the slab and the
-                mantle were considerd: 5, 10, and 50}
+                mantle were considered: 5, 10, and 50}
             \li{solve Stokes' equation:}
             $$ 4 \parx \parz \eta \parx \parz \Psi +
                (\parz^2 - \parx^2) \eta (\parz^2 \Psi - \parx^2 \Psi) = 
@@ -368,7 +392,7 @@
             Region, Romania}
         
         \ul{
-            \li{Eulerian finite lement technique to solve the equations}
+            \li{Eulerian finite element technique to solve the equations}
             \li{scaled variables}
             \[
                 t^* = \frac{\eta^*}{\rho^* g(H + h)}; \hspace{20pt}
@@ -387,7 +411,7 @@
         \pb{Stress in the Descending Relic Slab beneath the Vrancea
             Region, Romania}
         
-        \imgitFloat{ismail2000_model_setup.png --title="Model setup" --width=750}
+        \imgitFloat{ismail2000_model_setup.png --title="Model setup" --width=500}
     }
     
     \slide{
@@ -408,7 +432,7 @@
             \li{subducting slab gives rise to two mantle flows}
             \li{flow on the left moves clockwise, contributing to the
                 evolution of the Transylvanian basin and the folded arc}
-            \li{other rotates counterclockwise and possibly affects the
+            \li{other rotates counter-clockwise and possibly affects the
                 development of the Pre-Carpathian foredeep and the
                 Moesian platform}
             \li{ shape of the slab controlled by the circulation of
@@ -440,7 +464,7 @@
             \li{depth distribution of released seismic energy contains
                 two peaks &rarr; faulting processes other than viscous
                 stress release}
-            \li{heterogenities in the volume change due to phase transitions
+            \li{heterogeneities in the volume change due to phase transitions
                 and/or by the dehydration of rocks &rarr; fluid-assisted
                 faulting}
         }
@@ -488,9 +512,329 @@
             \li{increasing macroscopic stress &rarr; local region is fractured
                 &rarr; small fault, filled with pore pressure}
             \li{source of volatiles - possibility of high-pressure faulting}
-            \li{\(H_2 O\) carried down, detacted as electrical conducting anomaly}
+            \li{\(H_2 O\) carried down, detected as electrical conducting anomaly}
             \li{in Vrancea resistivity drops below \(\si{1}{\ohm\meter}\)}
         }
     }
+    
+    \slide{}
+    
+    \define{\st}{\pb{Modelling of Block Structure Dynamics for the
+                     Vrancea Region: Source Mechanisms of the
+                     Synthetic Earthquakes}}
+
+    
+    \slide{
+        \st
+        \p{A. A. Soloviev, I. A. Vorobieva and G. F. Panza}
+        
+        \p{Vrancea main strucural elements:}
+        \ol{
+            \li{East-European plate}
+            \li{Moesian subplate}
+            \li{Black Sea subplate}
+            \li{Intra-Alpine (Pannonian-Carpathian) subplate}
+        }
+    }
+    
+    \slide{
+        \st
+        
+        \ul{
+            \li{simulation of block dynamics}
+            \li{block-and-fault dynamics (BAFD): analyses basic features of
+                seismicity depend on the lithosphere structure and its dynamics}
+            \li{seismic region as a structure of perfectly rigid lithospheric
+                blocks divided by infinitely thin fault planes}
+            \li{blocks interact between themselves and with the underlying
+                asthenosphere}
+        }
+    }
+    
+    \slide{
+        \st
+        
+        \ul{
+            \li{blocks moves in response to prescribed motion of the boundary
+                blocks and of the underlying medium}
+            \li{blocks are perfectly rigid, deformation is localised in the
+                fault zones}
+            \li{relative block displacements along fault planes}
+            \li{block motion is defined so that the structure is in a
+                quasi-static equilibrium state}
+            \li{displacement of blocks &rarr; elastic forces}
+        }
+    }
+    
+    \slide{
+        \fleft{
+            \imgit{soloviev_2000_1.png}{}{width=400}
+        }
+        \fright{
+            \imgit{soloviev_2000_1.png}{}{width=400}
+        }
+        
+        \p{Observed (1900-1995) and modelled (7000 years) seismicity in Vrancea;
+           Soloviev and Ismail-Zadeh (2003)}
+    }
+    
+    \slide{
+        \st
+        
+        \ul{
+            \li{elstic stress \(\propto\) difference between relative
+                displacement and slippage (inelastic displacement)}
+            \li{rate of inelstic displacement \(\propto\) elastic stress}
+            \li{at each time translation vectors and angles of the blocks
+                are determined; strucure is on a quasi-static equilibrium}
+        }
+    }
+        
+    \slide{
+        \st
+        
+        \ul{
+            \li{interaction of the blocks is visco-elastic (normal state)
+                so far as ratio of the shear stress to the difference between
+                the pore pressure and normal stress (for each model cell at the
+                faults):}
+            $$ \frac{\subt{\sigma}{shear}}{\subt{P}{pore} - \subt{\sigma}{normal}} <
+               \subt{\sigma}{critical} $$
+            \li{if this condition is not met: stress-drop (failure) occurs
+                &rarr; failures in adjacent parts of fault planes &rarr;
+                earthquake}
+        }
+    }
+    
+    \slide{
+        \st
+        
+        \ul{
+            \li{stress-drop-affected parts are in a state of creep, until stress
+                falls below a certain level}
+            \li{faster growth of inelastic displacements,}
+            \li{BAFD model generates a catalogue of synthetic earthquakes}
+        }
+    }
+    
+    \slide{
+        \st
+        
+        \ul{
+            \li{spatial distribution of epicentres}
+            \li{slope of the frequency-magnitude (FM) plot}
+            \li{level of seismic activity}
+            \li{maximum magnitude of occurred events}
+            \li{relative activity of Vrancea subduction zone}
+        }
+        \p{are sensitive to: direction of the velocity vectors that define
+           the motion of the East-European plate, medium underlying
+           the subplates and other parameters}
+        
+    }
+    
+    
+    \slide{
+        \st
+        
+        \p{The model:}
+        
+        \ul{
+            \li{thickness \(H = \si{200}{\kilo\meter}\), bounds: two
+                horizontal planes; depth of deepest earthquakes}
+            \li{movements of the block structure boundaries and the underlying
+                medium generate external forces, assumed to be
+                translations with known horizontal rates}
+        }
+    }
+    
+    \slide{
+        \fleft{
+            \imgit{soloviev_ismail_2003_sies_1.png}{}{width=400}
+        }
+        \fright{
+            \imgit{soloviev_ismail_2003_sies_2.png}{}{width=400}
+        }
+        
+        \p{Observed (1900-1995) and modelled (7000 years) seismicity in Vrancea;
+           Soloviev and Ismail-Zadeh (2003)}
+    }
+    
+    \slide{
+        \fleft{
+            \imgitFloat{soloviev_ismail_2003_sies_3.png --title="FM plots for observed
+                   (solid line) and modelled events (dashed line) in Vrancea.
+                   Soloviev and Ismail-Zadeh (2003)" --width=525}
+        }
+    }
+    
+    \slide{
+        \pb{Stress}
+        
+        \ul{
+            \li{internal distribution and intensity of force acting at
+                any point in the continuum \([\newton\inv2{m}]\)}
+            $$ \ms = 
+            \left[\begin{matrix}
+            \sigma_{xx} & \sigma_{xy} & \sigma_{xz} \\
+            \sigma_{yx} & \sigma_{yy} & \sigma_{yz} \\
+            \sigma_{zx} & \sigma_{zy} & \sigma_{zz} \\
+            \end{matrix}\right]$$
+            \li{pressure:
+                \(P = - \left(\sum_{i=1}^{N} \sigma_{ii}\right) \inv{N}\),
+                it is invariant, independent of coordinate system}
+    
+        }
+    }
+    
+    \slide{
+        \pb{Stress}
+        
+        \ul{
+            \li{deviatoric stress, deviation from hydrostatic stress:}
+                $$ \ms' = \ms + \identity P $$
+            \li{by definition: \(\trace \ms' = 0\)}
+        }
+    }
+    
+    \slide{
+        \pb{Strain and strain rate}
+        
+        \ul{
+            \li{strain: characterises the amount of deformation}
+            \li{ratio of displacement to the initial length of deforming body:}
+            \li{strain tensor:}
+            $$ \eps _{ij} = \half (\par{j} u_i + \par{i} u_j) $$
+            $$ \eps _{ii} = \par{i} u_i $$
+            \li{quantifies the entiry deformation history at time \(t\)}
+        }
+    }
+            
+    \slide{
+        \pb{Strain and strain rate}
+        
+        \ul{
+            \li{convenient to use: \bold{strain rate} tensor:}
+            $$ \deps _{ij} = \half (\par{j} v_i + \par{i} v_j); \hspace{20pt}
+               \deps _{ii} = \par{i} v_i $$
+            $$ \trace{\deps} = \nabla \vv $$
+            \li{isotropic and deviatoric part:}
+            $$ \deps' = \deps - \third \identity (\nabla \vv); \hspace{20pt}
+               \trace \deps' = 0 $$
+        }
+    }
+    
+    \slide{
+        \pb{Rheology of rocks}
+        
+        \ul{
+            \li{rheology characterizes the flow/deformation behaviour of a
+                material}
+            \li{rocks behave elastically on relatively short time scales
+                (\( < \tpow{4}\text{years} \))}
+            \li{rocks at cold temperatures can be subject to brittle
+                (at low pressures) and plastic (at higher pressures)
+                deformation &rarr; shear and fracture zones}
+            \li{the visco-elasto-plastic rheology of rocks genrally should
+                be considered}
+        }
+    }
+    
+    \slide{
+        \pb{Rheology of rocks}
+        
+        \ul{
+            \li{viscous behaviour; solid-state creep: irreversible deformation
+                of crystalline substances under applied stress; major
+                deformation mechanism of Earth's crust and mantle}
+            \li{two major types of creep: \bold{diffusion} and
+                \bold{dislocation creep}}
+        }
+    }
+    
+    \slide{
+        \pb{Elastic rheology}
+        
+        \ul{
+            \li{described by Hooke's law}
+            $$ \ms = \lambda \identity \trace \eps + 2 \mu \eps $$
+            \li{\(\lambda\) and \(\mu\) are Lamé's constants; depend on
+                pressure, temperature and composition}
+            \li{in deforming elastic medium local stress orientation change
+                due to rotation of material points &larr; rigid body rotation
+                present in the velocity field}
+        }
+    }
+
+    \define{\depo}{\mathrm{D}_t^{\text{CR}}}
+    
+    \slide{
+        \pb{Maxwell viscoelastic rheology}
+        
+        \ul{
+            \li{combination of viscous and elastic rheologies under
+                certain assumptions}
+            \li{in numerical geodynamics this is the most commonly used}
+            \li{shear modulus is constant}
+            \li{\(\identity \subt{\eta}{bulk} \trace \subt{\deps'}{(viscous)}\)
+                is negligible}
+            $$ \deps' = \subt{\deps'}{(viscous)} + \subt{\deps'}{(elastic)} $$
+        }
+    }
+    
+    \slide{
+        \pb{Plastic rheology}
+        \ul{
+            \li{assumption: absolute shear stress limit \(\subt{\ms}{yield}\)
+                exists for a body; after reaching this limit plastic
+                yielding occurs}
+            \li{plastic yielding is irreversible, pattern of deformation is
+                different compared to viscous deformation}
+            \li{plastic creep is localised and forms multiple highly deformed
+                shear zones, separating relatively undeformed blocks}
+            \li{important for deformation of subducting slabs characterized
+                by low temperature and elevated stresses or for
+                lithospheric-scale localisation}
+        }
+    }
+    
+    \slide{
+        \pb{Visco-elasto-plastic rheology}
+            
+        \ul{
+            \li{in nature the general behaviour of rocks is
+                visco-elasto-plastic:}
+            $$ \deps' = \subt{\deps'}{(viscous)} + \subt{\deps'}{(elastic)} +
+                        \subt{\deps'}{(plastic)} $$
+            $$ \subt{\deps'}{(viscous)} = \frac{1}{2\eta} \ms' $$
+            $$ \subt{\deps'}{(elastic)} = \depo \ms' $$
+        }       
+    }
+    
+    \slide{
+        \pb{Visco-elasto-plastic rheology}
+            
+        \ul{
+            $$
+            \deps' _{ij \text{(plastic)}} = 
+            \left\{\begin{array}{ll}
+            0, & \text{for } \sec{\ms} < \subt{\ms}{yield} \\
+            \chi \frac{\partial \sec{\ms}}{\partial \ms' _{ij}} = 
+            \chi \frac{\ms' _{ij}}{2 \sec{\ms}}, 
+            & \text{for } \sec{\ms} = \subt{\ms}{yield} \\
+            \end{array}
+            \right\}
+            $$
+            \li{\(\chi\) is the plastic multiplier; variable scaling
+                coefficient that connects, in a uniform way, components of
+                the plastic strain rate (\(\subt{\deps'}{(plastic)}\)) with
+                the local stress distribution in places where the yielding
+                condition is reached}
+            \li{\(\chi\) should be determined locally at each moment in time
+                based on local values of \(\ms'\), \(\deps'\), \(\eta\),
+                \(\mu\)}
+        }
+    }
+    
 </body>
 </html>

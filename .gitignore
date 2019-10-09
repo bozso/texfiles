@@ -13,6 +13,10 @@
 *.fdb_latexmk
 latex.out/
 
+# ninja files
+.ninja_log
+.ninja_deps
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
