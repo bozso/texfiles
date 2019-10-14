@@ -21,6 +21,41 @@ FIXME: do not know the problem
 */
 
 
+\define{\templaterPath}{/home/istvan/progs/utils/tools/gpp.py}
+\define{\templaterBin}{python \templaterPath}
+
+\define{\call{args}}{\exec{\templaterBin \args}}
+
+
+\define{\imgit{in}{title}{attr}}{
+    <img src="https://raw.githubusercontent.com/bozso/texfiles/master/images/geodyn/prev_work/\in"
+     \attr title="\title" alt="\title"> 
+    <br> <font size="4">\title </font>
+}
+
+\define{\imgitFloat{args}}{
+    \call{imgit_float geodyn/prev_work/\args --total_width=800}
+}
+
+\define{\imhref{source}{title}{attr}}{
+    <img src="\source" \attr title="\title" alt="\title"> 
+    <br> <font size="4"> \title <a href="\source"> Source </a> </font>
+}
+
+\define{\fleft{in}{attrib}}{
+    <div style="float: left;" \attrib>
+        \in
+    </div>
+}
+
+\define{\fright{in}{attrib}}{
+    <div style="float: right;" \attrib>
+        \in
+    </div>
+}
+
+
+
 \define{\image{name}{opts}}{<img src="\impath/\name" \opts>}
 
 \define{\col{in}}{<div class="column"> \in </div>}

@@ -1,11 +1,6 @@
 \ifndef{__PRESENTATION_GPP}
 \define{__PRESENTATION_GPP}
 
-\define{\TEMPLATER_PATH}{/home/istvan/progs/utils/tools/gpp.py}
-\define{\TEMPLATER_EXE}{python \TEMPLATER_PATH}
-
-\define{\call{args}}{\exec{\TEMPLATER_EXE \args}}
-
 \define{\cover{in}}{
     <section class="slide" id="cover">
         \in

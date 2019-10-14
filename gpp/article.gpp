@@ -1,0 +1,8 @@
+\ifndef{__NOTES_GPP}
+\define{__NOTES_GPP}
+
+\define{\rem{in}}{<span style="background-color:#ff4d4d">\in</span>}
+\define{\add{in}}{<span style="background-color:#009900">\in</span>}
+\define{\unc{in}}{<span style="background-color:#ffff00">(\in)</span>}
+
+\endif

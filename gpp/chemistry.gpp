@@ -1,0 +1,9 @@
+\ifndef{__CHEMISTRY_GPP}
+\define{__CHEMISTRY_GPP}
+
+\define{\hydro}{\text{H}}
+\define{\helium}{\text{He}}
+\define{\oxygen}{\text{O}}
+\define{\water}{\hydro_{2} \oxygen}
+
+\endif
