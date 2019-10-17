@@ -9,12 +9,14 @@
 
 \define{\ms}{\mathbf{\sigma}}
 \define{\vv}{\mathbf{v}}
+\define{\vr}{\mathbf{r}}
 \define{\vg}{\mathbf{g}}
 \define{\vq}{\mathbf{q}}
 \define{\eps}{\varepsilon}
 \define{\deps}{\dot{\varepsilon}}
 \define{\me}{\mathbf{\eps}}
 \define{\sec{in}}{\subt{\in}{II}}
+\define{\depo}{\mathrm{D}_t^{\text{CR}}}
 
 
 <!DOCTYPE html>
@@ -45,7 +47,7 @@
 }
 
 \define{\imgitFloat{args}}{
-    \call{imgit_float geodyn/prev_work/\args --total_width=800}
+    \call{imgit_float geodyn/prev_work/\args totalWidth=800}
 }
 
 \define{\imhref{source}{title}{attr}}{
@@ -573,17 +575,17 @@
     
     
     \slide{
-        \imgitFloat{cloetingh2003_1.png --title="Results of numerical modeling
+        \imgitFloat{cloetingh2003_1.png title="Results of numerical modeling
                     with high thermal age (\(\si{150}{\mega\anni}\))
                     low buoyancy in the subducting plate and active surface
-                    processes (Cloetingh et al., 2003)" --width=650}
+                    processes (Cloetingh et al., 2003)" width=650}
     } 
     
     \slide{
-        \imgitFloat{cloetingh2003_2.png --title="Results of numerical modeling
+        \imgitFloat{cloetingh2003_2.png title="Results of numerical modeling
                     with young thermal age high high buoyancy 
                     of the lower plate and no surface processes
-                    (Cloetingh et al., 2003)" --width=650}
+                    (Cloetingh et al., 2003)" width=650}
     } 
     
     
@@ -656,7 +658,7 @@
         \st
         
         \ul{
-            \li{elstic stress \(\propto\) difference between relative
+            \li{elastic stress \(\propto\) difference between relative
                 displacement and slippage (inelastic displacement)}
             \li{rate of inelstic displacement \(\propto\) elastic stress}
             \li{at each time translation vectors and angles of the blocks
@@ -736,10 +738,121 @@
     
     \slide{
         \fleft{
-            \imgitFloat{soloviev_ismail_2003_sies_3.png --title="FM plots for observed
+            \imgitFloat{soloviev_ismail_2003_sies_3.png title="FM plots for observed
                    (solid line) and modelled events (dashed line) in Vrancea.
-                   Soloviev and Ismail-Zadeh (2003)" --width=525}
+                   Soloviev and Ismail-Zadeh (2003)" width=525}
         }
+    }
+    
+    
+    
+    \define{\st}{\pb{Robust characteristics method for modelling multiphase
+                     visco-elasto-plastic thermo-mechanical problems}}
+    
+    \slide{
+        \st
+        
+        \p{Taras V. Gerya, David A. Yuen}
+        \p{Physics of the Earth and Planetary Interiors 163 (2007) 83–105}
+        
+        \ul{
+            \li{Lagrangian-Eulerian numerical scheme based on conservative
+                finite-differences and marker-in-cell techniques}
+            \li{take into account the visco-elasto-plastic rheology of rocks}
+        }
+        
+    }
+    
+    \slide{
+        \pb{Visco-elasto-plastic rheology}
+            
+        \ul{
+            \li{in nature the general behaviour of rocks is
+                visco-elasto-plastic:}
+            $$ \deps' = \subt{\deps'}{(viscous)} + \subt{\deps'}{(elastic)} +
+                        \subt{\deps'}{(plastic)} $$
+            $$ \subt{\deps'}{(viscous)} = \frac{1}{2\eta} \ms' $$
+            $$ \subt{\deps'}{(elastic)} = \depo \ms' $$
+        }       
+    }
+    
+    \slide{
+        \pb{Visco-elasto-plastic rheology}
+            
+        \ul{
+            $$
+            \deps' _{ij \text{(plastic)}} = 
+            \left\{\begin{array}{ll}
+            0, & \text{for } \sec{\ms} < \subt{\ms}{yield} \\
+            \chi \frac{\partial \sec{\ms}}{\partial \ms' _{ij}} = 
+            \chi \frac{\ms' _{ij}}{2 \sec{\ms}}, 
+            & \text{for } \sec{\ms} = \subt{\ms}{yield} \\
+            \end{array}
+            \right\}
+            $$
+            \li{\(\chi\) is the plastic multiplier; variable scaling
+                coefficient that connects, in a uniform way, components of
+                the plastic strain rate (\(\subt{\deps'}{(plastic)}\)) with
+                the local stress distribution in places where the yielding
+                condition is reached}
+            \li{\(\chi\) should be determined locally at each moment in time
+                based on local values of \(\ms'\), \(\deps'\), \(\eta\),
+                \(\mu\)}
+        }
+    }
+    
+    \slide{
+        \pb{Visco-elasto-plastic rheology}
+        
+        \[
+            - \Der \ln \rho = \nabla \vv = 2 \sin\Psi \subt{\deps'}{II (plastic)}
+        \]
+        \ul{
+            \li{\(\Psi\): delatation angle, generally depends in plastic strain}
+            \li{generally \(\subt{\ms}{yield}\) depends on the mean stress of the solid
+                (\(\subt{P}{solid} = P)\) and on the pore fluid pressure
+                (\(\subt{P}{fluid}\))}
+            $$ \subt{\ms}{yield} = C + \sin\phi P $$
+        }
+    }
+    \slide{
+        \pb{Visco-elasto-plastic rheology}
+        
+        \ul{
+            $$ \sin\phi = \sin\subt{\phi}{dry} (1 - \lambda) $$
+            \li{\(C\) is the cohesion (residual strength at $P = 0$), $\phi$ is the
+                effective internal friction angle (\(\subt{\phi}{dry}\) is for dry rocks),
+                \(\lambda\) is the pore fluid pressure factor}
+            \li{for dry fractured crystalline rocks \(\sin\phi\) is independent of
+                composition, varies from \(0.85\) at \(P < \mega\pascal\) to \(0.6\)
+                at higher pressure}
+        }
+    }
+    
+    \slide{
+        \pb{Equations}
+        
+        \p{Heat conservation equation}
+        \[ \rho C_p \Der T = - \nabla \vq + H_r + H_a + H_s + H_L;
+            \hspace{20pt} \vq = -k(T,P,c) \nabla T \]
+        \[ H_a = T \alpha \vv \nabla P; \hspace{20pt}
+           H_s = \sum_{ij} \sigma_{ij} (\deps _{ij} -
+           \deps _{ij \text{(elastic)}}) \]
+        
+        \p{Mass conservation equation}
+        
+        \[ \Der \ln \rho + \nabla \vv = 0 \]
+    }
+        
+    \slide{
+        \pb{Equations}
+        
+        \p{Navier-Stokes equation}
+        \[ \nabla \sigma - \nabla P = - \rho(T,P,c) \vg(\vr) \]
+        \p{Equations that describe gravity}
+        \[ \vg(\vr) = -\nabla\Phi \]
+        \[ \laplace \Phi = 4 K \pi \gamma \rho(P,T,c) \]
+        
     }
     
     \slide{
@@ -840,8 +953,6 @@
         }
     }
 
-    \define{\depo}{\mathrm{D}_t^{\text{CR}}}
-    
     \slide{
         \pb{Maxwell viscoelastic rheology}
         

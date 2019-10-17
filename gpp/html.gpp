@@ -33,10 +33,6 @@ FIXME: do not know the problem
     <br> <font size="4">\title </font>
 }
 
-\define{\imgitFloat{args}}{
-    \call{imgit_float geodyn/prev_work/\args --total_width=800}
-}
-
 \define{\imhref{source}{title}{attr}}{
     <img src="\source" \attr title="\title" alt="\title"> 
     <br> <font size="4"> \title <a href="\source"> Source </a> </font>
