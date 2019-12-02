@@ -1,6 +1,11 @@
 \ifndef{__PRESENTATION_GPP}
 \define{__PRESENTATION_GPP}
 
+\define{\image{in}{attr}}{
+    <img src="https://raw.githubusercontent.com/bozso/texfiles/master/images/\in"
+     \attr>
+}
+
 \define{\cover{in}}{
     <section class="slide" id="cover">
         \in
@@ -25,3 +30,17 @@
         <figcaption>\cap</figcaption>
     </figure>
 }
+
+\define{\fleft{in}{attrib}}{
+    <div style="float: left;" \attrib>
+        \in
+    </div>
+}
+
+\define{\fright{in}{attrib}}{
+    <div style="float: right;" \attrib>
+        \in
+    </div>
+}
+
+\endif

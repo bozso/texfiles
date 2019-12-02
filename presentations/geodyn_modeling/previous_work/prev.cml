@@ -47,7 +47,7 @@
 }
 
 \define{\imgitFloat{args}}{
-    \call{imgit_float geodyn/prev_work/\args totalWidth=800}
+    \call{geodyn/prev_work/\args totalWidth=800}
 }
 
 \define{\imhref{source}{title}{attr}}{
@@ -175,23 +175,23 @@
     }
     
     \slide{
-        \imgitFloat{pan_basin_tect.png --title="Geological map of the
-               Pannonian Basin. (simplified after Schmid et al., 2008)" --width=700}
+        \imgitFloat{pan_basin_tect.png title="Geological map of the
+               Pannonian Basin. (simplified after Schmid et al., 2008)" width=700}
     }
     
     \slide{
-        \imgitFloat{pan_basin_seism.png --title="Location of earthquakes.
+        \imgitFloat{pan_basin_seism.png title="Location of earthquakes.
                     Epicentres taken from Bada et al. (2005) and the ROMPLUS
-                    catalogue (Radulian et al., 2002)" --width=650}
+                    catalogue (Radulian et al., 2002)" width=650}
     }
     
     \slide{
-        \imgitFloat{vrancea_tomo_cross.png --title="Tectonic cross section at crustal scale
+        \imgitFloat{vrancea_tomo_cross.png title="Tectonic cross section at crustal scale
                (simplified after Matenco et al., 2007).
                Teleseismic P-wave tomography (Bijwaard and Spakman, 2000;
                Wortel and Spakman, 2000)
                Earthquakes hypocentres taken the ROMPLUS catalogue
-               (Radulian et al., 2002)" --width=575}
+               (Radulian et al., 2002)" width=575}
     }
     
     \slide{
@@ -409,17 +409,17 @@
         \pb{Stress in the Descending Relic Slab beneath the Vrancea
             Region, Romania}
         
-        \imgitFloat{ismail2000_model_setup.png --title="Model setup" --width=500}
+        \imgitFloat{ismail2000_model_setup.png title="Model setup" width=500}
     }
     
     \slide{
         \pb{Stress in the Descending Relic Slab beneath the Vrancea
             Region, Romania}
         
-        \imgitFloat{ismail2000_model.png --title="Results of numerical modeling
+        \imgitFloat{ismail2000_model.png title="Results of numerical modeling
                     for a density contrast of
                     \(\si{\sci{0.7}{2}}{\kilo\gram\inv3{\meter}}\)
-                    and a viscosity ratio of \(10\) (Ismail-Zadeh et al., 2000)" --width=600}
+                    and a viscosity ratio of \(10\) (Ismail-Zadeh et al., 2000)" width=600}
     }
     
     \slide{

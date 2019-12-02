@@ -5,16 +5,24 @@
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
 
-<link rel="stylesheet" type="text/css" href="/home/istvan/Dokumentumok/texfiles/css/notes.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/home/istvan/Dokumentumok/texfiles/css/notes.css" />
 
 \define{\half}{\frac{1}{2}}
 \define{\third}{\frac{1}{3}}
 \define{\quarter}{\frac{1}{4}}
+\define{\under1{in}}{\frac{1}{\in}}
 
 \define{\trace{in}}{\text{Tr} \hspace{2pt} \in}
 
 \define{\gdiv{in}}{\nabla \left(\nabla \in \right) \hspace{2pt}}
+
+\define{\im{in}}{\( \in \)}
+\define{\math{in}}{\[ \in \]}
+
 \define{\paren{in}}{\left( \in \right)}
+\define{\sqParen{in}}{\left[ \in \right]}
+\define{\brack{in}}{\left\{ \in \right\}}
+
 \define{\par{in}}{\hspace{2pt} \partial_{\in}}
 \define{\parx}{\par{x}}
 \define{\pary}{\par{y}}
@@ -23,26 +31,28 @@
 \define{\parj}{\par{j}}
 \define{\part}{\hspace{2pt} \partial_{t}}
 \define{\md}{\mathrm{d}}
-\define{\Der{in}}{\mathrm{D}_t \in}
+\define{\Der}{\hspace{3pt} \mathrm{D}_t}
 \define{\der{nom}{denom}}{\frac{\md \nom}{\md \denom}}
 
 \define{\pow{base}{power}}{{\base}^{\power}}
 \define{\tpow{power}}{{10}^{\power}}
+\define{\pow10{power}}{{10}^{\power}}
 \define{\pow2{base}}{{\base}^{2}}
 \define{\pow3{base}}{{\base}^{3}}
 \define{\pow4{base}}{{\base}^{4}}
 \define{\pow5{base}}{{\base}^{5}}
 
-\define{\inv{base}}{{\base}^{-1}}
-\define{\inv2{base}}{{\base}^{-2}}
-\define{\inv3{base}}{{\base}^{-3}}
-\define{\inv4{base}}{{\base}^{-4}}
-\define{\inv5{base}}{{\base}^{-5}}
+\define{\invImplement{base}{exponent}}{\hspace{3pt} {\base}^{\exponent}}
+\define{\inv{base}}{\invImplement{\base}{-1}}
+\define{\inv2{base}}{\invImplement{\base}{-2}}
+\define{\inv3{base}}{\invImplement{\base}{-3}}
+\define{\inv4{base}}{\invImplement{\base}{-4}}
+\define{\inv5{base}}{\invImplement{\base}{-5}}
 
 \define{\sci{num}{power}}{\num \cdot 10^{\power}}
 
 \define{\nano}{\text{n}}
-\define{\micro}{\text{\mu}}
+\define{\micro}{\mu}
 \define{\milli}{\text{m}}
 \define{\kilo}{\text{k}}
 \define{\mega}{\text{M}}
@@ -52,6 +62,8 @@
 \define{\meter}{\text{m}}
 \define{\second}{\text{s}}
 \define{\gram}{\text{g}}
+\define{\kg}{\kilo\gram}
+\define{\deg}{^{\circ}}
 \define{\kilogram}{\text{kg}}
 \define{\watt}{\text{W}}
 \define{\joule}{\text{J}}
@@ -63,8 +75,12 @@
 \define{\year}{\text{yr}}
 \define{\anni}{\text{a}}
 \define{\ohm}{\Omega}
+\define{\mol}{\text{mol}}
+\define{\bar}{\text{bar}}
 
 \define{\si{num}{unit}}{\num \hspace{2pt} \unit}
+\define{\si10{num}{unit}}{\pow10{\num} \hspace{2pt} \unit}
+
 \define{\laplace}{\mathop{}\!\mathbin\bigtriangleup}
 \define{\trace}{\mathrm{Tr} \hspace{2pt}}
 \define{\rot}{\nabla \times \hspace{2pt}}

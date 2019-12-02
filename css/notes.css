@@ -1,14 +1,12 @@
 /*<meta />*/
 /*This stylesheet has styled boxes that are configured to use images*/
 
-body
-{
+body {
     font-family: Arial, Avenir, Myriad;
     line-height: 1.7em;
 }
 
-h1
-{
+h1 {
     font-size: 1.5em;
     font-weight: bold;
     margin-bottom: 8px;
@@ -16,49 +14,42 @@ h1
     padding-bottom: 10px;
 }
 
-h2
-{
+h2 {
     font-size: 1.2em;
     font-weight: normal;
     margin-bottom: 4px;
     margin-top: 20px;
 }
 
-h3
-{
+h3 {
     font-size: 1.1em;
     font-weight: normal;
     margin-bottom: 4px;
     margin-top: 16px;
 }
 
-li
-{
+li {
     margin-bottom: 6px;
     margin-top: 6px;
 }
 
-MadCap|xref
-{
+MadCap|xref {
     color: #2D8DCC;
     font-weight: bold;
     mc-format: '{para}';
     text-decoration: underline;
 }
 
-MadCap|xref:hover
-{
+MadCap|xref:hover {
     color: #BED230;
 }
 
-p
-{
+p {
     margin-bottom: 8px;
     margin-top: 8px;
 }
 
-p.note
-{
+p.note {
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
     background-color: #f0f7fb;
@@ -71,8 +62,7 @@ p.note
     padding: 15px 60px;
 }
 
-p.warning
-{
+p.warning {
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
     background-color: #f9e7e5;
@@ -85,8 +75,7 @@ p.warning
     padding: 15px 60px;
 }
 
-p.example
-{
+p.example {
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
     background-color: #e7f6f0;
@@ -99,8 +88,7 @@ p.example
     padding: 15px 60px;
 }
 
-p.tip
-{
+p.tip {
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
     background-color: #fffbea;
@@ -113,8 +101,7 @@ p.tip
     padding: 15px 60px;
 }
 
-p.noteAlt
-{
+p.noteAlt {
     background-color: #f0f7fb;
     background-position: 9px 0px;
     background-repeat: no-repeat;
@@ -124,8 +111,7 @@ p.noteAlt
     padding: 15px 60px;
 }
 
-p.warningAlt
-{
+p.warningAlt {
     background-color: #fcf7f2;
     background-position: 9px 0px;
     background-repeat: no-repeat;
@@ -135,8 +121,7 @@ p.warningAlt
     padding: 15px 60px;
 }
 
-p.exampleAlt
-{
+p.exampleAlt {
     background-color: #e7f6f0;
     background-position: 9px 0px;
     background-repeat: no-repeat;
@@ -146,8 +131,7 @@ p.exampleAlt
     padding: 15px 60px;
 }
 
-p.tipAlt
-{
+p.tipAlt {
     background-color: #fffbea;
     background-position: 9px 0px;
     background-repeat: no-repeat;
@@ -160,8 +144,7 @@ p.tipAlt
 
 /*Div styles*/
 
-div.note
-{
+div.note {
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
     background-color: #f0f7fb;
@@ -174,8 +157,7 @@ div.note
     padding: 15px 60px;
 }
 
-div.warning
-{
+div.warning {
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
     background-color: #f9e7e5;
@@ -188,8 +170,7 @@ div.warning
     padding: 15px 60px;
 }
 
-div.example
-{
+div.example {
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
     background-color: #e7f6f0;
@@ -202,8 +183,7 @@ div.example
     padding: 15px 60px;
 }
 
-div.tip
-{
+div.tip {
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
     background-color: #fffbea;
@@ -216,8 +196,7 @@ div.tip
     padding: 15px 60px;
 }
 
-div.noteAlt
-{
+div.noteAlt {
     background-color: #f0f7fb;
     background-position: 9px 0px;
     background-repeat: no-repeat;
@@ -227,8 +206,7 @@ div.noteAlt
     padding: 15px 60px;
 }
 
-div.warningAlt
-{
+div.warningAlt {
     background-color: #fcf7f2;
     background-position: 9px 0px;
     background-repeat: no-repeat;
@@ -238,8 +216,7 @@ div.warningAlt
     padding: 15px 60px;
 }
 
-div.exampleAlt
-{
+div.exampleAlt {
     background-color: #e7f6f0;
     background-position: 9px 0px;
     background-repeat: no-repeat;
@@ -249,8 +226,7 @@ div.exampleAlt
     padding: 15px 60px;
 }
 
-div.tipAlt
-{
+div.tipAlt {
     background-color: #fffbea;
     background-position: 9px 0px;
     background-repeat: no-repeat;
@@ -262,3 +238,44 @@ div.tipAlt
 
 
 
+/*Targets the caption text*/
+table caption {
+    font-size: 1.5em;
+    padding: 10px 5px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid black;
+}
+
+th {
+    font-weight: bold;
+    background-color: bbbb77;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+/*Targets the headings and first column*/
+/*
+th, td:nth-child(1) {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+*/
+
+/*Targets footer explanation and attribution*/
+/*
+tfoot tr:nth-child(1n+2) {
+    font-size: 0.9em;
+    font-weight: normal;
+    text-align: left;
+}
+*/

@@ -1,7 +1,8 @@
 \ifndef{__HTML_GPP}
 \define{__HTML_GPP}
 
-\define{\center{in}}{<center>\in</center>}
+\define{\col{in}}{<div class="column"> \in </div>}
+\define{\center{in}}{<center> \in </center>}
 
 \define{\pbreak}{<div class="page-break"></div>}
 \define{\htag{tag}{cont}{args}}{<\tag \args> \cont</\tag>}
@@ -78,6 +79,13 @@ FIXME: do not know the problem
 \define{\h4{in}}{<h4>\in</h4>}
 \define{\h5{in}}{<h5>\in</h5>}
 \define{\h5{in}}{<h6>\in</h6>}
+
+\define{\th{in}}{<th>\in</th>}
+\define{\td{in}}{<td>\in</td>}
+\define{\tr{in}}{<tr>\in</tr>}
+
+\define{\table{in}}{<table>\in</table>}
+\define{\caption{in}}{<caption>\in</caption>}
 
 \define{\body{in}}{<body> \in </body>}
 \define{\head{in}}{<head> \in </head>}
