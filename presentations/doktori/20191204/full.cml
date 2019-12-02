@@ -1,7 +1,9 @@
 \include{html.gpp}
 \include{presentation.gpp}
 
-\define{\title}{}
+\define{\title}{Műholdradar interferometria és GNSS mérések kombinálása 3D-s
+    deformációs terek meghatározására}
+
 \define{\affil}{Bozsó István, CSFK Geodéziai és Geofizikai Intézet}
 
 
@@ -42,8 +44,8 @@
         \h1{\title}
         \p{\affil}
         
-        \fleft{\image{ggi_logo.png}{width=200}}
-        \fright{\image{ggi_logo.png}{width=200}}
+        \fleft{\image{logos/ggi_logo.png}{width=200}}
+        \fright{\image{logos/esa_logo.bmp}{width=200}}
     }
 
     \slide{
@@ -93,6 +95,26 @@
         
         Magyarországi hálózatok
     }
+    
+    \slide{
+        \h2{Első eredmények}
+        
+        Parajd
+    }
 
+    \slide{
+        \h2{Első eredmények}
+        
+        Nagyskálájú
+    }
+    
+    
+    \slide{
+        \h2{További tervek}
+        
+        \ul{
+            \li{}
+        }
+    }
 </body>
 </html>
