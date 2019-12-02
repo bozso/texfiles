@@ -9,6 +9,15 @@
     font-size: 48px;
 }
 
+.slide h1 {
+    margin-top: 0;
+    margin-bottom: 32px;
+    color: var(--color-black);
+    line-height: 1;
+    font-weight: bold;
+    font-size: 50px;
+}
+
 .slide * + h2 {
     margin-top: 40px;
 }

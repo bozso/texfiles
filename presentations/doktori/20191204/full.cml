@@ -13,108 +13,183 @@
 
 
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>\title</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/home/istvan/Dokumentumok/texfiles/shower/themes/material/styles/styles.css">
-    <style>
-        .shower {
-            --slide-ratio: calc(16 / 9);
+\html{lang="hun"}{
+    \head{}{
+        <title>\title</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/home/istvan/Dokumentumok/texfiles/shower/themes/material/styles/styles.css">
+        <link rel="stylesheet" href="/home/istvan/Dokumentumok/texfiles/css/notes.css">
+        <script type="text/javascript" src="https://cdn.rawgit.com/pcooksey/bibtex-js/a802616/src/bibtex_js.js"></script>
+        <bibtex src="/home/istvan/Dokumentumok/texfiles/insar.bib"></bibtex>    
+        
+        <style>
+            .shower {
+                --slide-ratio: calc(16 / 9);
+            }
+            
+            .center {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+            }
+        </style>
+    }
+
+
+    \body{class="shower list"}{
+        <header class="caption">
+            \h1{\title}
+            \p{\affil}
+        </header>
+    
+        \cover{
+            \h1{\title}
+            \p{\affil}
+            
+            \center{
+                \row{
+                    \col2{\image{logos/ggi.png}{width=200}}
+                    \col2{\image{logos/elte.png}{width=200}}
+                }
+            }
         }
-        .center {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 50%;
+    
+        \slide{
+            \h2{Áttekintés}
+            
+            \ul{
+                \li{Bevezetés - motiváció, InSAR technológia}
+                \li{Első eredmények}
+                \li{További tervek}
+                \li{Összefoglalás}
+            }
         }
-    </style>
-</head>
-
-
-<body class="shower list">
-
-    <header class="caption">
-        \h1{\title}
-        \p{\affil}
-    </header>
-
-    \cover{
-        \h1{\title}
-        \p{\affil}
         
-        \fleft{\image{logos/ggi_logo.png}{width=200}}
-        \fright{\image{logos/elte.bmp}{width=200}}
-    }
-
-    \slide{
-        \h2{Áttekintés}
-        
-        \ul{
-            \li{Bevezetés - motiváció, InSAR technológia}
-            \li{Első eredmények}
-            \li{További tervek}
-            \li{Összefoglalás}
+        \slide{
+            \h2{Geofizikai, geodinamikai folyamatok 
+                geodéziai módszerekkel}
+            
+            Képek: GNSS - szeizmikus folyamatok megfigyelése - feszültség
+            felhalmozódása, földrengés utáni relaxáció, hosszú távú
+            folyamatok - Vrancea 
         }
-    }
-    
-    \slide{
-        \h2{Geofizikai, geodinamikai folyamatok 
-            geodéziai módszerekkel}
         
-        Képek: GNSS - szeizmikus folyamatok megfigyelése - feszültség
-        felhalmozódása, földrengés utáni relaxáció, hosszú távú
-        folyamatok - Vrancea 
-    }
-    
-    \slide{
-        \h2{Klasszikus geodéziai módszerek hátrányai}
-        
-        hátrányok: köldtésges, emberi erőforrás igényes, rossz térbel
-        felbontás
-    }
-    
-    \slide{
-        \h2{Bevezetés az InSAR technológiába}
-        
-        InSAR bevezető: interferometria alapelv, ábra - elmozdulás = 
-        fáziskülönbség &rarr; minden pixelre meglehet csinálni, relatiív
-        térben és időben, kicsomagolás sok kép elemzése &rarr; idősor
-    }
-    
-    \slide{
-        \h2{InSAR technológia hátrányai}
-        
-        Csak műholdirányú, leszálló felszálló &rarr; 2D elmozdulás
-        
-    }
-    
-    \slide{
-        \h2{Első eredmények}
-        
-        Magyarországi hálózatok
-    }
-    
-    \slide{
-        \h2{Első eredmények}
-        
-        Parajd
-    }
-
-    \slide{
-        \h2{Első eredmények}
-        
-        Nagyskálájú
-    }
-    
-    
-    \slide{
-        \h2{További tervek}
-        
-        \ul{
-            \li{}
+        \slide{
+            \h2{Klasszikus geodéziai módszerek hátrányai}
+            
+            
+            
+            hátrányok: köldtésges, emberi erőforrás igényes, rossz térbel
+            felbontás
         }
+        
+        \slide{
+            \h2{Bevezetés az InSAR technológiába}
+            
+            InSAR bevezető: interferometria alapelv, ábra - elmozdulás = 
+            fáziskülönbség &rarr; minden pixelre meglehet csinálni, relatiív
+            térben és időben, kicsomagolás sok kép elemzése &rarr; idősor
+        }
+        
+        \slide{
+            \h2{InSAR technológia hátrányai}
+            
+            \rows{
+                \col2{\image{insar/theory/ascending_descending_orbits.png}}
+                \col2{\image{insar/theory/daisy_schematic.png}}
+            }
+            
+            Csak műholdirányú, leszálló felszálló &rarr; 2D elmozdulás
+            
+        }
+        
+        \slide{
+            \h2{Első eredmények}
+            
+            Magyarországi hálózatok
+        }
+        
+        \slide{
+            \h2{Első eredmények}
+            
+            Parajd
+        }
+    
+        \slide{
+            \h2{Első eredmények}
+            
+            Nagyskálájú
+        }
+        
+        
+        \slide{
+            \h2{Jövőbeli tervek}
+            
+            \ul{
+                \li{ISIGN program továbbfejlesztése.}
+                \ul{
+                    \li{GNSS állomásadatok interpolálása nagyobb terület
+                        feldolgozása esetén}
+                    \li{beillesztés az automatikus SAR képfeldolgozó
+                        programrendszerbe}
+                    \li{}
+                }
+                
+                \li{Troposzférikus és Ionoszférikus hatások viszgálata,
+                    idősorok korrigálása}
+            }
+        }
+        
+        \slide{
+            \h2{Válogatott publikációk}
+            
+            \ul{
+                \li{
+                    \bib{Eszter Szűcs, \bold{István Bozsó}, István&nbsp;János Kovács,
+                         László Bányai, Ágnes Gál, Alexandru Szakács,
+                         and Viktor Wesztergom.}{Probing tectonic processes
+                         with space geodesy in the south Carpathians: insights
+                         from archive SAR data.}{Acta
+                         Geodaetica et Geophysica}{53(3):331--345, Sep 2018.}{http://dx.doi.org/10.1007/s40328-018-0228-x}
+                }
+                \li{
+                    \bib{László Bányai, Lajos Nagy, Andrew Hooper,
+                         \bold{István Bozsó}, Eszter Szűcs and Viktor Wesztergom.}{
+                         Investigation of Integrated Twin Corner Reflectors
+                         Designed for 3-D InSAR Applications.}{IEEE Geoscience
+                         and Remote Sensing Letters}{Accepted: 2019}{https://doi.org/10.1109/LGRS.2019.2939675}
+                }
+            }
+        }
+
+        \slide{
+            \h2{Válogatott publikációk}
+            
+            \ul{
+                \li{
+                    \bib{\bold{István Bozsó}, Eszter Szűcs, László Bányai and
+                         Viktor Wesztergom.}{Exploitation of Sentinel-1 SAR
+                         data for studying geodynamic, tropospheric and
+                         ionospheric processes.}{Selected papers of 5th
+                         International Conference on Research, Technology
+                         and Education of Space}{(2019) 34--37.}{https://doi.org/10.1109/LGRS.2019.2939675}
+                }
+
+                \li{
+                    \bib{\bold{István Bozsó}, László Bányai, Andrew Hooper,
+                         Eszter Szűcs, and Viktor Wesztergom.}{Integration of
+                         Sentinel-1 Interferometry and GNSS Networks for
+                         Derivation of 3D Surface Changes.}{IEEE Geoscience
+                         and Remote Sensing Letters}{\bold{Under review}}
+                }
+            }
+        }
+    % body
     }
-</body>
-</html>
+% html
+}
+
+
+

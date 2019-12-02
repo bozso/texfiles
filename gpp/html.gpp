@@ -1,11 +1,23 @@
 \ifndef{__HTML_GPP}
 \define{__HTML_GPP}
 
-\define{\col{in}}{<div class="column"> \in </div>}
+\define{\tag{tag}{cont}{args}}{<\tag \args> \cont</\tag>}
+
+\define{\html{args}{in}}{\tag{html}{\in}{\args}}
+\define{\body{args}{in}}{\tag{body}{\in}{\args}}
+\define{\head{args}{in}}{\tag{head}{\in}{\args}}
+
+\define{\col2{in}}{<div class="column2"> \in </div>}
+\define{\col3{in}}{<div class="column3"> \in </div>}
+\define{\col4{in}}{<div class="column4"> \in </div>}
+\define{\row{in}}{<div class="row"> \in </div>}
+
 \define{\center{in}}{<center> \in </center>}
 
+\define{\div{in}{attrib}}{<div \attrib> \in </div>}
+\define{\style{in}{attrib}}{<div style="\attrib>" \in </div>}
+
 \define{\pbreak}{<div class="page-break"></div>}
-\define{\htag{tag}{cont}{args}}{<\tag \args> \cont</\tag>}
 
 
 \define{\imref{in}{title}{attr}}{<img src="\in" \attr title="\title" alt="\title"> <br> \title Forrás: <a href="in"> \in </a>}
@@ -87,14 +99,24 @@ FIXME: do not know the problem
 \define{\table{in}}{<table>\in</table>}
 \define{\caption{in}}{<caption>\in</caption>}
 
-\define{\body{in}}{<body> \in </body>}
-\define{\head{in}}{<head> \in </head>}
-
 \define{\with{class}{in}}{<div class="\class"> \in </div>}
 \define{\div{in}{attr}}{
     <div \attr>
         \in
     </div>
+}
+
+\define{\bib{authors}{title}{journal}{pages}{doi}}{
+    <tr valign="top">
+    <td class="bibtexitem">
+    \authors
+    \title
+     <em>\journal</em>, \pages
+    \ifdef{doi}
+        [&nbsp;<a href="\doi">DOI</a>&nbsp;]
+    \endif
+    </td>
+    </tr>
 }
 
 \endif
