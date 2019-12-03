@@ -46,12 +46,18 @@
     
         \cover{
             \h1{\title}
+            
+            <font size=4>
             \p{\affil}
             
+            \p{Témavezetők: Szűcs Eszter - CSFK Geodéziai és Geofizikai Intézet
+               Lichtenberger János - ELTE Geofizikai és
+               Űrtudományi Tanszék, Űrkutató Csoport}
+            </font>
             \center{
                 \row{
-                    \col2{\image{logos/ggi.png}{width=200}}
-                    \col2{\image{logos/elte.png}{width=200}}
+                    \col2{\image{logos/ggi.png}{width=120}}
+                    \col2{\image{logos/elte.png}{width=120}}
                 }
             }
         }
@@ -68,7 +74,7 @@
         }
         
         \slide{
-            \h2{Geofizikai, geodinamikai folyamatok 
+            \h2{Geofizikai, geodinamikai folyamatok megfigyelése
                 geodéziai módszerekkel}
             
             \ul{
@@ -76,27 +82,11 @@
                     rendkívül jó időbeli felbontás}
                 \li{szeizmikus folyamatok megfigyelése - felszültség
                     felhalmozódása, földrengés, relaxáció}
-                \li{hosszú periódusú folyamatok, sűllyedés, kompakció,
+                \li{hosszú periódusú folyamatok, süllyedés, kompakció,
                     emelkedés}
                 \li{költség- és emberi erőforrás igényes}
                 \li{rossz térbeli lefedettség &rarr; felszíni deformációk
                     összekapcsolása mélybeli folyamatokkal nehézkes}
-            }
-        }
-        
-        \slide{
-            \center{
-                \row{
-                    \col2{
-                        \image{geodyn/hoeven_vertical.png}{height=350}
-                        \p{Permanens GNSS állomásokon mért vertikális elmozdulási
-                           sebességek. (van der Hoeven et al., 2005)}
-                    }
-                    \col2{\img{width=400}{https://www.epos-ip.org/sites/default/files/GLASS_d%27Aquila-AQUI-2009.jpg}
-                        2009-es d'Auila-i földrengés által okozott vertikális
-                        elmozdulás GNSS idősoron.
-                    }
-                }
             }
         }
         
@@ -136,6 +126,7 @@
         }
         
         \slide{
+            # Budapest Google Earth, SAR
             \center{
                 \image{insar/theory/mw_bands.png}{height=400}
                 \p{SAR visszavert felszíni amplitúdók egyazon területtről,
@@ -188,19 +179,28 @@
             
             \div{
                 \center{
-                    \image{insar/reflectors/networks/praid/reflector_pic.jpg}{width=350}
-                    \p{Telepített reflektor pár, Parajd}
+                    \image{insar/reflectors/networks/dszekcso/panorama.png}{width=420}
+                    \p{Telepített reflektor pár, Dunaszekcső}
+                    \image{logos/esa.bmp}{height=100}
                 }
             }{style="float: left"}
-            \fright{width:440px}{
+            \fright{width:375px}{
+                
                 \ul{
-                    \li{környezethez képest nagy amplitúdó, stabil visszavert
-                        fázis}
-                    \li{ISIGN (Integration of Sentinel-1 Interferometry and
-                        GNSS network) programrendszer &rarr; reflektorok
-                        műholdirányú elmozdulásai és GNSS mérések kombinálása
-                        Kálmán-szűréssel}
+                    \li{reflektorok tervezése: geometria, }
+                    \li{matematikai módszer kidolgozása az InSAR és
+                        GNSS adatok kombinálására}
+                    \li{}
                 }
+            }
+        }
+        
+        \slide{
+            \ul{
+                \li{ISIGN (Integration of Sentinel-1 Interferometry and
+                    GNSS network) programrendszer &rarr; reflektorok
+                    műholdirányú elmozdulásai és GNSS mérések kombinálása
+                    Kálmán-szűréssel}
             }
         }
         
