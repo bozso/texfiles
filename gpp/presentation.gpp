@@ -1,7 +1,7 @@
 \ifndef{__PRESENTATION_GPP}
 \define{__PRESENTATION_GPP}
 
-\define{\image{in}{attr}}{
+\define{\image{attr}{in}}{
     <img src="https://raw.githubusercontent.com/bozso/texfiles/master/images/\in"
      \attr>
 }

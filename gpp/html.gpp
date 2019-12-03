@@ -1,11 +1,12 @@
 \ifndef{__HTML_GPP}
 \define{__HTML_GPP}
 
-\define{\tag{tag}{cont}{args}}{<\tag \args> \cont</\tag>}
+\define{\tag{tag}{args}{cont}}{<\tag \args> \cont</\tag>}
 
-\define{\html{args}{in}}{\tag{html}{\in}{\args}}
-\define{\body{args}{in}}{\tag{body}{\in}{\args}}
-\define{\head{args}{in}}{\tag{head}{\in}{\args}}
+\define{\html{args}{in}}{\tag{html}{\args}{\in}}
+\define{\body{args}{in}}{\tag{body}{\args}{\in}}
+\define{\head{args}{in}}{\tag{head}{\args}{\in}}
+\define{\div{args}{in}}{\tag{div}{\args}{\in}}
 
 \define{\img{args}{in}}{
     <img src=\in \args>
@@ -18,7 +19,6 @@
 
 \define{\center{in}{args}}{<center \args> \in </center>}
 
-\define{\div{in}{attrib}}{<div \attrib> \in </div>}
 \define{\style{in}{attrib}}{<div style="\attrib>" \in </div>}
 
 \define{\pbreak}{<div class="page-break"></div>}
@@ -104,11 +104,6 @@ FIXME: do not know the problem
 \define{\caption{in}}{<caption>\in</caption>}
 
 \define{\with{class}{in}}{<div class="\class"> \in </div>}
-\define{\div{in}{attr}}{
-    <div \attr>
-        \in
-    </div>
-}
 
 \define{\bib{authors}{title}{journal}{pages}{doi}}{
     <tr valign="top">
