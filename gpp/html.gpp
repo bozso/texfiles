@@ -7,6 +7,10 @@
 \define{\body{args}{in}}{\tag{body}{\in}{\args}}
 \define{\head{args}{in}}{\tag{head}{\in}{\args}}
 
+\define{\img{args}{in}}{
+    <img src=\in \args>
+}
+
 \define{\col2{in}}{<div class="column2"> \in </div>}
 \define{\col3{in}}{<div class="column3"> \in </div>}
 \define{\col4{in}}{<div class="column4"> \in </div>}

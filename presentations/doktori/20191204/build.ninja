@@ -1,6 +1,6 @@
 rule html
   command = gpp --nostdinc -I/home/istvan/Dokumentumok/texfiles/gpp -U "\\" $
-      "" "{" "}{" "}" "{" "}" "#" "" +c "/*" "*/" +c "%" "\n" -x -o $out $in 
+      "" "{" "}{" "}" "{" "}" "#" "" +c "/*" "*/" +c "!" "\n" -x -o $out $in 
   description = html preprocessing
 
 build build/full.html: html full.cml

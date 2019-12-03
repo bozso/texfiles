@@ -20,7 +20,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/home/istvan/Dokumentumok/texfiles/shower/themes/material/styles/styles.css">
         <link rel="stylesheet" href="/home/istvan/Dokumentumok/texfiles/css/notes.css">
-        <script type="text/javascript" src="https://cdn.rawgit.com/pcooksey/bibtex-js/a802616/src/bibtex_js.js"></script>
         <bibtex src="/home/istvan/Dokumentumok/texfiles/insar.bib"></bibtex>    
         
         <style>
@@ -71,9 +70,36 @@
             \h2{Geofizikai, geodinamikai folyamatok 
                 geodéziai módszerekkel}
             
-            Képek: GNSS - szeizmikus folyamatok megfigyelése - feszültség
-            felhalmozódása, földrengés utáni relaxáció, hosszú távú
-            folyamatok - Vrancea 
+            \ul{
+                \li{GNSS - legelterjedtebb}
+                \li{szeizmikus folyamatok megfigyelése - felszültség
+                    felhalmozódása, földrengés, relaxáció}
+                \li{hosszú periódusú folyamatok, sűllyedés, kompakció,
+                    emelkedés}
+                \li{rendkívül jó időbeli felbontás}
+            }
+        }
+        
+        \slide{
+            \center{
+                \row{
+                    \col2{
+                        \image{geodyn/hoeven_vertical.png}{width=400}
+                        Permanens GNSS állomásokon mért vertikális elmozdulási
+                        sebességek. (van der Hoeven et al., 2005)
+                    }
+                    \col2{\img{width=400}{https://www.epos-ip.org/sites/default/files/GLASS_d%27Aquila-AQUI-2009.jpg}
+                        2009-es d'Auila-i földrengés által okozott vertikális
+                        elmozdulás GNSS idősoron.
+                    }
+                }
+            }
+            
+        
+            \ul{
+                \li{költség- és emberi erőforrás igényes}
+                \li{rossz térbeli lefedettség}
+            }
         }
         
         \slide{
@@ -81,7 +107,7 @@
             
             
             
-            hátrányok: köldtésges, emberi erőforrás igényes, rossz térbel
+            hátrányok: költséges, emberi erőforrás igényes, rossz térbel
             felbontás
         }
         
@@ -96,13 +122,24 @@
         \slide{
             \h2{InSAR technológia hátrányai}
             
-            \rows{
-                \col2{\image{insar/theory/ascending_descending_orbits.png}}
-                \col2{\image{insar/theory/daisy_schematic.png}}
+            \center{
+                \row{
+                    \col2{\image{insar/theory/ascending_descending_orbits.png}{width=400}}
+                    \col2{\image{insar/theory/daisy_schematic.png}{width=400}}
+                }
             }
             
             Csak műholdirányú, leszálló felszálló &rarr; 2D elmozdulás
             
+        }
+        
+        \slide{
+            \h2{Mesterséges reflektorok}
+            
+            \ul{
+                \li{magas amplitúdó, stabil visszavert fázis}
+                \li{GNSS adapter}
+            }
         }
         
         \slide{
