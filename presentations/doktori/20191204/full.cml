@@ -1,4 +1,5 @@
 \include{html.gpp}
+\include{latex.gpp}
 \include{presentation.gpp}
 
 \define{\title}{Műholdradar interferometria és GNSS mérések kombinálása 3D-s
@@ -71,12 +72,15 @@
                 geodéziai módszerekkel}
             
             \ul{
-                \li{GNSS - legelterjedtebb}
+                \li{GNSS - legelterjedtebb, teljes 3D elmozdulási idősor,
+                    rendkívül jó időbeli felbontás}
                 \li{szeizmikus folyamatok megfigyelése - felszültség
                     felhalmozódása, földrengés, relaxáció}
                 \li{hosszú periódusú folyamatok, sűllyedés, kompakció,
                     emelkedés}
-                \li{rendkívül jó időbeli felbontás}
+                \li{költség- és emberi erőforrás igényes}
+                \li{rossz térbeli lefedettség &rarr; felszíni deformációk
+                    összekapcsolása mélybeli folyamatokkal nehézkes}
             }
         }
         
@@ -84,9 +88,9 @@
             \center{
                 \row{
                     \col2{
-                        \image{geodyn/hoeven_vertical.png}{width=400}
-                        Permanens GNSS állomásokon mért vertikális elmozdulási
-                        sebességek. (van der Hoeven et al., 2005)
+                        \image{geodyn/hoeven_vertical.png}{height=350}
+                        \p{Permanens GNSS állomásokon mért vertikális elmozdulási
+                           sebességek. (van der Hoeven et al., 2005)}
                     }
                     \col2{\img{width=400}{https://www.epos-ip.org/sites/default/files/GLASS_d%27Aquila-AQUI-2009.jpg}
                         2009-es d'Auila-i földrengés által okozott vertikális
@@ -94,72 +98,166 @@
                     }
                 }
             }
-            
-        
-            \ul{
-                \li{költség- és emberi erőforrás igényes}
-                \li{rossz térbeli lefedettség}
-            }
-        }
-        
-        \slide{
-            \h2{Klasszikus geodéziai módszerek hátrányai}
-            
-            
-            
-            hátrányok: költséges, emberi erőforrás igényes, rossz térbel
-            felbontás
         }
         
         \slide{
             \h2{Bevezetés az InSAR technológiába}
             
-            InSAR bevezető: interferometria alapelv, ábra - elmozdulás = 
-            fáziskülönbség &rarr; minden pixelre meglehet csinálni, relatiív
-            térben és időben, kicsomagolás sok kép elemzése &rarr; idősor
+            \div{
+                \center{
+                    \img{width=350}{https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2014/02/sentinel-1/14276532-1-eng-GB/Sentinel-1.jpg}
+                    \p{Sentinel-1 műhold (ESA)}
+                }
+            }{style="float: left"}
+            \fright{width:400px}{
+                \ul{
+                    \li{SAR = Szintetikus Aprtúrájú Radar}
+                    \li{mikrohullámú távérzékelési technológia; fekvenciásávok
+                        L-sáv, C-sáv, X-sáv}
+                    \li{SAR eszköz felszerelhető: repülő, műhold, drone}
+                }
+            }
         }
         
         \slide{
-            \h2{InSAR technológia hátrányai}
+            \div{
+                \center{
+                    \image{insar/theory/sar_synthetic_length.png}{width=400}
+                }
+            }{style="float: left"}
+            \fright{width:380px}{
+                \ul{
+                    \li{földfelszín nagyfelbontású térképezése}
+                    \li{visszatérési idő: Sentinel-1 A/B Európa esetén 6 nap}
+                    \li{SAR műholdak: Sentinel-1 A/B (ESA), ALOS-2 (JAXA),
+                        TanDEM-X, TerraSAR-X (DLR)}
+                }
+            }
+        }
+        
+        \slide{
+            \center{
+                \image{insar/theory/mw_bands.png}{height=400}
+                \p{SAR visszavert felszíni amplitúdók egyazon területtről,
+                   különböző sávokban.}
+            }
+        }
+        
+        \slide{
+            \h2{Interferometria alapelv}
+            
+            \image{insar/theory/interfero.png}{style="float: left", width=380}
+            \fright{width:420px}{
+                \ul{
+                    \li{visszaverő felület \bold{műholdirányú} elmozdulása
+                        &rarr; fáziskülönbség}
+                    \li{két különböző időpontban készült SAR felvétel &rarr;
+                        fáziskülönbség kiszámítása minden pixelre &rarr;
+                        interferogram}
+                    \li{ideális esetben interferogram fázisértékek
+                        \im{\Delta \Phi = \frac{4 \pi}{\lambda}d}}
+                }
+            }
+        }
+        
+        \slide{
+            \center{
+                \image{insar/theory/wrapped_and_unwrapped_ifg.jpg}{height=380}
+                \p{Egy chile-i földrengés előtti és utáni SAR felvétel alapján
+                   készült interferogram be- és kicsomagolt fázisértékei.}
+            }
+        }
+        
+        \slide{
+            \h2{InSAR technológia korlátai}
             
             \center{
                 \row{
                     \col2{\image{insar/theory/ascending_descending_orbits.png}{width=400}}
                     \col2{\image{insar/theory/daisy_schematic.png}{width=400}}
                 }
-            }
-            
-            Csak műholdirányú, leszálló felszálló &rarr; 2D elmozdulás
-            
-        }
-        
-        \slide{
-            \h2{Mesterséges reflektorok}
-            
-            \ul{
-                \li{magas amplitúdó, stabil visszavert fázis}
-                \li{GNSS adapter}
+                \p{Felszálló és leszálló pálya műholdirányú elmozdulás idősor
+                    &rarr; vertikális és kelet-nyugati komponense a felszíni
+                    elmozdulásoknak}
             }
         }
         
         \slide{
-            \h2{Első eredmények}
+            \h2{ESA PECS projekt - Mesterséges reflektorok és adatfeldolgozási
+                eljárás fejlesztése}
             
-            Magyarországi hálózatok
+            \div{
+                \center{
+                    \image{insar/reflectors/networks/praid/reflector_pic.jpg}{width=350}
+                    \p{Telepített reflektor pár, Parajd}
+                }
+            }{style="float: left"}
+            \fright{width:440px}{
+                \ul{
+                    \li{környezethez képest nagy amplitúdó, stabil visszavert
+                        fázis}
+                    \li{ISIGN (Integration of Sentinel-1 Interferometry and
+                        GNSS network) programrendszer &rarr; reflektorok
+                        műholdirányú elmozdulásai és GNSS mérések kombinálása
+                        Kálmán-szűréssel}
+                }
+            }
         }
         
         \slide{
-            \h2{Első eredmények}
+            \h2{Magyarországi reflektor hálózatok}
             
-            Parajd
+            \center{
+                \image{insar/reflectors/networks/hungary_networks.png}{height=380}
+            }
+            
+        }
+        
+        \slide{
+            \h2{Magyarországi reflektor hálózatok}
+
+            \center{
+                \row{
+                    \col2{\image{insar/reflectors/networks/dszekcso/IB2-IB1_kalman.png}{width=400}}
+                    \col2{\image{insar/reflectors/networks/fonyod/KV-PH_kalman.png}{width=400}}
+                }
+            }
         }
     
         \slide{
-            \h2{Első eredmények}
+            \h2{Parajdi hálózat}
             
-            Nagyskálájú
+            \center{
+                \row{
+                    \col2{\image{insar/reflectors/networks/praid/schematic.png}{height=375}}
+                    \col2{\image{insar/reflectors/networks/praid/ts4.png}{width=400}}
+                    \col2{\image{insar/reflectors/networks/praid/reflectors_map.png}{width=250}}
+                }
+            }
         }
         
+        
+        \slide{
+            \h2{Nagyskálájú deformáció térképezése}
+            
+            \center{
+                \image{insar/nkp/ifgs_good.png}{height=400}
+            }
+        }
+
+        \slide{
+            \h2{Nagyskálájú deformáció térképezése}
+            
+            \image{insar/nkp/velocities.png}{style="float: left", width=380}
+            \fright{width:400px}{
+                \ul{
+                    \li{atmoszférikus hatások}
+                    \li{természetes szórópontok hiánya}
+                    \li{földfelszín mikrohullámú reflektanciájának évszakos
+                        változása &rarr; erős vegetáció nyáron, hótakaró télen}
+                }
+            }
+        }
         
         \slide{
             \h2{Jövőbeli tervek}
@@ -167,12 +265,14 @@
             \ul{
                 \li{ISIGN program továbbfejlesztése.}
                 \ul{
-                    \li{GNSS állomásadatok interpolálása nagyobb terület
-                        feldolgozása esetén}
+                    \li{GNSS állomás idősorok interpolálása nagyobb terület
+                        feldolgozása esetén.}
                     \li{beillesztés az automatikus SAR képfeldolgozó
                         programrendszerbe}
-                    \li{}
                 }
+                
+                \li{magyarországi és erdélyi reflektorhálózatok folyamatos
+                    feldolgozása}
                 
                 \li{Troposzférikus és Ionoszférikus hatások viszgálata,
                     idősorok korrigálása}
@@ -223,9 +323,19 @@
                 }
             }
         }
-    % body
+        
+        \slide{
+            \center{
+                \h2{Köszönöm a figyelmet!}
+                
+                \h3{Köszönetnyilvánítás:}
+                \p{Szűcs Eszter, Lichtenberger János, Wesztergom Viktor,
+                   Bányai László, GGI-s kollégák}
+            }{style="margin-top:3cm;"}
+        }
+    # body
     }
-% html
+# html
 }
 
 

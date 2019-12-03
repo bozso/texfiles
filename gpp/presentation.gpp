@@ -31,16 +31,4 @@
     </figure>
 }
 
-\define{\fleft{in}{attrib}}{
-    <div style="float: left;" \attrib>
-        \in
-    </div>
-}
-
-\define{\fright{in}{attrib}}{
-    <div style="float: right;" \attrib>
-        \in
-    </div>
-}
-
 \endif

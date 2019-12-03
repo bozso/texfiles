@@ -16,7 +16,7 @@
 \define{\col4{in}}{<div class="column4"> \in </div>}
 \define{\row{in}}{<div class="row"> \in </div>}
 
-\define{\center{in}}{<center> \in </center>}
+\define{\center{in}{args}}{<center \args> \in </center>}
 
 \define{\div{in}{attrib}}{<div \attrib> \in </div>}
 \define{\style{in}{attrib}}{<div style="\attrib>" \in </div>}
@@ -55,14 +55,14 @@ FIXME: do not know the problem
     <br> <font size="4"> \title <a href="\source"> Source </a> </font>
 }
 
-\define{\fleft{in}{attrib}}{
-    <div style="float: left;" \attrib>
+\define{\fleft{attrib}{in}}{
+    <div style="float: left; \attrib">
         \in
     </div>
 }
 
-\define{\fright{in}{attrib}}{
-    <div style="float: right;" \attrib>
+\define{\fright{attrib}{in}}{
+    <div style="float: right; \attrib">
         \in
     </div>
 }
