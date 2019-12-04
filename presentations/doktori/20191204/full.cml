@@ -261,11 +261,21 @@
         }
         
         \slide{
+            \h2{Magyarországi reflektor hálózatok}
+
+            \center{\row{
+                    \col2{\image{height=380}{insar/reflectors/networks/dszekcso/network.png}}
+                    \col2{\image{height=380}{insar/reflectors/networks/kulcs/network.png}}
+                }
+            }
+        }
+        
+        \slide{
             \h2{Dunaszekcsői hálózat}
 
             \center{
                 \row{
-                    \col2{\image{height=380}{insar/reflectors/networks/dszekcso/network.png}}
+                    \col2{\image{width=400}{insar/reflectors/networks/dszekcso/IB2-IB1_los.png}}
                     \col2{\image{width=400}{insar/reflectors/networks/dszekcso/IB2-IB1_kalman.png}}
                 }
             }
@@ -276,7 +286,6 @@
 
             \center{
                 \row{
-                    \col2{\image{height=380}{insar/reflectors/networks/kulcs/network.png}}
                     \col2{\image{width=400}{insar/reflectors/networks/kulcs/A1-AR_kalman.png}}
                 }
             }
