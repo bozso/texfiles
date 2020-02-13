@@ -12,8 +12,6 @@
     \call{\args totalWidth=800}
 }
 
-
-<!DOCTYPE html>
 \html{lang="hun"}{
     \head{}{
         <title>\title</title>
@@ -44,7 +42,7 @@
             \p{\affil}
         </header>
     
-        \cover{
+        \cover{}{
             \h1{\title}
             
             <font size=4>
@@ -62,7 +60,7 @@
             }
         }
     
-        \slide{
+        \slide{}{
             \h2{Áttekintés}
             
             \ul{
@@ -73,7 +71,7 @@
             }
         }
         
-        \slide{
+        \slide{}{
             \h2{Geofizikai, geodinamikai folyamatok megfigyelése
                 geodéziai módszerekkel}
             
@@ -90,7 +88,7 @@
             }
         }
         
-        \slide{
+        \slide{}{
             \h2{Bevezetés az InSAR technológiába}
             
             \div{style="float: left"}{
@@ -109,7 +107,7 @@
             }
         }
         
-        \slide{
+        \slide{}{
             # Budapest Google Earth, SAR
             \center{
                 \image{height=400}{insar/theory/mw_bands.png}
@@ -118,7 +116,7 @@
             }
         }
 
-        \slide{
+        \slide{}{
             \h2{Radar-interferometria alapelv}
             
             \image{style="float: left", width=420}{insar/theory/all_in_one.png}
@@ -132,7 +130,7 @@
             }
         }
         
-        \slide{
+        \slide{}{
             \h2{Radar-interferometria alapelv}
             
             \image{style="float: left", width=420}{insar/theory/all_in_one.png}
@@ -149,7 +147,7 @@
             }
         }
 
-        \slide{
+        \slide{}{
             \center{
                 \image{height=380}{insar/theory/wrapped_and_unwrapped_ifg.jpg}
                 \p{Egy chile-i földrengés előtti és utáni SAR felvétel alapján
@@ -157,7 +155,7 @@
             }
         }
         
-        \slide{
+        \slide{}{
             \h2{InSAR technológia korlátai}
             
             \center{
@@ -171,7 +169,7 @@
             }
         }
 
-        \slide{
+        \slide{}{
             \h2{InSAR technológia korlátai}
             \fleft{width:320}{
                 \center{
@@ -194,7 +192,7 @@
             }
         }
         
-        \slide{
+        \slide{}{
             \h2{ESA PECS projekt - Mesterséges reflektorok és adatfeldolgozási
                 eljárás fejlesztése}
             
@@ -214,7 +212,7 @@
             }
         }
 
-        \slide{
+        \slide{}{
             \h2{ESA PECS projekt - Mesterséges reflektorok és adatfeldolgozási
                 eljárás fejlesztése}
             
@@ -235,7 +233,7 @@
             }
         }
         
-        \slide{
+        \slide{}{
             \fleft{width:400}{
                 \image{width=400}{insar/reflectors/reflectors.png}
                 \image{width=400}{insar/reflectors/compare_azimuth.png}
@@ -252,7 +250,7 @@
             }
         }
         
-        \slide{
+        \slide{}{
             \h2{Magyarországi reflektor hálózatok}
             
             \center{
@@ -260,7 +258,7 @@
             }
         }
         
-        \slide{
+        \slide{}{
             \h2{Magyarországi reflektor hálózatok}
 
             \center{\row{
@@ -270,7 +268,7 @@
             }
         }
         
-        \slide{
+        \slide{}{
             \h2{Dunaszekcsői hálózat}
 
             \center{
@@ -281,7 +279,7 @@
             }
         }
 
-        \slide{
+        \slide{}{
             \h2{Kulcsi hálózat}
 
             \center{
@@ -293,7 +291,7 @@
         
         
         
-        \slide{
+        \slide{}{
             \h2{Parajdi hálózat}
             
             \center{
@@ -305,7 +303,7 @@
         }
         
         
-        \slide{
+        \slide{}{
             \h2{További tervek}
             
             \ul{
@@ -324,7 +322,7 @@
             }
         }
         
-        \slide{
+        \slide{}{
             \h2{Nagyskálájú deformáció térképezése}
             
             \center{
@@ -332,7 +330,7 @@
             }
         }
 
-        \slide{
+        \slide{}{
             \h2{Nagyskálájú deformáció térképezése}
             
             \image{style="float: left", width=380}{insar/nkp/velocities.png}
@@ -346,7 +344,7 @@
             }
         }
         
-        \slide{
+        \slide{}{
             \h2{Válogatott publikációk}
             
             \ul{
@@ -368,7 +366,7 @@
             }
         }
 
-        \slide{
+        \slide{}{
             \h2{Válogatott publikációk}
             
             \ul{
@@ -391,7 +389,7 @@
             }
         }
         
-        \slide{
+        \slide{}{
             \center{
                 \h2{Köszönöm a figyelmet!}
                 
@@ -400,6 +398,11 @@
                    Bányai László, GGI-s kollégák}
             }{style="margin-top:3cm;"}
         }
+
+    <div class="progress"></div>
+
+    <script src="https://shwr.me/shower/shower.min.js"></script>
+    
     # body
     }
 # html

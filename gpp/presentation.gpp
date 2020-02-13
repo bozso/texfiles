@@ -1,27 +1,34 @@
 \ifndef{__PRESENTATION_GPP}
 \define{__PRESENTATION_GPP}
 
+
+\define{\startPres}{
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=792, user-scalable=no">
+    <link rel="stylesheet" href="https://github.com/shower/material/blob/master/styles/styles.css">
+}
+
+\define{\html{args}{in}}{\tag{html}{\args}{\in}}
+
+\define{\slide{args}{in}}{
+    \tag{section}{\args class="slide"}{\in}
+}
+
+\define{\cover{args}{in}}{
+    \tag{section}{\args class="slide" id="cover"}{\in}
+}
+
+
 \define{\image{attr}{in}}{
     <img src="https://raw.githubusercontent.com/bozso/texfiles/master/images/\in"
      \attr>
 }
 
-\define{\cover{in}}{
-    <section class="slide" id="cover">
-        \in
-    </section>
-}
 
-\define{\slide{in}}{
-    <section class="slide">
-        \in
-    </section>
-}
+\define{\importEngine}{
+    <div class="progress"></div>
 
-\define{\blockquote{in}}{
-    <blockquote>
-        \in
-    </blockquote>
+    <script src="https://shwr.me/shower/shower.min.js"></script>
 }
 
 \define{\figure{in}{cap}}{

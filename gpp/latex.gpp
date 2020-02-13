@@ -1,9 +1,6 @@
 \ifndef{__LATEX_GPP}
 \define{__LATEX_GPP}
 
-<script id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
 
 <link rel="stylesheet" type="text/css" media="all" href="/home/istvan/Dokumentumok/texfiles/css/notes.css" />
 

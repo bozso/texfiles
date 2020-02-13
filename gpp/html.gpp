@@ -6,7 +6,13 @@
 \define{\html{args}{in}}{\tag{html}{\args}{\in}}
 \define{\body{args}{in}}{\tag{body}{\args}{\in}}
 \define{\head{args}{in}}{\tag{head}{\args}{\in}}
+\define{\header{args}{in}}{\tag{header}{\args}{\in}}
 \define{\div{args}{in}}{\tag{div}{\args}{\in}}
+
+\define{\blockquote{args}{in}}{
+    \tag{blockquote}{\args}{\in}
+}
+
 
 \define{\img{args}{in}}{
     <img src=\in \args>
@@ -21,20 +27,11 @@
 
 \define{\style{in}{attrib}}{<div style="\attrib>" \in </div>}
 
-\define{\pbreak}{<div class="page-break"></div>}
-
-
 \define{\imref{in}{title}{attr}}{<img src="\in" \attr title="\title" alt="\title"> <br> \title Forrás: <a href="in"> \in </a>}
 
 /*
 FIXME: do not know the problem
 
-\define{\imgit{in}{title}{attr}}{
-    <img src="https://raw.githubusercontent.com/bozso/texfiles/master/images/\in"
-     \attr title="\title" alt="\title"> 
-    <br> \title <a href="https://raw.githubusercontent.com/bozso/texfiles/master/images/\in">
-    Forrás </a>
-}
 */
 
 
@@ -44,28 +41,12 @@ FIXME: do not know the problem
 \define{\call{args}}{\exec{\templaterBin \args}}
 
 
-\define{\imgit{in}{title}{attr}}{
-    <img src="https://raw.githubusercontent.com/bozso/texfiles/master/images/geodyn/prev_work/\in"
-     \attr title="\title" alt="\title"> 
-    <br> <font size="4">\title </font>
-}
 
 \define{\imhref{source}{title}{attr}}{
     <img src="\source" \attr title="\title" alt="\title"> 
     <br> <font size="4"> \title <a href="\source"> Source </a> </font>
 }
 
-\define{\fleft{attrib}{in}}{
-    <div style="float: left; \attrib">
-        \in
-    </div>
-}
-
-\define{\fright{attrib}{in}}{
-    <div style="float: right; \attrib">
-        \in
-    </div>
-}
 
 
 
@@ -75,19 +56,6 @@ FIXME: do not know the problem
 \define{\row{in}}{<div class="row"> \in </div>}
 
 
-\define{\ul{in}}{<ul>\in</ul>}
-\define{\ol{in}}{<ol>\in</ol>}
-\define{\li{in}}{<li>\in</li>}
-
-\define{\bold{in}}{<b>\in</b>}
-\define{\p{in}}{<p>\in</p>}
-\define{\pb{in}}{<p><b>\in</b></p>}
-\define{\quote{in}}{<q>\in</q>}
-\define{\underline{in}}{<u>\in</u>}
-\define{\emph{in}}{<em>\in</em>}
-\define{\it{in}}{<i>\in</i>}
-\define{\del{in}}{<del>\in</del>}
-\define{\strong{in}}{<strong>\in</strong>}
 
 \define{\h1{in}}{<h1>\in</h1>}
 \define{\h2{in}}{<h2>\in</h2>}
