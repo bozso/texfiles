@@ -1,0 +1,11 @@
+# https://taskfile.dev
+
+version: '2'
+
+tasks:
+  build:
+    cmds:
+      - latexrun "bozsoi_insar.tex"
+  defualt:
+    cmds:
+      - task: build

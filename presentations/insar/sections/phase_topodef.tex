@@ -3,7 +3,7 @@
 \sepframe{Interferogram fázisa}
 
 \begin{frame}{\ft}
-    \begin{figp}{\inc{insar_phase.png}}{}{0.675}{0.3}
+    \begin{figp}{\inc{insar/theory/insar_phase.png}}{}{0.675}{0.3}
         Interferogram = két SAR felvétel fázisértékeinek különbsége:
         \begin{align*}
             \phi\{k,l\} = & A_1\{k,l\} e^{i\psi_1\{k,l\}} \times \\
@@ -15,7 +15,7 @@
 
 \begin{frame}{\ft}
     \begin{minic}{0.6}
-        \inc{ifg_flattening.png}
+        \inc{insar/theory/ifg_flattening.png}
         \centering
         
         Az interferogram \quo{kilapítása} (IFG flattening)
@@ -23,27 +23,30 @@
 \end{frame}
 
 
+
+% Zolitól ábra, példa számokkal, height ambiguity, error -- baseline
 \begin{frame}{\ft}
-    \begin{figp}{\inc{burgmann_geom.png}}{Két SAR felvétel geometriája \cite{BurgmannInSAR}}{0.4}{0.5}
+    \begin{figp}{\inc{insar/theory/burgmann_geom.png}}{Két SAR felvétel geometriája \cite{BurgmannInSAR}}{0.4}{0.5}
         \begin{itemize}
             \item $\phi = \frac{4\pi}{\lambda}\rho_1\left[\left(1 - \frac{2 \vec{B}\hat{l}_1}{\rho_1} + \frac{B^2}{\rho_1^2}\right)^2\right]$
             \item ha $B \ll \rho_{1,2}$ akkor $$\phi \approx - \frac{4\pi}{\lambda} (\vec{B}\hat{l}_1) = - \frac{4\pi}{\lambda} B \sin(\theta - \alpha)$$
             \item a magasság pedig: $$h = H - \rho_1 \cos\theta$$
-            \item magassági \quo{bizonytalanság} (height ambiguity): $$\subt{h}{a} = 2\pi \pard{h}{\phi} = \frac{\lambda\rho_1\sin\theta}{2B\cos(\theta - \alpha)}$$
+            \item magassági \quo{bizonytalanság} (height ambiguity):
+                  $$\subt{h}{a} = 2\pi \pard{h}{\phi} =
+                    \frac{\lambda\rho_1\sin\theta}{2B\cos(\theta - \alpha)}$$
         \end{itemize}
     \end{figp}
 \end{frame}
 
-
 \begin{frame}{\ft}
     \only<1>{
-    \begin{minic}{0.75}
-        \fig{hooper_topo_1.png}
+    \begin{minic}{0.70}
+        \inc{insar/theory/hooper_topo_1.png}
     \end{minic}
     }
     \only<2>{
-    \begin{minic}{0.75}
-        \fig{hooper_topo_2.png}
+    \begin{minic}{0.70}
+        \inc{insar/theory/hooper_topo_2.png}
     \end{minic}
     }
     \centering
@@ -54,7 +57,7 @@
 \def\ft{Deformációs fázis}
 
 \begin{frame}{\ft}
-    \begin{figp}{\inc{burgmann_geom.png}}{Két SAR felvétel geometriája \cite{BurgmannInSAR}}{0.4}{0.5}
+    \begin{figp}{\inc{insar/theory/burgmann_geom.png}}{Két SAR felvétel geometriája \cite{BurgmannInSAR}}{0.4}{0.5}
         \begin{itemize}
             \item $\phi \approx \frac{4\pi}{\lambda} (- \vec{B}\hat{l}_1 + \vec{D}\hat{l}_1))$
             \item $\delta\rho = \vec{D}\hat{l}_1$
@@ -65,11 +68,28 @@
 \end{frame}
 
 
+\begin{frame}{Fázistagok ``érzékenysége''}
+    \begin{center}
+    \begin{minipage}[b]{0.45\textwidth}
+        \inc{insar/theory/deform.png}
+        \centering
+        
+    \end{minipage}
+    \hspace{10pt}
+    \begin{minipage}[b]{0.45\textwidth}
+        \inc{insar/theory/baseline_vs_topo_ambig.png}
+        \centering
+        
+    \end{minipage}
+    \end{center}
+\end{frame}
+
+
 \def\ft{Egyéb fázistagok}
 
 \begin{frame}{\ft}
     \begin{minic}{0.75}
-        \fig{kilauea.png}
+        \inc{insar/theory/kilauea.png}
     \end{minic}
 \end{frame}
 

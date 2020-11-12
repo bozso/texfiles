@@ -17,7 +17,7 @@
 
 \begin{frame}{\ft}
     % \cite{RamonHanssen}
-    \begin{figp}{\inc{ramon_SAR.png}}{Radar felvétel geometriája \cite{RamonHanssen}}{0.5}{0.4}
+    \begin{figp}{\inc{insar/theory/ramon_SAR.png}}{Radar felvétel geometriája \cite{RamonHanssen}}{0.5}{0.4}
         RAR (Real Aperture Radar) felbontása: azimut / slant range $\approx 5$ km, ground range $\approx 14$ km:
         $$ \subt{W}{a} = \frac{\lambda}{\subt{L}{a}} R $$
         $$ \subt{\Delta}{r} = \frac{c\tau}{2} $$
@@ -27,7 +27,7 @@
 \def\ft{Range felbontás növelése}
 
 \begin{frame}{\ft}
-    \begin{figp}{\inc{chirp_demod.png}}{}{0.4}{0.4}
+    \begin{figp}{\inc{insar/theory/chirp_demod.png}}{}{0.4}{0.4}
         Chirp jel kibocsájtása, visszavert jel feldolgozása illesztett szűréssel:
         \begin{align*}
             f(t) &= a t & \text{lineárisan növekvő frekvencia} \\
@@ -43,14 +43,14 @@
 \begin{frame}{\ft}
     \begin{center}
     \begin{minipage}[b]{0.4\textwidth}
-        \fig{sar_synthetic_length.png}
+        \inc{insar/theory/sar_synthetic_length.png}
         \centering
         
         Egy földfelszíni szórópont leképződése a SAR felvétel készítése során.
     \end{minipage}
     \hspace{10pt}
     \begin{minipage}[b]{0.5\textwidth}
-        \fig{chirp_azimuth.png}
+        \inc{insar/theory/chirp_azimuth.png}
         \centering
         
         A földfelszíni szórópont által visszavert chirp jelek.
@@ -62,8 +62,8 @@
 \def\ft{Nyers SAR felvétel fókuszálása}
 
 \begin{frame}{\ft}
-    \begin{minic}{0.75}
-        \inc{rng_azi_compression.png}
+    \begin{minic}{0.70}
+        \inc{insar/theory/rng_azi_compression.png}
         
         \centering
         Felbontás fókuszálás után: ground range: $\approx 25$ m, azimut: $\approx 10$ m (ERS-1,2)
@@ -74,8 +74,8 @@
 \def\ft{Ismétlés - Szintetikus Apertúrájú Radar}
 
 \begin{frame}{\ft}
-    \begin{minic}{0.85}
-        \inc{mw_bands.png}
+    \begin{minic}{0.80}
+        \inc{insar/theory/mw_bands.png}
         
         \centering
         Különböző radarsávban készült felvételek egy területről.
@@ -85,7 +85,7 @@
 
 \begin{frame}{\ft}
     % insartut
-    \begin{figp}{\fig{sar_speckle.png}}{}{0.45}{0.45}
+    \begin{figp}{\inc{insar/theory/sar_speckle.png}}{}{0.45}{0.45}
         \begin{itemize}
             \item amplitúdó ÉS fázis érték pixelenként; komplex számként reprezentálható
             \item egyetlen SAR pixel értéke: $\subt{C}{SAR} = A e^{i\phi}$
@@ -98,7 +98,7 @@
 \begin{frame}{\ft}
     \begin{minic}{0.64}
         %RamonHanssen
-        \fig{ramon_shortening.png}
+        \inc{insar/theory/ramon_shortening.png}
         \centering
         
         Topográfia által okozott geometriai torzulásai a felbontási cellának.
@@ -108,7 +108,7 @@
 
 \begin{frame}{\ft}
     \begin{minic}{0.85}
-        \inc{mt_merapi.png}
+        \inc{insar/theory/mt_merapi.png}
         \centering
         
         Különböző felvételi geometriából készült felvételek a Merapi-hegyről (Indonézia)
