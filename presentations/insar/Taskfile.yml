@@ -6,6 +6,9 @@ tasks:
   build:
     cmds:
       - latexrun "bozsoi_insar.tex"
+  compress:
+    cmds:
+      - gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.5 -dNOPAUSE -dQUIET -dBATCH -dPrinted=false -sOutputFile="bozsoi_insar_compressed.pdf" "bozsoi_insar.pdf"
   defualt:
     cmds:
       - task: build
